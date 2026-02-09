@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   m_MoveSpeed: 5
-  m_RunSpeedModifier: 0.5
+  m_RunSpeedModifier: 2
   m_JumpForce: 10
 --- !u!61 &841366648
 BoxCollider2D:

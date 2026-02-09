@@ -253,4 +253,10 @@ public class InputManager : MonoBehaviour
         return inputDetected;
     }
 
+    public Vector3 GetWorldMousePosition()
+    {
+        Vector3 l_Vector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        return l_Vector;
+    }
+
 }
