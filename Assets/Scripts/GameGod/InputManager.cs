@@ -12,12 +12,14 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode m_PauseKey = KeyCode.Escape;
     [SerializeField] private KeyCode m_UpKey = KeyCode.W;
     [SerializeField] private KeyCode m_DownKey = KeyCode.S;
+    [SerializeField] private KeyCode m_RunKey = KeyCode.LeftShift;
     //private KeyCode m_InteractKey = KeyCode.E;
     
     [Header("Keyboard and Mouse Controls")]
     [SerializeField] private KeyCode m_JoystickJumpKey = KeyCode.JoystickButton1;
     [SerializeField] private KeyCode m_JoystickAttackKey = KeyCode.JoystickButton5;
-    [SerializeField] private KeyCode joystickPauseKey = KeyCode.JoystickButton9;
+    [SerializeField] private KeyCode m_JoystickPauseKey = KeyCode.JoystickButton9;
+    [SerializeField] private KeyCode m_JoystickRunKey = KeyCode.JoystickButton11;
 
     public enum InputSource
     {
@@ -42,12 +44,6 @@ public class InputManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.mousePosition != m_LastMousePosition)
@@ -186,7 +182,7 @@ public class InputManager : MonoBehaviour
             m_CurrentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
-        else if (Input.GetKeyDown(joystickPauseKey))
+        else if (Input.GetKeyDown(m_JoystickPauseKey))
         {
             m_CurrentInputSource = InputSource.Joystick;
             inputDetected = true;
@@ -240,4 +236,21 @@ public class InputManager : MonoBehaviour
     {
         return Input.GetAxisRaw("Horizontal");
     }
+
+    public bool GetRun()
+    {
+        bool inputDetected = false;
+        if (Input.GetKey(m_RunKey))
+        {
+            m_CurrentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKey(m_JoystickRunKey))
+        {
+            m_CurrentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
 }

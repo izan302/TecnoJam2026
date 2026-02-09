@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float m_MoveSpeed = 5f;
+    [SerializeField] private float m_RunSpeedModifier = 2f;
     [SerializeField] private float m_JumpForce = 4f;
     private float m_HorizontalInput;
     bool m_IsFacingRight = false;
@@ -22,12 +23,17 @@ public class PlayerMovement : MonoBehaviour
         {
             m_RigidBody.linearVelocity = new Vector2(m_RigidBody.linearVelocityX, m_JumpForce);
         }
+
+        m_RigidBody.linearVelocityY += Physics.gravity.y * Time.deltaTime;
     }
     void FixedUpdate()
     {
         float l_HorizontalMovement = m_HorizontalInput * m_MoveSpeed;
+        if (InputManager.Instance.GetRun())
+        {
+            l_HorizontalMovement *= m_RunSpeedModifier;
+        }
         m_RigidBody.linearVelocity = new Vector2(l_HorizontalMovement, m_RigidBody.linearVelocityY);
-        
     }
 
     void FlipSprite()
