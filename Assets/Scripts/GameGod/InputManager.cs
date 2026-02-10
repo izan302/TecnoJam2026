@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode m_UpKey = KeyCode.W;
     [SerializeField] private KeyCode m_DownKey = KeyCode.S;
     [SerializeField] private KeyCode m_RunKey = KeyCode.LeftShift;
+
     //private KeyCode m_InteractKey = KeyCode.E;
     
     [Header("Keyboard and Mouse Controls")]
