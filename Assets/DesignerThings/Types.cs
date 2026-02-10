@@ -1,7 +1,6 @@
 public enum Type{
     Graphics, 
-    Character, 
-    Mechanic, 
     Music, 
+    Mechanic, 
     Theme
 }

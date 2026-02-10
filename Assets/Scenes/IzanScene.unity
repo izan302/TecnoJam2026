@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameGod
   w: 8
   h: 8
-  size: 20
+  size: 1
 --- !u!114 &2033813961
 MonoBehaviour:
   m_ObjectHideFlags: 0
