@@ -8,6 +8,9 @@ public class GameGod : MonoBehaviour
     [SerializeField] int w;
     [SerializeField] int h;
     [SerializeField] float size;
+    [SerializeField] GameObject gridParent;
+    [SerializeField] GameObject cellBackgroundPrefab;
+
     public Grid<GridCell> grid;
 
     private void Awake()
@@ -18,5 +21,14 @@ public class GameGod : MonoBehaviour
     {
         //GenerateGrid
         grid = new Grid<GridCell>(w, h, size, new Vector3(20, 0), (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
+    }
+
+    public GameObject GetBackgroundPrefab()
+    {
+        return cellBackgroundPrefab;
+    }
+    public GameObject GetGridParent()
+    {
+        return gridParent;
     }
 }

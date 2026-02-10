@@ -101,6 +101,14 @@ public class Grid<TGridCell>
     {
         return m_CellSize;
     }
+    public int GetWidth()
+    {
+        return m_Width;
+    }
+    public int GetHeight()
+    {
+        return m_Height;
+    }
 
     public void SetGridObject(int _X, int _Y, TGridCell _Value)
     {
