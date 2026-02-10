@@ -1,8 +1,7 @@
 using System;
-using Unity.Collections;
 using UnityEngine;
 
-public class Grid<TGridObject>
+public class Grid<TGridCell>
 {
     public event EventHandler<OnGridValueChangedEventArgs> OnGridValueChanged;
     public class OnGridValueChangedEventArgs : EventArgs
@@ -10,21 +9,24 @@ public class Grid<TGridObject>
         public int x;
         public int y;
     }
+
     private int m_Width;
     private int m_Height;
+
     private float m_CellSize;
+
     private Vector3 m_OriginPosition;
-    private TGridObject[,] m_GridArray;
+    private TGridCell[,] m_GridArray;
     private TextMesh[,] m_DebugTextArray;
 
-    public Grid(int _Width, int _Height, float _CellSize, Vector3 _OriginPosition, Func<Grid<TGridObject>, int, int, TGridObject> _CreateGridObject)
+    public Grid(int _Width, int _Height, float _CellSize, Vector3 _OriginPosition, Func<Grid<TGridCell>, int, int, TGridCell> _CreateGridObject)
     {
         this.m_Width = _Width;
         this.m_Height = _Height;
         this.m_CellSize = _CellSize;
         this.m_OriginPosition = _OriginPosition;
 
-        m_GridArray = new TGridObject[m_Width, m_Height];
+        m_GridArray = new TGridCell[m_Width, m_Height];
         for (int x = 0; x < m_GridArray.GetLength(0); x++)
         {
             for (int y = 0; y < m_GridArray.GetLength(1); y++)
@@ -74,12 +76,12 @@ public class Grid<TGridObject>
         l_TextMesh.GetComponent<MeshRenderer>().sortingOrder = _SortingOrder;
         return l_TextMesh;
     }
-    public TGridObject GetGridObject(int _X, int _Y)
+    public TGridCell GetGridObject(int _X, int _Y)
     {
         if (_X >= 0 && _Y >= 0 && _X < m_Width && _Y < m_Height) return m_GridArray[_X, _Y];
-        return default(TGridObject);
+        return default(TGridCell);
     }
-    public TGridObject GetGridObject(Vector3 _WorldPosition)
+    public TGridCell GetGridObject(Vector3 _WorldPosition)
     {
         int l_X, l_Y;
         GetXYFromWorldPosition(_WorldPosition, out l_X, out l_Y);
@@ -100,7 +102,7 @@ public class Grid<TGridObject>
         return m_CellSize;
     }
 
-    public void SetGridObject(int _X, int _Y, TGridObject _Value)
+    public void SetGridObject(int _X, int _Y, TGridCell _Value)
     {
         if (_X >= 0 && _Y >= 0 && _X < m_Width && _Y < m_Height)
         {
@@ -113,7 +115,7 @@ public class Grid<TGridObject>
         if (OnGridValueChanged != null) OnGridValueChanged(this, new OnGridValueChangedEventArgs { x = _X, y = _Y });
     }
 
-    public void SetGridObject(Vector3 _WorldPosition, TGridObject _Value)
+    public void SetGridObject(Vector3 _WorldPosition, TGridCell _Value)
     {
         int l_X, l_Y;
         GetXYFromWorldPosition(_WorldPosition, out l_X, out l_Y);

@@ -266,6 +266,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2033813959}
   - component: {fileID: 2033813958}
+  - component: {fileID: 2033813960}
+  - component: {fileID: 2033813961}
   m_Layer: 0
   m_Name: GameGod
   m_TagString: Untagged
@@ -312,6 +314,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033813960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033813957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440293599ead3bc4b9088fe13178d10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameGod
+  w: 8
+  h: 8
+  size: 20
+--- !u!114 &2033813961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033813957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890a1f5395ae3bf4c8b21149e9732d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridPlacementManager
+  activePiece: {fileID: 0}
+  test: {fileID: 4910903356025855781, guid: 241b7819ab09d084fbfb62ae859d425f, type: 3}
 --- !u!1 &2049148297
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +352,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2049148299}
-  - component: {fileID: 2049148298}
   m_Layer: 0
   m_Name: TestObject
   m_TagString: Untagged
@@ -329,20 +359,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2049148298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049148297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c38e84111a2bf0f46b4a8f4748bdbff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  testObject: {fileID: 11400000, guid: 194a7a08e6cb96f419a7324c600defad, type: 2}
-  testObject2: {fileID: 11400000, guid: b5480f73eb4c1274ba6639bcc5e5d463, type: 2}
 --- !u!4 &2049148299
 Transform:
   m_ObjectHideFlags: 0
