@@ -5,16 +5,14 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance;    
 
     [Header("Keyboard and Mouse Controls")]
-    [SerializeField] private KeyCode m_JumpKey = KeyCode.Space;
-    [SerializeField] private KeyCode m_AttackKey = KeyCode.Mouse0;
-    [SerializeField] private KeyCode m_MoveLeftKey = KeyCode.A;
-    [SerializeField] private KeyCode m_MoveRightKey = KeyCode.D;
-    [SerializeField] private KeyCode m_PauseKey = KeyCode.Escape;
-    [SerializeField] private KeyCode m_UpKey = KeyCode.W;
-    [SerializeField] private KeyCode m_DownKey = KeyCode.S;
-    [SerializeField] private KeyCode m_RunKey = KeyCode.LeftShift;
-
-    //private KeyCode m_InteractKey = KeyCode.E;
+    [SerializeField] private KeyCode k_up = KeyCode.W;
+    [SerializeField] private KeyCode k_left = KeyCode.A;
+    [SerializeField] private KeyCode k_right = KeyCode.D;
+    [SerializeField] private KeyCode k_down= KeyCode.S;
+    [SerializeField] private KeyCode k_leftRotation = KeyCode.Q;
+    [SerializeField] private KeyCode k_rightRotation = KeyCode.E;
+    [SerializeField] private KeyCode k_confirmPiece = KeyCode.KeypadEnter;
+    [SerializeField] private KeyCode k_returnPiece = KeyCode.Return;
     
     [Header("Keyboard and Mouse Controls")]
     [SerializeField] private KeyCode m_JoystickJumpKey = KeyCode.JoystickButton1;

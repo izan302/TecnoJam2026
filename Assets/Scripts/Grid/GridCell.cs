@@ -6,8 +6,7 @@ public class GridCell
     private int m_Y;
 
     private GameObject m_BackgroundInstance;
-
-    private Piece placedPiece;
+    public Piece placedPiece { get; private set; }
     public bool IsEmpty => placedPiece == null;
     public GridCell(Grid<GridCell> grid, int x, int y)
     {

@@ -6,8 +6,8 @@ using UnityEngine;
 public class PieceData : ScriptableObject
 {
     public string m_PieceName;
-    [SerializeField] Type piceType;
-    [SerializeField] List<Properties> properties;
+    public Type piceType;
+    public List<Properties> properties;
 
     [SerializeField] int spawningLevel = 0;
     [SerializeField] bool grabble = true;

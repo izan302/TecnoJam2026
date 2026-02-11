@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 2033813958}
   - component: {fileID: 2033813960}
   - component: {fileID: 2033813961}
+  - component: {fileID: 2033813962}
   m_Layer: 0
   m_Name: GameGod
   m_TagString: Untagged
@@ -377,6 +378,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GridPlacementManager
   activePiece: {fileID: 0}
   test: {fileID: 4910903356025855781, guid: 241b7819ab09d084fbfb62ae859d425f, type: 3}
+--- !u!114 &2033813962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033813957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784cff0044d4491499ea5e6510829b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinConditionManager
+  requiredTypes: 
+  restrictedProperties: 
 --- !u!1 &2049148297
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class GridPlacementManager : MonoBehaviour
 {
+    public static GridPlacementManager instance;
+
     [SerializeField] Piece activePiece;
     [SerializeField] Piece test;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Update()
     {
         if (activePiece == null)
@@ -90,30 +96,38 @@ public class GridPlacementManager : MonoBehaviour
                     GameGod.instance.grid.GetGridObject(pos.x, pos.y).Place(activePiece);
                 }
                 activePiece = null;
+
+                if (WinConditionManager.instance != null)
+                {
+                    WinConditionManager.instance.CheckWinCondition();
+                }
             }
         }
     }
-
     void TryPickUpPiece()
-{
-    Vector3 mouseWorldPos = InputManager.Instance.GetWorldMousePosition();
-    RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
-
-    if (hit.collider != null)
     {
-        Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
-        if (clickedPiece != null)
-        {
-            activePiece = clickedPiece;
+        Vector3 mouseWorldPos = InputManager.Instance.GetWorldMousePosition();
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
 
-            foreach (var pos in activePiece.GetGridPositions())
+        if (hit.collider != null)
+        {
+            Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
+            if (clickedPiece != null)
             {
-                GridCell cell = GameGod.instance.grid.GetGridObject(pos.x, pos.y);
-                if (cell != null) cell.ClearPiece();
+                activePiece = clickedPiece;
+
+                foreach (var pos in activePiece.GetGridPositions())
+                {
+                    GridCell cell = GameGod.instance.grid.GetGridObject(pos.x, pos.y);
+                    if (cell != null) cell.ClearPiece();
+                }
+                if (WinConditionManager.instance != null)
+                {
+                    WinConditionManager.instance.CheckWinCondition();
+                }
             }
         }
     }
-}
 
     void SyncVisuals()
     {

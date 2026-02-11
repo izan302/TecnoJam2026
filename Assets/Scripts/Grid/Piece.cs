@@ -6,15 +6,16 @@ public class Piece : MonoBehaviour
     [Header("Configuraci�n Visual")]
     [SerializeField] GameObject tilePrefab;
 
-    PieceData data;
+    public PieceData data { get; private set; }
     public Vector2Int pivotGridPosition;
     public int rotation;
+    public Dictionary<Type, Color> piceColor;
 
-    public void Setup(PieceData data, Vector2Int startGridPosition)
+    public void Setup(PieceData d, Vector2Int startPos)
     {
-        this.data = data;
-        this.pivotGridPosition = startGridPosition;
-        this.rotation = 0;
+        data = d;
+        pivotGridPosition = startPos;
+        rotation = 0;
 
         GenerateVisuals();
     }
@@ -29,6 +30,7 @@ public class Piece : MonoBehaviour
             GameObject newTile = Instantiate(tilePrefab, transform);
             newTile.transform.localPosition = new Vector3(localGridPos.x * cellSize, localGridPos.y * cellSize, 0f);
             newTile.transform.localScale = new Vector3(cellSize, cellSize, 1f);
+            newTile.GetComponent<SpriteRenderer>().color = piceColor[data.piceType];
         }
     }
     public void RotatePiece(int direction)
