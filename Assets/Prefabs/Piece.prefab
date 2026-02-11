@@ -45,6 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Piece
   tilePrefab: {fileID: 2442897662123451086, guid: f2318e9bf64284444bcc083ddcf48192, type: 3}
-  data: {fileID: 0}
   pivotGridPosition: {x: 0, y: 0}
   rotation: 0
+  piceColor:
+    _serializedList:
+    - Key: 0
+      Value: {r: 0, g: 0.09811449, b: 1, a: 1}
+    - Key: 1
+      Value: {r: 0.5140424, g: 0, b: 1, a: 1}
+    - Key: 2
+      Value: {r: 1, g: 0.50281024, b: 0, a: 1}
+    - Key: 3
+      Value: {r: 0, g: 1, b: 0.9431782, a: 1}
+    - Key: 4
+      Value: {r: 0, g: 1, b: 0.0910151, a: 1}

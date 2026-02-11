@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784cff0044d4491499ea5e6510829b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinConditionManager
-  requiredTypes: 
+  requiredTypes: 00000000010000000200000003000000
   restrictedProperties: 
 --- !u!1 &2049148297
 GameObject:

@@ -1,15 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
+using AYellowpaper.SerializedCollections;
 
 public class Piece : MonoBehaviour
 {
-    [Header("Configuraci�n Visual")]
+    [Header("Configuracion Visual")]
     [SerializeField] GameObject tilePrefab;
 
     public PieceData data { get; private set; }
     public Vector2Int pivotGridPosition;
     public int rotation;
-    public Dictionary<Type, Color> piceColor;
+
+    [SerializedDictionary("PieceTypes", "Color")]
+    public SerializedDictionary<Type, Color> piceColor;
 
     public void Setup(PieceData d, Vector2Int startPos)
     {
@@ -30,6 +33,7 @@ public class Piece : MonoBehaviour
             GameObject newTile = Instantiate(tilePrefab, transform);
             newTile.transform.localPosition = new Vector3(localGridPos.x * cellSize, localGridPos.y * cellSize, 0f);
             newTile.transform.localScale = new Vector3(cellSize, cellSize, 1f);
+            if (piceColor[data.piceType] == null) return;
             newTile.GetComponent<SpriteRenderer>().color = piceColor[data.piceType];
         }
     }

@@ -22,7 +22,7 @@ public class GridPlacementManager : MonoBehaviour
                 //Vector2Int offset = activePiece.GetMinBounds();
                 
             }
-            if (InputManager.Instance.GetAttack())
+            if (Input.GetMouseButtonDown(0))
             {
                 TryPickUpPiece();
             }

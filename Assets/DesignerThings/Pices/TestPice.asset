@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestPice
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
   m_PieceName: testTile
-  piceType: 0
+  piceType: 1
   properties: 
   spawningLevel: 0
   grabble: 1
@@ -21,4 +21,3 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: -1, y: 0}
   - {x: 0, y: 1}
-  pivot: {x: 0, y: 0}

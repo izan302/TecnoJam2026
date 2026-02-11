@@ -64,7 +64,7 @@ public class InputManager : MonoBehaviour
 
         m_LastMousePosition = Input.mousePosition;
     }
-
+    /*
 
     public bool GetJump()
     {
@@ -250,12 +250,11 @@ public class InputManager : MonoBehaviour
             inputDetected = true;
         }
         return inputDetected;
-    }
+    }*/
 
     public Vector3 GetWorldMousePosition()
     {
         Vector3 l_Vector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return l_Vector;
     }
-
 }
