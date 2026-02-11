@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 70
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 555148442}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 42, z: -10}
+  m_LocalPosition: {x: 23.6, y: 3.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -318,19 +318,19 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b310426512f82a41b7650a059e4fdc5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  m_JumpKey: 32
-  m_AttackKey: 323
-  m_MoveLeftKey: 97
-  m_MoveRightKey: 100
-  m_PauseKey: 27
-  m_UpKey: 119
-  m_DownKey: 115
-  m_RunKey: 304
-  m_JoystickJumpKey: 331
-  m_JoystickAttackKey: 335
-  m_JoystickPauseKey: 339
-  m_JoystickRunKey: 341
+  m_EditorClassIdentifier: Assembly-CSharp::InputManager
+  k_up: 119
+  k_left: 97
+  k_right: 100
+  k_down: 115
+  k_leftRotation: 113
+  k_rightRotation: 101
+  k_confirmPiece: 271
+  k_returnPiece: 8
+  j_leftRotation: 334
+  j_rightRotation: 335
+  j_confirmPiece: 331
+  j_returnPiece: 332
 --- !u!4 &2033813959
 Transform:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameGod
   w: 8
   h: 8
-  size: 10
+  size: 1
   gridParent: {fileID: 881887032}
   cellBackgroundPrefab: {fileID: 4871744342147649391, guid: ad5dadd2e72a3884d9d0a0f8b4373eaa, type: 3}
 --- !u!114 &2033813961
@@ -378,6 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GridPlacementManager
   activePiece: {fileID: 0}
   test: {fileID: 4910903356025855781, guid: 241b7819ab09d084fbfb62ae859d425f, type: 3}
+  moveDelay: 0.15
 --- !u!114 &2033813962
 MonoBehaviour:
   m_ObjectHideFlags: 0

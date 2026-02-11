@@ -7,6 +7,9 @@ public class GridPlacementManager : MonoBehaviour
     [SerializeField] Piece activePiece;
     [SerializeField] Piece test;
 
+    [SerializeField] private float moveDelay = 0.15f;
+    private float moveTimer;
+
     private void Awake()
     {
         instance = this;
@@ -18,9 +21,8 @@ public class GridPlacementManager : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 activePiece = Instantiate(test);
-                activePiece.Setup(PieceData.AllPieces[0], new Vector2Int(0,0));
+                activePiece.Setup(PieceData.AllPieces[0], new Vector2Int(0, 0));
                 //Vector2Int offset = activePiece.GetMinBounds();
-                
             }
             if (Input.GetMouseButtonDown(0))
             {
@@ -29,6 +31,8 @@ public class GridPlacementManager : MonoBehaviour
         }
         else
         {
+            moveTimer -= Time.deltaTime;
+
             HandleMovement();
             HandleRotation();
             HandlePlacement();
@@ -40,26 +44,44 @@ public class GridPlacementManager : MonoBehaviour
     {
         if (activePiece == null) return;
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (InputManager.Instance.GetLeftRotation())
             TryRotate(-1);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (InputManager.Instance.GetRightRotation())
             TryRotate(1);
     }
     void HandleMovement()
     {
+        if (moveTimer > 0) return;
+
         Vector2Int delta = Vector2Int.zero;
-        if (Input.GetKeyDown(KeyCode.W)) delta = Vector2Int.up;
-        if (Input.GetKeyDown(KeyCode.S)) delta = Vector2Int.down;
-        if (Input.GetKeyDown(KeyCode.A)) delta = Vector2Int.left;
-        if (Input.GetKeyDown(KeyCode.D)) delta = Vector2Int.right;
+        if (InputManager.Instance.GetUp()) delta = Vector2Int.up;
+        if (InputManager.Instance.GetDown()) delta = Vector2Int.down;
+        if (InputManager.Instance.GetLeft()) delta = Vector2Int.left;
+        if (InputManager.Instance.GetRight()) delta = Vector2Int.right;
 
         if (delta != Vector2Int.zero)
         {
             Vector2Int targetPos = activePiece.pivotGridPosition + delta;
-            if (CanPlace(activePiece, targetPos, activePiece.rotation))
+
+            if (IsInsideGrid(activePiece, targetPos, activePiece.rotation))
+            {
                 activePiece.pivotGridPosition = targetPos;
+                moveTimer = moveDelay;
+            }
         }
+    }
+    bool IsInsideGrid(Piece piece, Vector2Int pivotPos, int rotation)
+    {
+        foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
+        {
+            if (blockPos.x < 0 || blockPos.x >= GameGod.instance.grid.GetWidth() ||
+                blockPos.y < 0 || blockPos.y >= GameGod.instance.grid.GetHeight())
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     void TryRotate(int dir)
@@ -87,7 +109,7 @@ public class GridPlacementManager : MonoBehaviour
     }
     void HandlePlacement()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (InputManager.Instance.GetConfirm())
         {
             if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
             {
