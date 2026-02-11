@@ -21,7 +21,7 @@ public class Piece : MonoBehaviour
     void GenerateVisuals()
     {
         if (data == null) return;
-
+        Debug.Log($"Piece {data.m_PieceName} genrated");
         float cellSize = GameGod.instance.grid.GetCellSize();
         foreach (Vector2Int blockPos in data.blocks)
         {
@@ -70,9 +70,9 @@ public class Piece : MonoBehaviour
         Vector2Int min = Vector2Int.zero;
         foreach (var block in data.blocks)
         {
-            Vector2Int local = block - data.pivot;
-            if (local.x < min.x) min.x = local.x;
-            if (local.y < min.y) min.y = local.y;
+            min = data.pivot;
+            if (block.x < min.x) min.x = block.x;
+            if (block.y < min.y) min.y = block.y;
         }
         return min;
     }

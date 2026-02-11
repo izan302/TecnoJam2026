@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class PieceData : ScriptableObject
 
     [Header("Shape")]
     public List<Vector2Int> blocks;
-    public Vector2Int pivot;
+    [NonSerialized]public Vector2Int pivot = new Vector2Int(0,0);
 
     public static readonly List<PieceData> AllPieces = new List<PieceData>();
 
