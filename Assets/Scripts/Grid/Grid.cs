@@ -44,7 +44,7 @@ public class Grid<TGridCell>
             {
                 for (int y = 0; y < m_GridArray.GetLength(1); y++)
                 {
-                    m_DebugTextArray[x, y] = ShowTextInScreen(m_GridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(m_CellSize, m_CellSize) * 0.5f, 20, Color.white, TextAnchor.MiddleCenter, TextAlignment.Center, 0);
+                    //m_DebugTextArray[x, y] = ShowTextInScreen(m_GridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(m_CellSize, m_CellSize) * 0.5f, 20, Color.white, TextAnchor.MiddleCenter, TextAlignment.Center, 0);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
                 }
@@ -54,7 +54,7 @@ public class Grid<TGridCell>
         }
         OnGridValueChanged += (object _Sender, OnGridValueChangedEventArgs _EventArgs) =>
         {
-            m_DebugTextArray[_EventArgs.x, _EventArgs.y].text = m_GridArray[_EventArgs.x, _EventArgs.y]?.ToString();
+            //m_DebugTextArray[_EventArgs.x, _EventArgs.y].text = m_GridArray[_EventArgs.x, _EventArgs.y]?.ToString();
         };
     }
 

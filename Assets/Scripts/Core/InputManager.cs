@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager Instance;    
+    public static InputManager Instance;
 
     [Header("Keyboard and Mouse Controls")]
     [SerializeField] private KeyCode k_up = KeyCode.W;
     [SerializeField] private KeyCode k_left = KeyCode.A;
     [SerializeField] private KeyCode k_right = KeyCode.D;
-    [SerializeField] private KeyCode k_down= KeyCode.S;
+    [SerializeField] private KeyCode k_down = KeyCode.S;
     [SerializeField] private KeyCode k_leftRotation = KeyCode.Q;
     [SerializeField] private KeyCode k_rightRotation = KeyCode.E;
     [SerializeField] private KeyCode k_confirmPiece = KeyCode.KeypadEnter;
-    [SerializeField] private KeyCode k_returnPiece = KeyCode.Return;
-    
+    [SerializeField] private KeyCode k_returnPiece = KeyCode.Backspace;
+
     [Header("Keyboard and Mouse Controls")]
-    [SerializeField] private KeyCode m_JoystickJumpKey = KeyCode.JoystickButton1;
-    [SerializeField] private KeyCode m_JoystickAttackKey = KeyCode.JoystickButton5;
-    [SerializeField] private KeyCode m_JoystickPauseKey = KeyCode.JoystickButton9;
-    [SerializeField] private KeyCode m_JoystickRunKey = KeyCode.JoystickButton11;
+    [SerializeField] private KeyCode j_leftRotation = KeyCode.JoystickButton4; 
+    [SerializeField] private KeyCode j_rightRotation = KeyCode.JoystickButton5;
+    [SerializeField] private KeyCode j_confirmPiece = KeyCode.JoystickButton1;
+    [SerializeField] private KeyCode j_returnPiece = KeyCode.JoystickButton2;
 
     public enum InputSource
     {
@@ -64,135 +64,33 @@ public class InputManager : MonoBehaviour
 
         m_LastMousePosition = Input.mousePosition;
     }
-    /*
 
-    public bool GetJump()
-    {
-        if (Input.GetKey(m_JumpKey))
-        {
-            m_CurrentInputSource = InputSource.Keyboard;
-            return true;
-        }
-        else if (Input.GetKey(m_JoystickJumpKey))
-        {
-            m_CurrentInputSource = InputSource.Joystick;
-            return true;
-        }
-
-        return false;
-    }
-    public bool GetJumpDown()
-    {
-        bool inputDetected = false;
-        if (Input.GetKeyDown(m_JumpKey))
-        {
-            m_CurrentInputSource = InputSource.Keyboard;
-            inputDetected = true;
-        }
-        else if (Input.GetKeyDown(m_JoystickJumpKey))
-        {
-            m_CurrentInputSource = InputSource.Joystick;
-            inputDetected = true;
-        }
-        return inputDetected;
-    }
-
-    public bool GetJumpUp()
-    {
-        bool inputDetected = false;
-        if (Input.GetKeyUp(m_JumpKey))
-        {
-            m_CurrentInputSource = InputSource.Keyboard;
-            inputDetected = true;
-        }
-        else if (Input.GetKeyUp(m_JoystickJumpKey))
-        {
-            m_CurrentInputSource = InputSource.Joystick;
-            inputDetected = true;
-        }
-        return inputDetected;
-    }
-
-    public bool GetAttack()
-    {
-        bool inputDetected = false;
-        if (Input.GetKeyDown(m_AttackKey))
-        {
-            m_CurrentInputSource = InputSource.Keyboard;
-            inputDetected = true;
-        }
-        else if (Input.GetKeyDown(m_JoystickAttackKey))
-        {
-            m_CurrentInputSource = InputSource.Joystick;
-            inputDetected = true;
-        }
-        return inputDetected;
-    }
-
-    public bool GetMoveLeft()
+    public bool GetDown()
     {
         bool inputDetected = false;
 
-        if (Input.GetKey(m_MoveLeftKey))
+        if (Input.GetKey(k_down))
         {
             m_CurrentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
         else
         {
-            float horizontalAxis = GetHorizontalAxis();
-            if (horizontalAxis < -0.1f)
+            float verticalAxis = Input.GetAxisRaw("Vertical");
+            if (verticalAxis < -0.5f)
             {
                 m_CurrentInputSource = InputSource.Joystick;
                 inputDetected = true;
             }
         }
 
-        return inputDetected;
-    }
-
-    public bool GetMoveRight()
-    {
-        bool inputDetected = false;
-
-        if (Input.GetKey(m_MoveRightKey))
-        {
-            m_CurrentInputSource = InputSource.Keyboard;
-            inputDetected = true;
-        }
-        else
-        {
-            float horizontalAxis = GetHorizontalAxis();
-            if (horizontalAxis > 0.1f)
-            {
-                m_CurrentInputSource = InputSource.Joystick;
-                inputDetected = true;
-            }
-        }
-
-        return inputDetected;
-    }
-
-    public bool GetPause()
-    {
-        bool inputDetected = false;
-        if (Input.GetKeyDown(m_PauseKey))
-        {
-            m_CurrentInputSource = InputSource.Keyboard;
-            inputDetected = true;
-        }
-        else if (Input.GetKeyDown(m_JoystickPauseKey))
-        {
-            m_CurrentInputSource = InputSource.Joystick;
-            inputDetected = true;
-        }
         return inputDetected;
     }
     public bool GetUp()
     {
         bool inputDetected = false;
 
-        if (Input.GetKey(m_UpKey))
+        if (Input.GetKey(k_up))
         {
             m_CurrentInputSource = InputSource.Keyboard;
             inputDetected = true;
@@ -210,19 +108,19 @@ public class InputManager : MonoBehaviour
         return inputDetected;
     }
 
-    public bool GetDown()
+    public bool GetLeft()
     {
         bool inputDetected = false;
 
-        if (Input.GetKey(m_DownKey))
+        if (Input.GetKeyDown(k_left))
         {
             m_CurrentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
         else
         {
-            float verticalAxis = Input.GetAxisRaw("Vertical");
-            if (verticalAxis < 0.5f)
+            float horizontalAxis = Input.GetAxisRaw("Horizontal");
+            if (horizontalAxis < -0.5f)
             {
                 m_CurrentInputSource = InputSource.Joystick;
                 inputDetected = true;
@@ -231,27 +129,91 @@ public class InputManager : MonoBehaviour
 
         return inputDetected;
     }
-    public float GetHorizontalAxis()
-    {
-        return Input.GetAxisRaw("Horizontal");
-    }
 
-    public bool GetRun()
+    public bool GetRight()
     {
         bool inputDetected = false;
-        if (Input.GetKey(m_RunKey))
+
+        if (Input.GetKey(k_right))
         {
             m_CurrentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
-        else if (Input.GetKey(m_JoystickRunKey))
+        else
+        {
+            float horizontalAxis = Input.GetAxisRaw("Horizontal");
+            if (horizontalAxis > 0.5f)
+            {
+                m_CurrentInputSource = InputSource.Joystick;
+                inputDetected = true;
+            }
+        }
+
+        return inputDetected;
+    }
+
+    public bool GetConfirm()
+    {
+        if (Input.GetKey(k_confirmPiece))
+        {
+            m_CurrentInputSource = InputSource.Keyboard;
+            return true;
+        }
+        else if (Input.GetKey(j_confirmPiece))
         {
             m_CurrentInputSource = InputSource.Joystick;
-            inputDetected = true;
+            return true;
         }
-        return inputDetected;
-    }*/
 
+        return false;
+    }
+
+    public bool GetLeftRotation()
+    {
+        if (Input.GetKeyDown(k_leftRotation))
+        {
+            m_CurrentInputSource = InputSource.Keyboard;
+            return true;
+        }
+        else if (Input.GetKeyDown(j_leftRotation))
+        {
+            m_CurrentInputSource = InputSource.Joystick;
+            return true;
+        }
+
+        return false;
+    }
+    public bool GetRightRotation()
+    {
+        if (Input.GetKeyDown(k_rightRotation))
+        {
+            m_CurrentInputSource = InputSource.Keyboard;
+            return true;
+        }
+        else if (Input.GetKeyDown(j_rightRotation))
+        {
+            m_CurrentInputSource = InputSource.Joystick;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool GetReturnPiece()
+    {
+        if (Input.GetKeyDown(k_returnPiece))
+        {
+            m_CurrentInputSource = InputSource.Keyboard;
+            return true;
+        }
+        else if (Input.GetKeyDown(j_returnPiece))
+        {
+            m_CurrentInputSource = InputSource.Joystick;
+            return true;
+        }
+
+        return false;
+    }
     public Vector3 GetWorldMousePosition()
     {
         Vector3 l_Vector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
