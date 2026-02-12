@@ -61,7 +61,6 @@ public class WindowsResizer : MonoBehaviour
                 }*/
                 m_rectTransform.offsetMin += l_positionDifference;
                 break;
-
         }
         m_lastPointPosition = l_pointerEventData.position;
     }

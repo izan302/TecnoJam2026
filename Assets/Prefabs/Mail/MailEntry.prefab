@@ -109,19 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   m_senderPFP: {fileID: -6668987231095658434, guid: f845f0ec20d53cb4fb8e7c0e6aace7d2, type: 3}
-  m_senderArroba: izannazi@gmail.com
-  m_emailContent: "Tras la \xFAltima audiencia celebrada en el Senado de los Estados
-    Unidos y como consecuencia de la decisi\xF3n adoptada, se ha acordado implementar,
-    durante los pr\xF3ximos d\xEDas, una ley mediante la cual se impedir\xE1 que
-    en los videojuegos se muestre cualquier tipo de imagen violenta expl\xEDcita,
-    as\xED como contenido de car\xE1cter sangriento (o cualquier arma de fuego).
-    Todo videojuego que incluya este tipo de contenido ser\xE1 autom\xE1ticamente
-    prohibido para su venta y se impondr\xE1 la correspondiente sanci\xF3n econ\xF3mica
-    a los desarrolladores responsables.\r\nAdem\xE1s se obligar\xE1 a que cada desarrollador
-    implemente una backdoor en su juego para que el gobierno sepa a tiempo real si
-    se cumplen estos requisitos\r\n"
-  m_senderName: IzanNazi
-  m_senderDate: 31/2/1945
+  m_senderArroba: 
+  m_emailContent: 
+  m_senderName: 
+  m_senderDate: 
   m_senderPFPImage: {fileID: 1343275367371478585}
   m_senderArrobaText: {fileID: 2505359260063592315}
   m_contentGameObject: {fileID: 0}
@@ -395,15 +386,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3584906, g: 0.3477939, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b79f7d249f2d2f45b408eb3a36f88d4, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

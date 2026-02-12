@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ContentData : MonoBehaviour
+public class ContentData : MonoBehaviour 
 {
     [SerializeField] public TextMeshProUGUI m_senderName;
     [SerializeField] public TextMeshProUGUI m_senderDate;
