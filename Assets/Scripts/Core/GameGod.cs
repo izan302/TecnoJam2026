@@ -33,4 +33,12 @@ public class GameGod : MonoBehaviour
     {
         return gridParent;
     }
+    void LoadLevelPieces()
+    {
+
+    }
+    private void LoadStoredPieces(int level)
+    {
+        
+    }
 }
