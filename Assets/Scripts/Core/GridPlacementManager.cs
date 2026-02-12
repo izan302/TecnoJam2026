@@ -76,8 +76,8 @@ public class GridPlacementManager : MonoBehaviour
     {
         foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
         {
-            if (blockPos.x < 0 || blockPos.x >= GameGod.instance.grid.GetWidth() ||
-                blockPos.y < 0 || blockPos.y >= GameGod.instance.grid.GetHeight())
+            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.grid.GetWidth() ||
+                blockPos.y < 0 || blockPos.y >= LevelManager.instance.grid.GetHeight())
             {
                 return false;
             }
@@ -95,12 +95,12 @@ public class GridPlacementManager : MonoBehaviour
     {
         foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
         {
-            if (blockPos.x < 0 || blockPos.x >= GameGod.instance.grid.GetWidth() ||
-                blockPos.y < 0 || blockPos.y >= GameGod.instance.grid.GetHeight())
+            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.grid.GetWidth() ||
+                blockPos.y < 0 || blockPos.y >= LevelManager.instance.grid.GetHeight())
             {
                 return false;
             }
-            GridCell cell = GameGod.instance.grid.GetGridObject(blockPos.x, blockPos.y);
+            GridCell cell = LevelManager.instance.grid.GetGridObject(blockPos.x, blockPos.y);
             if (cell == null || !cell.IsEmpty)
             {
                 return false;
@@ -116,7 +116,7 @@ public class GridPlacementManager : MonoBehaviour
             {
                 foreach (var pos in activePiece.GetGridPositions())
                 {
-                    GameGod.instance.grid.GetGridObject(pos.x, pos.y).Place(activePiece);
+                    LevelManager.instance.grid.GetGridObject(pos.x, pos.y).Place(activePiece);
                 }
                 activePiece = null;
 
@@ -141,7 +141,7 @@ public class GridPlacementManager : MonoBehaviour
 
                 foreach (var pos in activePiece.GetGridPositions())
                 {
-                    GridCell cell = GameGod.instance.grid.GetGridObject(pos.x, pos.y);
+                    GridCell cell = LevelManager.instance.grid.GetGridObject(pos.x, pos.y);
                     if (cell != null) cell.ClearPiece();
                 }
                 if (WinConditionManager.instance != null)
@@ -156,8 +156,8 @@ public class GridPlacementManager : MonoBehaviour
     {
         if (activePiece == null) return;
 
-        float cellSize = GameGod.instance.grid.GetCellSize();
-        Vector3 worldPos = GameGod.instance.grid.GetWorldPosition(
+        float cellSize = LevelManager.instance.grid.GetCellSize();
+        Vector3 worldPos = LevelManager.instance.grid.GetWorldPosition(
             activePiece.pivotGridPosition.x,
             activePiece.pivotGridPosition.y
         );

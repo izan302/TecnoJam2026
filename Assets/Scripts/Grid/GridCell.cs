@@ -27,7 +27,7 @@ public class GridCell
 
     private void SpawnBackground()
     {
-        GameObject prefab = GameGod.instance.GetBackgroundPrefab();
+        GameObject prefab = LevelManager.instance.GetBackgroundPrefab();
         
         Vector3 worldPos = m_Grid.GetWorldPosition(m_X, m_Y);
 
@@ -37,7 +37,7 @@ public class GridCell
         m_BackgroundInstance = Object.Instantiate(prefab, worldPos + offset, Quaternion.identity);
         m_BackgroundInstance.transform.name = $"Cell_{m_X}_{m_Y}";
         
-        m_BackgroundInstance.transform.SetParent(GameGod.instance.GetGridParent().transform);
+        m_BackgroundInstance.transform.SetParent(LevelManager.instance.GetGridParent().transform);
         m_BackgroundInstance.transform.localScale = new Vector3(cellSize, cellSize, 1f);
     }
 }

@@ -14,19 +14,21 @@ public class Piece : MonoBehaviour
     [SerializedDictionary("PieceTypes", "Color")]
     public SerializedDictionary<Type, Color> piceColor;
 
-    public void Setup(PieceData d, Vector2Int startPos)
+    public void Setup(PieceData d, Vector2Int startPos, int startRotation = 0)
     {
         data = d;
         pivotGridPosition = startPos;
-        rotation = 0;
+        rotation = startRotation; 
 
         GenerateVisuals();
+
+        UpdateVisualRotation();
     }
     void GenerateVisuals()
     {
         if (data == null) return;
         Debug.Log($"Piece {data.m_PieceName} genrated");
-        float cellSize = GameGod.instance.grid.GetCellSize();
+        float cellSize = LevelManager.instance.grid.GetCellSize();
         foreach (Vector2Int blockPos in data.blocks)
         {
             Vector2Int localGridPos = blockPos - data.pivot;
@@ -37,11 +39,30 @@ public class Piece : MonoBehaviour
             newTile.GetComponent<SpriteRenderer>().color = piceColor[data.piceType];
         }
     }
+
+    #region Rotations
     public void RotatePiece(int direction)
     {
         rotation = (rotation + direction % 4 + 4) % 4;
-        transform.Rotate(0, 0, direction == 1 ? -90 : 90);
+        UpdateVisualRotation();
     }
+    private void UpdateVisualRotation()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, rotation * -90f);
+    }
+    private Vector2Int Rotate(Vector2Int v, int rotation)
+    {
+        int r = (rotation % 4 + 4) % 4;
+        switch (r)
+        {
+            case 1: return new Vector2Int(v.y, -v.x);
+            case 2: return new Vector2Int(-v.x, -v.y);
+            case 3: return new Vector2Int(-v.y, v.x);
+            default: return v;
+        }
+    }
+    #endregion
+
     public List<Vector2Int> GetGridPositions(Vector2Int pivot, int rotation)
     {
         List<Vector2Int> result = new List<Vector2Int>();
@@ -55,22 +76,10 @@ public class Piece : MonoBehaviour
         }
         return result;
     }
-    private Vector2Int Rotate(Vector2Int v, int rotation)
-    {
-        int r = (rotation % 4 + 4) % 4;
-        switch (r)
-        {
-            case 1: return new Vector2Int(v.y, -v.x);
-            case 2: return new Vector2Int(-v.x, -v.y);
-            case 3: return new Vector2Int(-v.y, v.x);
-            default: return v;            
-        }
-    }
     public List<Vector2Int> GetGridPositions()
     {
         return GetGridPositions(this.pivotGridPosition, this.rotation);
     }
-
     public Vector2Int GetMinBounds()
     {
         Vector2Int min = Vector2Int.zero;

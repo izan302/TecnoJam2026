@@ -14,7 +14,7 @@ public class WinConditionManager : MonoBehaviour
     }
     public void CheckWinCondition()
     {
-        Grid<GridCell> grid = GameGod.instance.grid;
+        Grid<GridCell> grid = LevelManager.instance.grid;
         int width = grid.GetWidth();
         int height = grid.GetHeight();
 
