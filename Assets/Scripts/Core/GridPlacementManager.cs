@@ -21,6 +21,7 @@ public class GridPlacementManager : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 activePiece = Instantiate(test);
+                Debug.Log(PieceData.AllPieces.Count);
                 activePiece.Setup(PieceData.AllPieces[0], new Vector2Int(0, 0));
                 //Vector2Int offset = activePiece.GetMinBounds();
             }

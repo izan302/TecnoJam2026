@@ -18,6 +18,7 @@ public class GameGod : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Resources.LoadAll<PieceData>("");
     }
     void Start()
     {
