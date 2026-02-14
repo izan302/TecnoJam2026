@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameAppScript : MonoBehaviour
 {
+    [SerializeField] private string m_appName;
     [SerializeField] private float m_timeToDoubleClick = 1.5f;
     private float m_clickCounter;
     private void Update()
@@ -15,7 +16,7 @@ public class GameAppScript : MonoBehaviour
     {
         if (m_clickCounter < m_timeToDoubleClick)
         {
-            SceneManager.LoadScene("JanScene2");
+            SceneManager.LoadScene(m_appName, LoadSceneMode.Additive);
         }
         m_clickCounter = 0;
     }
