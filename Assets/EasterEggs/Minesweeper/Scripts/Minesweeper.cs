@@ -130,6 +130,10 @@ public class Minesweeper
                     }
                 }
             }
+            if (l_Cell.IsFlagged() || l_Cell.IsRevealed())
+            {
+                return;
+            }
             RevealCell(l_Cell.GetX(), l_Cell.GetY());
         }
     }
