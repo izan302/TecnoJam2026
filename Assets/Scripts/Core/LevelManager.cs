@@ -99,6 +99,7 @@ public class LevelManager : MonoBehaviour
     }
     private void LoadStoredPieces(int level)
     {
+        //CON ESTE CÓDIGO FUNCA LA GENERACIÓN DE PIEZAS EN EL SUPPLEMENTARY GRID 
         /*
         foreach (var entry in levelData.piecesToSpawn)
         {
