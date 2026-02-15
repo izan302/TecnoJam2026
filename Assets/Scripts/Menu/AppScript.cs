@@ -17,4 +17,8 @@ public class AppScript : MonoBehaviour
         }
         m_clickCounter = 0;
     }
+    public void AppClose()
+    {
+        m_appWindow.SetActive(false);
+    }
 }
