@@ -8,6 +8,8 @@ public class GridPlacementManager : MonoBehaviour
     [SerializeField] Piece test;
 
     [SerializeField] private float moveDelay = 0.15f;
+    [SerializeField] private float rotationSpeed = 10f;
+    private Quaternion targetVisualRotation;
     private float moveTimer;
 
     private void Awake()
@@ -16,15 +18,10 @@ public class GridPlacementManager : MonoBehaviour
     }
     void Update()
     {
+
         if (activePiece == null)
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                activePiece = Instantiate(test);
-                Debug.Log(PieceData.AllPieces.Count);
-                activePiece.Setup(PieceData.AllPieces[0], new Vector2Int(0, 0));
-                //Vector2Int offset = activePiece.GetMinBounds();
-            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 TryPickUpPiece();
@@ -32,12 +29,16 @@ public class GridPlacementManager : MonoBehaviour
         }
         else
         {
+            if (Input.GetMouseButtonDown(1))
+            {
+                ReturnPieceToSupplementaryGrid();
+            }
             moveTimer -= Time.deltaTime;
 
             HandleMovement();
             HandleRotation();
             HandlePlacement();
-            SyncVisuals();
+            //SyncVisuals();
         }
     }
 
@@ -87,9 +88,12 @@ public class GridPlacementManager : MonoBehaviour
 
     void TryRotate(int dir)
     {
-        int targetRotation = activePiece.rotation + dir;
-        if (CanPlace(activePiece, activePiece.pivotGridPosition, targetRotation))
-            activePiece.rotation = targetRotation;
+        int targetRotationValue = activePiece.rotation + dir;
+
+        if (CanPlace(activePiece, activePiece.pivotGridPosition, targetRotationValue))
+        {
+            activePiece.rotation = targetRotationValue;
+        }
     }
     bool CanPlace(Piece piece, Vector2Int pivotPos, int rotation)
     {
@@ -138,12 +142,14 @@ public class GridPlacementManager : MonoBehaviour
             if (clickedPiece != null)
             {
                 activePiece = clickedPiece;
+                targetVisualRotation = activePiece.transform.rotation;
 
                 foreach (var pos in activePiece.GetGridPositions())
                 {
                     GridCell cell = LevelManager.instance.grid.GetGridObject(pos.x, pos.y);
                     if (cell != null) cell.ClearPiece();
                 }
+                clickedPiece.SetGrid(LevelManager.instance.grid);
                 if (WinConditionManager.instance != null)
                 {
                     WinConditionManager.instance.CheckWinCondition();
@@ -151,20 +157,32 @@ public class GridPlacementManager : MonoBehaviour
             }
         }
     }
-
+    /*
     void SyncVisuals()
     {
         if (activePiece == null) return;
 
-        float cellSize = LevelManager.instance.grid.GetCellSize();
-        Vector3 worldPos = LevelManager.instance.grid.GetWorldPosition(
+        float cellSize = LevelManager.instance.GetGrid(activePiece.GetGrid()).GetCellSize();
+        Vector3 worldPos = LevelManager.instance.GetGrid(activePiece.GetGrid()).GetWorldPosition(
             activePiece.pivotGridPosition.x,
             activePiece.pivotGridPosition.y
         );
-
         Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
-        activePiece.transform.position = worldPos + offset;
 
-        activePiece.transform.rotation = Quaternion.Euler(0, 0, activePiece.rotation * -90f);
+        activePiece.transform.position = Vector3.Lerp(activePiece.transform.position, worldPos + offset, Time.deltaTime * rotationSpeed);
+
+        activePiece.transform.rotation = Quaternion.Slerp(
+            activePiece.transform.rotation,
+            targetVisualRotation,
+            Time.deltaTime * rotationSpeed
+        );
+    }
+    */
+
+    public void ReturnPieceToSupplementaryGrid()
+    {
+        activePiece.SetGrid(LevelManager.instance.supplementaryGrid);
+        //SyncVisuals();
+        activePiece = null;
     }
 }

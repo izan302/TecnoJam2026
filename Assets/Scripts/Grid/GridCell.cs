@@ -14,11 +14,12 @@ public class GridCell
         this.m_X = x;
         this.m_Y = y;
 
-        SpawnBackground();
+        //SpawnBackground();
     }
     public void Place(Piece piece)
     {
         placedPiece = piece;
+        piece.SetGrid(m_Grid);
     }
     public void ClearPiece()
     {
@@ -31,13 +32,13 @@ public class GridCell
         
         Vector3 worldPos = m_Grid.GetWorldPosition(m_X, m_Y);
 
-        float cellSize = m_Grid.GetCellSize();
+        float cellSize = LevelManager.instance.GetGrid(m_Grid).GetCellSize();
         Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
 
         m_BackgroundInstance = Object.Instantiate(prefab, worldPos + offset, Quaternion.identity);
         m_BackgroundInstance.transform.name = $"Cell_{m_X}_{m_Y}";
         
-        m_BackgroundInstance.transform.SetParent(LevelManager.instance.GetGridParent().transform);
+        m_BackgroundInstance.transform.SetParent(LevelManager.instance.GetGridParent(m_Grid).transform);
         m_BackgroundInstance.transform.localScale = new Vector3(cellSize, cellSize, 1f);
     }
 }
