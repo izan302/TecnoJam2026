@@ -14,15 +14,18 @@ public class Piece : MonoBehaviour
     [SerializedDictionary("PieceTypes", "Color")]
     public SerializedDictionary<Type, Color> piceColor;
     [SerializeField] private float smoothSpeed = 10f;
+    private Vector3 initialScale;
     public void Setup(PieceData d, Vector2Int startPos, Grid<GridCell> grid, int startRotation = 0)
     {
         data = d;
         pivotGridPosition = startPos;
-        rotation = startRotation; 
+        rotation = startRotation;
         m_Grid = grid;
 
-        GenerateVisuals();
+        initialScale = Vector3.one;
+        transform.localScale = Vector3.one;
 
+        GenerateVisuals();
         UpdateVisualRotation();
     }
     void Update()
@@ -34,9 +37,9 @@ public class Piece : MonoBehaviour
 
         Vector3 targetPos = currentGrid.GetWorldPosition(pivotGridPosition.x, pivotGridPosition.y);
         Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
-        
+
         Quaternion targetRot = Quaternion.Euler(0, 0, rotation * -90f);
-        Vector3 targetScale = new Vector3(cellSize, cellSize, 1f);
+        Vector3 targetScale = initialScale * cellSize;
 
         transform.position = Vector3.Lerp(transform.position, targetPos + offset, Time.deltaTime * smoothSpeed);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * smoothSpeed);
@@ -46,16 +49,20 @@ public class Piece : MonoBehaviour
     void GenerateVisuals()
     {
         if (data == null) return;
-        //Debug.Log($"Piece {data.m_PieceName} genrated");
-        float cellSize = LevelManager.instance.GetGrid(m_Grid).GetCellSize();
+
         foreach (Vector2Int blockPos in data.blocks)
         {
             Vector2Int localGridPos = blockPos - data.pivot;
             GameObject newTile = Instantiate(tilePrefab, transform);
-            newTile.transform.localPosition = new Vector3(localGridPos.x * cellSize, localGridPos.y * cellSize, 0f);
-            newTile.transform.localScale = new Vector3(cellSize, cellSize, 1f);
-            if (piceColor[data.piceType] == null) return;
-            newTile.GetComponent<SpriteRenderer>().color = piceColor[data.piceType];
+
+            newTile.transform.localPosition = new Vector3(localGridPos.x, localGridPos.y, 0f);
+
+            newTile.transform.localScale = Vector3.one;
+
+            if (piceColor.ContainsKey(data.piceType))
+            {
+                newTile.GetComponent<SpriteRenderer>().color = piceColor[data.piceType];
+            }
         }
     }
     public Grid<GridCell> GetGrid()
