@@ -144,6 +144,8 @@ public class LevelManager : MonoBehaviour
 
             Piece newPiece = Instantiate(piecePrefab);
             newPiece.Setup(p, spawnPos, supplementaryGrid);
+            newPiece.SaveHomeState();
+            newPiece.inInventory = true;
 
             float cellSize = supplementaryGrid.GetCellSize();
             Vector3 worldPos = supplementaryGrid.GetWorldPosition(spawnPos.x, spawnPos.y);

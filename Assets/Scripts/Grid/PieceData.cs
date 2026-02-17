@@ -11,7 +11,7 @@ public class PieceData : ScriptableObject
     public Sprite icon;
 
     public int spawningLevel = 0;
-    [SerializeField] bool grabble = true;
+    public bool grabble = true;
 
     [Header("Shape")]
     public List<Vector2Int> blocks;

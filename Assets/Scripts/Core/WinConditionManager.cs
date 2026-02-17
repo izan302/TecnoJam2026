@@ -26,7 +26,7 @@ public class WinConditionManager : MonoBehaviour
                 GridCell cell = grid.GetGridObject(x, y);
                 if (cell == null || cell.IsEmpty)
                 {
-                    Debug.Log("Grid not full");
+                    Debug.Log("Grid not full" + cell.IsEmpty);
                     return;
                 }
 

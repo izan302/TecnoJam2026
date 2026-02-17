@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
+using Unity.VisualScripting;
 
 public class Piece : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class Piece : MonoBehaviour
     [SerializeField] private float smoothSpeed = 10f;
     private Vector3 initialScale;
 
+    private Vector2Int storedGridPosition;
+    private int storedRotation;
+    public bool inInventory  = false;
     List<PieceTile> tiles = new List<PieceTile>();
-    [SerializeField]Sprite[] selectionPhases; //0 Base - 1 Hover - 2 Select
     public void Setup(PieceData d, Vector2Int startPos, Grid<GridCell> grid, int startRotation = 0)
     {
         data = d;
@@ -66,10 +69,8 @@ public class Piece : MonoBehaviour
             {
                 PieceTile t = newTile.GetComponent<PieceTile>();
                 t.baseTile.color = piceColor[data.piceType];
-                //t.baseTile.sprite = data.icon;
-
-                t.selection.sprite = selectionPhases[0];
-
+                t.baseTile.sprite = data.icon;
+                t.selection.enabled = false;
                 tiles.Add(t);
             }
         }
@@ -83,11 +84,13 @@ public class Piece : MonoBehaviour
         m_Grid = grid;
     }
 
-    public void OnPieceSelect(int state)
+    public void OnPieceSelect(bool selected)
     {
         foreach (PieceTile t in tiles)
         {
-            t.selection.sprite = selectionPhases[state];
+            t.selection.enabled = selected;
+            t.selection.renderingLayerMask = selected ? (uint)2 : (uint)1;
+            t.baseTile.renderingLayerMask = selected ? (uint)2 : (uint)1;
         }
     }
 
@@ -113,6 +116,18 @@ public class Piece : MonoBehaviour
         }
     }
     #endregion
+
+    public void SaveHomeState()
+    {
+        storedGridPosition = pivotGridPosition;
+        storedRotation = rotation;
+    }
+    public void RestoreToHomeState()
+    {
+        pivotGridPosition = storedGridPosition;
+        rotation = storedRotation;
+        UpdateVisualRotation();
+    }
 
     public List<Vector2Int> GetGridPositions(Vector2Int pivot, int rotation)
     {
