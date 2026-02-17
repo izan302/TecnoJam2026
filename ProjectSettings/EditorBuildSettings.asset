@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/JanScene2.unity
     guid: 659b51ecfc8dcd346bc88c047fd96a79
   - enabled: 1
-    path: Assets/Scenes/Minesweeper.unity
-    guid: f2077b2fcf98cc54fbfe7064a70eae7e
-  - enabled: 1
     path: Assets/Scenes/IzanScene.unity
     guid: b08677a275cd63340af1fbcd6b5fbbae
   m_configObjects:

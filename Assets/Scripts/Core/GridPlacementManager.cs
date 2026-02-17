@@ -88,10 +88,8 @@ public class GridPlacementManager : MonoBehaviour
     {
         int targetRotationValue = activePiece.rotation + dir;
 
-        if (IsInsideGrid(activePiece, activePiece.pivotGridPosition, targetRotationValue))
-        {
-            activePiece.rotation = targetRotationValue;
-        }
+        activePiece.rotation = targetRotationValue;
+
     }
     bool CanPlace(Piece piece, Vector2Int pivotPos, int rotation)
     {
@@ -141,7 +139,9 @@ public class GridPlacementManager : MonoBehaviour
             Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
             if (clickedPiece == null) return;
             if (clickedPiece.data.grabble == false) return;
-
+            
+            clickedPiece.SetGrid(LevelManager.instance.grid);
+            clickedPiece.transform.SetParent(LevelManager.instance.GetGridParent(clickedPiece.GetGrid()).transform);
             activePiece = clickedPiece;
             activePiece.OnPieceSelect(true);
 
@@ -186,6 +186,7 @@ public class GridPlacementManager : MonoBehaviour
             }
         }
         activePiece.SetGrid(LevelManager.instance.supplementaryGrid);
+        activePiece.transform.SetParent(LevelManager.instance.GetGridParent(activePiece.GetGrid()).transform);
         activePiece.RestoreToHomeState();
         activePiece.inInventory = true;
         Grid<GridCell> suppGrid = LevelManager.instance.supplementaryGrid;

@@ -19,7 +19,7 @@ public class Piece : MonoBehaviour
 
     private Vector2Int storedGridPosition;
     private int storedRotation;
-    public bool inInventory  = false;
+    public bool inInventory = false;
     List<PieceTile> tiles = new List<PieceTile>();
     public void Setup(PieceData d, Vector2Int startPos, Grid<GridCell> grid, int startRotation = 0)
     {
@@ -41,14 +41,16 @@ public class Piece : MonoBehaviour
 
         float cellSize = currentGrid.GetCellSize();
 
-        Vector3 targetPos = currentGrid.GetWorldPosition(pivotGridPosition.x, pivotGridPosition.y);
-        Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
+        Vector3 cellLocalOffset = new Vector3(pivotGridPosition.x * cellSize, pivotGridPosition.y * cellSize, 0);
+
+        Vector3 targetLocalPos = cellLocalOffset + new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
+
+        transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocalPos, Time.deltaTime * smoothSpeed);
 
         Quaternion targetRot = Quaternion.Euler(0, 0, rotation * -90f);
         Vector3 targetScale = initialScale * cellSize;
 
-        transform.position = Vector3.Lerp(transform.position, targetPos + offset, Time.deltaTime * smoothSpeed);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * smoothSpeed);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRot, Time.deltaTime * smoothSpeed);
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * smoothSpeed);
     }
 

@@ -16,7 +16,7 @@ public class GameAppScript : MonoBehaviour
     {
         if (m_clickCounter < m_timeToDoubleClick)
         {
-            SceneManager.LoadScene(m_appName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(m_appName);
         }
         m_clickCounter = 0;
     }

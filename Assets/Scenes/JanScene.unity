@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07c3a043351e154d973495b4c4bbeb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameAppScript
-  m_appName: 
+  m_appName: IzanScene
   m_timeToDoubleClick: 1.5
 --- !u!1 &1428257164
 GameObject:
@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3817700073379439606, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1328,6 +1332,18 @@ PrefabInstance:
     - target: {fileID: 6517268185606394553, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_senderArroba
       value: tecnocampus@gmail.cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960430177909734485, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960430177909734485, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960430177909734485, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606764210478265562, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_AnchoredPosition.y

@@ -31,6 +31,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int supplementaryH;
     [SerializeField] float supplementarySize;
     public Grid<GridCell> supplementaryGrid;
+    [Header("Scroll")]
+    [SerializeField] private Scrollable scrollController;
+    [SerializeField] private float visibleAreaHeight = 10f;
 
     private void Awake()
     {
@@ -109,10 +112,7 @@ public class LevelManager : MonoBehaviour
         List<PieceData> piecesToSpawn = new List<PieceData>();
         foreach (PieceData p in PieceData.AllPieces)
         {
-            if (p.spawningLevel <= level && p.spawningLevel >= 0)
-            {
-                piecesToSpawn.Add(p);
-            }
+            if (p.spawningLevel <= level && p.spawningLevel >= 0) piecesToSpawn.Add(p);
         }
 
         int currentX = 0;
@@ -123,7 +123,6 @@ public class LevelManager : MonoBehaviour
         foreach (PieceData p in piecesToSpawn)
         {
             (Vector2Int min, Vector2Int max) bounds = CalculatePieceBounds(p);
-
             int pieceWidth = bounds.max.x - bounds.min.x + 1;
             int pieceHeight = bounds.max.y - bounds.min.y + 1;
 
@@ -133,35 +132,35 @@ public class LevelManager : MonoBehaviour
                 currentY += maxRowHeight + padding;
                 maxRowHeight = 0;
             }
-            if (currentY + pieceHeight > supplementaryH)
-            {
-                Debug.LogWarning("Error no space");
-            }
-            int pivotX = currentX - bounds.min.x;
-            int pivotY = currentY - bounds.min.y;
 
-            Vector2Int spawnPos = new Vector2Int(pivotX, pivotY);
+            Vector2Int spawnPos = new Vector2Int(currentX - bounds.min.x, currentY - bounds.min.y);
 
             Piece newPiece = Instantiate(piecePrefab);
+            newPiece.transform.SetParent(supplementaryGridParent.transform);
             newPiece.Setup(p, spawnPos, supplementaryGrid);
             newPiece.SaveHomeState();
             newPiece.inInventory = true;
 
+            // Posicionamiento inicial
             float cellSize = supplementaryGrid.GetCellSize();
             Vector3 worldPos = supplementaryGrid.GetWorldPosition(spawnPos.x, spawnPos.y);
-            Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
-            newPiece.transform.position = worldPos + offset;
+            newPiece.transform.position = worldPos + new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
 
             foreach (var gridPos in newPiece.GetGridPositions())
             {
                 if (supplementaryGrid.GetGridObject(gridPos.x, gridPos.y) != null)
                     supplementaryGrid.GetGridObject(gridPos.x, gridPos.y).Place(newPiece);
             }
+
             currentX += pieceWidth + padding;
-            if (pieceHeight > maxRowHeight)
-            {
-                maxRowHeight = pieceHeight;
-            }
+            if (pieceHeight > maxRowHeight) maxRowHeight = pieceHeight;
+        }
+
+        float totalContentHeight = supplementaryH * supplementarySize;
+
+        if (scrollController != null)
+        {
+            scrollController.SetupLimits(totalContentHeight);
         }
     }
     private (Vector2Int min, Vector2Int max) CalculatePieceBounds(PieceData data)
