@@ -1,5 +1,3 @@
 public enum Properties { 
-    Violent, 
-    Revolutionary, 
-    Pixel 
+    FPS, Disparos, Metal, Realismo, ArmasDeFuego, Rock, Agotamiento, Tranquilo, Plataforma, Proteccion, Pixeles, Ambientacion, ArmaADistancia, ArmaBlanca, Droga, Controles, Electricidad
 }

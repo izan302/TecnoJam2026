@@ -8,6 +8,7 @@ public class PieceData : ScriptableObject
     public string m_PieceName;
     public Type piceType;
     public List<Properties> properties;
+    public Sprite icon;
 
     [SerializeField] int spawningLevel = 0;
     [SerializeField] bool grabble = true;

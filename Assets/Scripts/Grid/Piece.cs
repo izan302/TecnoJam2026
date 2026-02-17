@@ -15,6 +15,9 @@ public class Piece : MonoBehaviour
     public SerializedDictionary<Type, Color> piceColor;
     [SerializeField] private float smoothSpeed = 10f;
     private Vector3 initialScale;
+
+    List<PieceTile> tiles;
+    [SerializeField]Sprite[] selectionPhases; //0 Base - 1 Hover - 2 Select
     public void Setup(PieceData d, Vector2Int startPos, Grid<GridCell> grid, int startRotation = 0)
     {
         data = d;
@@ -61,7 +64,13 @@ public class Piece : MonoBehaviour
 
             if (piceColor.ContainsKey(data.piceType))
             {
-                newTile.GetComponent<SpriteRenderer>().color = piceColor[data.piceType];
+                PieceTile t = newTile.GetComponent<PieceTile>();
+                t.baseTile.color = piceColor[data.piceType];
+                t.baseTile.sprite = data.icon;
+
+                t.selection.sprite = selectionPhases[0];
+
+                tiles.Add(t);
             }
         }
     }
@@ -72,6 +81,14 @@ public class Piece : MonoBehaviour
     public void SetGrid(Grid<GridCell> grid)
     {
         m_Grid = grid;
+    }
+
+    public void OnPieceSelect(int state)
+    {
+        foreach (PieceTile t in tiles)
+        {
+            t.selection.sprite = selectionPhases[state];
+        }
     }
 
     #region Rotations
