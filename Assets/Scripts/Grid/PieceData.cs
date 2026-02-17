@@ -10,7 +10,7 @@ public class PieceData : ScriptableObject
     public List<Properties> properties;
     public Sprite icon;
 
-    [SerializeField] int spawningLevel = 0;
+    public int spawningLevel = 0;
     [SerializeField] bool grabble = true;
 
     [Header("Shape")]

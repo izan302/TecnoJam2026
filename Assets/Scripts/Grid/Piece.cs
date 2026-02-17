@@ -16,7 +16,7 @@ public class Piece : MonoBehaviour
     [SerializeField] private float smoothSpeed = 10f;
     private Vector3 initialScale;
 
-    List<PieceTile> tiles;
+    List<PieceTile> tiles = new List<PieceTile>();
     [SerializeField]Sprite[] selectionPhases; //0 Base - 1 Hover - 2 Select
     public void Setup(PieceData d, Vector2Int startPos, Grid<GridCell> grid, int startRotation = 0)
     {
@@ -66,7 +66,7 @@ public class Piece : MonoBehaviour
             {
                 PieceTile t = newTile.GetComponent<PieceTile>();
                 t.baseTile.color = piceColor[data.piceType];
-                t.baseTile.sprite = data.icon;
+                //t.baseTile.sprite = data.icon;
 
                 t.selection.sprite = selectionPhases[0];
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject cellBackgroundPrefab;
     [SerializeField] GameObject supplementaryGridParent;
 
+    [Header("Levels")]
+    [SerializeField] LevelDefinition[] levels;
+
     [Header("Referencias")]
     [SerializeField] Piece piecePrefab;
-    [SerializeField] LevelDefinition currentLevelData;
     [SerializeField] GridCellVisual gridCellVisual;
     [SerializeField] GridCellVisual supplementaryGridCellVisual;
 
@@ -22,10 +25,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int h;
     [SerializeField] float size;
     public Grid<GridCell> grid;
+
     [Header("Supplementary Grid")]
     [SerializeField] int supplementaryW;
     [SerializeField] int supplementaryH;
-    [SerializeField] float supplementarySize; 
+    [SerializeField] float supplementarySize;
     public Grid<GridCell> supplementaryGrid;
 
     private void Awake()
@@ -38,16 +42,18 @@ public class LevelManager : MonoBehaviour
         //GenerateGrid
         grid = new Grid<GridCell>(w, h, size, gridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
         supplementaryGrid = new Grid<GridCell>(supplementaryW, supplementaryH, supplementarySize, supplementaryGridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
-        
+
         gridCellVisual.Setup(grid);
         supplementaryGridCellVisual.Setup(supplementaryGrid);
 
-        if (currentLevelData != null)
+        int level = 1;
+
+        if (levels != null)
         {
-            LoadLevelPieces(currentLevelData);
-            //LoadStoredPieces(level);
+            LoadLevelPieces(levels[level - 1]);
+            LoadStoredPieces(level);
         }
-        
+
     }
 
     public GameObject GetBackgroundPrefab()
@@ -80,6 +86,7 @@ public class LevelManager : MonoBehaviour
     }
     void LoadLevelPieces(LevelDefinition levelData)
     {
+        if (levelData.piecesToSpawn == null) return;
         foreach (var entry in levelData.piecesToSpawn)
         {
             Piece newPiece = Instantiate(piecePrefab);
@@ -99,24 +106,79 @@ public class LevelManager : MonoBehaviour
     }
     private void LoadStoredPieces(int level)
     {
-        //CON ESTE CÓDIGO FUNCA LA GENERACIÓN DE PIEZAS EN EL SUPPLEMENTARY GRID 
-        /*
-        foreach (var entry in levelData.piecesToSpawn)
+        List<PieceData> piecesToSpawn = new List<PieceData>();
+        foreach (PieceData p in PieceData.AllPieces)
         {
+            if (p.spawningLevel <= level && p.spawningLevel >= 0)
+            {
+                piecesToSpawn.Add(p);
+            }
+        }
+
+        int currentX = 0;
+        int currentY = 0;
+        int maxRowHeight = 0;
+        int padding = 1;
+
+        foreach (PieceData p in piecesToSpawn)
+        {
+            (Vector2Int min, Vector2Int max) bounds = CalculatePieceBounds(p);
+
+            int pieceWidth = bounds.max.x - bounds.min.x + 1;
+            int pieceHeight = bounds.max.y - bounds.min.y + 1;
+
+            if (currentX + pieceWidth > supplementaryW)
+            {
+                currentX = 0;
+                currentY += maxRowHeight + padding;
+                maxRowHeight = 0;
+            }
+            if (currentY + pieceHeight > supplementaryH)
+            {
+                Debug.LogWarning("Error no space");
+            }
+            int pivotX = currentX - bounds.min.x;
+            int pivotY = currentY - bounds.min.y;
+
+            Vector2Int spawnPos = new Vector2Int(pivotX, pivotY);
+
             Piece newPiece = Instantiate(piecePrefab);
-            newPiece.Setup(entry.pieceData, entry.position, supplementaryGrid, entry.rotation);
+            newPiece.Setup(p, spawnPos, supplementaryGrid);
 
             float cellSize = supplementaryGrid.GetCellSize();
-            Vector3 worldPos = supplementaryGrid.GetWorldPosition(entry.position.x, entry.position.y);
-
+            Vector3 worldPos = supplementaryGrid.GetWorldPosition(spawnPos.x, spawnPos.y);
             Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
             newPiece.transform.position = worldPos + offset;
 
             foreach (var gridPos in newPiece.GetGridPositions())
             {
-                supplementaryGrid.GetGridObject(gridPos.x, gridPos.y).Place(newPiece);
+                if (supplementaryGrid.GetGridObject(gridPos.x, gridPos.y) != null)
+                    supplementaryGrid.GetGridObject(gridPos.x, gridPos.y).Place(newPiece);
+            }
+            currentX += pieceWidth + padding;
+            if (pieceHeight > maxRowHeight)
+            {
+                maxRowHeight = pieceHeight;
             }
         }
-        */
+    }
+    private (Vector2Int min, Vector2Int max) CalculatePieceBounds(PieceData data)
+    {
+        if (data.blocks == null || data.blocks.Count == 0) return (Vector2Int.zero, Vector2Int.zero);
+
+        Vector2Int min = data.blocks[0];
+        Vector2Int max = data.blocks[0];
+
+        foreach (var block in data.blocks)
+        {
+            Vector2Int pos = block - data.pivot;
+
+            if (pos.x < min.x) min.x = pos.x;
+            if (pos.y < min.y) min.y = pos.y;
+            if (pos.x > max.x) max.x = pos.x;
+            if (pos.y > max.y) max.y = pos.y;
+        }
+        return (min, max);
     }
 }
+

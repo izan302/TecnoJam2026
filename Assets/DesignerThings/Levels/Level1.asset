@@ -10,9 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6b399df978295744b586d1e829de84e, type: 3}
-  m_Name: Level Test
+  m_Name: Level1
   m_EditorClassIdentifier: Assembly-CSharp::LevelDefinition
-  piecesToSpawn:
-  - pieceData: {fileID: 11400000, guid: 5c9f8d23d8102e148bb9d0bc656063d7, type: 2}
-    position: {x: 6, y: 6}
-    rotation: 0
+  piecesToSpawn: []

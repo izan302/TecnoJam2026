@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8942516425080146743}
   - component: {fileID: -3486126863100110588}
   - component: {fileID: 79293855914379236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PieceTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   baseTile: {fileID: 7007012925434807193}
-  Selection: {fileID: 6029896768985945401}
+  selection: {fileID: 6029896768985945401}
 --- !u!1 &5312947858322204901
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5368033879226108668}
   - component: {fileID: 6029896768985945401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2937398837156358548}
   - component: {fileID: 7007012925434807193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

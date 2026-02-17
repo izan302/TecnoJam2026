@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6689100758398036003}
   - component: {fileID: 4910903356025855781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,15 +50,19 @@ MonoBehaviour:
   piceColor:
     _serializedList:
     - Key: 0
-      Value: {r: 0, g: 0.09811449, b: 1, a: 1}
+      Value: {r: 0.5764706, g: 0.63529414, b: 0.654902, a: 1}
     - Key: 1
-      Value: {r: 0.5140424, g: 0, b: 1, a: 1}
+      Value: {r: 0.8745099, g: 0.5686275, b: 0.24313727, a: 1}
     - Key: 2
-      Value: {r: 1, g: 0.50281024, b: 0, a: 1}
+      Value: {r: 0.9333334, g: 0.8078432, b: 0.4784314, a: 1}
     - Key: 3
-      Value: {r: 0, g: 1, b: 0.9431782, a: 1}
+      Value: {r: 0.4039216, g: 0.46274513, b: 0.70980394, a: 1}
     - Key: 4
-      Value: {r: 0, g: 1, b: 0.0910151, a: 1}
+      Value: {r: 0.81568635, g: 0.43921572, b: 0.5372549, a: 1}
+    - Key: 5
+      Value: {r: 0.79215693, g: 0.8196079, b: 0.5137255, a: 1}
+    - Key: 6
+      Value: {r: 0.69803923, g: 0.5254902, b: 0.13725491, a: 1}
   smoothSpeed: 10
   selectionPhases:
   - {fileID: 1434626764, guid: 46fcb0e38fec9cb4b8b909f27f703709, type: 3}
