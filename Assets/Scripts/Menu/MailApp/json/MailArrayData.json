@@ -2,24 +2,46 @@
     "mail": [
         {
             "m_senderPFPstring": "Sprites/Mails/Lion",
-            "m_senderArroba": "aimarbutanero@yahoo.es",
-            "m_emailContent": "me he cagado en los pantalones muy heavy",
-            "m_senderName": "Aimar Butanero",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Hoy finalmente se celebrará la audiencia contra la violencia en los videojuegos. Se prevé que la resolución derive un control parcial sobre el contenido de los videojuegos y que se adopten medidas para establecer restricciones de edad.",
+            "m_senderName": "Anuncios gubernamentales",
+            "m_senderDate": "05/03/1994"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Tras la audiencia celebrada en el Senado de los Estados Unidos y como consecuencia de la decisión adoptada, se ha acordado implementar, durante los próximos días, una ley mediante la cual se impedirá que en los videojuegos se muestre cualquier tipo de imagen violenta explícita, así como contenido de carácter sangriento (o cualquier arma de fuego). Todo videojuego que incluya este tipo de contenido será automáticamente prohibido para su venta y se impondrá la correspondiente sanción económica a los desarrolladores responsables.\n\nAdemás se obligará a que cada desarrollador implemente una <b><color=red>backdoor</color=red></b> en su juego para que el gobierno sepa a tiempo real si se cumplen estos requisitos.",
+            "m_senderName": "Anuncios gubernamentales",
+            "m_senderDate": "06/03/1994"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Tras la audiencia celebrada en el Senado de los Estados Unidos y como consecuencia de la decisión adoptada, se ha acordado implementar,medidas para la censura de los videojuegos,.\nSegún se ha informado, a partir del día de hoy quedará completamente prohibida la aparición de <b><color=red>armas de fuego y de sangre</color></b> en los videojuegos, con el fin de evitar la normalización del uso de armas entre la población. Asimismo, quedarán prohibidos aquellos juegos que contengan contenidos <b><color=red>realistas</color></b> o que intenten emular situaciones propias de la vida real.\n\nEstas medidas están orientadas a prevenir que las personas, especialmente los menores, intenten reproducir en la vida real las conductas observadas en los videojuegos\n\nLos desarrolladores deberán adaptarse a esta nueva medida; de lo contrario, se enfrentarán a las penalizaciones económicas pertinentes impuestas por la audiencia nacional.",
+            "m_senderName": "Anuncios gubernamentales",
+            "m_senderDate": "07/03/1994"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "mercadroga@communications.com",
+            "m_emailContent": "Compre ahora su rifle de asalto de última generación, con un diseño elegante y moderno, que le permitirá destacar entre la multitud. \nEste rifle de asalto es el arma perfecta para aquellos que buscan una experiencia de caza emocionante. Con su alta precisión y potencia, este rifle de asalto será la envidia de sus amigos y compañeros. \nNo pierda la oportunidad de adquirir este increíble rifle de asalto y elevar su cazería al siguiente nivel.",
+            "m_senderName": "Nueva promoción de Mercadroga",
+            "m_senderDate": "07/03/1994"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Una de las leyes más polémicas y contradictorias surgidas tras la audiencia ha generado un intenso debate público. El gobierno ha considerado que las últimas medidas contra los videojuegos son insuficientes, por tanto se ha decidido prohibir todo tipo de <b><color=red>arco, drogas, mecánicas de disparar</color></b> toda la música <b><color=red>rock</color></b> ya que contienen letras explícitas, ante el auge de videojuegos violentos. Según sostienen fuentes oficiales, esta exposición podría desencadenar episodios de violencia física en la vida real y desobediencia civil, por lo que se ha señalado que se requiere de manera urgente la implementación de nuevos requisitos.\n\nComo medida complementaria para verificar su cumplimiento, se ha planteado la necesidad de incorporar un chip dentro de los juegos que permita supervisar la aplicación de manera más efectiva y automatizada el cumplimiento de la normativa.",
+            "m_senderName": "Anuncios gubernamentales",
+            "m_senderDate": "08/03/1994"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "",
+            "m_senderName": "Anuncios gubernamentales",
             "m_senderDate": "11/09/2001"
-        },
-        {
-            "m_senderPFPstring": "Sprites/Mails/Lion",
-            "m_senderArroba": "aimarbutanero@yahoo.es",
-            "m_emailContent": "no vengas al world trade center mañana",
-            "m_senderName": "Aimar Butanero",
-            "m_senderDate": "10/09/2001"
-        },
-        {
-            "m_senderPFPstring": "Sprites/Mails/Lion",
-            "m_senderArroba": "aimarbutanero@yahoo.es",
-            "m_emailContent": "he planeado algo muy guapo para dentro de dos dias",
-            "m_senderName": "Aimar Butanero",
-            "m_senderDate": "09/09/2001"
         }
+
     ]
 }

@@ -1,5 +1,6 @@
 using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -45,8 +46,8 @@ public class Mail : MonoBehaviour
         m_contentData.m_senderName.text = this.m_senderName;
         m_contentData.m_senderDate.text = this.m_senderDate;
         m_contentData.m_senderPFP.sprite = this.m_senderPFP;
+        m_contentData.m_senderPFP.GetComponent<Image>().color = Color.white;
         m_contentData.m_emailContent.text = this.m_emailContent;
 
     }
-
 }

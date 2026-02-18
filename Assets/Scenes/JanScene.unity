@@ -1641,6 +1641,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 2242281633877331512, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242281633877331512, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242281633877331512, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242281633877331512, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242281633877331512, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242281633877331512, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 2507059778399357772, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1656,6 +1680,18 @@ PrefabInstance:
     - target: {fileID: 3133675616106754673, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.1796875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411480314545621436, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Color.b
+      value: 0.77647066
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411480314545621436, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Color.g
+      value: 0.39607847
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411480314545621436, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1254902
       objectReference: {fileID: 0}
     - target: {fileID: 3574682950358657611, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_rectTransform
@@ -1788,6 +1824,18 @@ PrefabInstance:
     - target: {fileID: 6517268185606394553, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_senderArroba
       value: tecnocampus@gmail.cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857787377326957151, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857787377326957151, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857787377326957151, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6431373
       objectReference: {fileID: 0}
     - target: {fileID: 6960430177909734485, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_AnchorMax.x
