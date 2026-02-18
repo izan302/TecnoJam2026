@@ -1,6 +1,7 @@
 using TMPro;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class MinesweeperGameHandler : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class MinesweeperGameHandler : MonoBehaviour
     [SerializeField] private GameObject m_GameScreen;
     [SerializeField] private GameObject m_MinesweeperWindow;
     [SerializeField] private TextMeshProUGUI m_Timer;
+
+    private bool m_IsGameRunning;
     private float m_StartTime;
     void Start()
     {
@@ -50,16 +53,25 @@ public class MinesweeperGameHandler : MonoBehaviour
             m_GameScreen.SetActive(true);
         }
         m_StartTime = Time.time;
+        m_IsGameRunning = true;
     }
     void Update()
     {
+        if (!m_IsGameRunning) return;
         float t = Time.time - m_StartTime;
         float minutes = (t / 60);
         float seconds = (t % 60);
         m_Timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-    public void GameOver()
+    public void GameOver(int x, int y)
     {
+        m_IsGameRunning = false;
+        m_GridPrefabVisual.ExplodeCell(x, y);
+        StartCoroutine(GameOverCorroutine());
+    }
+    IEnumerator GameOverCorroutine()
+    {
+        yield return new WaitForSeconds(2);
         if (m_GameOverScreen != null)
         {
             m_GameOverScreen.SetActive(true);

@@ -8,6 +8,7 @@ public class Minesweeper
     [SerializeField] float m_Size;
     Grid<MinesweeperGridCell> m_Grid;
     [SerializeField] Transform m_GridParent;
+    bool m_IsGameRunning;
     public Minesweeper(int width, int height, float size, Transform gridParent, int _mineCount = 10)
     {
         this.m_Width = width;
@@ -15,6 +16,7 @@ public class Minesweeper
         this.m_Size = size;
         this.m_GridParent = gridParent;
         m_Grid = new Grid<MinesweeperGridCell>(m_Width, m_Height, m_Size, new Vector3(m_GridParent.position.x, m_GridParent.position.y), (Grid<MinesweeperGridCell> g, int x, int y) => new MinesweeperGridCell(g, x, y, this));
+        m_IsGameRunning = true;
 
         int i_MinePlaced = 0;
         while (i_MinePlaced < _mineCount)
@@ -85,12 +87,14 @@ public class Minesweeper
         MinesweeperGridCell.MinesweeeperCellType l_CellType = Reveal(x, y);
         if (l_CellType == MinesweeperGridCell.MinesweeeperCellType.Mine)
         {
-            MinesweeperGameHandler.Instance.GameOver();
+            m_IsGameRunning = false;
+            MinesweeperGameHandler.Instance.GameOver(x, y);
         }
     }
 
     public void HandleClickFromWindow(Vector3 worldPosition, bool _isRightClick)
     {
+        if (!m_IsGameRunning) return;
         if (m_Grid == null)
         {
             return;
