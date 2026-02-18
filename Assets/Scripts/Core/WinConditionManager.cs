@@ -17,6 +17,7 @@ public class WinConditionManager : MonoBehaviour
         Grid<GridCell> grid = LevelManager.instance.grid;
         int width = grid.GetWidth();
         int height = grid.GetHeight();
+         grid.LogGrid();
 
         HashSet<Type> foundTypes = new HashSet<Type>();
         for (int x = 0; x < width; x++)
@@ -59,6 +60,6 @@ public class WinConditionManager : MonoBehaviour
 
     private void OnLevelWon()
     {
-        Debug.Log("¡VICTORIA! Todas las condiciones se han cumplido.");
+        Debug.Log("ï¿½VICTORIA! Todas las condiciones se han cumplido.");
     }
 }

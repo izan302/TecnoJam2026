@@ -41,4 +41,16 @@ public class GridCell
         m_BackgroundInstance.transform.SetParent(LevelManager.instance.GetGridParent(m_Grid).transform);
         m_BackgroundInstance.transform.localScale = new Vector3(cellSize, cellSize, 1f);
     }
+
+    public override string ToString()
+    {
+        if (placedPiece != null)
+        {
+            return "■";
+        }
+        else
+        {
+            return "□";
+        }
+    }
 }

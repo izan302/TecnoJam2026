@@ -34,9 +34,9 @@ public class Grid<TGridCell>
                 m_GridArray[x, y] = _CreateGridObject(this, x, y);
             }
         }
-        
+
         bool l_ShowDebug = true;
-        
+
         if (l_ShowDebug)
         {
             m_DebugTextArray = new TextMesh[m_Width, m_Height];
@@ -44,7 +44,7 @@ public class Grid<TGridCell>
             {
                 for (int y = 0; y < m_GridArray.GetLength(1); y++)
                 {
-                    //m_DebugTextArray[x, y] = ShowTextInScreen(m_GridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(m_CellSize, m_CellSize) * 0.5f, 20, Color.white, TextAnchor.MiddleCenter, TextAlignment.Center, 0);
+                    m_DebugTextArray[x, y] = ShowTextInScreen(m_GridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(m_CellSize, m_CellSize) * 0.5f, 20, Color.white, TextAnchor.MiddleCenter, TextAlignment.Center, 0);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
                 }
@@ -54,7 +54,7 @@ public class Grid<TGridCell>
         }
         OnGridValueChanged += (object _Sender, OnGridValueChangedEventArgs _EventArgs) =>
         {
-            //m_DebugTextArray[_EventArgs.x, _EventArgs.y].text = m_GridArray[_EventArgs.x, _EventArgs.y]?.ToString();
+            m_DebugTextArray[_EventArgs.x, _EventArgs.y].text = m_GridArray[_EventArgs.x, _EventArgs.y]?.ToString();
         };
     }
 
@@ -128,5 +128,23 @@ public class Grid<TGridCell>
         int l_X, l_Y;
         GetXYFromWorldPosition(_WorldPosition, out l_X, out l_Y);
         SetGridObject(l_X, l_Y, _Value);
+    }
+
+    public void LogGrid()
+    {
+        string gridLog = $"--- Estado del Grid ({m_Width}x{m_Height}) ---\n";
+
+        for (int y = m_Height - 1; y >= 0; y--)
+        {
+            string row = "";
+            for (int x = 0; x < m_Width; x++)
+            {
+                TGridCell cell = m_GridArray[x, y];
+                row += cell != null ? $"{cell.ToString()} " : "[?] ";
+            }
+            gridLog += row + "\n";
+        }
+
+        Debug.Log(gridLog);
     }
 }

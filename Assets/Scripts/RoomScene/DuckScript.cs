@@ -7,7 +7,7 @@ public class DuckScript : MonoBehaviour
     {
         m_AudioSource = GetComponent<AudioSource>();
     }
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         m_AudioSource.Play();
     }
