@@ -46,7 +46,6 @@ public class GridPlacementManager : MonoBehaviour
             {
                 activePiece.SetBorderColor(Color.red);
             }
-            //SyncVisuals();
         }
     }
 
@@ -77,6 +76,7 @@ public class GridPlacementManager : MonoBehaviour
             if (IsInsideGrid(activePiece, targetPos, activePiece.rotation))
             {
                 activePiece.pivotGridPosition = targetPos;
+                UpdateActivePieceVisualPosition();
                 moveTimer = moveDelay;
             }
         }
@@ -85,8 +85,8 @@ public class GridPlacementManager : MonoBehaviour
     {
         foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
         {
-            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.grid.GetWidth() ||
-                blockPos.y < 0 || blockPos.y >= LevelManager.instance.grid.GetHeight())
+            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.GetGrid(piece.GetGrid()).GetWidth() ||
+              blockPos.y < 0 || blockPos.y >= LevelManager.instance.GetGrid(piece.GetGrid()).GetHeight())
             {
                 return false;
             }
@@ -106,12 +106,12 @@ public class GridPlacementManager : MonoBehaviour
     {
         foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
         {
-            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.grid.GetWidth() ||
-                blockPos.y < 0 || blockPos.y >= LevelManager.instance.grid.GetHeight())
+            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.GetGrid(piece.GetGrid()).GetWidth() ||
+              blockPos.y < 0 || blockPos.y >= LevelManager.instance.GetGrid(piece.GetGrid()).GetHeight())
             {
                 return false;
             }
-            GridCell cell = LevelManager.instance.grid.GetGridObject(blockPos.x, blockPos.y);
+            GridCell cell = LevelManager.instance.GetGrid(piece.GetGrid()).GetGridObject(blockPos.x, blockPos.y);
             if (cell == null || !cell.IsEmpty)
             {
                 return false;
@@ -121,22 +121,25 @@ public class GridPlacementManager : MonoBehaviour
     }
     void HandlePlacement()
     {
-        if (InputManager.Instance.GetConfirm())
+        if (InputManager.Instance.GetConfirm() && activePiece != null)
         {
             if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
             {
+                Grid<GridCell> mainGrid = LevelManager.instance.GetGrid(activePiece.GetGrid());
+
                 foreach (var pos in activePiece.GetGridPositions())
                 {
-                    LevelManager.instance.grid.GetGridObject(pos.x, pos.y).Place(activePiece);
+                    mainGrid.GetGridObject(pos.x, pos.y).Place(activePiece);
                 }
+
                 activePiece.OnPieceSelect(false);
                 activePiece.inInventory = false;
+                UpdateActivePieceVisualPosition();
+
                 activePiece = null;
 
                 if (WinConditionManager.instance != null)
-                {
                     WinConditionManager.instance.CheckWinCondition();
-                }
             }
         }
     }
@@ -148,41 +151,47 @@ public class GridPlacementManager : MonoBehaviour
         if (hit.collider != null)
         {
             Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
-            if (clickedPiece == null) return;
-            if (clickedPiece.data.grabble == false) return;
-            
-            clickedPiece.SetGrid(LevelManager.instance.grid);
-            clickedPiece.transform.SetParent(LevelManager.instance.GetGridParent(clickedPiece.GetGrid()).transform);
-            activePiece = clickedPiece;
-            activePiece.OnPieceSelect(true);
+            if (clickedPiece == null || clickedPiece.data.grabble == false) return;
 
-            foreach (var pos in activePiece.GetGridPositions())
+            Grid<GridCell> currentGrid = LevelManager.instance.GetGrid(clickedPiece.GetGrid());
+            foreach (var pos in clickedPiece.GetGridPositions())
             {
-                GridCell cell = LevelManager.instance.grid.GetGridObject(pos.x, pos.y);
-                if (cell != null) cell.ClearPiece();
+                GridCell cell = currentGrid.GetGridObject(pos.x, pos.y);
+                if (cell != null && cell.placedPiece == clickedPiece)
+                {
+                    cell.ClearPiece();
+                }
             }
-            clickedPiece.SetGrid(LevelManager.instance.grid);
+
+            activePiece = clickedPiece;
+            activePiece.SetGrid(LevelManager.instance.grid);
+            activePiece.OnPieceSelect(true);
+            activePiece.transform.SetParent(LevelManager.instance.GetGridParent(activePiece.GetGrid()).transform);
+
             if (activePiece.inInventory)
             {
                 int centerX = LevelManager.instance.grid.GetWidth() / 2;
                 int centerY = LevelManager.instance.grid.GetHeight() / 2;
-
                 activePiece.pivotGridPosition = new Vector2Int(centerX, centerY);
 
-                Vector3 worldCenterPos = LevelManager.instance.grid.GetWorldPosition(centerX, centerY);
-                float cellSize = LevelManager.instance.grid.GetCellSize();
-                Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
-
-                activePiece.transform.position = worldCenterPos + offset;
+                UpdateActivePieceVisualPosition();
             }
 
             if (WinConditionManager.instance != null)
-            {
                 WinConditionManager.instance.CheckWinCondition();
-            }
-
-
         }
+    }
+
+    void UpdateActivePieceVisualPosition()
+    {
+        if (activePiece == null) return;
+
+        Grid<GridCell> currentGrid = LevelManager.instance.GetGrid(activePiece.GetGrid());
+        Vector3 worldPos = currentGrid.GetWorldPosition(activePiece.pivotGridPosition.x, activePiece.pivotGridPosition.y);
+        float cellSize = currentGrid.GetCellSize();
+        Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
+
+        activePiece.transform.position = worldPos + offset;
     }
 
     public void ReturnPieceToSupplementaryGrid()
@@ -190,7 +199,7 @@ public class GridPlacementManager : MonoBehaviour
         if (activePiece == null) return;
         foreach (var pos in activePiece.GetGridPositions())
         {
-            GridCell cell = LevelManager.instance.grid.GetGridObject(pos.x, pos.y);
+            GridCell cell = LevelManager.instance.GetGrid(activePiece.GetGrid()).GetGridObject(pos.x, pos.y);
             if (cell != null && cell.placedPiece == activePiece)
             {
                 cell.ClearPiece();
