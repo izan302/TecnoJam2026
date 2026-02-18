@@ -1,0 +1,25 @@
+{
+    "mail": [
+        {
+            "m_senderPFP": "Sprites/Mails/Scream-cry.gif",
+            "m_senderArroba": "aimarbutanero@yahoo.es",
+            "m_emailContent": "me he cagado en los pantalones muy heavy",
+            "m_senderName": "Aimar Butanero",
+            "m_senderDate": "11/09/2001"
+        },
+        {
+            "m_senderPFP": "",
+            "m_senderArroba": "aimarbutanero@yahoo.es",
+            "m_emailContent": "no vengas al world trade center mañana",
+            "m_senderName": "Aimar Butanero",
+            "m_senderDate": "10/09/2001"
+        },
+        {
+            "m_senderPFP": "",
+            "m_senderArroba": "aimarbutanero@yahoo.es",
+            "m_emailContent": "he planeado algo muy guapo para dentro de dos dias",
+            "m_senderName": "Aimar Butanero",
+            "m_senderDate": "09/09/2001"
+        }
+    ]
+}
