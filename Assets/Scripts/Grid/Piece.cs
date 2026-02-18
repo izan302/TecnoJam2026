@@ -16,7 +16,6 @@ public class Piece : MonoBehaviour
     public SerializedDictionary<Type, Color> piceColor;
     [SerializeField] private float smoothSpeed = 10f;
     private Vector3 initialScale;
-
     private Vector2Int storedGridPosition;
     private int storedRotation;
     public bool inInventory = false;
@@ -75,6 +74,13 @@ public class Piece : MonoBehaviour
                 t.selection.enabled = false;
                 tiles.Add(t);
             }
+        }
+    }
+    public void SetBorderColor(Color color)
+    {
+        foreach (PieceTile t in tiles)
+        {
+            t.selection.color = color;
         }
     }
     public Grid<GridCell> GetGrid()

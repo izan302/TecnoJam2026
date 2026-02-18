@@ -643,6 +643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridCellVisual
   m_GridCellVisualPrefab: {fileID: 5608538961949296201, guid: ad5dadd2e72a3884d9d0a0f8b4373eaa, type: 3}
+  m_OtherGridCellVisualPrefab: {fileID: 5608538961949296201, guid: 2ab35c195a7e8f040af510a5bbd8419c, type: 3}
 --- !u!1 &555148442
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridCellVisual
   m_GridCellVisualPrefab: {fileID: 5608538961949296201, guid: ad5dadd2e72a3884d9d0a0f8b4373eaa, type: 3}
+  m_OtherGridCellVisualPrefab: {fileID: 5608538961949296201, guid: ad5dadd2e72a3884d9d0a0f8b4373eaa, type: 3}
 --- !u!1 &1041908035
 GameObject:
   m_ObjectHideFlags: 0

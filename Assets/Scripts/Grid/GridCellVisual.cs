@@ -5,6 +5,7 @@ public class GridCellVisual : MonoBehaviour
 {
     public static GridCellVisual Instance { get; private set; }
     [SerializeField] Transform m_GridCellVisualPrefab;
+    [SerializeField] Transform m_OtherGridCellVisualPrefab;
     private Transform[,] m_VisualNodeArray;
     private List<Transform> m_VisualNodeList;
     private Grid<GridCell> m_Grid;
@@ -28,7 +29,9 @@ public class GridCellVisual : MonoBehaviour
                 Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
                 Vector3 l_GridPosition = l_WorldPos + offset;
 
-                Transform l_VisualNode = CreateVisualNode(l_GridPosition);
+                Transform l_PrefabToInstantiate = ((x + y) % 2 == 0) ? m_GridCellVisualPrefab : m_OtherGridCellVisualPrefab;
+
+                Transform l_VisualNode = CreateVisualNode(l_PrefabToInstantiate, l_GridPosition);
                 m_VisualNodeArray[x, y] = l_VisualNode;
                 m_VisualNodeList.Add(l_VisualNode);
             }
@@ -54,19 +57,13 @@ public class GridCellVisual : MonoBehaviour
 
                 Transform l_VisualNode = m_VisualNodeArray[x, y];
                 l_VisualNode.gameObject.SetActive(true);
-                //SetupVisualNode(l_VisualNode, l_GridCell);
             }
         }
     }
-    private Transform CreateVisualNode(Vector3 _Position)
-    {        
-        Transform l_VisualNode = Object.Instantiate(m_GridCellVisualPrefab, _Position, Quaternion.identity, transform);
+    private Transform CreateVisualNode(Transform _Prefab, Vector3 _Position)
+    {         
+        Transform l_VisualNode = Object.Instantiate(_Prefab, _Position, Quaternion.identity, transform);
         l_VisualNode.transform.localScale = new Vector3(m_Grid.GetCellSize(), m_Grid.GetCellSize(), 1f);
         return l_VisualNode;
-    }
-
-    private void SetupVisualNode(Transform _VisualNode, GridCell _GridCell)
-    {
-        //_VisualNode.GetComponent<SpriteRenderer>().color = _GridCell.GetVisualColor();
     }
 }

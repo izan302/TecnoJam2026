@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class GridPlacementManager : MonoBehaviour
@@ -36,6 +37,15 @@ public class GridPlacementManager : MonoBehaviour
             HandleMovement();
             HandleRotation();
             HandlePlacement();
+
+            if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
+            {
+                activePiece.SetBorderColor(Color.green);
+            }
+            else
+            {
+                activePiece.SetBorderColor(Color.red);
+            }
             //SyncVisuals();
         }
     }
@@ -87,9 +97,10 @@ public class GridPlacementManager : MonoBehaviour
     void TryRotate(int dir)
     {
         int targetRotationValue = activePiece.rotation + dir;
-
-        activePiece.rotation = targetRotationValue;
-
+        if (IsInsideGrid(activePiece, activePiece.pivotGridPosition, targetRotationValue))
+        {
+            activePiece.rotation = targetRotationValue;
+        }
     }
     bool CanPlace(Piece piece, Vector2Int pivotPos, int rotation)
     {
