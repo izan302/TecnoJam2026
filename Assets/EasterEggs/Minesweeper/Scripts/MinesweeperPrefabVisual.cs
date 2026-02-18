@@ -44,6 +44,12 @@ public class MinesweeperPrefabVisual : MonoBehaviour
         UpdateVisual(m_Grid);
     }
 
+    public void ExplodeCell(int x, int y)
+    {
+        Transform l_VisualNode = m_VisualNodeArray[x, y];
+        l_VisualNode.Find("Explosion").GetComponent<SpriteRenderer>().gameObject.SetActive(true);
+    }
+
     private void UpdateVisual(Grid<MinesweeperGridCell> _Grid)
     {
         HideNodeVisuals();
@@ -82,7 +88,8 @@ public class MinesweeperPrefabVisual : MonoBehaviour
         TextMeshPro l_MineNumber = _VisualNode.Find("MineNumber").GetComponent<TextMeshPro>();
         Transform l_HiddenTransform = _VisualNode.Find("Hidden");
         SpriteRenderer l_FlagSprite = _VisualNode.Find("Flag").GetComponent<SpriteRenderer>();
-
+        SpriteRenderer l_ExplodeSprite = _VisualNode.Find("Explosion").GetComponent<SpriteRenderer>();
+        l_ExplodeSprite.gameObject.SetActive(false);
         if (!_MineObject.IsRevealed())
         {
             l_HiddenTransform.gameObject.SetActive(true);

@@ -1883,6 +1883,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 799122605268866233, guid: 0d94287d864d9544199a5d3e706554cf, type: 3}
+    - target: {fileID: 2760951353663452169, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4387371424265219862, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
       propertyPath: m_WorldCamera
       value: 
@@ -1991,6 +1995,10 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 8f4c62fca593a9c46ba71089bbbbae2f, type: 3}
+    - target: {fileID: 8905130365924577049, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 224
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8842143717501903167, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
     m_RemovedGameObjects:
