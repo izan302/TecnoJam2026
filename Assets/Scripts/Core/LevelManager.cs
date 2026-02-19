@@ -51,7 +51,8 @@ public class LevelManager : MonoBehaviour
         gridCellVisual.Setup(grid);
         supplementaryGridCellVisual.Setup(supplementaryGrid);
 
-        int level = GabeNewell.Instance.m_Level;
+        //int level = GabeNewell.Instance.m_Level;
+        int level = 1;
 
         if (levels != null)
         {
