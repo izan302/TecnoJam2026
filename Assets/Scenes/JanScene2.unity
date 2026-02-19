@@ -442,11 +442,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1548878635 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2399788009619735714, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
-  m_PrefabInstance: {fileID: 4499024514453622876}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2139485840
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,18 +471,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b310426512f82a41b7650a059e4fdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
-  m_JumpKey: 32
-  m_AttackKey: 323
-  m_MoveLeftKey: 97
-  m_MoveRightKey: 100
-  m_PauseKey: 27
-  m_UpKey: 119
-  m_DownKey: 115
-  m_RunKey: 304
-  m_JoystickJumpKey: 331
-  m_JoystickAttackKey: 335
-  m_JoystickPauseKey: 339
-  m_JoystickRunKey: 341
+  k_up: 119
+  k_left: 97
+  k_right: 100
+  k_down: 115
+  k_leftRotation: 113
+  k_rightRotation: 101
+  k_confirmPiece: 271
+  k_returnPiece: 8
+  j_leftRotation: 334
+  j_rightRotation: 335
+  j_confirmPiece: 331
+  j_returnPiece: 332
 --- !u!4 &2139485842
 Transform:
   m_ObjectHideFlags: 0
@@ -515,6 +510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EMAIL_APP
       objectReference: {fileID: 0}
+    - target: {fileID: 1295343748716781347, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d94287d864d9544199a5d3e706554cf, type: 3}
     - target: {fileID: 2007674002493881375, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
@@ -529,6 +528,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2507059778399357772, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.299927
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521696326773716126, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081186111436577677, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
@@ -654,7 +685,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   m_textJSON: {fileID: 4900000, guid: 267599a4c5ab64446b528c9c13140d53, type: 3}
   m_mailEntryPrefab: {fileID: 1579319216945269584, guid: ecdb5465ab5803e46bac82c7f87f2c26, type: 3}
-  m_contentBox: {fileID: 1548878635}
+  m_MailContent: {fileID: 0}
+  m_mailViewPortContent: {fileID: 0}
+  m_notificationGameObject: {fileID: 0}
+  m_textUGUI: {fileID: 0}
+  m_newMails: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
