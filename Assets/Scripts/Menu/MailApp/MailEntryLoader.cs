@@ -80,7 +80,7 @@ public class MailEntryLoader : MonoBehaviour
             m_MailContent
         );
 
-        rt.anchoredPosition = new Vector2(-92, -50 * m_loadedMails);
+        rt.anchoredPosition = new Vector2(-100, -50 * m_loadedMails);
 
         m_loadedMails++;
         m_newMails++;
