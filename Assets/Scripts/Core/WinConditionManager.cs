@@ -4,10 +4,6 @@ public class WinConditionManager : MonoBehaviour
 {
     public static WinConditionManager instance;
 
-    [Header("Level config")]
-    public List<Type> requiredTypes;
-    public List<Properties> restrictedProperties;
-
     private void Awake()
     {
         instance = this;
@@ -37,7 +33,7 @@ public class WinConditionManager : MonoBehaviour
                     PieceData data = piece.data;
                     foreach (var prop in data.properties)
                     {
-                        if (restrictedProperties.Contains(prop))
+                        if (LevelManager.instance.restrictedProperties.Contains(prop))
                         {
                             Debug.Log($"Piece {data.m_PieceName} has baned property: {prop}.");
                             return;
@@ -47,7 +43,7 @@ public class WinConditionManager : MonoBehaviour
                 }
             }
         }
-        foreach (Type reqType in requiredTypes)
+        foreach (Type reqType in LevelManager.instance.requiredTypes)
         {
             if (!foundTypes.Contains(reqType))
             {

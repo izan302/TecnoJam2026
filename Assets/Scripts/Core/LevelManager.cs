@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Levels")]
     [SerializeField] LevelDefinition[] levels;
+    public List<Type> requiredTypes;
+    public List<Properties> restrictedProperties;
 
     [Header("Referencias")]
     [SerializeField] Piece piecePrefab;
@@ -53,10 +55,19 @@ public class LevelManager : MonoBehaviour
 
         if (levels != null)
         {
+            DefineBanedProperties(levels[level - 1]);
             LoadLevelPieces(levels[level - 1]);
             LoadStoredPieces(level);
         }
 
+    }
+
+    private void DefineBanedProperties(LevelDefinition levelDefinition)
+    {
+        foreach (Properties p in levelDefinition.restrictedProperties)
+        {
+            restrictedProperties.Add(p);
+        }
     }
 
     public GameObject GetBackgroundPrefab()

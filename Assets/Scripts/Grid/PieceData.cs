@@ -7,7 +7,7 @@ public class PieceData : ScriptableObject
 {
     public string m_PieceName;
     public Type piceType;
-    public List<Properties> properties;
+    public List<Properties> properties = new List<Properties>();
     public Sprite icon;
 
     public int spawningLevel = 0;
