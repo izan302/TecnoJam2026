@@ -33,19 +33,21 @@ public class GridPlacementManager : MonoBehaviour
                 ReturnPieceToSupplementaryGrid();
             }
             moveTimer -= Time.deltaTime;
-
             HandleMovement();
             HandleRotation();
-            HandlePlacement();
 
-            if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
+            if (activePiece != null)
             {
-                activePiece.SetBorderColor(Color.green);
+                if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
+                {
+                    activePiece.SetBorderColor(Color.green);
+                }
+                else
+                {
+                    activePiece.SetBorderColor(Color.red);
+                }
             }
-            else
-            {
-                activePiece.SetBorderColor(Color.red);
-            }
+            HandlePlacement();
         }
     }
 
