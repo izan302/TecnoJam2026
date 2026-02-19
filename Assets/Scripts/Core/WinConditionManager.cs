@@ -32,11 +32,13 @@ public class WinConditionManager : MonoBehaviour
          grid.LogGrid();
 
         HashSet<Type> foundTypes = new HashSet<Type>();
+        bool t = false;
+        bool j = false;
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                bool j = false;
+                
                 GridCell cell = grid.GetGridObject(x, y);
                 if (cell == null || cell.IsEmpty)
                 {
@@ -44,10 +46,9 @@ public class WinConditionManager : MonoBehaviour
                     j = true;
                 }
                 GridNotFull.SetActive(j);
-
                 Piece piece = cell.placedPiece;
 
-                bool t = false;
+                
                 if (piece != null)
                 {
                     PieceData data = piece.data;
@@ -60,10 +61,11 @@ public class WinConditionManager : MonoBehaviour
                         }
                     }
                     foundTypes.Add(data.piceType);
-                    BannedPiece.SetActive(t);
                 }
             }
         }
+        BannedPiece.SetActive(t);
+        GridNotFull.SetActive(j);
         foreach (Type reqType in LevelManager.instance.requiredTypes)
         {
             if (!foundTypes.Contains(reqType))
