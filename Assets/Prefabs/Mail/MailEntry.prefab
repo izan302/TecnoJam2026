@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -91.99992, y: 0}
-  m_SizeDelta: {x: 184, y: 50}
+  m_AnchoredPosition: {x: -89.99994, y: 0}
+  m_SizeDelta: {x: 185, y: 52}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &9047181768489741576
 MonoBehaviour:
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_emailContent: 
   m_senderName: 
   m_senderDate: 
+  m_senderPFPstring: ' '
   m_senderPFPImage: {fileID: 1343275367371478585}
   m_senderArrobaText: {fileID: 2505359260063592315}
   m_contentGameObject: {fileID: 0}
