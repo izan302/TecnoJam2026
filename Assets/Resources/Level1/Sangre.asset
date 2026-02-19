@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Sangre
   piceType: 1
   properties: 03000000
-  icon: {fileID: -1196839650, guid: e6b1bf5f7458f0040a1563f25a0e014b, type: 3}
+  icon: {fileID: 1635637639, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
   spawningLevel: 1
   grabble: 1
   blocks:

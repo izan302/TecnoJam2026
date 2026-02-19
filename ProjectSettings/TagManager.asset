@@ -14,7 +14,7 @@ TagManager:
   - UI
   - Pieces
   - 
-  - 
+  - PostProcesing
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: Pieces
     uniqueID: 650993317
+    locked: 0
+  - name: Foreground
+    uniqueID: 1199105327
     locked: 0
   m_RenderingLayers:
   - Default

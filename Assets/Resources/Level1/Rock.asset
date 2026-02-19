@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Rock
   piceType: 4
   properties: 05000000
-  icon: {fileID: -2978653956524333172, guid: e6b1bf5f7458f0040a1563f25a0e014b, type: 3}
+  icon: {fileID: 5398311133586959735, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
   spawningLevel: 1
   grabble: 1
   blocks:

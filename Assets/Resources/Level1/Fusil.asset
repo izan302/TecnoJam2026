@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Fusil
   piceType: 3
   properties: 04000000
-  icon: {fileID: 1560901207, guid: e6b1bf5f7458f0040a1563f25a0e014b, type: 3}
+  icon: {fileID: -94542410, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
   spawningLevel: 1
   grabble: 1
   blocks:
