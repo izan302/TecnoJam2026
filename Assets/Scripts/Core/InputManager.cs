@@ -11,8 +11,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode k_down = KeyCode.S;
     [SerializeField] private KeyCode k_leftRotation = KeyCode.Q;
     [SerializeField] private KeyCode k_rightRotation = KeyCode.E;
-    [SerializeField] private KeyCode k_confirmPiece = KeyCode.KeypadEnter;
-    [SerializeField] private KeyCode k_returnPiece = KeyCode.Backspace;
+    [SerializeField] private KeyCode k_confirmPiece = KeyCode.Space;
+    [SerializeField] private KeyCode k_returnPiece = KeyCode.Mouse1;
 
     [Header("Keyboard and Mouse Controls")]
     [SerializeField] private KeyCode j_leftRotation = KeyCode.JoystickButton4; 

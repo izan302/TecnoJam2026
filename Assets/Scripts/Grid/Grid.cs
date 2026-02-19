@@ -35,7 +35,7 @@ public class Grid<TGridCell>
             }
         }
 
-        bool l_ShowDebug = true;
+        bool l_ShowDebug = false;
 
         if (l_ShowDebug)
         {
@@ -54,7 +54,7 @@ public class Grid<TGridCell>
         }
         OnGridValueChanged += (object _Sender, OnGridValueChangedEventArgs _EventArgs) =>
         {
-            m_DebugTextArray[_EventArgs.x, _EventArgs.y].text = m_GridArray[_EventArgs.x, _EventArgs.y]?.ToString();
+            //m_DebugTextArray[_EventArgs.x, _EventArgs.y].text = m_GridArray[_EventArgs.x, _EventArgs.y]?.ToString();
         };
     }
 

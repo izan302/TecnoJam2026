@@ -41,7 +41,7 @@ public class MailEntryLoader : MonoBehaviour
         m_mailLists = JsonUtility.FromJson<MailLists>(m_textJSON.text);
         for (int i = 0; i<m_mailLists.mail.Length; i++)
         {
-            if (m_mailLists.mail[i].m_level != 0)
+            if (m_mailLists.mail[i].m_level != GabeNewell.Instance.m_Level)
             {
                 continue;
             }
@@ -82,11 +82,12 @@ public class MailEntryLoader : MonoBehaviour
     }
     public void OpenMail()
     {
-        if (m_clickCounter < m_timeToDoubleClick)
+        if (m_clickCounter < m_timeToDoubleClick && !GabeNewell.Instance.m_MailsAreRead)
         {
             m_newMails = 0;
             m_textUGUI.text = m_newMails.ToString();
             m_notificationGameObject.SetActive(false);
+            GabeNewell.Instance.m_MailsAreRead = true;
         }
         m_clickCounter = 0;
     }
@@ -95,13 +96,5 @@ public class MailEntryLoader : MonoBehaviour
     void Update()
     {
         m_clickCounter += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadLevelMail(1);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            LoadLevelMail(2);
-        }
     }
 }

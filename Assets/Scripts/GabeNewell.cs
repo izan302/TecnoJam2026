@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class GabeNewell : MonoBehaviour
 {
-    public GabeNewell Instance {get; private set;}
+    public static GabeNewell Instance {get; private set;}
     public int m_Level {get; private set;}
-    void Start()
+    public bool m_MailsAreRead {get; set;}
+    void Awake()
     {
-        m_Level = 0;
-        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return; 
+        }
+
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
-    void Update()
+
+    public void LevelUp()
     {
-        
+        m_Level++;
+        m_MailsAreRead = false;
     }
 }

@@ -16,6 +16,8 @@ public class GameAppScript : MonoBehaviour
     {
         if (m_clickCounter < m_timeToDoubleClick)
         {
+            if (GabeNewell.Instance.m_Level == 0) 
+                GabeNewell.Instance.LevelUp();
             SceneManager.LoadScene(m_appName);
         }
         m_clickCounter = 0;
