@@ -1,9 +1,9 @@
 using TMPro;
 using UnityEngine;
 
-public class PieceInfo : MonoBehaviour
+public class PieceInfoDisplayer : MonoBehaviour
 {
-    public static PieceInfo instance;
+    public static PieceInfoDisplayer instance;
     [SerializeField] TextMeshProUGUI pieceName;
     [SerializeField] TextMeshProUGUI pieceType;
     [SerializeField] TextMeshProUGUI[] propertie;
@@ -25,7 +25,7 @@ public class PieceInfo : MonoBehaviour
 
         for (int i = 0; i < propertie.Length; i++)
         {
-            if (piece.properties.Count >= i)
+            if (piece.properties.Count > i)
             {
                 propertie[i].enabled = true;
 

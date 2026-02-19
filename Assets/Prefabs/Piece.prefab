@@ -64,7 +64,4 @@ MonoBehaviour:
     - Key: 6
       Value: {r: 0.69803923, g: 0.5254902, b: 0.13725491, a: 1}
   smoothSpeed: 10
-  selectionPhases:
-  - {fileID: 1434626764, guid: 46fcb0e38fec9cb4b8b909f27f703709, type: 3}
-  - {fileID: 555095808, guid: 46fcb0e38fec9cb4b8b909f27f703709, type: 3}
-  - {fileID: 6245018552409137788, guid: 46fcb0e38fec9cb4b8b909f27f703709, type: 3}
+  inInventory: 0

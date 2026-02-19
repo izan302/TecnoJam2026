@@ -94,7 +94,8 @@ public class Piece : MonoBehaviour
 
     public void OnPieceSelect(bool selected)
     {
-        PieceInfo.instance.DisplayPiece(data, piceColor[data.piceType]);
+        Debug.Log(piceColor[data.piceType]);
+        PieceInfoDisplayer.instance.DisplayPiece(data, piceColor[data.piceType]);
         foreach (PieceTile t in tiles)
         {
             t.selection.enabled = selected;
