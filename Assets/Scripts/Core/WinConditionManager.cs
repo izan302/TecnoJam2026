@@ -1,15 +1,31 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 public class WinConditionManager : MonoBehaviour
 {
     public static WinConditionManager instance;
+    [SerializeField] Button SendButton;
+    [Header("ErrorSprites")]
+    [SerializeField] GameObject GridNotFull;
+    [SerializeField] GameObject BannedPiece;
+    [SerializeField] GameObject MissingGenere;
+    [SerializeField] GameObject MissingItem;
+    [SerializeField] GameObject MissingMechanic;
+    [SerializeField] GameObject MissingStyle;
 
+    bool showSendButton = false;
     private void Awake()
     {
         instance = this;
     }
+    private void Start()
+    {
+        SendButton.interactable = false;
+        CheckWinCondition();
+        }
     public void CheckWinCondition()
     {
+        showSendButton = true;
         Grid<GridCell> grid = LevelManager.instance.grid;
         int width = grid.GetWidth();
         int height = grid.GetHeight();
@@ -20,14 +36,18 @@ public class WinConditionManager : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
+                bool j = false;
                 GridCell cell = grid.GetGridObject(x, y);
                 if (cell == null || cell.IsEmpty)
                 {
-                    Debug.Log("Grid not full" + cell.IsEmpty);
-                    return;
+                    showSendButton = false;
+                    j = true;
                 }
+                GridNotFull.SetActive(j);
 
                 Piece piece = cell.placedPiece;
+
+                bool t = false;
                 if (piece != null)
                 {
                     PieceData data = piece.data;
@@ -35,11 +55,12 @@ public class WinConditionManager : MonoBehaviour
                     {
                         if (LevelManager.instance.restrictedProperties.Contains(prop))
                         {
-                            Debug.Log($"Piece {data.m_PieceName} has baned property: {prop}.");
-                            return;
+                            showSendButton = false;
+                            t = true;
                         }
                     }
                     foundTypes.Add(data.piceType);
+                    BannedPiece.SetActive(t);
                 }
             }
         }
@@ -47,15 +68,26 @@ public class WinConditionManager : MonoBehaviour
         {
             if (!foundTypes.Contains(reqType))
             {
-                Debug.Log($"Not {reqType} piece found.");
-                return;
+                showSendButton = false;
+                switch(reqType)
+                {
+                    case Type.Genero: MissingGenere.SetActive(true); break;
+                    case Type.Mecanica: MissingMechanic.SetActive(true); break;
+                    case Type.Item: MissingItem.SetActive(true); break;
+                    case Type.Estilo: MissingStyle.SetActive(true); break;
+                }
+            }
+            else
+            {
+                switch (reqType)
+                {
+                    case Type.Genero: MissingGenere.SetActive(false); break;
+                    case Type.Mecanica: MissingMechanic.SetActive(false); break;
+                    case Type.Item: MissingItem.SetActive(false); break;
+                    case Type.Estilo: MissingStyle.SetActive(false); break;
+                }
             }
         }
-        OnLevelWon();
-    }
-
-    private void OnLevelWon()
-    {
-        Debug.Log("�VICTORIA! Todas las condiciones se han cumplido.");
+        SendButton.interactable = showSendButton;
     }
 }
