@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Disparar
   piceType: 1
   properties: 0100000002000000
-  icon: {fileID: 0}
+  icon: {fileID: 1949160140, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
   spawningLevel: 1
   grabble: 1
   blocks:
