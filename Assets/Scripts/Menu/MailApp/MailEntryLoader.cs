@@ -45,7 +45,6 @@ public class MailEntryLoader : MonoBehaviour
                 CreateMailEntry(i);
             }
         }
-        Notifiy();
     }
 
     public void LoadLevelMail(int level)
