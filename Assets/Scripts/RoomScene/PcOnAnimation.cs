@@ -18,10 +18,11 @@ public class PcOnAnimation : MonoBehaviour
 
     public void OnClick()
     {
-        m_PcOff.SetActive(false);
+        SceneManager.LoadScene("JanScene", LoadSceneMode.Additive);
         m_PcOn.SetActive(true);
-        m_PcDesktop.SetActive(false);
         m_PcStartupScreen.SetActive(true);
+        m_PcOff.SetActive(false);
+        m_PcDesktop.SetActive(false);
 
         m_StartupVideo.Play();
     }
@@ -33,8 +34,8 @@ public class PcOnAnimation : MonoBehaviour
 
     IEnumerator EnterOnPC()
     {
-        m_PcStartupScreen.SetActive(false);
         m_PcDesktop.SetActive(true);
+        m_PcStartupScreen.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("JanScene");
     } 
