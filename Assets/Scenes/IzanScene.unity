@@ -3526,8 +3526,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[0]'
-      value: "Bienvenido al mejor <size=80%>(y \xFAnico)</size> software de desarrollo
-        aprobado por el gobierno."
+      value: "Bienvenido al mejor <size=50%><color=grey>(y \xFAnico)</color></size>
+        software de desarrollo aprobado por el gobierno."
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[1]'
@@ -3580,7 +3580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

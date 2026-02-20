@@ -10,25 +10,30 @@ public class PcOnAnimation : MonoBehaviour
     [SerializeField] private GameObject m_PcOff;
     [SerializeField] private GameObject m_PcDesktop;
     [SerializeField] private GameObject m_PcStartupScreen;
+    [SerializeField] private GameObject m_Title;
 
     void Start()
     {
         m_StartupVideo.loopPointReached += OnVideoFinished;
+        m_StartupVideo.started += OnVideoStarted;
     }
 
     public void OnClick()
     {
         SceneManager.LoadScene("JanScene", LoadSceneMode.Additive);
-        m_PcDesktop.SetActive(false);
+        m_Title.SetActive(false);
         m_PcOn.SetActive(true);
         m_PcStartupScreen.SetActive(true);
         m_StartupVideo.Play();
-        m_PcOff.SetActive(false);        
     }
 
     void OnVideoFinished(VideoPlayer vp)
     {
         StartCoroutine(EnterOnPC());
+    }
+    void OnVideoStarted(VideoPlayer vp)
+    {
+        m_PcOff.SetActive(false);
     }
 
     IEnumerator EnterOnPC()
