@@ -3412,6 +3412,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1783749874}
     m_Modifications:
+    - target: {fileID: 330069221606362631, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -26.8342
+      objectReference: {fileID: 0}
+    - target: {fileID: 330069221606362631, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.06150055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430368187108649756, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430368187108649756, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_margin.x
+      value: 2.3828278
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175209963889224781, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514709495737260826, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 26.2621
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514709495737260826, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0032999516
+      objectReference: {fileID: 0}
     - target: {fileID: 7897423063632306235, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3492,9 +3520,67 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TutorialTexts.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[0]'
+      value: "Bienvenido al mejor <size=80%>(y \xFAnico)</size> software de desarrollo
+        aprobado por el gobierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[1]'
+      value: "Para desarrollar tu juego, tienes que colocar los componentes de la
+        <color=green>cuadr\xEDcula</color> de la derecha"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[2]'
+      value: "de manera que encajen y sin dejar ning\xFAn hueco en la <color=red>cuadr\xEDcula</color>
+        de la izquierda."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[3]'
+      value: "Cada componente tiene sus propiedades, que se mostrar\xE1n al seleccionar
+        el componente en la <color=orange>pantalla</color>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[4]'
+      value: "Cada componente tiene sus propiedades, que se mostrar\xE1n al seleccionar
+        el componente en la <color=orange>pantalla</color>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[5]'
+      value: "Todo juego necesita 4 componentes: <color=purple>Mec\xE1nicas</color>,
+        <color=#946B1F>G\xE9nero</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>\xCDtem</color>.
+        Sabr\xE1s cu\xE1l es cu\xE1l por la pantalla o por el color del componente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[6]'
+      value: "Para mover los componentes s\xF3lo tienes que hacer <size=90%><b>click</b></size>
+        en ellas. Una vez seleccionados puedes rotarlos con las teclas <size=90%><b>Q</b></size>
+        y <size=90%><b>E</b></size>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[7]'
+      value: y moverlos con las teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>,
+        <size=90%><b>S</b></size>, <size=90%><b>D</b></size>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[8]'
+      value: Buena suerte.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[9]'
+      value: Buena suerte.
+      objectReference: {fileID: 0}
     - target: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_Name
       value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

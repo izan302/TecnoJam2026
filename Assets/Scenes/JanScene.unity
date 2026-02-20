@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 12957522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.59546, y: 0, z: -10}
+  m_LocalPosition: {x: -40, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2179,6 +2179,7 @@ GameObject:
   - component: {fileID: 1696414415}
   - component: {fileID: 1696414414}
   - component: {fileID: 1696414413}
+  - component: {fileID: 1696414417}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2268,9 +2269,23 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -38.48999, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 1920.0001, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1696414417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696414412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfbf6f7192dc6a488398c763e966e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsLoader
+  m_SyncBands: {fileID: 0}
+  m_SettingsMenu: {fileID: 0}
 --- !u!1001 &1701943107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2281,11 +2296,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99747426192201326, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1046.71
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 99747426192201326, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 506.27768
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 99747426192201326, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2450,7 +2465,7 @@ Transform:
   m_GameObject: {fileID: 1704399715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.47, y: 0, z: -10}
+  m_LocalPosition: {x: -40, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
