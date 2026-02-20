@@ -6,6 +6,7 @@ public class GabeNewell : MonoBehaviour
     public static GabeNewell Instance {get; private set;}
     public int m_Level {get; private set;} = 1;
     public bool m_MailsAreRead {get; set;}
+    public bool m_IsTutorialPlaying {get; set;} = false;
     public bool m_CrtEffect {get; set;} = true;
     void Awake()
     {

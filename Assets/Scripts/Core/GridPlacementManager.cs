@@ -17,7 +17,7 @@ public class GridPlacementManager : MonoBehaviour
     }
     void Update()
     {
-
+        if (GabeNewell.Instance.m_IsTutorialPlaying) return;
         if (activePiece == null)
         {
 

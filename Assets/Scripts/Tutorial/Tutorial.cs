@@ -1,0 +1,156 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class Tutorial : MonoBehaviour
+{
+    [Header("Configuración")]
+    [SerializeField] private TextMeshProUGUI m_TextComponent;
+    [SerializeField] private float m_CharactersPerSecond = 30f;
+    [SerializeField] private int m_MouthSpeedDivisor = 3; 
+    [SerializeField] private float m_RotationAmount = 5f;
+    [SerializeField] private float m_RotationSpeed = 10f;
+
+    [Header("Textos")]
+    [SerializeField, TextArea(3,5)] private string[] m_TutorialTexts; 
+    [HideInInspector] [SerializeField] string m_Text1 = "Bienvenido al mejor <size=80%>(y único)</size> software de desarrollo aprobado por el gobierno.";
+    [HideInInspector] [SerializeField] string m_Text2 = "Para desarrollar tu juego, tienes que colocar los componentes de la <color=green>cuadrícula</color> de la derecha";
+    [HideInInspector] [SerializeField] string m_Text3 = "de manera que encajen y sin dejar ningún hueco en la <color=red>cuadrícula</color> de la izquierda.";
+    [HideInInspector] [SerializeField] string m_Text4 = "Cada componente tiene sus propiedades, que se mostrarán al seleccionar el componente en la <color=orange>pantalla</color>.";
+    [HideInInspector] [SerializeField] string m_Text5 = "Todo juego necesita 4 componentes: <color=purple>Mecánicas</color>, <color=#946B1F>Género</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>Ítem</color>. Sabrás cuál es cuál por la pantalla o por el color del componente.";
+    [HideInInspector] [SerializeField] string m_Text6 = "Buena suerte.";
+
+    [Header("Referencias")]
+    [SerializeField] GameObject m_SupplementaryGridIndicator;
+    [SerializeField] GameObject m_GridIndicator;
+    [SerializeField] GameObject m_ScreenIndicator;
+
+    [Header("Portrait")]
+    [SerializeField] GameObject m_Face;
+    [SerializeField] GameObject m_Mouth;
+
+    private Vector3 m_MouthOriginalLocalPos;
+    private Quaternion m_FaceOriginalRotation;
+    private int m_CurrentIndex = 0;
+    private Coroutine m_TypeRoutine;
+    private bool m_IsTyping = false;
+    private int m_TotalVisibleCharacters;
+
+    void Start()
+    {
+        m_MouthOriginalLocalPos = m_Mouth.transform.localPosition;
+        m_FaceOriginalRotation = m_Face.transform.localRotation;
+
+        m_SupplementaryGridIndicator.SetActive(false);
+        m_GridIndicator.SetActive(false);
+        m_ScreenIndicator.SetActive(false);
+
+        m_TutorialTexts = new string[] { m_Text1, m_Text2, m_Text3, m_Text4, m_Text5, m_Text6 };
+        
+        if (GabeNewell.Instance.m_Level == 1)
+        {
+            GabeNewell.Instance.m_IsTutorialPlaying = true;
+            StartCoroutine(ShowNextText());
+        }
+            
+    }
+
+    void Update()
+    {
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && GabeNewell.Instance.m_Level == 1)
+        {
+            HandleInput();
+        }
+    }
+
+    private void HandleInput()
+    {
+        if (m_IsTyping)
+        {
+            StopCoroutine(m_TypeRoutine);
+            m_TextComponent.maxVisibleCharacters = m_TotalVisibleCharacters;
+            m_Mouth.transform.localPosition = m_MouthOriginalLocalPos;
+            m_Face.transform.localRotation = m_FaceOriginalRotation;
+            m_IsTyping = false;
+            OnTextFinished(m_CurrentIndex);
+        }
+        else
+        {
+            m_CurrentIndex++;
+            if (m_CurrentIndex < m_TutorialTexts.Length)
+            {
+                StartCoroutine(ShowNextText());
+            }
+            else
+            {
+                FinalizarTutorial();
+            }
+        }
+    }
+
+    private IEnumerator ShowNextText()
+    {
+        m_SupplementaryGridIndicator.SetActive(false);
+        m_GridIndicator.SetActive(false);
+        m_ScreenIndicator.SetActive(false);
+
+        m_TextComponent.text = m_TutorialTexts[m_CurrentIndex];
+        m_TextComponent.maxVisibleCharacters = 0;
+        
+        m_TextComponent.ForceMeshUpdate(); 
+        m_TotalVisibleCharacters = m_TextComponent.textInfo.characterCount;
+
+        m_IsTyping = true;
+        m_TypeRoutine = StartCoroutine(TypeText());
+        yield return null;
+    }
+
+    private IEnumerator TypeText()
+    {
+        int i_Counter = 0;
+        bool l_IsMouthOpen = false;
+        float l_StartTime = Time.time;
+
+        while (i_Counter <= m_TotalVisibleCharacters)
+        {
+            float l_RotationZ = Mathf.Sin((Time.time - l_StartTime) * m_RotationSpeed) * m_RotationAmount;
+            m_Face.transform.localRotation = m_FaceOriginalRotation * Quaternion.Euler(0, 0, l_RotationZ);
+
+            if (i_Counter % m_MouthSpeedDivisor == 0)
+            {
+                m_Mouth.transform.localPosition = l_IsMouthOpen ? 
+                    m_MouthOriginalLocalPos - new Vector3(0, 0.02f, 0) : 
+                    m_MouthOriginalLocalPos;
+
+                l_IsMouthOpen = !l_IsMouthOpen;
+            }
+
+            m_TextComponent.maxVisibleCharacters = i_Counter;
+            i_Counter++;
+            yield return new WaitForSeconds(1f / m_CharactersPerSecond);
+        }
+
+        m_Mouth.transform.localPosition = m_MouthOriginalLocalPos;
+        m_Face.transform.localRotation = m_FaceOriginalRotation;
+        m_IsTyping = false;
+        OnTextFinished(m_CurrentIndex);
+    }
+
+    private void OnTextFinished(int i_Index)
+    {
+        switch (i_Index)
+        {
+            case 1: m_SupplementaryGridIndicator.SetActive(true); break;
+            case 2: m_GridIndicator.SetActive(true); break;
+            case 3: m_ScreenIndicator.SetActive(true); break;
+        }
+    }
+
+    private void FinalizarTutorial()
+    {
+        m_TextComponent.text = "";
+        GabeNewell.Instance.m_IsTutorialPlaying = false;
+        gameObject.SetActive(false);
+    }
+}
