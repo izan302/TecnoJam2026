@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,12 +15,6 @@ public class Tutorial : MonoBehaviour
 
     [Header("Textos")]
     [SerializeField, TextArea(3,5)] private string[] m_TutorialTexts; 
-    [HideInInspector] [SerializeField] string m_Text1 = "Bienvenido al mejor <size=80%>(y único)</size> software de desarrollo aprobado por el gobierno.";
-    [HideInInspector] [SerializeField] string m_Text2 = "Para desarrollar tu juego, tienes que colocar los componentes de la <color=green>cuadrícula</color> de la derecha";
-    [HideInInspector] [SerializeField] string m_Text3 = "de manera que encajen y sin dejar ningún hueco en la <color=red>cuadrícula</color> de la izquierda.";
-    [HideInInspector] [SerializeField] string m_Text4 = "Cada componente tiene sus propiedades, que se mostrarán al seleccionar el componente en la <color=orange>pantalla</color>.";
-    [HideInInspector] [SerializeField] string m_Text5 = "Todo juego necesita 4 componentes: <color=purple>Mecánicas</color>, <color=#946B1F>Género</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>Ítem</color>. Sabrás cuál es cuál por la pantalla o por el color del componente.";
-    [HideInInspector] [SerializeField] string m_Text6 = "Buena suerte.";
 
     [Header("Referencias")]
     [SerializeField] GameObject m_SupplementaryGridIndicator;
@@ -45,8 +40,6 @@ public class Tutorial : MonoBehaviour
         m_SupplementaryGridIndicator.SetActive(false);
         m_GridIndicator.SetActive(false);
         m_ScreenIndicator.SetActive(false);
-
-        m_TutorialTexts = new string[] { m_Text1, m_Text2, m_Text3, m_Text4, m_Text5, m_Text6 };
         
         if (GabeNewell.Instance.m_Level == 1)
         {
