@@ -176,17 +176,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
---- !u!114 &41425251 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 323470421466858629, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
-  m_PrefabInstance: {fileID: 41425250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b43127001cef94bbb0488795afe3a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &121025707
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +753,7 @@ GameObject:
   - component: {fileID: 361018230}
   - component: {fileID: 361018229}
   - component: {fileID: 361018228}
+  - component: {fileID: 361018231}
   m_Layer: 0
   m_Name: SendToButton
   m_TagString: Untagged
@@ -834,21 +824,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 41425251}
-        m_TargetAssemblyTypeName: GabeNewell, Assembly-CSharp
-        m_MethodName: LevelUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1184586178}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: GoToDesktop
+      - m_Target: {fileID: 361018231}
+        m_TargetAssemblyTypeName: SendButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -896,6 +874,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361018226}
   m_CullTransparentMesh: 1
+--- !u!114 &361018231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361018226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc19d47f5f3e6b4f87c760d80f2ef03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!224 &413486145 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4884763558196549787, guid: f026a705b30aa7046891cfa7b082c994, type: 3}
@@ -2161,17 +2151,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050197899}
   m_CullTransparentMesh: 1
---- !u!114 &1184586178 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5702719362204360312, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
-  m_PrefabInstance: {fileID: 41425250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4df1299561133241914ead17e4b2a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LoadScene
 --- !u!1 &1320656259
 GameObject:
   m_ObjectHideFlags: 0

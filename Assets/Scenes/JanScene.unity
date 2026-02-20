@@ -2338,7 +2338,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1704399719}
   - component: {fileID: 1704399718}
-  - component: {fileID: 1704399717}
   - component: {fileID: 1704399716}
   m_Layer: 8
   m_Name: DesktopCam
@@ -2391,14 +2390,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &1704399717
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704399715}
-  m_Enabled: 1
 --- !u!20 &1704399718
 Camera:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class WinConditionManager : MonoBehaviour
         Grid<GridCell> grid = LevelManager.instance.grid;
         int width = grid.GetWidth();
         int height = grid.GetHeight();
-         grid.LogGrid();
+        //grid.LogGrid();
 
         HashSet<Type> foundTypes = new HashSet<Type>();
         bool t = false;

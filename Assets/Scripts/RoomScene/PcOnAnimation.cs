@@ -19,12 +19,11 @@ public class PcOnAnimation : MonoBehaviour
     public void OnClick()
     {
         SceneManager.LoadScene("JanScene", LoadSceneMode.Additive);
+        m_PcDesktop.SetActive(false);
         m_PcOn.SetActive(true);
         m_PcStartupScreen.SetActive(true);
-        m_PcOff.SetActive(false);
-        m_PcDesktop.SetActive(false);
-
         m_StartupVideo.Play();
+        m_PcOff.SetActive(false);        
     }
 
     void OnVideoFinished(VideoPlayer vp)
