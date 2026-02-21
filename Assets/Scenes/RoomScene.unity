@@ -1215,6 +1215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1eff0e9ef9b8140ba2cd6f8fa41038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckScript
+  m_Duck: {fileID: 249349143}
+  growSize: -0.2
+  duration: 0.2
 --- !u!82 &1008120628
 AudioSource:
   m_ObjectHideFlags: 0
