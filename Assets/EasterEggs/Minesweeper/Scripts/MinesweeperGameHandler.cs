@@ -92,6 +92,7 @@ public class MinesweeperGameHandler : MonoBehaviour
         {
             m_VictoryScreen.SetActive(true);
         }
+        GabeNewell.Instance.m_MinesweeperWon = true;
     }
     public void Retry()
     {
