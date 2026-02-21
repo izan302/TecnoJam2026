@@ -10,10 +10,12 @@ public class GridPlacementManager : MonoBehaviour
     [SerializeField] private float moveDelay = 0.15f;
     [SerializeField] private float rotationSpeed = 10f;
     private float moveTimer;
+    private CameraShake m_CameraShake;
 
     private void Awake()
     {
         instance = this;
+        m_CameraShake = FindAnyObjectByType<CameraShake>();
     }
     void Update()
     {
@@ -142,6 +144,9 @@ public class GridPlacementManager : MonoBehaviour
 
                 if (WinConditionManager.instance != null)
                     WinConditionManager.instance.CheckWinCondition();
+            }else
+            {
+                m_CameraShake.PlayCameraShake();
             }
         }
     }
