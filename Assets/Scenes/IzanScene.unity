@@ -856,7 +856,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -91770777, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
+  m_Sprite: {fileID: 2799817003446718568, guid: 2eb918be374e68d48836d4f9b3f1c481, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3598,7 +3598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

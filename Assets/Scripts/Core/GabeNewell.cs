@@ -9,6 +9,7 @@ public class GabeNewell : MonoBehaviour
     public bool m_IsTutorialPlaying {get; set;} = false;
     public bool m_CrtEffect {get; set;} = true;
     public bool m_MinesweeperWon {get; set;} = false;
+    public bool m_TutorialPlayed {get; set;} = false;
     void Awake()
     {
         if (Instance != null && Instance != this)

@@ -144,6 +144,7 @@ public class Tutorial : MonoBehaviour
     {
         m_TextComponent.text = "";
         GabeNewell.Instance.m_IsTutorialPlaying = false;
+        GabeNewell.Instance.m_TutorialPlayed = true;
         gameObject.SetActive(false);
     }
 }
