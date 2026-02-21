@@ -7,9 +7,29 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private float m_Magnitude = 0.3f;
 
     private Vector3 m_ShakeOffset;
+    
+    // Configuración del enfado
+    private int m_ShakeCount = 0; 
+    private float m_LastShakeTime;
+    [SerializeField] private int m_ShakesToAngry = 5;
+    [SerializeField] private float m_ResetThreshold = 2f; 
 
     public void PlayCameraShake()
     {
+        if (Time.time - m_LastShakeTime > m_ResetThreshold)
+        {
+            m_ShakeCount = 0;
+        }
+
+        m_ShakeCount++;
+        m_LastShakeTime = Time.time;
+
+        if (m_ShakeCount >= m_ShakesToAngry)
+        {
+            FindAnyObjectByType<TutorialStarter>()?.OpenDialogue("<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?");
+            m_ShakeCount = 0;
+        }
+
         StopAllCoroutines();
         StartCoroutine(ShakeRoutine());
     }
@@ -21,7 +41,6 @@ public class CameraShake : MonoBehaviour
         while (l_Elapsed < m_Duration)
         {
             float damp = 1.0f - (l_Elapsed / m_Duration);
-
             float x = Random.Range(-1f, 1f) * m_Magnitude * damp;
             float y = Random.Range(-1f, 1f) * m_Magnitude * damp;
 

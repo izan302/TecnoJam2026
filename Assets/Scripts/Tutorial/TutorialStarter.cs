@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TutorialStarter : MonoBehaviour
@@ -11,9 +12,9 @@ public class TutorialStarter : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenDialogue(String _Text)
     {
-        
+        m_Tutorial.SetActive(true);
+        m_Tutorial.GetComponent<Tutorial>().AngryText(_Text);
     }
 }

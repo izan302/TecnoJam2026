@@ -154,7 +154,7 @@ public class InputManager : MonoBehaviour
 
     public bool GetConfirm()
     {
-        if (Input.GetKey(k_confirmPiece))
+        if (Input.GetKeyDown(k_confirmPiece))
         {
             m_CurrentInputSource = InputSource.Keyboard;
             return true;
