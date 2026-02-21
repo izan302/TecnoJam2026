@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using static Mail;
 
 public class MailEntryLoader : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class MailEntryLoader : MonoBehaviour
         public string m_senderName;
         public string m_senderDate;
         public int m_level;
+        public string m_extraImage;
     }
 
     public class MailLists { public MailJsonData[] mail; }
@@ -77,11 +79,15 @@ public class MailEntryLoader : MonoBehaviour
             m_mailLists.mail[index].m_emailContent,
             m_mailLists.mail[index].m_senderName,
             m_mailLists.mail[index].m_senderDate,
-            m_MailContent
+            m_MailContent,
+            m_mailLists.mail[index].m_extraImage
         );
 
         rt.anchoredPosition = new Vector2(-100, -50 * m_loadedMails);
-
+        if(index == 0)
+        {
+            l_mail.OnClick();
+        }
         m_loadedMails++;
         m_newMails++;
     }
@@ -108,5 +114,13 @@ public class MailEntryLoader : MonoBehaviour
     void Update()
     {
         m_clickCounter += Time.deltaTime;
+        if(Input.GetKeyUp(KeyCode.L))
+        {
+            LoadLevelMail(2);
+        }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            LoadLevelMail(3);
+        }
     }
 }

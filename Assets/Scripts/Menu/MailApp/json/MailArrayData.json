@@ -6,7 +6,8 @@
             "m_emailContent": "Hoy finalmente se celebrará la audiencia contra la violencia en los videojuegos. Se prevé que la resolución derive un control parcial sobre el contenido de los videojuegos y que se adopten medidas para establecer restricciones de edad.",
             "m_senderName": "Anuncios gubernamentales",
             "m_senderDate": "05/03/1994",
-            "m_level": 1
+            "m_level": 1,
+            "m_extraImage": "Sprites/Mails/gmailPlaceholder"
         },
         {
             "m_senderPFPstring": "Sprites/Mails/Lion",

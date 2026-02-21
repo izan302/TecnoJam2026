@@ -1,8 +1,5 @@
-using System.IO;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Mail : MonoBehaviour
@@ -16,6 +13,7 @@ public class Mail : MonoBehaviour
     [SerializeField] [Multiline] public string m_emailContent = " ";
     [SerializeField] public string m_senderName = " ";
     [SerializeField] public string m_senderDate = " ";
+    [SerializeField] public Sprite m_extraImage;
 
     [Header("Objetos Contenido Scroller")]
     [SerializeField] public string m_senderPFPstring = " ";
@@ -26,7 +24,7 @@ public class Mail : MonoBehaviour
     [SerializeField] private GameObject m_contentGameObject;
     private ContentData m_contentData;
 
-    public void SetValues(string senderPFP, string senderArroba, string emailContent, string senderName, string senderDate, GameObject contentGameObject)
+    public void SetValues(string senderPFP, string senderArroba, string emailContent, string senderName, string senderDate, GameObject contentGameObject, string extraImage)
     {
         m_senderPFPstring = senderPFP;
         m_senderPFP = Resources.Load<Sprite>(m_senderPFPstring) as Sprite;
@@ -38,11 +36,23 @@ public class Mail : MonoBehaviour
         m_senderArrobaText.text = m_senderArroba;
         m_senderPFPImage.sprite = m_senderPFP;
         m_senderPFPImage.sprite = Resources.Load<Sprite>(m_senderPFPstring) as Sprite;
+        m_extraImage = Resources.Load<Sprite>(extraImage) as Sprite;
+        m_contentData = m_contentGameObject.GetComponent<ContentData>();
     }
 
     public void OnClick()
     {
-        m_contentData = m_contentGameObject.GetComponent<ContentData>();
+        if(m_extraImage != null)
+        {
+            m_contentData.m_contentImage.rectTransform.sizeDelta = new Vector2(m_extraImage.rect.size.x, m_extraImage.rect.size.y);
+            m_contentData.m_contentImage.sprite = this.m_extraImage;
+            m_contentData.m_contentImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            m_contentData.m_contentImage.gameObject.SetActive(false);
+        }
+
         m_contentData.m_senderName.text = this.m_senderName;
         m_contentData.m_senderDate.text = this.m_senderDate;
         m_contentData.m_senderPFP.sprite = this.m_senderPFP;
@@ -50,4 +60,5 @@ public class Mail : MonoBehaviour
         m_contentData.m_emailContent.text = this.m_emailContent;
 
     }
+
 }

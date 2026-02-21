@@ -317,7 +317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4913511951690908828, guid: f18f076bfce39ef49a409721ce65dc9a, type: 3}
+  m_Sprite: {fileID: -5777496369148594638, guid: 4091d8ce1c8887f4a815e35f9841abc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -820,3 +820,5 @@ MonoBehaviour:
   m_senderDate: {fileID: 690773453480459748}
   m_emailContent: {fileID: 4856124368596154669}
   m_senderPFP: {fileID: 5667551767094841480}
+  m_contentImage: {fileID: 0}
+  m_contentButton: {fileID: 0}
