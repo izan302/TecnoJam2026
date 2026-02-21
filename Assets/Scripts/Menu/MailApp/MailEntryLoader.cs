@@ -45,6 +45,7 @@ public class MailEntryLoader : MonoBehaviour
                 CreateMailEntry(i);
             }
         }
+        if (!GabeNewell.Instance.m_MailsAreRead) Notifiy(); 
     }
 
     public void LoadLevelMail(int level)
@@ -89,6 +90,7 @@ public class MailEntryLoader : MonoBehaviour
     {
         m_textUGUI.text = m_newMails.ToString();
         m_notificationGameObject.SetActive(true);
+        GabeNewell.Instance.m_MailsAreRead = false;
     }
 
     public void OpenMail()
