@@ -3428,6 +3428,22 @@ PrefabInstance:
       propertyPath: m_margin.x
       value: 2.3828278
       objectReference: {fileID: 0}
+    - target: {fileID: 4430368187108649756, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430368187108649756, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430368187108649756, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430368187108649756, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 6175209963889224781, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3522,7 +3538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_TutorialTexts.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[0]'
@@ -3532,12 +3548,12 @@ PrefabInstance:
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[1]'
       value: "Para desarrollar tu juego, tienes que colocar los componentes de la
-        <color=green>cuadr\xEDcula</color> de la derecha"
+        <color=#06EF06>cuadr\xEDcula</color> de la izquierda"
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[2]'
       value: "de manera que encajen y sin dejar ning\xFAn hueco en la <color=red>cuadr\xEDcula</color>
-        de la izquierda."
+        de la derecha."
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[3]'
@@ -3546,29 +3562,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[4]'
-      value: "Cada componente tiene sus propiedades, que se mostrar\xE1n al seleccionar
-        el componente en la <color=orange>pantalla</color>."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
-      propertyPath: 'm_TutorialTexts.Array.data[5]'
       value: "Todo juego necesita 4 componentes: <color=purple>Mec\xE1nicas</color>,
         <color=#946B1F>G\xE9nero</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>\xCDtem</color>.
         Sabr\xE1s cu\xE1l es cu\xE1l por la pantalla o por el color del componente."
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
-      propertyPath: 'm_TutorialTexts.Array.data[6]'
+      propertyPath: 'm_TutorialTexts.Array.data[5]'
       value: "Para mover los componentes s\xF3lo tienes que hacer <size=90%><b>click</b></size>
-        en ellas. Una vez seleccionados puedes rotarlos con las teclas <size=90%><b>Q</b></size>
+        en ellos. Una vez seleccionados puedes rotarlos con las teclas <size=90%><b>Q</b></size>
         y <size=90%><b>E</b></size>."
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
-      propertyPath: 'm_TutorialTexts.Array.data[7]'
+      propertyPath: 'm_TutorialTexts.Array.data[6]'
       value: y moverlos con las teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>,
         <size=90%><b>S</b></size>, <size=90%><b>D</b></size>.
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTexts.Array.data[7]'
+      value: "Para confirmar la posici\xF3n de los componentes en la cuadr\xEDcula
+        usa la <size=90%><b>barra espaciadora</b></size>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[8]'
-      value: Buena suerte.
+      value: "y si cambias de idea puedes devolver el componente a la cuadr\xEDcula
+        de la izquierda con el <size=90%><b>click derecho</b></size> mientras lo
+        tienes seleccionado."
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[9]'
@@ -3580,7 +3598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
