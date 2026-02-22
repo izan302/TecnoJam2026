@@ -22,7 +22,9 @@ public class Mail : MonoBehaviour
 
     [Header("Objetos Contenido Mail")]
     [SerializeField] private GameObject m_contentGameObject;
+    [SerializeField] private RawImage m_readedImage;
     private ContentData m_contentData;
+    
 
     public void SetValues(string senderPFP, string senderArroba, string emailContent, string senderName, string senderDate, GameObject contentGameObject, string extraImage)
     {
@@ -58,7 +60,12 @@ public class Mail : MonoBehaviour
         m_contentData.m_senderPFP.sprite = this.m_senderPFP;
         m_contentData.m_senderPFP.GetComponent<Image>().color = Color.white;
         m_contentData.m_emailContent.text = this.m_emailContent;
+        Opened();
+    }
 
+    public void Opened()
+    {
+        m_readedImage.color = new Color(255, 255, 255, 0);
     }
 
 }

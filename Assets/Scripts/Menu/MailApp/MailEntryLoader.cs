@@ -42,7 +42,7 @@ public class MailEntryLoader : MonoBehaviour
         
         for (int i = 0; i < m_mailLists.mail.Length; i++)
         {
-            if (m_mailLists.mail[i].m_level == GabeNewell.Instance.m_Level)
+            if (m_mailLists.mail[i].m_level <= GabeNewell.Instance.m_Level)
             {
                 CreateMailEntry(i);
             }
@@ -54,7 +54,7 @@ public class MailEntryLoader : MonoBehaviour
     {
         for (int i = 0; i < m_mailLists.mail.Length; i++)
         {
-            if (m_mailLists.mail[i].m_level == level)
+            if (m_mailLists.mail[i].m_level<= level)
             {
                 CreateMailEntry(i);
             }
@@ -88,6 +88,12 @@ public class MailEntryLoader : MonoBehaviour
         {
             l_mail.OnClick();
         }
+
+        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level)
+        {
+            l_mail.Opened();
+        }
+
         m_loadedMails++;
         m_newMails++;
     }
@@ -111,7 +117,7 @@ public class MailEntryLoader : MonoBehaviour
         m_clickCounter = 0;
     }
 
-    void Update()
+    /*void Update()
     {
         m_clickCounter += Time.deltaTime;
         if(Input.GetKeyUp(KeyCode.L))
@@ -122,5 +128,5 @@ public class MailEntryLoader : MonoBehaviour
         {
             LoadLevelMail(3);
         }
-    }
+    }*/
 }

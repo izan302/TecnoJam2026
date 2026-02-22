@@ -120,6 +120,7 @@ MonoBehaviour:
   m_senderPFPImage: {fileID: 1343275367371478585}
   m_senderArrobaText: {fileID: 2505359260063592315}
   m_contentGameObject: {fileID: 0}
+  m_readedImage: {fileID: 6772674987703363206}
 --- !u!114 &8901436199611254413
 MonoBehaviour:
   m_ObjectHideFlags: 0
