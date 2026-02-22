@@ -1,0 +1,62 @@
+{
+  "languages": [
+    {
+      "languageID": "ES",
+      "items": [
+        { "key": "menu_start", "value": "- Clic aquí para comenzar -" },
+        { "key": "menu_settings", "value": "Opciones" },
+        { "key": "menu_language", "value": "Idioma" },
+        { "key": "menu_syncbands", "value": "Activar Syncbands" },
+        { "key": "desktop_email", "value": "Email" },
+        { "key": "desktop_buscaminas", "value": "Buscaminas" },
+        { "key": "desktop_engine", "value": "Liberty Engine" },
+        { "key": "minesweeper_start", "value": "INICIAR"},
+        { "key": "minesweeper_title", "value": "<color=red>BUSCA</color>MINAS"},
+        { "key": "minesweeper_victory", "value": "Victoria"},
+        { "key": "minesweeper_gameOver", "value": "Has Perdido"},
+        { "key": "minesweeper_restart", "value": "REINICIAR"},
+        { "key": "minesweeper_menu", "value": "MENU"},
+        { "key": "tut_01", "value": "Bienvenido al mejor <size=50%><color=grey>(y único)</color></size> software de desarrollo aprobado por el gobierno." },
+        { "key": "tut_02", "value": "Para desarrollar tu juego, tienes que colocar los componentes de la <color=#06EF06>cuadrícula</color> de la izquierda" },
+        { "key": "tut_03", "value": "de manera que encajen y sin dejar ningún hueco en la <color=red>cuadrícula</color> de la derecha." },
+        { "key": "tut_04", "value": "Cada componente tiene sus propiedades, que se mostrarán al seleccionar el componente en la <color=orange>pantalla</color>." },
+        { "key": "tut_05", "value": "Todo juego necesita 4 componentes: <color=purple>Mecánicas</color>, <color=#946B1F>Género</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>Ítem</color>. Sabrás cuál es cuál por la pantalla o por el color del componente." },
+        { "key": "tut_06", "value": "Para mover los componentes sólo tienes que hacer <size=90%><b>click</b></size> en ellos. Una vez seleccionados puedes rotarlos con las teclas <size=90%><b>Q</b></size> y <size=90%><b>E</b></size>." },
+        { "key": "tut_07", "value": "y moverlos con las teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size>." },
+        { "key": "tut_08", "value": "Para confirmar la posición de los componentes en la cuadrícula usa la <size=90%><b>barra espaciadora</b></size>" },
+        { "key": "tut_09", "value": "y si cambias de idea puedes devolver el componente a la cuadrícula de la izquierda con el <size=90%><b>click derecho</b></size> mientras lo tienes seleccionado." },
+        { "key": "tut_10", "value": "Buena suerte." },
+        { "key": "tut_angry", "value": "<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?" }
+      ]
+    },
+    {
+      "languageID": "EN",
+      "items": [
+        { "key": "menu_start", "value": "- Press here to start -" },
+        { "key": "menu_settings", "value": "Settings" },
+        { "key": "menu_language", "value": "Language" },
+        { "key": "menu_syncbands", "value": "Activate Syncbands" },
+        { "key": "desktop_email", "value": "Email" },
+        { "key": "desktop_buscaminas", "value": "Minewsweeper" },
+        { "key": "desktop_engine", "value": "Liberty Engine" },
+        { "key": "minesweeper_start", "value": "Start"},
+        { "key": "minesweeper_title", "value": "<color=red>MINE</color>SWEEPER"},
+        { "key": "minesweeper_victory", "value": "Victory"},
+        { "key": "minesweeper_gameOver", "value": "Game Over"},
+        { "key": "minesweeper_restart", "value": "RESTART"},
+        { "key": "minesweeper_menu", "value": "MENU"},
+        { "key": "tut_01", "value": "Welcome to the best <size=50%><color=grey>(and only)</color></size> government-approved development software." },
+        { "key": "tut_02", "value": "To develop your game, you have to place the components from the <color=#06EF06>grid</color> on the left" },
+        { "key": "tut_03", "value": "so that they fit and without leaving any gaps in the <color=red>grid</color> on the right." },
+        { "key": "tut_04", "value": "Each component has its properties, which will be displayed when selecting the component on the <color=orange>screen</color>." },
+        { "key": "tut_05", "value": "Every game needs 4 components: <color=purple>Mechanics</color>, <color=#946B1F>Genre</color>, <color=#E5C16F>Style</color> and an <color=#5D69A9>Item</color>. You will know which is which by the screen or by the color of the component." },
+        { "key": "tut_06", "value": "To move the components you just have to <size=90%><b>click</b></size> on them. Once selected you can rotate them with the <size=90%><b>Q</b></size> and <size=90%><b>E</b></size> keys." },
+        { "key": "tut_07", "value": "and move them with the <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size> keys." },
+        { "key": "tut_08", "value": "To confirm the position of the components on the grid use the <size=90%><b>space bar</b></size>" },
+        { "key": "tut_09", "value": "and if you change your mind you can return the component to the grid on the left with the <size=90%><b>right click</b></size> while you have it selected." },
+        { "key": "tut_10", "value": "Good luck." },
+        { "key": "tut_angry", "value": "<size=120%><color=red>STOP IT!</color></size>\nDON'T YOU SEE YOU CAN'T PLACE IT THERE?" }
+      ]
+    }
+  ]
+}

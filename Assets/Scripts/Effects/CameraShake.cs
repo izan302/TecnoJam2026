@@ -26,7 +26,7 @@ public class CameraShake : MonoBehaviour
 
         if (m_ShakeCount >= m_ShakesToAngry)
         {
-            FindAnyObjectByType<TutorialStarter>()?.OpenDialogue("<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?");
+            FindAnyObjectByType<TutorialStarter>()?.OpenDialogue("tut_angry");
             m_ShakeCount = 0;
         }
 

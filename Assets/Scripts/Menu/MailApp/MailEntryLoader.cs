@@ -1,17 +1,16 @@
 using TMPro;
 using UnityEngine;
-using static Mail;
+using System.Collections.Generic;
 
 public class MailEntryLoader : MonoBehaviour
 {
-    public TextAsset m_textJSON;
     [SerializeField] public MailLists m_mailLists = new MailLists();
 
     [Header("Mail Loading")]
     public GameObject m_mailEntryPrefab;
     public GameObject m_MailContent;
     public GameObject m_mailViewPortContent;
-    private GameObject m_contentBox;
+    private List<GameObject> m_spawnedMails = new List<GameObject>();
 
     [Header("Notifications")]
     public GameObject m_notificationGameObject;
@@ -33,44 +32,57 @@ public class MailEntryLoader : MonoBehaviour
         public string m_extraImage;
     }
 
+    [System.Serializable]
     public class MailLists { public MailJsonData[] mail; }
+
+    void OnEnable()
+    {
+        LocalizationManager.OnLanguageChanged += ReloadAllMails;
+    }
+
+    void OnDisable()
+    {
+        LocalizationManager.OnLanguageChanged -= ReloadAllMails;
+    }
 
     void Start()
     {
-        m_newMails = 0;
-        m_mailLists = JsonUtility.FromJson<MailLists>(m_textJSON.text);
-        
-        for (int i = 0; i < m_mailLists.mail.Length; i++)
-        {
-            if (m_mailLists.mail[i].m_level <= GabeNewell.Instance.m_Level)
-            {
-                CreateMailEntry(i);
-            }
-        }
-        if (!GabeNewell.Instance.m_MailsAreRead) Notifiy(); 
+        ReloadAllMails();
     }
 
-    public void LoadLevelMail(int level)
+    public void ReloadAllMails()
     {
-        for (int i = 0; i < m_mailLists.mail.Length; i++)
+        foreach (GameObject go in m_spawnedMails) Destroy(go);
+        m_spawnedMails.Clear();
+        m_loadedMails = 0;
+        m_newMails = 0;
+
+        string fileName = "Mails_" + GabeNewell.Instance.m_Language;
+        TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
+
+        if (jsonFile != null)
         {
-            if (m_mailLists.mail[i].m_level<= level)
+            m_mailLists = JsonUtility.FromJson<MailLists>(jsonFile.text);
+            
+            for (int i = 0; i < m_mailLists.mail.Length; i++)
             {
-                CreateMailEntry(i);
+                if (m_mailLists.mail[i].m_level <= GabeNewell.Instance.m_Level)
+                {
+                    CreateMailEntry(i);
+                }
             }
+            if (!GabeNewell.Instance.m_MailsAreRead) Notifiy(); 
         }
-        Notifiy();
     }
 
     private void CreateMailEntry(int index)
     {
-        m_contentBox = Instantiate(m_mailEntryPrefab);
+        GameObject m_contentBox = Instantiate(m_mailEntryPrefab);
+        m_spawnedMails.Add(m_contentBox);
         m_contentBox.transform.SetParent(m_mailViewPortContent.transform, false);
 
         RectTransform rt = m_contentBox.GetComponent<RectTransform>();
         rt.localScale = Vector3.one;
-        rt.localPosition = new Vector3(rt.localPosition.x, rt.localPosition.y, 0f);
-        rt.localRotation = Quaternion.identity;
 
         Mail l_mail = m_contentBox.GetComponent<Mail>();
         l_mail.SetValues(
@@ -84,15 +96,9 @@ public class MailEntryLoader : MonoBehaviour
         );
 
         rt.anchoredPosition = new Vector2(-105, -50 * m_loadedMails);
-        if(index == 0)
-        {
-            l_mail.OnClick();
-        }
-
-        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level)
-        {
-            l_mail.Opened();
-        }
+        
+        if(index == 0) l_mail.OnClick();
+        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level) l_mail.Opened();
 
         m_loadedMails++;
         m_newMails++;
@@ -116,17 +122,4 @@ public class MailEntryLoader : MonoBehaviour
         }
         m_clickCounter = 0;
     }
-
-    /*void Update()
-    {
-        m_clickCounter += Time.deltaTime;
-        if(Input.GetKeyUp(KeyCode.L))
-        {
-            LoadLevelMail(2);
-        }
-        if (Input.GetKeyUp(KeyCode.K))
-        {
-            LoadLevelMail(3);
-        }
-    }*/
 }

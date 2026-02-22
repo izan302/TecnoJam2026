@@ -10,6 +10,7 @@ public class GabeNewell : MonoBehaviour
     public bool m_CrtEffect {get; set;} = true;
     public bool m_MinesweeperWon {get; set;} = false;
     public bool m_TutorialPlayed {get; set;} = false;
+    public string m_Language {get; set;} = "ES";
     void Awake()
     {
         if (Instance != null && Instance != this)

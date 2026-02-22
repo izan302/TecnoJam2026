@@ -3695,6 +3695,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TutorialTextKeys.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[0]'
       value: "Bienvenido al mejor <size=50%><color=grey>(y \xFAnico)</color></size>
         software de desarrollo aprobado por el gobierno."
@@ -3745,6 +3749,46 @@ PrefabInstance:
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: 'm_TutorialTexts.Array.data[9]'
       value: Buena suerte.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[0]'
+      value: tut_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[1]'
+      value: tut_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[2]'
+      value: tut_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[3]'
+      value: tut_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[4]'
+      value: tut_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[5]'
+      value: tut_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[6]'
+      value: tut_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[7]'
+      value: tut_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[8]'
+      value: tut_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: 'm_TutorialTextKeys.Array.data[9]'
+      value: tut_10
       objectReference: {fileID: 0}
     - target: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_Name

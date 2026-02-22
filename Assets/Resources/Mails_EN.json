@@ -1,0 +1,53 @@
+{
+  "mail": [
+    {
+      "m_senderPFPstring": "Sprites/Mails/aguila",
+      "m_senderArroba": "announcements@gob.com",
+      "m_emailContent": "Today, the hearing against violence in video games will finally be held. The resolution is expected to result in partial control over video game content and the adoption of measures to establish age restrictions.",
+      "m_senderName": "Government Announcements",
+      "m_senderDate": "05/03/1994",
+      "m_level": 1,
+      "m_extraImage": "Sprites/Mails/gmailPlaceholder"
+    },
+    {
+      "m_senderPFPstring": "Sprites/Mails/aguila",
+      "m_senderArroba": "announcements@gob.com",
+      "m_emailContent": "Following the hearing held in the United States Senate and as a consequence of the decision adopted, it has been agreed to implement, over the coming days, a law that will prevent video games from showing any type of explicit violent imagery, as well as bloody content (or any firearms). Any video game that includes this type of content will be automatically banned from sale, and the corresponding economic sanction will be imposed on the responsible developers.\n\nFurthermore, every developer will be required to implement a <b><color=red>backdoor</color></b> in their game so the government can monitor in real-time whether these requirements are being met.",
+      "m_senderName": "Government Announcements",
+      "m_senderDate": "06/03/1994",
+      "m_level": 2
+    },
+    {
+      "m_senderPFPstring": "Sprites/Mails/aguila",
+      "m_senderArroba": "announcements@gob.com",
+      "m_emailContent": "Following the hearing held in the United States Senate and as a consequence of the decision adopted, it has been agreed to implement measures for the censorship of video games.\nAs reported, starting today, the appearance of <b><color=red>firearms and blood</color></b> in video games will be completely prohibited, in order to avoid the normalization of weapon use among the population. Likewise, games containing <b><color=red>realistic</color></b> content or those attempting to emulate real-life situations will be banned.\n\nThese measures are aimed at preventing individuals, especially minors, from attempting to reproduce behaviors observed in video games in real life.\n\nDevelopers must adapt to this new measure; otherwise, they will face the pertinent economic penalties imposed by the national court.",
+      "m_senderName": "Government Announcements",
+      "m_senderDate": "07/03/1994",
+      "m_level": 3
+    },
+    {
+      "m_senderPFPstring": "Sprites/Mails/Lion",
+      "m_senderArroba": "mercadroga@communications.com",
+      "m_emailContent": "Buy now your latest generation assault rifle, with an elegant and modern design that will allow you to stand out from the crowd.\nThis assault rifle is the perfect weapon for those looking for an exciting hunting experience. With its high precision and power, this assault rifle will be the envy of your friends and colleagues.\nDo not miss the opportunity to acquire this incredible assault rifle and take your hunting to the next level.",
+      "m_senderName": "New promotion from Wartmart",
+      "m_senderDate": "07/03/1994",
+      "m_level": 3
+    },
+    {
+      "m_senderPFPstring": "Sprites/Mails/aguila",
+      "m_senderArroba": "announcements@gob.com",
+      "m_emailContent": "One of the most controversial and contradictory laws arising from the hearing has generated intense public debate. The government has considered the latest measures against video games to be insufficient; therefore, it has been decided to prohibit all types of <b><color=red>bows, drugs, shooting mechanics</color></b> and all <b><color=red>rock</color></b> music as it contains explicit lyrics, in view of the rise of violent video games. According to official sources, this exposure could trigger episodes of physical violence in real life and civil disobedience, thus urgent implementation of new requirements is needed.\n\nAs a complementary measure to verify compliance, the need to incorporate a chip within the games has been raised, allowing for more effective and automated monitoring of compliance with the regulations.",
+      "m_senderName": "Government Announcements",
+      "m_senderDate": "08/03/1994",
+      "m_level": 3
+    },
+    {
+      "m_senderPFPstring": "Sprites/Mails/aguila",
+      "m_senderArroba": "announcements@gob.com",
+      "m_emailContent": "",
+      "m_senderName": "Government Announcements",
+      "m_senderDate": "11/09/2001",
+      "m_level": 4
+    }
+  ]
+}

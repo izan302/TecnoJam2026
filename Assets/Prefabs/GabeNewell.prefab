@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99747426192201326}
   - component: {fileID: 323470421466858629}
+  - component: {fileID: 881174882708205957}
   - component: {fileID: 9074474862739700346}
   - component: {fileID: 5924161611779075866}
   - component: {fileID: 5702719362204360312}
@@ -47,6 +48,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b43127001cef94bbb0488795afe3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &881174882708205957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828592730295388585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4e0ab21c710444a6da35dca4e4231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationManager
 --- !u!114 &9074474862739700346
 MonoBehaviour:
   m_ObjectHideFlags: 0
