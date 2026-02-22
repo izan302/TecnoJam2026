@@ -24,6 +24,11 @@ public class MinesweeperGameHandler : MonoBehaviour
     [SerializeField] private GameObject m_MinesweeperWindow;
     [SerializeField] private TextMeshProUGUI m_Timer;
 
+    [Header("Animaciones App")]
+    [SerializeField] private Animation m_anim;
+    [SerializeField] private AnimationClip m_OpenClip;
+    [SerializeField] private AnimationClip m_CloseClip;
+
     private bool m_IsGameRunning;
     private float m_StartTime;
     void Start()
@@ -113,6 +118,8 @@ public class MinesweeperGameHandler : MonoBehaviour
         if (m_MinesweeperWindow != null)
         {
             m_MinesweeperWindow.SetActive(true);
+            m_anim.clip = m_OpenClip;
+            m_anim.Play();
         }
         GoToMenu();
     }
