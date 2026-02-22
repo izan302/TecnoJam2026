@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e430cc86305be42b6d56604472093d, type: 3}
+  m_Name: SFX
+  m_EditorClassIdentifier: Assembly-CSharp::PieceData
+  m_PieceName: Disparar
+  piceType: 1
+  properties: 0100000002000000
+  icon: {fileID: 1949160140, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
+  spawningLevel: 1
+  grabble: 1
+  blocks:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: 3, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: 2, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
+  - {x: 0, y: 3}
