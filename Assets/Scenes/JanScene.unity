@@ -819,6 +819,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323503931}
   m_CullTransparentMesh: 1
+--- !u!1 &330124462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 981679098998645843, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+  m_PrefabInstance: {fileID: 670285719389388596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &330124468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330124462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &346248139 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7594075578567013445, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
@@ -900,6 +917,7 @@ GameObject:
   - component: {fileID: 396580954}
   - component: {fileID: 396580953}
   - component: {fileID: 396580955}
+  - component: {fileID: 396580956}
   m_Layer: 5
   m_Name: EmailButton
   m_TagString: Untagged
@@ -1067,6 +1085,18 @@ MonoBehaviour:
   m_notificationGameObject: {fileID: 1558697904}
   m_textUGUI: {fileID: 1411792668}
   m_newMails: 0
+--- !u!114 &396580956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396580948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1001 &435579598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1193,6 +1223,23 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2618434717930990579, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
   m_PrefabInstance: {fileID: 435579598}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &740514624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921045276600007931, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+  m_PrefabInstance: {fileID: 670285719389388596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &740514630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740514624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &820131462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1326,7 @@ GameObject:
   - component: {fileID: 835529449}
   - component: {fileID: 835529448}
   - component: {fileID: 835529447}
+  - component: {fileID: 835529451}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1412,6 +1460,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835529445}
   m_CullTransparentMesh: 1
+--- !u!114 &835529451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835529445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+--- !u!1 &866582624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1466693105812044018, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+  m_PrefabInstance: {fileID: 670285719389388596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &866582630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866582624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+--- !u!1 &888548706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5690286376177670266, guid: 24ff2177098e3b146be73f7cb838c56a, type: 3}
+  m_PrefabInstance: {fileID: 7013155041249231609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &953070840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 549168425683257081, guid: 16b18d7cfc6bcb64ebf84cc54ddd2418, type: 3}
@@ -1541,6 +1623,7 @@ GameObject:
   - component: {fileID: 1046189054}
   - component: {fileID: 1046189053}
   - component: {fileID: 1046189056}
+  - component: {fileID: 1046189057}
   m_Layer: 5
   m_Name: GuinguosButton
   m_TagString: Untagged
@@ -1675,6 +1758,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseWindow
   m_WindowToClose: {fileID: 297904989}
+--- !u!114 &1046189057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046189051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!20 &1076053945 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5359085465156567358, guid: bf2e52789c5a9374fa2265660bde2a06, type: 3}
@@ -1830,6 +1925,7 @@ GameObject:
   - component: {fileID: 1163247939}
   - component: {fileID: 1163247938}
   - component: {fileID: 1163247937}
+  - component: {fileID: 1163247941}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1964,6 +2060,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163247935}
   m_CullTransparentMesh: 1
+--- !u!114 &1163247941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163247935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &1254756972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,6 +2085,7 @@ GameObject:
   - component: {fileID: 1254756974}
   - component: {fileID: 1254756977}
   - component: {fileID: 1254756976}
+  - component: {fileID: 1254756978}
   m_Layer: 5
   m_Name: GameStartButton
   m_TagString: Untagged
@@ -2112,11 +2221,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameAppScript
   m_appName: IzanScene
   m_timeToDoubleClick: 1.5
+--- !u!114 &1254756978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254756972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!224 &1334793046 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8513328322890718838, guid: 24ff2177098e3b146be73f7cb838c56a, type: 3}
   m_PrefabInstance: {fileID: 7013155041249231609}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1334793048
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888548706}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!1 &1345488937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8412767563555092248, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+  m_PrefabInstance: {fileID: 670285719389388596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1345488943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345488937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &1411792667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2497,7 @@ GameObject:
   - component: {fileID: 1429985793}
   - component: {fileID: 1429985791}
   - component: {fileID: 1429985795}
+  - component: {fileID: 1429985796}
   m_Layer: 5
   m_Name: MinesweeperButton
   m_TagString: Untagged
@@ -2480,6 +2631,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6328dcba103ef4e9ce80e1eb7fef85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinesweeperButton
+--- !u!114 &1429985796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429985789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &1463394493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,6 +2732,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3200571571787435845, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
   m_PrefabInstance: {fileID: 670285719389388596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1526658117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7828169244764767975, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+  m_PrefabInstance: {fileID: 670285719389388596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1526658123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526658117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!114 &1537513312 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5735025284838304688, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
@@ -3830,6 +4010,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950918142947950774, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4387371424265219862, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
       propertyPath: m_WorldCamera
       value: 
@@ -3993,6 +4177,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 630871092702272914, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
       insertIndex: -1
       addedObject: {fileID: 351493527}
+    - targetCorrespondingSourceObject: {fileID: 8412767563555092248, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1345488943}
+    - targetCorrespondingSourceObject: {fileID: 2921045276600007931, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 740514630}
+    - targetCorrespondingSourceObject: {fileID: 7828169244764767975, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526658123}
+    - targetCorrespondingSourceObject: {fileID: 1466693105812044018, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 866582630}
+    - targetCorrespondingSourceObject: {fileID: 981679098998645843, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 330124468}
   m_SourcePrefab: {fileID: 100100000, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
 --- !u!1001 &1866799204568885591
 PrefabInstance:
@@ -4178,7 +4377,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5690286376177670266, guid: 24ff2177098e3b146be73f7cb838c56a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1334793048}
   m_SourcePrefab: {fileID: 100100000, guid: 24ff2177098e3b146be73f7cb838c56a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

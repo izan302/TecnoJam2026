@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1851725661955453739}
   - component: {fileID: 9047181768489741576}
   - component: {fileID: 6350051908177976717}
+  - component: {fileID: 8901436199611254413}
   m_Layer: 5
   m_Name: MailEntry
   m_TagString: Untagged
@@ -119,6 +120,18 @@ MonoBehaviour:
   m_senderPFPImage: {fileID: 1343275367371478585}
   m_senderArrobaText: {fileID: 2505359260063592315}
   m_contentGameObject: {fileID: 0}
+--- !u!114 &8901436199611254413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579319216945269584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &3306146804670661744
 GameObject:
   m_ObjectHideFlags: 0

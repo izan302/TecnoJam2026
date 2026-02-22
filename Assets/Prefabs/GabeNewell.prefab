@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 99747426192201326}
   - component: {fileID: 323470421466858629}
   - component: {fileID: 9074474862739700346}
+  - component: {fileID: 5924161611779075866}
   - component: {fileID: 5702719362204360312}
   m_Layer: 0
   m_Name: GabeNewell
@@ -70,6 +71,23 @@ MonoBehaviour:
   j_rightRotation: 335
   j_confirmPiece: 331
   j_returnPiece: 332
+--- !u!114 &5924161611779075866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828592730295388585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7164386dae4d8b945a83a3a0b12ac45d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
+  cursorNormal: {fileID: 2800000, guid: f678a5723f527b44c8dc9f4b2dae580c, type: 3}
+  cursorClick: {fileID: 2800000, guid: 2ead93b3a206a4b4596739ddcb5aeb4a, type: 3}
+  cursorDrag: {fileID: 2800000, guid: be97e110193791d4987765cfedf759d2, type: 3}
+  cursorLoad: {fileID: 2800000, guid: b395b6a7e3d6a5540b9b95fc370320f8, type: 3}
+  cursorUnClickable: {fileID: 2800000, guid: 4c463a0a1a3049941a4286dc894e33fe, type: 3}
 --- !u!114 &5702719362204360312
 MonoBehaviour:
   m_ObjectHideFlags: 0

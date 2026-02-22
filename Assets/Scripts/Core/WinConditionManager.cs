@@ -91,5 +91,6 @@ public class WinConditionManager : MonoBehaviour
             }
         }
         SendButton.interactable = showSendButton;
+        SendButton.GetComponent<InteractiveObject>().m_IsInteractable = showSendButton;
     }
 }

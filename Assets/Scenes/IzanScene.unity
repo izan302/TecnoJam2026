@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 254124110}
   - component: {fileID: 254124109}
   - component: {fileID: 254124108}
+  - component: {fileID: 254124111}
   m_Layer: 0
   m_Name: UpArrow
   m_TagString: Untagged
@@ -383,6 +384,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254124106}
   m_CullTransparentMesh: 1
+--- !u!114 &254124111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254124106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &296402869
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +409,7 @@ GameObject:
   - component: {fileID: 296402872}
   - component: {fileID: 296402871}
   - component: {fileID: 296402874}
+  - component: {fileID: 296402875}
   m_Layer: 0
   m_Name: Cross
   m_TagString: Untagged
@@ -529,6 +543,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadScene
   m_SceneToLoad: JanScene
+--- !u!114 &296402875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296402869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &303820177
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +780,7 @@ GameObject:
   - component: {fileID: 361018229}
   - component: {fileID: 361018228}
   - component: {fileID: 361018231}
+  - component: {fileID: 361018232}
   m_Layer: 0
   m_Name: SendToButton
   m_TagString: Untagged
@@ -886,6 +913,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc19d47f5f3e6b4f87c760d80f2ef03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &361018232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361018226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &462669154
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +937,7 @@ GameObject:
   - component: {fileID: 462669158}
   - component: {fileID: 462669157}
   - component: {fileID: 462669156}
+  - component: {fileID: 462669159}
   m_Layer: 0
   m_Name: DownArrow
   m_TagString: Untagged
@@ -1018,6 +1058,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462669154}
   m_CullTransparentMesh: 1
+--- !u!114 &462669159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462669154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &478752247
 GameObject:
   m_ObjectHideFlags: 0

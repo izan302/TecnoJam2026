@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // Requerido para detectar eventos de UI
+using UnityEngine.EventSystems;
 
 public class UIDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -21,6 +21,7 @@ public class UIDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     {
         m_CanvasGroup.alpha = 0.6f;
         m_CanvasGroup.blocksRaycasts = false;
+        CursorManager.Instance.SetInteractorCursor(CursorManager.CursorImage.Drag, Vector2.zero);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -30,6 +31,7 @@ public class UIDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        CursorManager.Instance.SetInteractorCursor(CursorManager.CursorImage.Normal, Vector2.zero);
         m_CanvasGroup.alpha = 1f;
         m_CanvasGroup.blocksRaycasts = true;
     }

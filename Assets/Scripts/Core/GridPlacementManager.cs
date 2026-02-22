@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GridPlacementManager : MonoBehaviour
 {
@@ -20,12 +21,18 @@ public class GridPlacementManager : MonoBehaviour
     void Update()
     {
         if (GabeNewell.Instance.m_IsTutorialPlaying) return;
+
+        HandleCursorVisuals();
+
         if (activePiece == null)
         {
 
             if (Input.GetMouseButtonDown(0))
             {
-                TryPickUpPiece();
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    TryPickUpPiece();
+                }
             }
         }
         else
@@ -48,9 +55,39 @@ public class GridPlacementManager : MonoBehaviour
                 {
                     activePiece.SetBorderColor(Color.red);
                 }
+                UpdateActivePieceVisualPosition();
             }
             HandlePlacement();
         }
+    }
+
+    void HandleCursorVisuals()
+    {
+        if (activePiece != null)
+        {
+            return;
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        Vector3 mouseWorldPos = InputManager.Instance.GetWorldMousePosition();
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
+
+        if (hit.collider != null)
+        {
+            Piece pieceUnderMouse = hit.collider.GetComponentInParent<Piece>();
+            if (pieceUnderMouse != null)
+            {
+                var state = pieceUnderMouse.data.grabble ? CursorManager.CursorImage.Clickable : CursorManager.CursorImage.UnClickable;
+                CursorManager.Instance.SetInteractorCursor(state, Vector2.zero);
+                return;
+            }
+        }
+
+        CursorManager.Instance.SetInteractorCursor(CursorManager.CursorImage.Normal, Vector2.zero);
     }
 
     void HandleRotation()
@@ -80,7 +117,6 @@ public class GridPlacementManager : MonoBehaviour
             if (IsInsideGrid(activePiece, targetPos, activePiece.rotation))
             {
                 activePiece.pivotGridPosition = targetPos;
-                UpdateActivePieceVisualPosition();
                 moveTimer = moveDelay;
             }
         }
@@ -186,6 +222,7 @@ public class GridPlacementManager : MonoBehaviour
 
             if (WinConditionManager.instance != null)
                 WinConditionManager.instance.CheckWinCondition();
+            CursorManager.Instance.SetInteractorCursor(CursorManager.CursorImage.Normal, Vector2.zero);
         }
     }
 
@@ -216,12 +253,7 @@ public class GridPlacementManager : MonoBehaviour
         activePiece.transform.SetParent(LevelManager.instance.GetGridParent(activePiece.GetGrid()).transform);
         activePiece.RestoreToHomeState();
         activePiece.inInventory = true;
-        Grid<GridCell> suppGrid = LevelManager.instance.supplementaryGrid;
-        Vector3 worldPos = suppGrid.GetWorldPosition(activePiece.pivotGridPosition.x, activePiece.pivotGridPosition.y);
-        float cellSize = suppGrid.GetCellSize();
-        Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
-
-        activePiece.transform.position = worldPos + offset;
+        UpdateActivePieceVisualPosition();
         activePiece.OnPieceSelect(false);
         activePiece = null;
     }
