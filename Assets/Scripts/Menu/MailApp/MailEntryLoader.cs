@@ -83,7 +83,7 @@ public class MailEntryLoader : MonoBehaviour
             m_mailLists.mail[index].m_extraImage
         );
 
-        rt.anchoredPosition = new Vector2(-100, -50 * m_loadedMails);
+        rt.anchoredPosition = new Vector2(-105, -50 * m_loadedMails);
         if(index == 0)
         {
             l_mail.OnClick();
