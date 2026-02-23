@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using static UnityEngine.Audio.ProcessorInstance;
 
 public class PieceInfoDisplayer : MonoBehaviour
 {
@@ -39,6 +40,16 @@ public class PieceInfoDisplayer : MonoBehaviour
                 propertie[i].enabled = false;
             }
         }
+    }
+    public void DisplayError(string titulo, string info)
+    {
+        pieceName.text = titulo;
+        pieceType.text = info;
+        pieceType.color = bannedColor;
 
+        for (int i = 0; i < propertie.Length; i++)
+        {
+            propertie[i].enabled = false;
+        }
     }
 }
