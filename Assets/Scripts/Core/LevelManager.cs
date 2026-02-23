@@ -30,7 +30,6 @@ public class LevelManager : MonoBehaviour
 
     [Header("Supplementary Grid")]
     [SerializeField] int supplementaryW;
-    [SerializeField] int supplementaryH;
     [SerializeField] float supplementarySize;
     public Grid<GridCell> supplementaryGrid;
     [Header("Scroll")]
@@ -44,14 +43,14 @@ public class LevelManager : MonoBehaviour
     }
     void Start()
     {
+        int level = GabeNewell.Instance.m_Level;
         //GenerateGrid
         grid = new Grid<GridCell>(w, h, size, gridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
-        supplementaryGrid = new Grid<GridCell>(supplementaryW, supplementaryH, supplementarySize, supplementaryGridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
+        supplementaryGrid = new Grid<GridCell>(supplementaryW, levels[level - 1].maxSuplementaryGridHeight, supplementarySize, supplementaryGridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
 
         gridCellVisual.Setup(grid);
         supplementaryGridCellVisual.Setup(supplementaryGrid);
 
-        int level = GabeNewell.Instance.m_Level;
         //int level = 1;
 
         if (levels != null)
@@ -168,7 +167,7 @@ public class LevelManager : MonoBehaviour
             if (pieceHeight > maxRowHeight) maxRowHeight = pieceHeight;
         }
 
-        float totalContentHeight = supplementaryH * supplementarySize;
+        float totalContentHeight = levels[level - 1].maxSuplementaryGridHeight * supplementarySize;
 
         if (scrollController != null)
         {
