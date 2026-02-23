@@ -17,7 +17,7 @@ MonoBehaviour:
   properties: 00000000
   icon: {fileID: 0}
   spawningLevel: 3
-  grabble: 1
+  grabble: 0
   blocks:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
