@@ -11,6 +11,7 @@ public class PieceData : ScriptableObject
     public Sprite icon;
 
     public int spawningLevel = 0;
+    public int despawningLevel = int.MaxValue;
     public bool grabble = true;
 
     [Header("Shape")]
