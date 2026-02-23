@@ -124,7 +124,7 @@ public class LevelManager : MonoBehaviour
         List<PieceData> piecesToSpawn = new List<PieceData>();
         foreach (PieceData p in PieceData.AllPieces)
         {
-            if (p.spawningLevel <= level && p.spawningLevel >= 0 && p.despawningLevel <= level) piecesToSpawn.Add(p);
+            if (p.spawningLevel <= level && p.spawningLevel >= 0 && p.despawningLevel >= level) piecesToSpawn.Add(p);
         }
 
         int currentX = 0;
