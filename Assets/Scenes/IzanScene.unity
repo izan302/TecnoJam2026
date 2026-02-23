@@ -4296,7 +4296,7 @@ PrefabInstance:
       objectReference: {fileID: 482014952}
     - target: {fileID: 8538487591247779146, guid: 82f99663e5fb0d047a6180adc63e901d, type: 3}
       propertyPath: levels.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8538487591247779146, guid: 82f99663e5fb0d047a6180adc63e901d, type: 3}
       propertyPath: supplementarySize
@@ -4309,7 +4309,15 @@ PrefabInstance:
     - target: {fileID: 8538487591247779146, guid: 82f99663e5fb0d047a6180adc63e901d, type: 3}
       propertyPath: 'levels.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 5907a85c535e32d458483e5105a003b9, type: 2}
+      objectReference: {fileID: 11400000, guid: df56b3858430f6f42a9d6a3b1f2b82b8, type: 2}
+    - target: {fileID: 8538487591247779146, guid: 82f99663e5fb0d047a6180adc63e901d, type: 3}
+      propertyPath: 'levels.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ceca209105bd0046811c371bac67d38, type: 2}
+    - target: {fileID: 8538487591247779146, guid: 82f99663e5fb0d047a6180adc63e901d, type: 3}
+      propertyPath: 'levels.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: de0f482f8c9a5994f8ccffba354b4835, type: 2}
     - target: {fileID: 8538487591247779146, guid: 82f99663e5fb0d047a6180adc63e901d, type: 3}
       propertyPath: supplementaryGridParent
       value: 
