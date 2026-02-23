@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Scrollable : MonoBehaviour
 {
     [Header("Referencias")]
     public Transform m_TopAnchor;    
     public Transform m_BottomAnchor;
+    [SerializeField] Scrollbar m_Scrollbar;
 
     [Header("Configuración")]
     [SerializeField] private float m_ScrollSpeed = 10f;
@@ -50,14 +53,42 @@ public class Scrollable : MonoBehaviour
     {
         m_TargetY += m_ButtonStep;
         ApplyClamp();
+        UpdateScrollbar();
     }
 
     public void ScrollUp()
     {
         m_TargetY -= m_ButtonStep;
         ApplyClamp();
+        UpdateScrollbar();
     }
+    public void SetScrollPosition(Single s)
+    {
+        if (!m_IsReady) return;
 
+        float l_LimitBottom = m_BottomAnchor.position.y;
+        float l_LimitTop = GetLimitTop();
+
+        float l_Min = Mathf.Min(l_LimitBottom, l_LimitTop);
+        float l_Max = Mathf.Max(l_LimitBottom, l_LimitTop);
+        m_TargetY = Mathf.Lerp(l_LimitBottom, l_LimitTop, s);
+
+        ApplyClamp();
+    }
+    private void UpdateScrollbar()
+    {
+        if (m_Scrollbar == null) return;
+
+        float l_LimitBottom = m_BottomAnchor.position.y;
+        float l_LimitTop = GetLimitTop();
+        if (Mathf.Approximately(l_LimitBottom, l_LimitTop))
+        {
+            m_Scrollbar.value = 1f;
+            return;
+        }
+        float l_Normalized = Mathf.InverseLerp(l_LimitBottom, l_LimitTop, m_TargetY);
+        m_Scrollbar.SetValueWithoutNotify(l_Normalized);
+    }
     void Update()
     {
         if (!m_IsReady) return;
@@ -67,6 +98,7 @@ public class Scrollable : MonoBehaviour
         {
             m_TargetY -= l_ScrollInput * m_ScrollSpeed;
             ApplyClamp();
+            UpdateScrollbar();
         }
 
         Vector3 l_NextPos = new Vector3(transform.position.x, m_TargetY, transform.position.z);
