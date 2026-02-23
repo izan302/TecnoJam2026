@@ -37,7 +37,7 @@
         { "key": "menu_language", "value": "Language" },
         { "key": "menu_syncbands", "value": "Activate Syncbands" },
         { "key": "desktop_email", "value": "Email" },
-        { "key": "desktop_buscaminas", "value": "Minewsweeper" },
+        { "key": "desktop_buscaminas", "value": "Minesweeper" },
         { "key": "desktop_engine", "value": "Liberty Engine" },
         { "key": "minesweeper_start", "value": "Start"},
         { "key": "minesweeper_title", "value": "<color=red>MINE</color>SWEEPER"},
