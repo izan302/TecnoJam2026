@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
   m_PieceName: Chip
   piceType: 0
-  properties: 00000000
-  icon: {fileID: 0}
+  properties: 
+  icon: {fileID: -91770777, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
   spawningLevel: 3
+  despawningLevel: 3
   grabble: 0
   blocks:
   - {x: 0, y: 0}
