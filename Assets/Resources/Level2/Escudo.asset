@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
   m_PieceName: Escudo
   piceType: 3
-  properties: 09000000
-  icon: {fileID: 648612117, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
+  properties: 090000001c0000001d000000
+  icon: {fileID: 1272650163, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
   spawningLevel: 2
   grabble: 1
   blocks:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
   m_PieceName: Metal
   piceType: 4
-  properties: 
+  properties: 02000000
   icon: {fileID: 0}
   spawningLevel: 3
   grabble: 1

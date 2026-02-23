@@ -10,18 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e430cc86305be42b6d56604472093d, type: 3}
-  m_Name: Arco
+  m_Name: Mando
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
-  m_PieceName: Arco
-  piceType: 1
-  properties: 16000000180000001700000001000000
-  icon: {fileID: -2030771766, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
-  spawningLevel: 2
+  m_PieceName: Mando
+  piceType: 3
+  properties: 0f00000011000000
+  icon: {fileID: 0}
+  spawningLevel: 4
   grabble: 1
-  blocks:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
-  - {x: 2, y: 0}
-  - {x: 1, y: -1}
-  - {x: 2, y: -1}
-  - {x: 2, y: -2}
+  blocks: []

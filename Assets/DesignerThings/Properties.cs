@@ -1,3 +1,3 @@
 public enum Properties { 
-    FPS, Disparos, Metal, Realismo, ArmasDeFuego, Rock, Agotamiento, Tranquilo, Plataforma, Proteccion, Pixeles, Ambientacion, ArmaADistancia, ArmaBlanca, Droga, Controles, Electricidad
+    FPS, Disparos, Metal, Realismo, ArmasDeFuego, Rock, Agotamiento, Tranquilo, Plataforma, Proteccion, Pixeles, Ambientacion, ArmaADistancia, ArmaBlanca, Droga, Controles, Electricidad,Tecleo,Patata,Tierra,Satanico,Sectario,RobinHood,Punteria,Equilibrio,Heisenberg,Placer,Evasion,Defensa,CapitanAmerica,Jason,Oxidado,Obstaculos,Inmersion,Jazz,Pop 
 }
