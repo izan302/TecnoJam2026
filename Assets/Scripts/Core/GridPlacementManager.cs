@@ -194,6 +194,7 @@ public class GridPlacementManager : MonoBehaviour
         if (hit.collider != null)
         {
             Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
+            PieceInfoDisplayer.instance.DisplayPiece(clickedPiece.data, clickedPiece.piceColor[clickedPiece.data.piceType]);
             if (clickedPiece == null || clickedPiece.data.grabble == false) return;
 
             Grid<GridCell> currentGrid = LevelManager.instance.GetGrid(clickedPiece.GetGrid());

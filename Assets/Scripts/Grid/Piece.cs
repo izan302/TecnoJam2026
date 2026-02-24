@@ -71,6 +71,7 @@ public class Piece : MonoBehaviour
                 PieceTile t = newTile.GetComponent<PieceTile>();
                 t.baseTile.color = piceColor[data.piceType];
                 t.baseTile.sprite = data.icon;
+                t.baseTile.renderingLayerMask = 3;
                 t.selection.enabled = false;
                 tiles.Add(t);
             }
@@ -95,7 +96,7 @@ public class Piece : MonoBehaviour
     public void OnPieceSelect(bool selected)
     {
         //Debug.Log(piceColor[data.piceType]);
-        PieceInfoDisplayer.instance.DisplayPiece(data, piceColor[data.piceType]);
+        
         foreach (PieceTile t in tiles)
         {
             t.selection.enabled = selected;
