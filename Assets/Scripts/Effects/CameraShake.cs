@@ -8,7 +8,6 @@ public class CameraShake : MonoBehaviour
 
     private Vector3 m_ShakeOffset;
     
-    // Configuración del enfado
     private int m_ShakeCount = 0; 
     private float m_LastShakeTime;
     [SerializeField] private int m_ShakesToAngry = 5;

@@ -15,7 +15,6 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private float m_RotationSpeed = 10f;
 
     [Header("Localización")]
-    // Ahora aquí ponemos las llaves del JSON: "tut_01", "tut_02", etc.
     [SerializeField] private string[] m_TutorialTextKeys; 
 
     [Header("Referencias")]
@@ -33,106 +32,118 @@ public class Tutorial : MonoBehaviour
     private int m_CurrentIndex = 0;
     private Coroutine m_TypeRoutine;
     private bool m_IsTyping = false;
+    private bool m_IsAngryMode = false;
     private int m_TotalVisibleCharacters;
     private string m_ActiveKey;
+    private RawImage m_FaceImage;
 
-    void OnEnable()
-    {
-        LocalizationManager.OnLanguageChanged += RefreshLocalizedText;
-    }
+    void OnEnable() => LocalizationManager.OnLanguageChanged += RefreshLocalizedText;
+    void OnDisable() => LocalizationManager.OnLanguageChanged -= RefreshLocalizedText;
 
-    void OnDisable()
+    void Awake()
     {
-        LocalizationManager.OnLanguageChanged -= RefreshLocalizedText;
+        m_MouthOriginalLocalPos = m_Mouth.transform.localPosition;
+        m_FaceOriginalRotation = m_Face.transform.localRotation;
+        m_FaceImage = m_Face.GetComponent<RawImage>();
+        
+        m_AngryFace.SetActive(false);
+        if (m_FaceImage != null) m_FaceImage.enabled = true;
     }
 
     void Start()
     {
-        m_MouthOriginalLocalPos = m_Mouth.transform.localPosition;
-        m_FaceOriginalRotation = m_Face.transform.localRotation;
-
-        m_SupplementaryGridIndicator.SetActive(false);
-        m_GridIndicator.SetActive(false);
-        m_ScreenIndicator.SetActive(false);
-        m_AngryFace.SetActive(false);
+        ResetIndicators();
         
-        if (GabeNewell.Instance.m_Level == 1)
+        if (!GabeNewell.Instance.m_TutorialPlayed)
         {
             GabeNewell.Instance.m_IsTutorialPlaying = true;
-            m_ActiveKey = m_TutorialTextKeys[m_CurrentIndex];
-            StartCoroutine(ShowNextText());
+            m_CurrentIndex = 0;
+            m_IsAngryMode = false;
+            ShowText(m_TutorialTextKeys[m_CurrentIndex]);
+        }
+        else
+        {
+            m_TextComponent.text = "";
+            if (m_FaceImage != null) m_FaceImage.enabled = false;
+            gameObject.SetActive(false);
         }
     }
 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && GabeNewell.Instance.m_Level == 1)
-        {
-            HandleInput();
-        }
-    }
-
-    private void HandleInput()
-    {
-        if (m_IsTyping)
-        {
-            StopCoroutine(m_TypeRoutine);
-            m_TextComponent.maxVisibleCharacters = m_TotalVisibleCharacters;
-            m_Mouth.transform.localPosition = m_MouthOriginalLocalPos;
-            m_Face.transform.localRotation = m_FaceOriginalRotation;
-            m_IsTyping = false;
-            OnTextFinished(m_CurrentIndex);
-        }
-        else
-        {
-            m_CurrentIndex++;
-            if (m_CurrentIndex < m_TutorialTextKeys.Length)
-            {
-                m_ActiveKey = m_TutorialTextKeys[m_CurrentIndex];
-                StartCoroutine(ShowNextText());
-            }
-            else
-            {
-                FinalizarTutorial();
-            }
-        }
-    }
-
-    private IEnumerator ShowNextText()
-    {
-        m_SupplementaryGridIndicator.SetActive(false);
-        m_GridIndicator.SetActive(false);
-        m_ScreenIndicator.SetActive(false);
-
-        m_TextComponent.text = LocalizationManager.instance.GetText(m_ActiveKey);
-        m_TextComponent.maxVisibleCharacters = 0;
+        bool l_HasInput = Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space);
         
+        if (l_HasInput)
+        {
+            if (m_IsTyping)
+            {
+                CompleteTextInstantly();
+            }
+            else if (m_IsAngryMode)
+            {
+                ResetAfterAngry();
+            }
+            else if (GabeNewell.Instance.m_IsTutorialPlaying)
+            {
+                AdvanceTutorial();
+            }
+        }
+    }
+
+    public void ShowText(string _key)
+    {
+        if (m_TypeRoutine != null) StopCoroutine(m_TypeRoutine);
+        
+        m_ActiveKey = _key;
+        m_TextComponent.text = LocalizationManager.instance.GetText(_key);
+        m_TextComponent.maxVisibleCharacters = 0;
         m_TextComponent.ForceMeshUpdate(); 
         m_TotalVisibleCharacters = m_TextComponent.textInfo.characterCount;
 
         m_IsTyping = true;
-        m_TypeRoutine = StartCoroutine(TypeTextRoutine(m_CurrentIndex));
-        yield return null;
+        m_TypeRoutine = StartCoroutine(TypeTextRoutine());
     }
 
-    private IEnumerator TypeTextRoutine(int _Index)
+    public void AngryText(string _TextKey)
+    {
+        m_IsAngryMode = true;
+        gameObject.SetActive(true);
+        
+        m_AngryFace.SetActive(true);
+        if (m_FaceImage != null) m_FaceImage.enabled = false;
+        
+        ShowText(_TextKey);
+    }
+
+    private void AdvanceTutorial()
+    {
+        m_CurrentIndex++;
+        if (m_CurrentIndex < m_TutorialTextKeys.Length)
+        {
+            ShowText(m_TutorialTextKeys[m_CurrentIndex]);
+        }
+        else
+        {
+            FinalizarTutorial();
+        }
+    }
+
+    private IEnumerator TypeTextRoutine()
     {
         int i_Counter = 0;
-        bool l_IsMouthOpen = false;
         float l_StartTime = Time.time;
 
         while (i_Counter <= m_TotalVisibleCharacters)
         {
-            float l_RotationZ = Mathf.Sin((Time.time - l_StartTime) * m_RotationSpeed) * m_RotationAmount;
-            m_Face.transform.localRotation = m_FaceOriginalRotation * Quaternion.Euler(0, 0, l_RotationZ);
+            float l_RotZ = Mathf.Sin((Time.time - l_StartTime) * m_RotationSpeed) * m_RotationAmount;
+            m_Face.transform.localRotation = m_FaceOriginalRotation * Quaternion.Euler(0, 0, l_RotZ);
 
             if (i_Counter % m_MouthSpeedDivisor == 0)
             {
-                m_Mouth.transform.localPosition = l_IsMouthOpen ? 
+                bool l_Open = (i_Counter / m_MouthSpeedDivisor % 2 != 0);
+                m_Mouth.transform.localPosition = l_Open ? 
                     m_MouthOriginalLocalPos - new Vector3(0, 0.02f, 0) : 
                     m_MouthOriginalLocalPos;
-
-                l_IsMouthOpen = !l_IsMouthOpen;
             }
 
             m_TextComponent.maxVisibleCharacters = i_Counter;
@@ -140,28 +151,57 @@ public class Tutorial : MonoBehaviour
             yield return new WaitForSeconds(1f / m_CharactersPerSecond);
         }
 
+        OnTypingFinished();
+    }
+
+    private void CompleteTextInstantly()
+    {
+        if (m_TypeRoutine != null) StopCoroutine(m_TypeRoutine);
+        m_TextComponent.maxVisibleCharacters = m_TotalVisibleCharacters;
+        OnTypingFinished();
+    }
+
+    private void OnTypingFinished()
+    {
+        m_IsTyping = false;
         m_Mouth.transform.localPosition = m_MouthOriginalLocalPos;
         m_Face.transform.localRotation = m_FaceOriginalRotation;
-        m_IsTyping = false;
-        OnTextFinished(_Index);
-    }
 
-    private void RefreshLocalizedText()
-    {
-        if (!m_IsTyping)
+        if (!m_IsAngryMode && GabeNewell.Instance.m_IsTutorialPlaying)
         {
-            m_TextComponent.text = LocalizationManager.instance.GetText(m_ActiveKey);
+            UpdateTutorialVisuals(m_CurrentIndex);
         }
     }
 
-    private void OnTextFinished(int i_Index)
+    private void UpdateTutorialVisuals(int _index)
     {
-        switch (i_Index)
+        m_SupplementaryGridIndicator.SetActive(_index == 1);
+        m_GridIndicator.SetActive(_index == 2);
+        m_ScreenIndicator.SetActive(_index == 3);
+    }
+
+    private void ResetAfterAngry()
+    {
+        m_IsAngryMode = false;
+        m_AngryFace.SetActive(false);
+        m_TextComponent.text = "";
+        
+        if (!GabeNewell.Instance.m_IsTutorialPlaying) 
         {
-            case 1: m_SupplementaryGridIndicator.SetActive(true); break;
-            case 2: m_GridIndicator.SetActive(true); break;
-            case 3: m_ScreenIndicator.SetActive(true); break;
+            if (m_FaceImage != null) m_FaceImage.enabled = false;
+            gameObject.SetActive(false);
         }
+        else
+        {
+            if (m_FaceImage != null) m_FaceImage.enabled = true;
+        }
+    }
+
+    private void ResetIndicators()
+    {
+        m_SupplementaryGridIndicator.SetActive(false);
+        m_GridIndicator.SetActive(false);
+        m_ScreenIndicator.SetActive(false);
     }
 
     private void FinalizarTutorial()
@@ -169,14 +209,13 @@ public class Tutorial : MonoBehaviour
         m_TextComponent.text = "";
         GabeNewell.Instance.m_IsTutorialPlaying = false;
         GabeNewell.Instance.m_TutorialPlayed = true;
+        if (m_FaceImage != null) m_FaceImage.enabled = false;
         gameObject.SetActive(false);
     }
 
-    public void AngryText(string _TextKey)
+    private void RefreshLocalizedText()
     {
-        m_ActiveKey = _TextKey;
-        StartCoroutine(ShowNextText());
-        m_AngryFace.SetActive(true);
-        m_Face.GetComponent<RawImage>().enabled = false;
+        if (!m_IsTyping && !string.IsNullOrEmpty(m_ActiveKey))
+            m_TextComponent.text = LocalizationManager.instance.GetText(m_ActiveKey);
     }
 }
