@@ -14,7 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelDefinition
   maxSuplementaryGridHeight: 300
   restrictedProperties: 010000000e00000005000000
-  piecesToSpawn:
-  - pieceData: {fileID: 11400000, guid: eb8fa60028439374e869dd52e977f388, type: 2}
-    position: {x: 3, y: 3}
-    rotation: 0
+  piecesToSpawn: []
