@@ -17,11 +17,12 @@ MonoBehaviour:
   properties: 0b00000021000000120000001a000000
   icon: {fileID: -1722407522, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
   spawningLevel: 2
+  despawningLevel: 2147483647
   grabble: 1
   blocks:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
   - {x: 2, y: 0}
-  - {x: 1, y: -1}
-  - {x: 2, y: -1}
-  - {x: 2, y: -2}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: 0, y: 2}

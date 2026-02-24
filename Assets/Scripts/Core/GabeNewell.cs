@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GabeNewell : MonoBehaviour
 {
     public static GabeNewell Instance {get; private set;}
-    public int m_Level {get; private set;} = 5;
+    public int m_Level {get; private set;} = 2;
     public bool m_MailsAreRead {get; set;} = false;
     public bool m_IsTutorialPlaying {get; set;} = false;
     public bool m_CrtEffect {get; set;} = true;
