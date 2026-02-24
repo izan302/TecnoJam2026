@@ -66,7 +66,7 @@ public class MailEntryLoader : MonoBehaviour
             
             for (int i = 0; i < m_mailLists.mail.Length; i++)
             {
-                if (m_mailLists.mail[i].m_level <= GabeNewell.Instance.m_Level)
+                if (m_mailLists.mail[i].m_level <= GabeNewell.Instance.m_Level())
                 {
                     CreateMailEntry(i);
                 }
@@ -98,7 +98,7 @@ public class MailEntryLoader : MonoBehaviour
         rt.anchoredPosition = new Vector2(-105, -50 * m_loadedMails);
         
         if(index == 0) l_mail.OnClick();
-        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level) l_mail.Opened();
+        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level()) l_mail.Opened();
 
         m_loadedMails++;
         m_newMails++;

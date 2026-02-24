@@ -6,7 +6,7 @@ public class TutorialStarter : MonoBehaviour
     [SerializeField] GameObject m_Tutorial;
     void Start()
     {
-        if (GabeNewell.Instance.m_Level == 1 && !GabeNewell.Instance.m_TutorialPlayed)
+        if (GabeNewell.Instance.m_Level() == 1 && !GabeNewell.Instance.m_TutorialPlayed)
         {
             m_Tutorial.SetActive(true);
         }

@@ -3,31 +3,39 @@ using UnityEngine.SceneManagement;
 
 public class GabeNewell : MonoBehaviour
 {
-    public static GabeNewell Instance {get; private set;}
-    public int m_Level {get; private set;} = 1;
-    public bool m_MailsAreRead {get; set;} = false;
-    public bool m_IsTutorialPlaying {get; set;} = false;
-    public bool m_CrtEffect {get; set;} = true;
-    public bool m_MinesweeperWon {get; set;} = false;
-    public bool m_TutorialPlayed {get; set;} = false;
-    public string m_Language {get; set;} = "ES";
+    public static GabeNewell Instance { get; private set; }
+    [SerializeField] public int level = 1;
+    public bool m_MailsAreRead { get; set; } = false;
+    public bool m_IsTutorialPlaying { get; set; } = false;
+    public bool m_CrtEffect { get; set; } = true;
+    public bool m_MinesweeperWon { get; set; } = false;
+    public bool m_TutorialPlayed { get; set; } = false;
+    public string m_Language { get; set; } = "ES";
     void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
-            return; 
+            return;
         }
 
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
     }
+    public int m_Level()
+    {
+        return level;
+    }
+    void m_Level(int i)
+    {
+        level = i;
+    }
     public void LevelUp()
     {
-        m_Level++;
+        level++;
         m_MailsAreRead = false;
-        Debug.Log(m_Level);
+        Debug.Log(level);
         GoToTransition();
     }
 

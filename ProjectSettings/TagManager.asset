@@ -50,6 +50,9 @@ TagManager:
   - name: Grid
     uniqueID: 626539837
     locked: 0
+  - name: PiezasGobierno
+    uniqueID: 733675981
+    locked: 0
   - name: Pieces
     uniqueID: 650993317
     locked: 0

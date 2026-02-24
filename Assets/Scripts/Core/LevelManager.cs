@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
     }
     void Start()
     {
-        int level = GabeNewell.Instance.m_Level;
+        int level = GabeNewell.Instance.m_Level();
         //GenerateGrid
         grid = new Grid<GridCell>(w, h, size, gridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));
         supplementaryGrid = new Grid<GridCell>(supplementaryW, levels[level - 1].maxSuplementaryGridHeight, supplementarySize, supplementaryGridParent.transform.position, (Grid<GridCell> g, int x, int y) => new GridCell(g, x, y));

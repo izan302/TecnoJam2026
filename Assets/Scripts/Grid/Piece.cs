@@ -71,7 +71,7 @@ public class Piece : MonoBehaviour
                 PieceTile t = newTile.GetComponent<PieceTile>();
                 t.baseTile.color = piceColor[data.piceType];
                 t.baseTile.sprite = data.icon;
-                t.baseTile.renderingLayerMask = 3;
+                t.baseTile.sortingOrder = (data.piceType == Type.Gobierno) ? -1 : 1;
                 t.selection.enabled = false;
                 tiles.Add(t);
             }
