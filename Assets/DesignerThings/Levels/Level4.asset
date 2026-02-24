@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level4
   m_EditorClassIdentifier: Assembly-CSharp::LevelDefinition
   maxSuplementaryGridHeight: 300
-  restrictedProperties: 0d000000020000000a0000000a000000
+  restrictedProperties: 0d000000020000000a00000005000000010000000e0000000300000004000000
   piecesToSpawn: []
