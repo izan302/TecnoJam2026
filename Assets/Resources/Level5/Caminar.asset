@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Caminar
   piceType: 1
   properties: 
-  icon: {fileID: -1108288058, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
+  icon: {fileID: 369251515, guid: 8e78d3a958ec23a4c8367bd83c7770ff, type: 3}
   spawningLevel: 5
   despawningLevel: 2147483647
   grabble: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Metal
   piceType: 4
   properties: 02000000
-  icon: {fileID: -5656868927070744920, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
+  icon: {fileID: 277292488, guid: b8b836b4da45d8b4aa508a98101e0e6b, type: 3}
   spawningLevel: 3
   despawningLevel: 2147483647
   grabble: 1

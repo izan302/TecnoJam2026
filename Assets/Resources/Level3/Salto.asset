@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Salto
   piceType: 1
   properties: 06000000
-  icon: {fileID: -1108288058, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
+  icon: {fileID: -94564376, guid: b8b836b4da45d8b4aa508a98101e0e6b, type: 3}
   spawningLevel: 3
   despawningLevel: 2147483647
   grabble: 1

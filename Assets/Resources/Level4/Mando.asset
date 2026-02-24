@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Mando
   piceType: 3
   properties: 0f00000011000000
-  icon: {fileID: -1108288058, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
+  icon: {fileID: 1183487743, guid: 5ca611ccf9d43af4faad22ce83baf9f4, type: 3}
   spawningLevel: 4
   despawningLevel: 2147483647
   grabble: 1

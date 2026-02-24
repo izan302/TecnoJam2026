@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Hackeo
   piceType: 1
   properties: 0f000000
-  icon: {fileID: 1064229018, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
+  icon: {fileID: -1339506848, guid: b8b836b4da45d8b4aa508a98101e0e6b, type: 3}
   spawningLevel: 3
   despawningLevel: 2147483647
   grabble: 1
