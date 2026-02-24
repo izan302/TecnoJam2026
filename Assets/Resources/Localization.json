@@ -10,7 +10,7 @@
         
         { "key": "desktop_email", "value": "Email" },
         { "key": "desktop_buscaminas", "value": "Buscaminas" },
-        { "key": "desktop_engine", "value": "Liberty Engine" },
+        { "key": "desktop_engine", "value": "Freedom Engine" },
         
         { "key": "minesweeper_start", "value": "INICIAR"},
         { "key": "minesweeper_title", "value": "<color=red>BUSCA</color>MINAS"},
