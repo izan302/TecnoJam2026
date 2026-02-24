@@ -10,19 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e430cc86305be42b6d56604472093d, type: 3}
-  m_Name: Mando
+  m_Name: Chip
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
-  m_PieceName: Mando
-  piceType: 3
-  properties: 0f00000011000000
+  m_PieceName: Chip
+  piceType: 0
+  properties: 
   icon: {fileID: -1108288058, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
-  spawningLevel: 4
-  despawningLevel: 2147483647
-  grabble: 1
+  spawningLevel: 5
+  despawningLevel: -1
+  grabble: 0
   blocks:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
-  - {x: -1, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -2}
-  - {x: 1, y: -2}
+  - {x: 2, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: 2, y: 1}
+  - {x: 3, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
+  - {x: 2, y: 2}
+  - {x: 3, y: 2}
+  - {x: 4, y: 2}
+  - {x: 1, y: 3}
+  - {x: 2, y: 3}
+  - {x: 3, y: 3}
+  - {x: 4, y: 3}
+  - {x: 5, y: 3}
+  - {x: 2, y: 4}
+  - {x: 3, y: 4}
+  - {x: 4, y: 4}
+  - {x: 5, y: 4}
+  - {x: 3, y: 5}
+  - {x: 4, y: 5}
+  - {x: 5, y: 5}

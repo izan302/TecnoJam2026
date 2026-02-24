@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6b399df978295744b586d1e829de84e, type: 3}
-  m_Name: Level4
+  m_Name: Level5
   m_EditorClassIdentifier: Assembly-CSharp::LevelDefinition
-  maxSuplementaryGridHeight: 300
-  restrictedProperties: 0d000000020000000a00000005000000010000000e0000000300000004000000
+  maxSuplementaryGridHeight: 100
+  restrictedProperties: 
   piecesToSpawn:
-  - pieceData: {fileID: 11400000, guid: 545062eb676779245b67b20f35ad2299, type: 2}
-    position: {x: 3, y: 5}
+  - pieceData: {fileID: 11400000, guid: 77a703c397ed5f94caffcb98dc616c33, type: 2}
+    position: {x: 1, y: 1}
     rotation: 0

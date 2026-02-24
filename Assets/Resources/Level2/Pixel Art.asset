@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
   m_PieceName: Pixel Art
   piceType: 2
-  properties: 080000002000000012000000
+  properties: 0a00000012000000
   icon: {fileID: 294153933, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
   spawningLevel: 2
+  despawningLevel: 2147483647
   grabble: 1
   blocks:
   - {x: 0, y: 0}

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e430cc86305be42b6d56604472093d, type: 3}
-  m_Name: "Pu\xF1os"
+  m_Name: Caminar
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
-  m_PieceName: "Pu\xF1os"
-  piceType: 3
-  properties: 00000000
-  icon: {fileID: 648612117, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
-  spawningLevel: 4
+  m_PieceName: Caminar
+  piceType: 1
+  properties: 
+  icon: {fileID: -1108288058, guid: 193b8155528856e4c997c9109a3ea902, type: 3}
+  spawningLevel: 5
   despawningLevel: 2147483647
   grabble: 1
   blocks:
