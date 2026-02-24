@@ -991,6 +991,7 @@ MonoBehaviour:
   m_appAnimation: {fileID: 953070846}
   m_appAnimationOpen: {fileID: 7400000, guid: f5cd722494f211e4bbb99463ba47c6ee, type: 2}
   m_appAnimationClose: {fileID: 0}
+  m_IsDoubleClickToOpen: 1
 --- !u!114 &396580955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,6 +1440,7 @@ MonoBehaviour:
   m_appAnimation: {fileID: 351493530}
   m_appAnimationOpen: {fileID: 0}
   m_appAnimationClose: {fileID: 7400000, guid: 03614a8351fa51f4aa48923707c31393, type: 2}
+  m_IsDoubleClickToOpen: 1
 --- !u!1 &866582624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1466693105812044018, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
@@ -1753,11 +1755,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8235a12b8714f4e838ca68d0ef0331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AppScript
-  m_timeToDoubleClick: 0.1
+  m_timeToDoubleClick: -1
   m_appWindow: {fileID: 297904989}
   m_appAnimation: {fileID: 435579603}
   m_appAnimationOpen: {fileID: 7400000, guid: cc008d9b57fb6a24897fa87c650abb46, type: 2}
   m_appAnimationClose: {fileID: 7400000, guid: f5cd722494f211e4bbb99463ba47c6ee, type: 2}
+  m_IsDoubleClickToOpen: 0
 --- !u!20 &1076053945 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5359085465156567358, guid: bf2e52789c5a9374fa2265660bde2a06, type: 3}
@@ -1971,6 +1974,7 @@ MonoBehaviour:
   m_appAnimation: {fileID: 953070846}
   m_appAnimationOpen: {fileID: 0}
   m_appAnimationClose: {fileID: 7400000, guid: 0ecd250f10fe65b41b1fb7d1268a8a79, type: 2}
+  m_IsDoubleClickToOpen: 1
 --- !u!114 &1163247938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,6 +2435,7 @@ MonoBehaviour:
   m_appAnimation: {fileID: 435579603}
   m_appAnimationOpen: {fileID: 0}
   m_appAnimationClose: {fileID: 7400000, guid: b435016037cf2f5408c7a7feedc115cd, type: 2}
+  m_IsDoubleClickToOpen: 1
 --- !u!1 &1428257164
 GameObject:
   m_ObjectHideFlags: 0

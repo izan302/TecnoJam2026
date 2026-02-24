@@ -8,6 +8,7 @@ public class AppScript : MonoBehaviour
     [SerializeField] private Animation m_appAnimation;
     [SerializeField] private AnimationClip m_appAnimationOpen;
     [SerializeField] private AnimationClip m_appAnimationClose;
+    [SerializeField] private bool m_IsDoubleClickToOpen = true;
     private float m_clickCounter;
     private void Update()
     {
@@ -15,7 +16,7 @@ public class AppScript : MonoBehaviour
     }
     public void AppClick()
     {
-        if(m_clickCounter < m_timeToDoubleClick)
+        if(m_clickCounter < m_timeToDoubleClick || !m_IsDoubleClickToOpen)
         {
             m_appWindow.SetActive(true);
             if(m_appAnimationOpen != null)
