@@ -53,6 +53,10 @@ public class GabeNewell : MonoBehaviour
     {
         SceneManager.LoadScene("GameSentScene");
     }
+    public void GoToEndGame()
+    {
+        SceneManager.LoadScene("EndGame");
+    }
 
     public void LoadDesktop()
     {

@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject supplementaryGridParent;
 
     [Header("Levels")]
-    [SerializeField] LevelDefinition[] levels;
+    public  LevelDefinition[] levels;
     public List<Type> requiredTypes;
     public List<Properties> restrictedProperties;
 
