@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8235a12b8714f4e838ca68d0ef0331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AppScript
-  m_timeToDoubleClick: 0
+  m_timeToDoubleClick: 0.1
   m_appWindow: {fileID: 297904989}
   m_appAnimation: {fileID: 435579603}
   m_appAnimationOpen: {fileID: 7400000, guid: cc008d9b57fb6a24897fa87c650abb46, type: 2}

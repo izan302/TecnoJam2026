@@ -266,8 +266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eb41d104d92d74b91ad4764ea2bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErrorShow
-  title: 'ERROR(40): GenereNotFound'
-  message: Unexisting genere inside the game. \nPlease add a Genere before sending.
   errorCode: error_40_
 --- !u!114 &121025712
 MonoBehaviour:
@@ -628,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4df1299561133241914ead17e4b2a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadScene
-  m_SceneToLoad: JanScene
+  m_SceneToLoad: DesktopScene
 --- !u!114 &296402875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,8 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eb41d104d92d74b91ad4764ea2bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErrorShow
-  title: 'ERROR(83): GridNotFull'
-  message: The grid is still not full. \nPlease, complete it before sending.
   errorCode: error_83_
 --- !u!114 &303820182
 MonoBehaviour:
@@ -2472,8 +2468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eb41d104d92d74b91ad4764ea2bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErrorShow
-  title: 'ERROR(42): StyleNotFound'
-  message: Unexisting style inside the game. \nPlease add a Style before sending.
   errorCode: error_42_
 --- !u!114 &1050197904
 MonoBehaviour:
@@ -3218,8 +3212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eb41d104d92d74b91ad4764ea2bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErrorShow
-  title: 'ERROR(41): MechanicNotFound'
-  message: Unexisting mechanic inside the game. \nPlease add a Mechanic before sending.
   errorCode: error_41_
 --- !u!114 &1739215924
 MonoBehaviour:
@@ -3379,8 +3371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eb41d104d92d74b91ad4764ea2bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErrorShow
-  title: 'ERROR(155): BannedPiecePresent'
-  message: There's a banned piece inside the game. \nPlease REMOVE IT before sending.
   errorCode: error_115_
 --- !u!114 &1761895394
 MonoBehaviour:
@@ -3701,8 +3691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eb41d104d92d74b91ad4764ea2bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErrorShow
-  title: 'ERROR(43): ItemNotFound'
-  message: Unexisting item inside the game. \nPlease add an Item before sending.
   errorCode: error_43_
 --- !u!114 &1824539537
 MonoBehaviour:

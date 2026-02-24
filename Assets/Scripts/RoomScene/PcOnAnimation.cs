@@ -20,7 +20,7 @@ public class PcOnAnimation : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("JanScene", LoadSceneMode.Additive);
+        GabeNewell.Instance.LoadDesktop();
         m_Title.SetActive(false);
         m_PcOn.SetActive(true);
         m_PcStartupScreen.SetActive(true);
@@ -41,7 +41,7 @@ public class PcOnAnimation : MonoBehaviour
         m_PcDesktop.SetActive(true);
         m_PcStartupScreen.SetActive(false);
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("JanScene");
+        GabeNewell.Instance.GoToDesktop();
     } 
 
     void OnDestroy()

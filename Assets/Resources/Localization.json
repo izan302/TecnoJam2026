@@ -32,6 +32,9 @@
         { "key": "tut_10", "value": "Buena suerte." },
         { "key": "tut_angry", "value": "<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?" },
 
+        { "key": "gameSent_01", "value": "Enviaste tu juego..." },
+        { "key": "gameSent_02", "value": "Tu juego ha sido <color=red>RECHAZADO</color> por el gobierno... " },
+
 
         { "key": "error_83_title", "value": "ERROR(83): CuadrículaIncompleta" },
         { "key": "error_83_message", "value": "La cuadrícula aún no está llena. \nPor favor, complétala antes de enviar." },
@@ -164,16 +167,26 @@
         { "key": "tut_10", "value": "Good luck." },
         { "key": "tut_angry", "value": "<size=120%><color=red>STOP IT!</color></size>\nDON'T YOU SEE YOU CAN'T PLACE IT THERE?" },
 
+
+        { "key": "gameSent_01", "value": "You submit your game..." },
+        { "key": "gameSent_02", "value": "Your game has been <color=red>REJECTED</color> by the government... " },
+
+
         { "key": "error_83_title", "value": "ERROR(83): GridNotFull"},
         { "key": "error_83_message", "value": "The grid is still not full. \nPlease, complete it before sending."},
+
         { "key": "error_155_title", "value": "ERROR(155): BannedPiecePresent"},
         { "key": "error_155_message", "value": "There's a banned piece inside the game. \nPlease REMOVE IT before sending."},
+
         { "key": "error_40_title", "value": "ERROR(40): GenereNotFound"},
         { "key": "error_40_message", "value": "Unexisting genere inside the game. \nPlease add a Genere before sending."},
+
         { "key": "error_41_title", "value": "ERROR(41): MechanicNotFound"},
         { "key": "error_41_message", "value": "Unexisting mechanic inside the game. \nPlease add a Mechanic before sending."},
+
         { "key": "error_42_title", "value": "ERROR(42): StyleNotFound"},
         { "key": "error_42_message", "value": "Unexisting style inside the game. \nPlease add a Style before sending."},
+
         { "key": "error_43_title", "value": "ERROR(43): ItemNotFound"},
         { "key": "error_43_message", "value": "Unexisting item inside the game. \nPlease add an Item before sending."},
 

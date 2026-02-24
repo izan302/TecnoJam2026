@@ -16,7 +16,7 @@ public class GameAppScript : MonoBehaviour
     {
         if (m_clickCounter < m_timeToDoubleClick)
         {
-            SceneManager.LoadScene(m_appName);
+            GabeNewell.Instance.GoToGameplay();
         }
         m_clickCounter = 0;
     }

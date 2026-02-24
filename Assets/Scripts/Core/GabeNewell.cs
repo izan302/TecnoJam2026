@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GabeNewell : MonoBehaviour
 {
     public static GabeNewell Instance {get; private set;}
-    public int m_Level {get; private set;} = 2;
+    public int m_Level {get; private set;} = 1;
     public bool m_MailsAreRead {get; set;} = false;
     public bool m_IsTutorialPlaying {get; set;} = false;
     public bool m_CrtEffect {get; set;} = true;
@@ -28,6 +28,31 @@ public class GabeNewell : MonoBehaviour
         m_Level++;
         m_MailsAreRead = false;
         Debug.Log(m_Level);
-        SceneManager.LoadScene("JanScene");
+        GoToTransition();
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("RoomScene");
+    }
+
+    public void GoToDesktop()
+    {
+        SceneManager.LoadScene("DesktopScene");
+    }
+
+    public void GoToTransition()
+    {
+        SceneManager.LoadScene("GameSentScene");
+    }
+
+    public void LoadDesktop()
+    {
+        SceneManager.LoadScene("DesktopScene", LoadSceneMode.Additive);
+    }
+
+    public void GoToGameplay()
+    {
+        SceneManager.LoadScene("GameplayScene");
     }
 }
