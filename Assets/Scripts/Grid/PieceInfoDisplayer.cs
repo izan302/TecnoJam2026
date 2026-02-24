@@ -20,8 +20,8 @@ public class PieceInfoDisplayer : MonoBehaviour
 
     public void DisplayPiece(PieceData piece, Color c)
     {
-        pieceName.text = piece.name;
-        pieceType.text = "Type: " + piece.piceType.ToString();
+        pieceName.text = LocalizationManager.instance.GetText("piece_name_"+piece.name);
+        pieceType.text = LocalizationManager.instance.GetText("ui_type") + ": " + LocalizationManager.instance.GetText("piece_type_"+piece.piceType.ToString());
         pieceType.color = c;
 
         for (int i = 0; i < propertie.Length; i++)
@@ -31,7 +31,7 @@ public class PieceInfoDisplayer : MonoBehaviour
                 propertie[i].enabled = true;
 
                 Properties prp = piece.properties[i];
-                propertie[i].text = "·" + prp;
+                propertie[i].text = "â€¢ " + LocalizationManager.instance.GetText("prp_" +prp.ToString());
 
                 propertie[i].color = LevelManager.instance.restrictedProperties.Contains(prp) ? bannedColor : goodColor;
             }
@@ -41,10 +41,10 @@ public class PieceInfoDisplayer : MonoBehaviour
             }
         }
     }
-    public void DisplayError(string titulo, string info)
+    public void DisplayError(string Title_Key, string Message_Key)
     {
-        pieceName.text = titulo;
-        pieceType.text = info;
+        pieceName.text = LocalizationManager.instance.GetText(Title_Key);
+        pieceType.text = LocalizationManager.instance.GetText(Message_Key);
         pieceType.color = bannedColor;
 
         for (int i = 0; i < propertie.Length; i++)
