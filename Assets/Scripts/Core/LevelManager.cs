@@ -105,7 +105,7 @@ public class LevelManager : MonoBehaviour
         {
             Piece newPiece = Instantiate(piecePrefab);
             newPiece.Setup(entry.pieceData, entry.position, grid, entry.rotation);
-
+            newPiece.transform.SetParent(gridParent.transform);
             float cellSize = grid.GetCellSize();
             Vector3 worldPos = grid.GetWorldPosition(entry.position.x, entry.position.y);
 
@@ -117,6 +117,7 @@ public class LevelManager : MonoBehaviour
                 grid.GetGridObject(gridPos.x, gridPos.y).Place(newPiece);
             }
         }
+        grid.LogGrid();
     }
     private void LoadStoredPieces(int level)
     {
