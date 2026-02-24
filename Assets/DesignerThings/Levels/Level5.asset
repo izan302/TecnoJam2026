@@ -18,3 +18,9 @@ MonoBehaviour:
   - pieceData: {fileID: 11400000, guid: 77a703c397ed5f94caffcb98dc616c33, type: 2}
     position: {x: 1, y: 1}
     rotation: 0
+  - pieceData: {fileID: 11400000, guid: 545062eb676779245b67b20f35ad2299, type: 2}
+    position: {x: 3, y: 5}
+    rotation: 0
+  - pieceData: {fileID: 11400000, guid: eb8fa60028439374e869dd52e977f388, type: 2}
+    position: {x: 3, y: 3}
+    rotation: 0
