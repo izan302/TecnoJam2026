@@ -7,7 +7,7 @@ public class SendButton : MonoBehaviour
     {
         if (!m_Clicked)
         {
-            if (GabeNewell.Instance.m_Level() == LevelManager.instance.levels.Length)
+            if (GabeNewell.Instance.m_Level() >= LevelManager.instance.levels.Length)
                 GabeNewell.Instance.GoToEndGame();
             else
                 GabeNewell.Instance.LevelUp();
