@@ -41,8 +41,8 @@ public class BackgroudAnimation : MonoBehaviour
         m_AllOnLights.SetActive(true);
         m_OneOffLight.SetActive(false);
         yield return new WaitForSeconds(0.2f);
-        m_AllOffLights.SetActive(true);
-        m_AllOnLights.SetActive(false);
+        //m_AllOffLights.SetActive(true);
+        //m_AllOnLights.SetActive(false);
         m_OneOffLight.SetActive(false);
         yield return new WaitForSeconds(1f);
         m_AllOnLights.SetActive(true);
