@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class GridPlacementManager : MonoBehaviour
 {
@@ -9,15 +10,16 @@ public class GridPlacementManager : MonoBehaviour
     [SerializeField] Piece activePiece;
 
     [SerializeField] private float moveDelay = 0.15f;
-    [SerializeField] private float rotationSpeed = 10f;
     private float moveTimer;
     private CameraShake m_CameraShake;
+    private bool isBouncing = false;
 
     private void Awake()
     {
         instance = this;
         m_CameraShake = FindAnyObjectByType<CameraShake>();
     }
+
     void Update()
     {
         if (GabeNewell.Instance.m_IsTutorialPlaying) return;
@@ -26,7 +28,6 @@ public class GridPlacementManager : MonoBehaviour
 
         if (activePiece == null)
         {
-
             if (Input.GetMouseButtonDown(0))
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
@@ -40,38 +41,37 @@ public class GridPlacementManager : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 ReturnPieceToSupplementaryGrid();
+                return;
             }
+
             moveTimer -= Time.deltaTime;
             HandleMovement();
             HandleRotation();
 
-            if (activePiece != null)
-            {
-                if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
-                {
-                    activePiece.SetBorderColor(Color.green);
-                }
-                else
-                {
-                    activePiece.SetBorderColor(Color.red);
-                }
-                UpdateActivePieceVisualPosition();
-            }
+            UpdatePieceStatus();
             HandlePlacement();
         }
     }
 
+    void UpdatePieceStatus()
+    {
+        if (activePiece == null) return;
+
+        if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
+        {
+            activePiece.SetBorderColor(Color.green);
+        }
+        else
+        {
+            activePiece.SetBorderColor(Color.red);
+        }
+        UpdateActivePieceVisualPosition();
+    }
+
     void HandleCursorVisuals()
     {
-        if (activePiece != null)
-        {
-            return;
-        }
-
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        if (activePiece != null) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         Vector3 mouseWorldPos = InputManager.Instance.GetWorldMousePosition();
         RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
@@ -86,13 +86,12 @@ public class GridPlacementManager : MonoBehaviour
                 return;
             }
         }
-
         CursorManager.Instance.SetInteractorCursor(CursorManager.CursorImage.Normal, Vector2.zero);
     }
 
     void HandleRotation()
     {
-        if (activePiece == null) return;
+        if (activePiece == null || isBouncing) return;
 
         if (InputManager.Instance.GetLeftRotation())
             TryRotate(-1);
@@ -100,9 +99,10 @@ public class GridPlacementManager : MonoBehaviour
         if (InputManager.Instance.GetRightRotation())
             TryRotate(1);
     }
+
     void HandleMovement()
     {
-        if (moveTimer > 0) return;
+        if (moveTimer > 0 || activePiece == null) return;
 
         Vector2Int delta = Vector2Int.zero;
         if (InputManager.Instance.GetUp()) delta = Vector2Int.up;
@@ -121,12 +121,14 @@ public class GridPlacementManager : MonoBehaviour
             }
         }
     }
+
     bool IsInsideGrid(Piece piece, Vector2Int pivotPos, int rotation)
     {
+        Grid<GridCell> grid = LevelManager.instance.GetGrid(piece.GetGrid());
         foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
         {
-            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.GetGrid(piece.GetGrid()).GetWidth() ||
-              blockPos.y < 0 || blockPos.y >= LevelManager.instance.GetGrid(piece.GetGrid()).GetHeight())
+            if (blockPos.x < 0 || blockPos.x >= grid.GetWidth() ||
+                blockPos.y < 0 || blockPos.y >= grid.GetHeight())
             {
                 return false;
             }
@@ -136,22 +138,40 @@ public class GridPlacementManager : MonoBehaviour
 
     void TryRotate(int dir)
     {
-        int targetRotationValue = activePiece.rotation + dir;
+        int originalRotation = activePiece.rotation;
+        int targetRotationValue = (originalRotation + dir % 4 + 4) % 4;
+
         if (IsInsideGrid(activePiece, activePiece.pivotGridPosition, targetRotationValue))
         {
             activePiece.rotation = targetRotationValue;
         }
+        else
+        {
+            StartCoroutine(RotateBounceRoutine(originalRotation, targetRotationValue));
+        }
     }
+
+    IEnumerator RotateBounceRoutine(int original, int target)
+    {
+        isBouncing = true;
+        activePiece.rotation = target;
+        yield return new WaitForSeconds(0.01f);
+        activePiece.rotation = original;
+        isBouncing = false;
+    }
+
     bool CanPlace(Piece piece, Vector2Int pivotPos, int rotation)
     {
+        if (isBouncing) return false;
+        Grid<GridCell> grid = LevelManager.instance.GetGrid(piece.GetGrid());
         foreach (var blockPos in piece.GetGridPositions(pivotPos, rotation))
         {
-            if (blockPos.x < 0 || blockPos.x >= LevelManager.instance.GetGrid(piece.GetGrid()).GetWidth() ||
-              blockPos.y < 0 || blockPos.y >= LevelManager.instance.GetGrid(piece.GetGrid()).GetHeight())
+            if (blockPos.x < 0 || blockPos.x >= grid.GetWidth() ||
+                blockPos.y < 0 || blockPos.y >= grid.GetHeight())
             {
                 return false;
             }
-            GridCell cell = LevelManager.instance.GetGrid(piece.GetGrid()).GetGridObject(blockPos.x, blockPos.y);
+            GridCell cell = grid.GetGridObject(blockPos.x, blockPos.y);
             if (cell == null || !cell.IsEmpty)
             {
                 return false;
@@ -159,14 +179,14 @@ public class GridPlacementManager : MonoBehaviour
         }
         return true;
     }
+
     void HandlePlacement()
     {
-        if (InputManager.Instance.GetConfirm() && activePiece != null)
+        if (InputManager.Instance.GetConfirm() && activePiece != null && !isBouncing)
         {
             if (CanPlace(activePiece, activePiece.pivotGridPosition, activePiece.rotation))
             {
                 Grid<GridCell> mainGrid = LevelManager.instance.GetGrid(activePiece.GetGrid());
-
                 foreach (var pos in activePiece.GetGridPositions())
                 {
                     mainGrid.GetGridObject(pos.x, pos.y).Place(activePiece);
@@ -174,18 +194,19 @@ public class GridPlacementManager : MonoBehaviour
 
                 activePiece.OnPieceSelect(false);
                 activePiece.inInventory = false;
-                UpdateActivePieceVisualPosition();
-
+                UpdatePieceStatus();
                 activePiece = null;
 
                 if (WinConditionManager.instance != null)
                     WinConditionManager.instance.CheckWinCondition();
-            }else
+            }
+            else
             {
-                m_CameraShake.PlayCameraShake();
+                if (m_CameraShake != null) m_CameraShake.PlayCameraShake();
             }
         }
     }
+
     void TryPickUpPiece()
     {
         Vector3 mouseWorldPos = InputManager.Instance.GetWorldMousePosition();
@@ -194,9 +215,10 @@ public class GridPlacementManager : MonoBehaviour
         if (hit.collider != null)
         {
             Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
-            PieceInfoDisplayer.instance.DisplayPiece(clickedPiece.data, clickedPiece.piceColor[clickedPiece.data.piceType]);
             if (clickedPiece == null || clickedPiece.data.grabble == false) return;
 
+            PieceInfoDisplayer.instance.DisplayPiece(clickedPiece.data, clickedPiece.piceColor[clickedPiece.data.piceType]);
+            
             Grid<GridCell> currentGrid = LevelManager.instance.GetGrid(clickedPiece.GetGrid());
             foreach (var pos in clickedPiece.GetGridPositions())
             {
@@ -217,12 +239,13 @@ public class GridPlacementManager : MonoBehaviour
                 int centerX = LevelManager.instance.grid.GetWidth() / 2;
                 int centerY = LevelManager.instance.grid.GetHeight() / 2;
                 activePiece.pivotGridPosition = new Vector2Int(centerX, centerY);
-
-                UpdateActivePieceVisualPosition();
             }
+
+            UpdatePieceStatus();
 
             if (WinConditionManager.instance != null)
                 WinConditionManager.instance.CheckWinCondition();
+            
             CursorManager.Instance.SetInteractorCursor(CursorManager.CursorImage.Normal, Vector2.zero);
         }
     }
@@ -230,31 +253,20 @@ public class GridPlacementManager : MonoBehaviour
     void UpdateActivePieceVisualPosition()
     {
         if (activePiece == null) return;
-
         Grid<GridCell> currentGrid = LevelManager.instance.GetGrid(activePiece.GetGrid());
         Vector3 worldPos = currentGrid.GetWorldPosition(activePiece.pivotGridPosition.x, activePiece.pivotGridPosition.y);
         float cellSize = currentGrid.GetCellSize();
         Vector3 offset = new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
-
         activePiece.transform.position = worldPos + offset;
     }
 
     public void ReturnPieceToSupplementaryGrid()
     {
         if (activePiece == null) return;
-        foreach (var pos in activePiece.GetGridPositions())
-        {
-            GridCell cell = LevelManager.instance.GetGrid(activePiece.GetGrid()).GetGridObject(pos.x, pos.y);
-            if (cell != null && cell.placedPiece == activePiece)
-            {
-                cell.ClearPiece();
-            }
-        }
         activePiece.SetGrid(LevelManager.instance.supplementaryGrid);
         activePiece.transform.SetParent(LevelManager.instance.GetGridParent(activePiece.GetGrid()).transform);
         activePiece.RestoreToHomeState();
         activePiece.inInventory = true;
-        UpdateActivePieceVisualPosition();
         activePiece.OnPieceSelect(false);
         activePiece = null;
     }

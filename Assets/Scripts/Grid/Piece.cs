@@ -20,6 +20,7 @@ public class Piece : MonoBehaviour
     private int storedRotation;
     public bool inInventory = false;
     List<PieceTile> tiles = new List<PieceTile>();
+
     public void Setup(PieceData d, Vector2Int startPos, Grid<GridCell> grid, int startRotation = 0)
     {
         data = d;
@@ -33,15 +34,14 @@ public class Piece : MonoBehaviour
         GenerateVisuals();
         UpdateVisualRotation();
     }
+
     void Update()
     {
         var currentGrid = LevelManager.instance.GetGrid(this.GetGrid());
         if (currentGrid == null) return;
 
         float cellSize = currentGrid.GetCellSize();
-
         Vector3 cellLocalOffset = new Vector3(pivotGridPosition.x * cellSize, pivotGridPosition.y * cellSize, 0);
-
         Vector3 targetLocalPos = cellLocalOffset + new Vector3(cellSize * 0.5f, cellSize * 0.5f, 0);
 
         transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocalPos, Time.deltaTime * smoothSpeed);
@@ -61,9 +61,7 @@ public class Piece : MonoBehaviour
         {
             Vector2Int localGridPos = blockPos - data.pivot;
             GameObject newTile = Instantiate(tilePrefab, transform);
-
             newTile.transform.localPosition = new Vector3(localGridPos.x, localGridPos.y, 0f);
-
             newTile.transform.localScale = Vector3.one;
 
             if (piceColor.ContainsKey(data.piceType))
@@ -77,6 +75,7 @@ public class Piece : MonoBehaviour
             }
         }
     }
+
     public void SetBorderColor(Color color)
     {
         foreach (PieceTile t in tiles)
@@ -84,10 +83,12 @@ public class Piece : MonoBehaviour
             t.selection.color = color;
         }
     }
+
     public Grid<GridCell> GetGrid()
     {
         return m_Grid;
     }
+
     public void SetGrid(Grid<GridCell> grid)
     {
         m_Grid = grid;
@@ -95,8 +96,6 @@ public class Piece : MonoBehaviour
 
     public void OnPieceSelect(bool selected)
     {
-        //Debug.Log(piceColor[data.piceType]);
-        
         foreach (PieceTile t in tiles)
         {
             t.selection.enabled = selected;
@@ -111,11 +110,13 @@ public class Piece : MonoBehaviour
         rotation = (rotation + direction % 4 + 4) % 4;
         UpdateVisualRotation();
     }
+
     private void UpdateVisualRotation()
     {
-        transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, 0, rotation * -90f), 1f);
+        transform.localRotation = Quaternion.Euler(0, 0, rotation * -90f);
     }
-    private Vector2Int Rotate(Vector2Int v, int rotation)
+
+    public Vector2Int Rotate(Vector2Int v, int rotation)
     {
         int r = (rotation % 4 + 4) % 4;
         switch (r)
@@ -133,6 +134,7 @@ public class Piece : MonoBehaviour
         storedGridPosition = pivotGridPosition;
         storedRotation = rotation;
     }
+
     public void RestoreToHomeState()
     {
         pivotGridPosition = storedGridPosition;
@@ -146,23 +148,22 @@ public class Piece : MonoBehaviour
         foreach (Vector2Int block in data.blocks)
         {
             Vector2Int localPos = block - data.pivot;
-
             Vector2Int rotatedPos = Rotate(localPos, rotation);
-
             result.Add(pivot + rotatedPos);
         }
         return result;
     }
+
     public List<Vector2Int> GetGridPositions()
     {
         return GetGridPositions(this.pivotGridPosition, this.rotation);
     }
+
     public Vector2Int GetMinBounds()
     {
-        Vector2Int min = Vector2Int.zero;
+        Vector2Int min = data.pivot;
         foreach (var block in data.blocks)
         {
-            min = data.pivot;
             if (block.x < min.x) min.x = block.x;
             if (block.y < min.y) min.y = block.y;
         }
