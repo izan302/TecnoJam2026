@@ -551,7 +551,7 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   m_CharactersPerSecond: 40
   m_PauseOnPunctuation: 1
-  m_PunctuationPauseTime: 0.5
+  m_PunctuationPauseTime: 0.3
 --- !u!1 &437649050
 GameObject:
   m_ObjectHideFlags: 0
