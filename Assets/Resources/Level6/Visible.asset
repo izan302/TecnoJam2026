@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Visible
   piceType: 2
   properties: 
-  icon: {fileID: 3327476702383911730, guid: bf82666e272268d4b83de402060ff550, type: 3}
+  icon: {fileID: 1279798899, guid: 333635534a92b5f4fa457b4768386a03, type: 3}
   spawningLevel: 6
   despawningLevel: 2147483647
   grabble: 1

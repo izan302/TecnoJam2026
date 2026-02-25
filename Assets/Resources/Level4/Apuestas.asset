@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e430cc86305be42b6d56604472093d, type: 3}
-  m_Name: Pixel Art
+  m_Name: Apuestas
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
-  m_PieceName: Pixel Art
-  piceType: 2
-  properties: 0a00000012000000
-  icon: {fileID: 1998023972, guid: 333635534a92b5f4fa457b4768386a03, type: 3}
-  spawningLevel: 2
-  despawningLevel: 5
+  m_PieceName: 
+  piceType: 0
+  properties: 
+  icon: {fileID: 0}
+  spawningLevel: 0
+  despawningLevel: 2147483647
   grabble: 1
-  blocks:
-  - {x: 0, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 0}
-  - {x: 1, y: 1}
+  blocks: []

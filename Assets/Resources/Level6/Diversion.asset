@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Diversion
   piceType: 3
   properties: 
-  icon: {fileID: 3327476702383911730, guid: bf82666e272268d4b83de402060ff550, type: 3}
+  icon: {fileID: 4358506794842372027, guid: eda30218f78ec4d41a809d9a828248d5, type: 3}
   spawningLevel: 6
   despawningLevel: 2147483647
   grabble: 1
