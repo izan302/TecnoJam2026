@@ -29,9 +29,7 @@ public class LanguageDropdown : MonoBehaviour
         for (int i = 0; i < data.languages.Count; i++)
         {
             string langID = data.languages[i].languageID;
-
-            Sprite flag = null;
-            flagIcons.TryGetValue(langID, out flag);
+            Sprite flag = flagIcons[langID];
 
             var option =  new TMP_Dropdown.OptionData(langID, flag, Color.white);
             options.Add(option);
@@ -45,6 +43,7 @@ public class LanguageDropdown : MonoBehaviour
         m_Dropdown.AddOptions(options);
 
         m_Dropdown.value = currentIndex;
+        m_Dropdown.image.sprite = flagIcons[options[currentIndex].text];
         m_Dropdown.RefreshShownValue();
 
         m_Dropdown.onValueChanged.AddListener(OnDropdownChanged);
