@@ -1,70 +1,63 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
-    [Header("Configuración")]
-    [SerializeField] private TextMeshProUGUI m_TextComponent;
-    [SerializeField] private float m_CharactersPerSecond = 30f;
-    [SerializeField] private int m_MouthSpeedDivisor = 3; 
+    [Header("Configuración Animación")]
     [SerializeField] private float m_RotationAmount = 5f;
     [SerializeField] private float m_RotationSpeed = 10f;
+    [SerializeField] private float m_MouthMoveAmount = 10f;
+    [SerializeField] private float m_MouthSpeed = 15f;
+
+    [Header("Referencias UI")]
+    [SerializeField] private TextMeshProUGUI m_TextComponent;
+    [SerializeField] private TypewriterEffect m_TypewriterEffect;
+
+    [Header("Retratos y Bocas")]
+    [SerializeField] private GameObject m_NormalFaceGroup;
+    [SerializeField] private GameObject m_NormalMouth;
+    [SerializeField] private GameObject m_AngryFaceGroup;
+    [SerializeField] private GameObject m_AngryMouth;
+
+    [Header("Indicadores Visuales")]
+    [SerializeField] private GameObject m_SupplementaryGridIndicator;
+    [SerializeField] private GameObject m_GridIndicator;
+    [SerializeField] private GameObject m_ScreenIndicator;
 
     [Header("Localización")]
-    [SerializeField] private string[] m_TutorialTextKeys; 
+    [SerializeField] private string[] m_TutorialTextKeys;
 
-    [Header("Referencias")]
-    [SerializeField] GameObject m_SupplementaryGridIndicator;
-    [SerializeField] GameObject m_GridIndicator;
-    [SerializeField] GameObject m_ScreenIndicator;
+    private Vector3 m_NormalMouthOriginalPos;
+    private Vector3 m_AngryMouthOriginalPos;
+    private Quaternion m_NormalOriginalRot;
+    private Quaternion m_AngryOriginalRot;
 
-    [Header("Portrait")]
-    [SerializeField] GameObject m_Face;
-    [SerializeField] GameObject m_Mouth;
-    [SerializeField] GameObject m_AngryFace;
-
-    private Vector3 m_MouthOriginalLocalPos;
-    private Quaternion m_FaceOriginalRotation;
     private int m_CurrentIndex = 0;
-    private Coroutine m_TypeRoutine;
-    private bool m_IsTyping = false;
     private bool m_IsAngryMode = false;
-    private int m_TotalVisibleCharacters;
-    private string m_ActiveKey;
-    private RawImage m_FaceImage;
-
-    void OnEnable() => LocalizationManager.OnLanguageChanged += RefreshLocalizedText;
-    void OnDisable() => LocalizationManager.OnLanguageChanged -= RefreshLocalizedText;
 
     void Awake()
     {
-        m_MouthOriginalLocalPos = m_Mouth.transform.localPosition;
-        m_FaceOriginalRotation = m_Face.transform.localRotation;
-        m_FaceImage = m_Face.GetComponent<RawImage>();
-        
-        m_AngryFace.SetActive(false);
-        if (m_FaceImage != null) m_FaceImage.enabled = true;
+        m_NormalMouthOriginalPos = m_NormalMouth.transform.localPosition;
+        m_AngryMouthOriginalPos = m_AngryMouth.transform.localPosition;
+        m_NormalOriginalRot = m_NormalFaceGroup.transform.localRotation;
+        m_AngryOriginalRot = m_AngryFaceGroup.transform.localRotation;
+
+        ResetIndicators();
     }
 
     void Start()
     {
-        ResetIndicators();
-        
-        if (!GabeNewell.Instance.m_TutorialPlayed)
+        m_TypewriterEffect.OnTextFinished += OnTypingFinished;
+
+        if (!GabeNewell.Instance.m_TutorialPlayed && m_TutorialTextKeys.Length > 0)
         {
             GabeNewell.Instance.m_IsTutorialPlaying = true;
             m_CurrentIndex = 0;
-            m_IsAngryMode = false;
             ShowText(m_TutorialTextKeys[m_CurrentIndex]);
         }
         else
         {
-            m_TextComponent.text = "";
-            if (m_FaceImage != null) m_FaceImage.enabled = false;
             gameObject.SetActive(false);
         }
     }
@@ -72,12 +65,12 @@ public class Tutorial : MonoBehaviour
     void Update()
     {
         bool l_HasInput = Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space);
-        
+
         if (l_HasInput)
         {
-            if (m_IsTyping)
+            if (m_TypewriterEffect.IsTyping)
             {
-                CompleteTextInstantly();
+                m_TypewriterEffect.Skip();
             }
             else if (m_IsAngryMode)
             {
@@ -88,31 +81,28 @@ public class Tutorial : MonoBehaviour
                 AdvanceTutorial();
             }
         }
+
+        if (m_TypewriterEffect.IsTyping)
+        {
+            AnimateTalking();
+        }
+        else
+        {
+            ResetAnimation();
+        }
     }
 
     public void ShowText(string _key)
     {
-        if (m_TypeRoutine != null) StopCoroutine(m_TypeRoutine);
-        
-        m_ActiveKey = _key;
-        m_TextComponent.text = LocalizationManager.instance.GetText(_key);
-        m_TextComponent.maxVisibleCharacters = 0;
-        m_TextComponent.ForceMeshUpdate(); 
-        m_TotalVisibleCharacters = m_TextComponent.textInfo.characterCount;
-
-        m_IsTyping = true;
-        m_TypeRoutine = StartCoroutine(TypeTextRoutine());
+        SetAngryMode(false);
+        m_TypewriterEffect.PlayText(_key, m_TextComponent);
     }
 
-    public void AngryText(string _TextKey)
+    public void AngryText(string _key)
     {
-        m_IsAngryMode = true;
-        gameObject.SetActive(true);
-        
-        m_AngryFace.SetActive(true);
-        if (m_FaceImage != null) m_FaceImage.enabled = false;
-        
-        ShowText(_TextKey);
+        gameObject.SetActive(true); 
+        SetAngryMode(true);
+        m_TypewriterEffect.PlayText(_key, m_TextComponent);
     }
 
     private void AdvanceTutorial()
@@ -124,98 +114,82 @@ public class Tutorial : MonoBehaviour
         }
         else
         {
-            FinalizarTutorial();
+            FinishTutorial();
         }
-    }
-
-    private IEnumerator TypeTextRoutine()
-    {
-        int i_Counter = 0;
-        float l_StartTime = Time.time;
-
-        while (i_Counter <= m_TotalVisibleCharacters)
-        {
-            float l_RotZ = Mathf.Sin((Time.time - l_StartTime) * m_RotationSpeed) * m_RotationAmount;
-            m_Face.transform.localRotation = m_FaceOriginalRotation * Quaternion.Euler(0, 0, l_RotZ);
-
-            if (i_Counter % m_MouthSpeedDivisor == 0)
-            {
-                bool l_Open = (i_Counter / m_MouthSpeedDivisor % 2 != 0);
-                m_Mouth.transform.localPosition = l_Open ? 
-                    m_MouthOriginalLocalPos - new Vector3(0, 0.02f, 0) : 
-                    m_MouthOriginalLocalPos;
-            }
-
-            m_TextComponent.maxVisibleCharacters = i_Counter;
-            i_Counter++;
-            yield return new WaitForSeconds(1f / m_CharactersPerSecond);
-        }
-
-        OnTypingFinished();
-    }
-
-    private void CompleteTextInstantly()
-    {
-        if (m_TypeRoutine != null) StopCoroutine(m_TypeRoutine);
-        m_TextComponent.maxVisibleCharacters = m_TotalVisibleCharacters;
-        OnTypingFinished();
     }
 
     private void OnTypingFinished()
     {
-        m_IsTyping = false;
-        m_Mouth.transform.localPosition = m_MouthOriginalLocalPos;
-        m_Face.transform.localRotation = m_FaceOriginalRotation;
-
-        if (!m_IsAngryMode && GabeNewell.Instance.m_IsTutorialPlaying)
+        ResetAnimation();
+        if (!m_IsAngryMode)
         {
             UpdateTutorialVisuals(m_CurrentIndex);
         }
     }
 
-    private void UpdateTutorialVisuals(int _index)
+    private void AnimateTalking()
     {
-        m_SupplementaryGridIndicator.SetActive(_index == 1);
-        m_GridIndicator.SetActive(_index == 2);
-        m_ScreenIndicator.SetActive(_index == 3);
+        float l_RotZ = Mathf.Sin(Time.time * m_RotationSpeed) * m_RotationAmount;
+        float l_MouthOffset = Mathf.PingPong(Time.time * m_MouthSpeed, m_MouthMoveAmount);
+
+        if (!m_IsAngryMode)
+        {
+            m_NormalFaceGroup.transform.localRotation = m_NormalOriginalRot * Quaternion.Euler(0, 0, l_RotZ);
+            m_NormalMouth.transform.localPosition = m_NormalMouthOriginalPos + new Vector3(0, -l_MouthOffset, 0);
+        }
+        else
+        {
+            m_AngryFaceGroup.transform.localRotation = m_AngryOriginalRot * Quaternion.Euler(0, 0, l_RotZ);
+            m_AngryMouth.transform.localPosition = m_AngryMouthOriginalPos + new Vector3(0, -l_MouthOffset, 0);
+        }
+    }
+
+    private void ResetAnimation()
+    {
+        m_NormalFaceGroup.transform.localRotation = m_NormalOriginalRot;
+        m_NormalMouth.transform.localPosition = m_NormalMouthOriginalPos;
+        m_AngryFaceGroup.transform.localRotation = m_AngryOriginalRot;
+        m_AngryMouth.transform.localPosition = m_AngryMouthOriginalPos;
+    }
+
+    public void SetAngryMode(bool _isAngry)
+    {
+        m_IsAngryMode = _isAngry;
+        m_NormalFaceGroup.SetActive(!_isAngry);
+        m_AngryFaceGroup.SetActive(_isAngry);
     }
 
     private void ResetAfterAngry()
     {
-        m_IsAngryMode = false;
-        m_AngryFace.SetActive(false);
+        SetAngryMode(false);
         m_TextComponent.text = "";
         
-        if (!GabeNewell.Instance.m_IsTutorialPlaying) 
+        if (GabeNewell.Instance.m_TutorialPlayed)
         {
-            if (m_FaceImage != null) m_FaceImage.enabled = false;
             gameObject.SetActive(false);
         }
-        else
-        {
-            if (m_FaceImage != null) m_FaceImage.enabled = true;
-        }
+    }
+
+    private void UpdateTutorialVisuals(int _index)
+    {
+        if (m_SupplementaryGridIndicator) m_SupplementaryGridIndicator.SetActive(_index == 1);
+        if (m_GridIndicator) m_GridIndicator.SetActive(_index == 2);
+        if (m_ScreenIndicator) m_ScreenIndicator.SetActive(_index == 3);
     }
 
     private void ResetIndicators()
     {
-        m_SupplementaryGridIndicator.SetActive(false);
-        m_GridIndicator.SetActive(false);
-        m_ScreenIndicator.SetActive(false);
+        if (m_SupplementaryGridIndicator) m_SupplementaryGridIndicator.SetActive(false);
+        if (m_GridIndicator) m_GridIndicator.SetActive(false);
+        if (m_ScreenIndicator) m_ScreenIndicator.SetActive(false);
     }
 
-    private void FinalizarTutorial()
+    private void FinishTutorial()
     {
-        m_TextComponent.text = "";
         GabeNewell.Instance.m_IsTutorialPlaying = false;
         GabeNewell.Instance.m_TutorialPlayed = true;
-        if (m_FaceImage != null) m_FaceImage.enabled = false;
+        m_TextComponent.text = "";
+        ResetIndicators();
         gameObject.SetActive(false);
-    }
-
-    private void RefreshLocalizedText()
-    {
-        if (!m_IsTyping && !string.IsNullOrEmpty(m_ActiveKey))
-            m_TextComponent.text = LocalizationManager.instance.GetText(m_ActiveKey);
     }
 }

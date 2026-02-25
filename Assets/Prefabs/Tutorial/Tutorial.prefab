@@ -398,7 +398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.714, y: 4.3364}
+  m_AnchoredPosition: {x: 14.714001, y: 4.3363996}
   m_SizeDelta: {x: 18.2796, y: 6.4767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5892113211066178270
@@ -772,29 +772,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b62a2e8b3a881a4c9c9843f3269a3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  m_TextComponent: {fileID: 4430368187108649756}
-  m_CharactersPerSecond: 30
-  m_MouthSpeedDivisor: 3
   m_RotationAmount: 5
   m_RotationSpeed: 10
-  m_TutorialTexts: []
-  m_Text1: "Bienvenido al mejor <size=5>(y \xFAnico)</size> software de desarrollo
-    aprobado por el gobierno."
-  m_Text2: "Para desarrollar tu juego tienes que colocar los componentes de la <color=green>cuadr\xEDcula</color>
-    de la derecha"
-  m_Text3: "de manera que encajen y sin dejar ning\xFAn hueco en la <color=red>cuadr\xEDcula</color>
-    de la izquierda."
-  m_Text4: "Cada componente tiene sus propiedades, que se mostrar\xE1n al seleccionar
-    el componente en la <color=Orange>pantalla</color>."
-  m_Text5: "Todo juego necesita 4 componentes:<color=purple> Mec\xE1nicas</color>,
-    <color=#946B1F>G\xE9nero</color>,<color=#E5C16F> Estilo</color> y un <color=#5D69A9>Item</color>.
-    Sabr\xE1s cual es cual por la pantalla o por el color del componente."
-  m_Text6: Buena suerte.
-  m_SupplementaryGridIndicator: {fileID: 6896109686513050918}
-  m_GridIndicator: {fileID: 5735564645156629338}
-  m_ScreenIndicator: {fileID: 6175209963889224781}
-  m_Face: {fileID: 7903132936118733897}
+  m_MouthMoveAmount: 0.1
+  m_MouthSpeed: 15
+  m_TextComponent: {fileID: 4430368187108649756}
+  m_TypewriterEffect: {fileID: 0}
+  m_NormalFaceGroup: {fileID: 0}
   m_Mouth: {fileID: 4073674577174463785}
+  m_AngryFaceGroup: {fileID: 0}
+  m_TutorialTextKeys: []
 --- !u!222 &7860847696359372021
 CanvasRenderer:
   m_ObjectHideFlags: 0
