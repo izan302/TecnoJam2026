@@ -88,7 +88,7 @@ public class TransitionHandler : MonoBehaviour
         }
 
         folio.transform.localPosition = endPos;
-        StartCoroutine(ShowLetter(3f));
+        StartCoroutine(ShowLetter(0.5f));
     }
     IEnumerator ShowLetter(float _waitTime)
     {
