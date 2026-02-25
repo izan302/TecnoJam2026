@@ -2831,6 +2831,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[0].Key
+      value: ES
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[1].Key
+      value: EN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[2].Key
+      value: EUSK
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[3].Key
+      value: CAT
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[4].Key
+      value: GL
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[5].Key
+      value: AN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[0].Value
+      value: 
+      objectReference: {fileID: -4943824752338471872, guid: a782c7bd0c325e94e8fab03fc4792d2a, type: 3}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[1].Value
+      value: 
+      objectReference: {fileID: 1516049784683200535, guid: 9756b52eac9fd0c47855357199c501d8, type: 3}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[2].Value
+      value: 
+      objectReference: {fileID: 4594299765176345545, guid: 518a8a424076729468be1b50697e846d, type: 3}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[3].Value
+      value: 
+      objectReference: {fileID: -4897578839205825560, guid: 384eba91df26e9c49a43762ce2fe7c9d, type: 3}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[4].Value
+      value: 
+      objectReference: {fileID: -3407699835890307245, guid: ae3de2ef4406fc64988162b1c5accd78, type: 3}
+    - target: {fileID: 7824094772052721496, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: flagIcons._serializedList.Array.data[5].Value
+      value: 
+      objectReference: {fileID: -5828373384838942875, guid: 95da8fe669a68ad4b8138f2cfbcd7f4c, type: 3}
     - target: {fileID: 8008495257298736614, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_Sprite
       value: 
