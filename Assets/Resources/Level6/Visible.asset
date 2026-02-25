@@ -10,19 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e430cc86305be42b6d56604472093d, type: 3}
-  m_Name: SFX
+  m_Name: Visible
   m_EditorClassIdentifier: Assembly-CSharp::PieceData
-  m_PieceName: SFX
-  piceType: 4
-  properties: 0b00000021000000120000001a000000
-  icon: {fileID: -1722407522, guid: 1e7b6588c109c0f4d98e858b8d8d646e, type: 3}
-  spawningLevel: 2
-  despawningLevel: 5
+  m_PieceName: Visible
+  piceType: 2
+  properties: 
+  icon: {fileID: 3327476702383911730, guid: bf82666e272268d4b83de402060ff550, type: 3}
+  spawningLevel: 6
+  despawningLevel: 2147483647
   grabble: 1
   blocks:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
-  - {x: 2, y: 0}
-  - {x: 1, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 2}
+  - {x: -1, y: 0}

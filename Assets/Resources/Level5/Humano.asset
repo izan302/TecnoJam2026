@@ -17,7 +17,7 @@ MonoBehaviour:
   properties: 
   icon: {fileID: 1980417078, guid: 8e78d3a958ec23a4c8367bd83c7770ff, type: 3}
   spawningLevel: 5
-  despawningLevel: 2147483647
+  despawningLevel: 5
   grabble: 1
   blocks:
   - {x: 0, y: 0}
