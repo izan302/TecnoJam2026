@@ -16,6 +16,7 @@ public class TypewriterEffect : MonoBehaviour
 
     private Coroutine m_TypeRoutine;
     private int m_TotalCharacters;
+    public bool IsTyping => m_IsTyping;
     private bool m_IsTyping = false;
 
     public void PlayText(string _textKey, TextMeshProUGUI _textComponent)
