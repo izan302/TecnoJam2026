@@ -31,9 +31,10 @@
         { "key": "tut_09", "value": "y si cambias de idea puedes devolver el componente a la cuadrícula de la izquierda con el <size=90%><b>click derecho</b></size> mientras lo tienes seleccionado." },
         { "key": "tut_10", "value": "Buena suerte." },
         { "key": "tut_angry", "value": "<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?" },
-
-        { "key": "gameSent_01", "value": "Enviaste tu juego..." },
-        { "key": "gameSent_02", "value": "Tu juego ha sido <color=red>RECHAZADO</color> por el gobierno... " },
+        
+        { "key": "gameSent_Title", "value": "Reporte de resultados"},
+        { "key": "gameSent_rejected", "value": "Lamentablemente, no podermos aceptar su juego." },
+        { "key": "gameSent_accepted", "value": "Tu juego ha sido aceptado, felicidades, esto sí que es un juego correcto para el gobierno." },
 
 
         { "key": "error_83_title", "value": "ERROR(83): CuadrículaIncompleta" },
@@ -168,8 +169,10 @@
         { "key": "tut_angry", "value": "<size=120%><color=red>STOP IT!</color></size>\nDON'T YOU SEE YOU CAN'T PLACE IT THERE?" },
 
 
-        { "key": "gameSent_01", "value": "You submit your game..." },
-        { "key": "gameSent_02", "value": "Your game has been <color=red>REJECTED</color> by the government... " },
+        { "key": "gameSent_Title", "value": "Result report"},
+        { "key": "gameSent_rejected", "value": "Unfortunately, we cannot accept your game." },
+        { "key": "gameSent_accepted", "value": "Your game has been accepted, congratulations, this is a fair game for the government." },
+
 
 
         { "key": "error_83_title", "value": "ERROR(83): GridNotFull"},
