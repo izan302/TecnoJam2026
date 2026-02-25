@@ -462,7 +462,7 @@
                     "value": "Pop"
                 }
             ]
-        }, //Castellano
+        },
         {
             "languageID": "EN",
             "items": [
@@ -931,7 +931,7 @@
                     "value": "Pop"
                 }
             ]
-        }, //Inglés
+        },
         {
             "languageID": "CAT",
             "items": [
@@ -1390,7 +1390,7 @@
                     "value": "Pop"
                 }
             ]
-        }, //Catalán
+        },
         {
             "languageID": "EU",
             "items": [
@@ -1835,7 +1835,7 @@
                     "value": "Pop"
                 }
             ]
-        }, //Euskera
+        },
         {
             "languageID": "AN",
             "items": [
@@ -2280,7 +2280,7 @@
                     "value": "Pop"
                 }
             ]
-        }, //Aragones
+        },
         {
             "languageID": "GL",
             "items": [
@@ -2725,6 +2725,6 @@
                     "value": "Pop"
                 }
             ]
-        } //Galego
+        }
     ]
 }
