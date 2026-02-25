@@ -64,6 +64,7 @@
                     "value": "Bienvenido al mejor <size=50%><color=grey>(y único)</color></size> software de desarrollo aprobado por el gobierno."
                 },
                 {
+                    "key": "tut_02",
                     "value": "Para desarrollar tu juego, tienes que colocar los componentes de la <color=#06EF06>cuadrícula</color> de la izquierda"
                 },
                 {
