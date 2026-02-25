@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TypewriterEffect : MonoBehaviour
 {
@@ -17,11 +18,12 @@ public class TypewriterEffect : MonoBehaviour
     private int m_TotalCharacters;
     private bool m_IsTyping = false;
 
-    public void PlayText(string _textKey)
+    public void PlayText(string _textKey, TextMeshProUGUI _textComponent)
     {
         if (m_TypeRoutine != null) StopCoroutine(m_TypeRoutine);
 
         string l_translatedText = LocalizationManager.instance.GetText(_textKey);
+        m_TextComponent = _textComponent;
         m_TextComponent.text = l_translatedText;
         m_TextComponent.maxVisibleCharacters = 0;
         

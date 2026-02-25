@@ -33,7 +33,7 @@
         { "key": "tut_angry", "value": "<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?" },
         
         { "key": "gameSent_Title", "value": "Reporte de resultados"},
-        { "key": "gameSent_rejected", "value": "Lamentablemente, no podermos aceptar su juego." },
+        { "key": "gameSent_rejected", "value": "Después de revisar exhaustivamente su videojuego. Lamentablemente, debemos comunicarle que <color=red>no puede publicarlo</color>. \nEste tipo de contenidos no son adecuados para todas las edades, por favor, <color=red>piense en los niños</color> que consumirán esto. \n\nAtentamente,\nOficina Gubernamental de Control Mediático." },
         { "key": "gameSent_accepted", "value": "Tu juego ha sido aceptado, felicidades, esto sí que es un juego correcto para el gobierno." },
 
 
@@ -170,7 +170,7 @@
 
 
         { "key": "gameSent_Title", "value": "Result report"},
-        { "key": "gameSent_rejected", "value": "Unfortunately, we cannot accept your game." },
+        { "key": "gameSent_rejected", "value": "After thoroughly reviewing your video game. Unfortunately, we must inform you that <color=red>you cannot publish it</color>. \nThis type of content is not suitable for all ages, please <color=red>think of the children</color> who will be consuming this. \n\nSincerely, \nGovernment Office of Media Control." },
         { "key": "gameSent_accepted", "value": "Your game has been accepted, congratulations, this is a fair game for the government." },
 
 

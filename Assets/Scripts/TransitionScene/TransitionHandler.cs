@@ -11,28 +11,36 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject folio;
 
     [Header("CartaFinal")]
-    [SerializeField] Sprite paperNotificationRejected;
-    [SerializeField] Sprite paperNotificationAproved;
+    [SerializeField] GameObject letterFinal;
+    [SerializeField] GameObject paperNotificationRejected;
+    [SerializeField] GameObject paperNotificationAproved;
     [SerializeField] TextMeshProUGUI letterText;
 
-    [Header("Animación Solapa")]
+    [Header("Animaciï¿½n Solapa")]
     [SerializeField] AnimationCurve flapRotationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] float flapRotationDuration = 1f;
     [SerializeField] Vector3 flapRotationAxis = new Vector3(1, 0, 0);
 
-    [Header("Animación Folio")]
+    [Header("Animaciï¿½n Folio")]
     [SerializeField] AnimationCurve folioMoveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] float folioMoveDuration = 1f;
     [SerializeField] float folioUpwardDistance = 2f;
+    [Header("AnimaciÃ³n Carta Final")]
+    [SerializeField] AnimationCurve letterMoveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    [SerializeField] float letterMoveDuration = 1f;
+    [SerializeField] float targetYPosition = 6.4f;
 
     [SerializeField] string[] m_KeysToPlay;
 
+    TypewriterEffect typewriter;
     bool showAproved = false;
     bool isAnimating = false;
 
     private void Start()
     {
         showAproved = GabeNewell.Instance.m_Level() == 6;
+        typewriter = GetComponent<TypewriterEffect>();
+        typewriter.OnTextFinished += StartNextScene;
         Letter.SetActive(true);
         folio.SetActive(true);
     }
@@ -63,7 +71,7 @@ public class TransitionHandler : MonoBehaviour
         solapaEnvelope.transform.localRotation = endRot;
 
         solapaEnvelope.transform.SetSiblingIndex(0);
-        
+
 
         timeElapsed = 0f;
         Vector3 startPos = folio.transform.localPosition;
@@ -84,10 +92,53 @@ public class TransitionHandler : MonoBehaviour
     }
     IEnumerator ShowLetter(float _waitTime)
     {
-        //
-        yield return null;
+        yield return new WaitForSeconds(_waitTime);
+
+        letterFinal.SetActive(true);
+        if (showAproved)
+        {
+            paperNotificationAproved.SetActive(true);
+            paperNotificationRejected.SetActive(false);
+        }
+        else
+        {
+            paperNotificationAproved.SetActive(false);
+            paperNotificationRejected.SetActive(true); 
+        }
+
+        RectTransform rect = letterFinal.GetComponent<RectTransform>();
+
+        float timeElapsed = 0f;
+
+        Vector2 startPos = rect.anchoredPosition;
+        Vector2 endPos = new Vector2(startPos.x, 6f);
+
+        while (timeElapsed < letterMoveDuration)
+        {
+            float t = timeElapsed / letterMoveDuration;
+            float curveValue = letterMoveCurve.Evaluate(t);
+
+            rect.anchoredPosition =
+                Vector2.LerpUnclamped(startPos, endPos, curveValue);
+
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        rect.anchoredPosition = endPos;
+
+        isAnimating = false;
+
+        if (showAproved)
+        {
+            typewriter.PlayText("gameSent_accepted", letterText);
+        }
+        else
+        {
+           typewriter.PlayText("gameSent_rejected", letterText);
+        }
     }
-    public void StartNextScene(float _waitTime)
+    public void StartNextScene()
     {
         GabeNewell.Instance.GoToDesktop();
     }
