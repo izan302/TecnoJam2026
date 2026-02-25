@@ -1,277 +1,2730 @@
 {
-  "languages": [
-    {
-      "languageID": "ES",
-      "items": [
-        { "key": "menu_start", "value": "- Clic aquí para comenzar -" },
-        { "key": "menu_settings", "value": "Opciones" },
-        { "key": "menu_language", "value": "Idioma" },
-        { "key": "menu_syncbands", "value": "Activar Syncbands" },
-        
-        { "key": "desktop_email", "value": "Email" },
-        { "key": "desktop_buscaminas", "value": "Buscaminas" },
-        { "key": "desktop_engine", "value": "Freedom Engine" },
-        
-        { "key": "minesweeper_start", "value": "INICIAR"},
-        { "key": "minesweeper_title", "value": "<color=red>BUSCA</color>MINAS"},
-        { "key": "minesweeper_victory", "value": "Victoria"},
-        { "key": "minesweeper_gameOver", "value": "Has Perdido"},
-        { "key": "minesweeper_restart", "value": "REINICIAR"},
-        { "key": "minesweeper_menu", "value": "MENU"},
+    "languages": [
+        {
+            "languageID": "ES",
+            "items": [
+                {
+                    "key": "menu_start",
+                    "value": "- Clic aquí para comenzar -"
+                },
+                {
+                    "key": "menu_settings",
+                    "value": "Opciones"
+                },
+                {
+                    "key": "menu_language",
+                    "value": "Idioma"
+                },
+                {
+                    "key": "menu_syncbands",
+                    "value": "Activar Syncbands"
+                },
+
+                {
+                    "key": "desktop_email",
+                    "value": "Email"
+                },
+                {
+                    "key": "desktop_buscaminas",
+                    "value": "Buscaminas"
+                },
+                {
+                    "key": "desktop_engine",
+                    "value": "Freedom Engine"
+                },
+
+                {
+                    "key": "minesweeper_start",
+                    "value": "INICIAR"
+                },
+                {
+                    "key": "minesweeper_title",
+                    "value": "<color=red>BUSCA</color>MINAS"
+                },
+                {
+                    "key": "minesweeper_victory",
+                    "value": "Victoria"
+                },
+                {
+                    "key": "minesweeper_gameOver",
+                    "value": "Has Perdido"
+                },
+                {
+                    "key": "minesweeper_restart",
+                    "value": "REINICIAR"
+                },
+                {
+                    "key": "minesweeper_menu",
+                    "value": "MENU"
+                },
 
 
-        { "key": "tut_01", "value": "Bienvenido al mejor <size=50%><color=grey>(y único)</color></size> software de desarrollo aprobado por el gobierno." },
-        { "key": "tut_02", "value": "Para desarrollar tu juego, tienes que colocar los componentes de la <color=#06EF06>cuadrícula</color> de la izquierda" },
-        { "key": "tut_03", "value": "de manera que encajen y sin dejar ningún hueco en la <color=red>cuadrícula</color> de la derecha." },
-        { "key": "tut_04", "value": "Cada componente tiene sus propiedades, que se mostrarán al seleccionar el componente en la <color=orange>pantalla</color>." },
-        { "key": "tut_05", "value": "Todo juego necesita 4 componentes: <color=purple>Mecánicas</color>, <color=#946B1F>Género</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>Ítem</color>. Sabrás cuál es cuál por la pantalla o por el color del componente." },
-        { "key": "tut_06", "value": "Para mover los componentes sólo tienes que hacer <size=90%><b>click</b></size> en ellos. Una vez seleccionados puedes rotarlos con las teclas <size=90%><b>Q</b></size> y <size=90%><b>E</b></size>." },
-        { "key": "tut_07", "value": "y moverlos con las teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size>." },
-        { "key": "tut_08", "value": "Para confirmar la posición de los componentes en la cuadrícula usa la <size=90%><b>barra espaciadora</b></size>" },
-        { "key": "tut_09", "value": "y si cambias de idea puedes devolver el componente a la cuadrícula de la izquierda con el <size=90%><b>click derecho</b></size> mientras lo tienes seleccionado." },
-        { "key": "tut_10", "value": "Buena suerte." },
-        { "key": "tut_angry", "value": "<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?" },
-        
-        { "key": "gameSent_Title", "value": "Reporte de resultados"},
-        { "key": "gameSent_rejected", "value": "Después de revisar exhaustivamente su videojuego. Lamentablemente, debemos comunicarle que <color=red>no puede publicarlo</color>. \nEste tipo de contenidos no son adecuados para todas las edades, por favor, <color=red>piense en los niños</color> que consumirán esto. \n\nAtentamente,\nOficina Gubernamental de Control Mediático." },
-        { "key": "gameSent_accepted", "value": "Tu juego ha sido aceptado, felicidades, esto sí que es un juego correcto para el gobierno." },
+                {
+                    "key": "tut_01",
+                    "value": "Bienvenido al mejor <size=50%><color=grey>(y único)</color></size> software de desarrollo aprobado por el gobierno."
+                },
+                {
+                    "value": "Para desarrollar tu juego, tienes que colocar los componentes de la <color=#06EF06>cuadrícula</color> de la izquierda"
+                },
+                {
+                    "key": "tut_03",
+                    "value": "de manera que encajen y sin dejar ningún hueco en la <color=red>cuadrícula</color> de la derecha."
+                },
+                {
+                    "key": "tut_04",
+                    "value": "Cada componente tiene sus propiedades, que se mostrarán al seleccionar el componente en la <color=orange>pantalla</color>."
+                },
+                {
+                    "key": "tut_05",
+                    "value": "Todo juego necesita 4 componentes: <color=purple>Mecánicas</color>, <color=#946B1F>Género</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>Ítem</color>. Sabrás cuál es cuál por la pantalla o por el color del componente."
+                },
+                {
+                    "key": "tut_06",
+                    "value": "Para mover los componentes sólo tienes que hacer <size=90%><b>click</b></size> en ellos. Una vez seleccionados puedes rotarlos con las teclas <size=90%><b>Q</b></size> y <size=90%><b>E</b></size>."
+                },
+                {
+                    "key": "tut_07",
+                    "value": "y moverlos con las teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size>."
+                },
+                {
+                    "key": "tut_08",
+                    "value": "Para confirmar la posición de los componentes en la cuadrícula usa la <size=90%><b>barra espaciadora</b></size>"
+                },
+                {
+                    "key": "tut_09",
+                    "value": "y si cambias de idea puedes devolver el componente a la cuadrícula de la izquierda con el <size=90%><b>click derecho</b></size> mientras lo tienes seleccionado."
+                },
+                {
+                    "key": "tut_10",
+                    "value": "Buena suerte."
+                },
+                {
+                    "key": "tut_angry",
+                    "value": "<size=120%><color=red>¡PARA YA!</color></size>\n¿NO VES QUE NO PUEDES PONERLO?"
+                },
+
+                {
+                    "key": "gameSent_Title",
+                    "value": "Reporte de resultados"
+                },
+                {
+                    "key": "gameSent_rejected",
+                    "value": "Después de revisar exhaustivamente su videojuego. Lamentablemente, debemos comunicarle que <color=red>no puede publicarlo</color>. \nEste tipo de contenidos no son adecuados para todas las edades, por favor, <color=red>piense en los niños</color> que consumirán esto. \n\nAtentamente,\nOficina Gubernamental de Control Mediático."
+                },
+                {
+                    "key": "gameSent_accepted",
+                    "value": "Tu juego ha sido aceptado, felicidades, esto sí que es un juego correcto para el gobierno."
+                },
 
 
-        { "key": "error_83_title", "value": "ERROR(83): CuadrículaIncompleta" },
-        { "key": "error_83_message", "value": "La cuadrícula aún no está llena. \nPor favor, complétala antes de enviar." },
-              
-        { "key": "error_155_title", "value": "ERROR(155): ComponenteProhibido" },
-        { "key": "error_155_message", "value": "Hay una pieza prohibida en el juego. \nPor favor, ELIMÍNALA antes de enviar." },
-              
-        { "key": "error_40_title", "value": "ERROR(40): GéneroNoEncontrado" },
-        { "key": "error_40_message", "value": "No existe un Género en el juego. \nPor favor, añade un Género antes de enviar." },
-              
-        { "key": "error_41_title", "value": "ERROR(41): MecánicaNoEncontrada" },
-        { "key": "error_41_message", "value": "No existe una Mecánica en el juego. \nPor favor, añade una Mecánica antes de enviar." },
-              
-        { "key": "error_42_title", "value": "ERROR(42): EstiloNoEncontrado" },
-        { "key": "error_42_message", "value": "No existe un Estilo en el juego. \nPor favor, añade un Estilo antes de enviar." },
-              
-        { "key": "error_43_title", "value": "ERROR(43): ÍtemNoEncontrado" },
-        { "key": "error_43_message", "value": "No existe un Ítem en el juego. \nPor favor, añade un Ítem antes de enviar." },
+                {
+                    "key": "error_83_title",
+                    "value": "ERROR(83): CuadrículaIncompleta"
+                },
+                {
+                    "key": "error_83_message",
+                    "value": "La cuadrícula aún no está llena. \nPor favor, complétala antes de enviar."
+                },
 
-        
-        { "key": "piece_name_Correr", "value": "Correr" },
-        { "key": "piece_name_Disparar", "value": "Disparar" },
-        { "key": "piece_name_Lofi", "value": "Lofi" },
-        { "key": "piece_name_FPS", "value": "FPS" },
-        { "key": "piece_name_Fuego", "value": "Fuego" },
-        { "key": "piece_name_Fusil", "value": "Fusil" },
-        { "key": "piece_name_Pistola", "value": "Pistola" },
-        { "key": "piece_name_Realista", "value": "Realista" },
-        { "key": "piece_name_Rock", "value": "Rock" },
-        { "key": "piece_name_Sangre", "value": "Sangre" },
-        { "key": "piece_name_Arco", "value": "Arco" },
-        { "key": "piece_name_Droga", "value": "Droga" },
-        { "key": "piece_name_Electricidad", "value": "Electricidad" },
-        { "key": "piece_name_Machete", "value": "Machete" },
-        { "key": "piece_name_Ratonyteclado", "value": "Ratón y Teclado" },
-        { "key": "piece_name_Pixel Art", "value": "Pixel Art" },
-        { "key": "piece_name_Escudo", "value": "Escudo" },
-        { "key": "piece_name_SFX", "value": "SFX" },
-        { "key": "piece_name_Monedas", "value": "Monedas" },
-        { "key": "piece_name_Metal", "value": "Metal" },
-        { "key": "piece_name_Salto", "value": "Salto" },
-        { "key": "piece_name_Chip", "value": "Chip" },
-        { "key": "piece_name_Hackeo", "value": "Hackeo" },
-        { "key": "piece_name_Plataformas", "value": "Plataformas" },
-        { "key": "piece_name_Pop", "value": "Pop" },
-        { "key": "piece_name_Mando", "value": "Mando" },
-        { "key": "piece_name_Puños", "value": "Puños" },
+                {
+                    "key": "error_155_title",
+                    "value": "ERROR(155): ComponenteProhibido"
+                },
+                {
+                    "key": "error_155_message",
+                    "value": "Hay una pieza prohibida en el juego. \nPor favor, ELIMÍNALA antes de enviar."
+                },
 
+                {
+                    "key": "error_40_title",
+                    "value": "ERROR(40): GéneroNoEncontrado"
+                },
+                {
+                    "key": "error_40_message",
+                    "value": "No existe un Género en el juego. \nPor favor, añade un Género antes de enviar."
+                },
 
-        { "key": "piece_type_Gobierno", "value": "Gobierno"},
-        { "key": "piece_type_Mecanica", "value": "Mecánica"},
-        { "key": "piece_type_Estilo", "value": "Estilo"},
-        { "key": "piece_type_Item", "value": "Ítem"},
-        { "key": "piece_type_Musica", "value": "Música"},
-        { "key": "piece_type_Elemento", "value": "Elemento"},
-        { "key": "piece_type_Genero", "value": "Genero"},
+                {
+                    "key": "error_41_title",
+                    "value": "ERROR(41): MecánicaNoEncontrada"
+                },
+                {
+                    "key": "error_41_message",
+                    "value": "No existe una Mecánica en el juego. \nPor favor, añade una Mecánica antes de enviar."
+                },
+
+                {
+                    "key": "error_42_title",
+                    "value": "ERROR(42): EstiloNoEncontrado"
+                },
+                {
+                    "key": "error_42_message",
+                    "value": "No existe un Estilo en el juego. \nPor favor, añade un Estilo antes de enviar."
+                },
+
+                {
+                    "key": "error_43_title",
+                    "value": "ERROR(43): ÍtemNoEncontrado"
+                },
+                {
+                    "key": "error_43_message",
+                    "value": "No existe un Ítem en el juego. \nPor favor, añade un Ítem antes de enviar."
+                },
 
 
-        { "key": "ui_type", "value": "Tipo" },
-
-        { "key": "prp_FPS", "value": "FPS" },
-        { "key": "prp_Disparos", "value": "Disparos" },
-        { "key": "prp_Metal", "value": "Metal" },
-        { "key": "prp_Realismo", "value": "Realismo" },
-        { "key": "prp_ArmasDeFuego", "value": "Armas de Fuego" },
-        { "key": "prp_Rock", "value": "Rock" },
-        { "key": "prp_Agotamiento", "value": "Agotamiento" },
-        { "key": "prp_Tranquilo", "value": "Tranquilo" },
-        { "key": "prp_Plataforma", "value": "Plataforma" },
-        { "key": "prp_Proteccion", "value": "Protección" },
-        { "key": "prp_Pixeles", "value": "Píxeles" },
-        { "key": "prp_Ambientacion", "value": "Ambientación" },
-        { "key": "prp_ArmaADistancia", "value": "Arma a Distancia" },
-        { "key": "prp_ArmaBlanca", "value": "Arma Blanca" },
-        { "key": "prp_Droga", "value": "Droga" },
-        { "key": "prp_Controles", "value": "Controles" },
-        { "key": "prp_Electricidad", "value": "Electricidad" },
-        { "key": "prp_Tecleo", "value": "Tecleo" },
-        { "key": "prp_Patata", "value": "Patata" },
-        { "key": "prp_Tierra", "value": "Tierra" },
-        { "key": "prp_Satanico", "value": "Satánico" },
-        { "key": "prp_Sectario", "value": "Sectario" },
-        { "key": "prp_RobinHood", "value": "Robin Hood" },
-        { "key": "prp_Punteria", "value": "Puntería" },
-        { "key": "prp_Equilibrio", "value": "Equilibrio" },
-        { "key": "prp_Heisenberg", "value": "Heisenberg" },
-        { "key": "prp_Placer", "value": "Placer" },
-        { "key": "prp_Evasion", "value": "Evasión" },
-        { "key": "prp_Defensa", "value": "Defensa" },
-        { "key": "prp_CapitanAmerica", "value": "Capitán América" },
-        { "key": "prp_Jason", "value": "Jason" },
-        { "key": "prp_Oxidado", "value": "Oxidado" },
-        { "key": "prp_Obstaculos", "value": "Obstáculos" },
-        { "key": "prp_Inmersion", "value": "Inmersión" },
-        { "key": "prp_Jazz", "value": "Jazz" },
-        { "key": "prp_Pop", "value": "Pop" }
-      ]
-    },
-    {
-      "languageID": "EN",
-      "items": [
-        { "key": "menu_start", "value": "- Press here to start -" },
-        { "key": "menu_settings", "value": "Settings" },
-        { "key": "menu_language", "value": "Language" },
-        { "key": "menu_syncbands", "value": "Activate Syncbands" },
-
-
-        { "key": "desktop_email", "value": "Email" },
-        { "key": "desktop_buscaminas", "value": "Minesweeper" },
-        { "key": "desktop_engine", "value": "Liberty Engine" },
-
-
-        { "key": "minesweeper_start", "value": "Start"},
-        { "key": "minesweeper_title", "value": "<color=red>MINE</color>SWEEPER"},
-        { "key": "minesweeper_victory", "value": "Victory"},
-        { "key": "minesweeper_gameOver", "value": "Game Over"},
-        { "key": "minesweeper_restart", "value": "RESTART"},
-        { "key": "minesweeper_menu", "value": "MENU"},
-
-
-        { "key": "tut_01", "value": "Welcome to the best <size=50%><color=grey>(and only)</color></size> government-approved game engine." },
-        { "key": "tut_02", "value": "To develop your game, you have to place the components from the <color=#06EF06>grid</color> on the left" },
-        { "key": "tut_03", "value": "so that they fit without leaving any gaps in the <color=red>grid</color> on the right." },
-        { "key": "tut_04", "value": "Each component has its properties, which will be displayed when selecting the component on the <color=orange>screen</color>." },
-        { "key": "tut_05", "value": "Every game needs 4 components: <color=purple>Mechanics</color>, <color=#946B1F>Genre</color>, <color=#E5C16F>Style</color> and an <color=#5D69A9>Item</color>. You will know which is which by the screen or by the color of the component." },
-        { "key": "tut_06", "value": "To move the components you just have to <size=90%><b>click</b></size> on them. Once selected you can rotate them with the <size=90%><b>Q</b></size> and <size=90%><b>E</b></size> keys." },
-        { "key": "tut_07", "value": "and move them with the <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size> keys." },
-        { "key": "tut_08", "value": "To confirm the position of the components on the grid use the <size=90%><b>space bar</b></size>" },
-        { "key": "tut_09", "value": "and if you change your mind you can return the component to the grid on the left with the <size=90%><b>right click</b></size> while you have it selected." },
-        { "key": "tut_10", "value": "Good luck." },
-        { "key": "tut_angry", "value": "<size=120%><color=red>STOP IT!</color></size>\nDON'T YOU SEE YOU CAN'T PLACE IT THERE?" },
-
-
-        { "key": "gameSent_Title", "value": "Result report"},
-        { "key": "gameSent_rejected", "value": "After thoroughly reviewing your video game. Unfortunately, we must inform you that <color=red>you cannot publish it</color>. \nThis type of content is not suitable for all ages, please <color=red>think of the children</color> who will be consuming this. \n\nSincerely, \nGovernment Office of Media Control." },
-        { "key": "gameSent_accepted", "value": "Your game has been accepted, congratulations, this is a fair game for the government." },
-
-
-
-        { "key": "error_83_title", "value": "ERROR(83): GridNotFull"},
-        { "key": "error_83_message", "value": "The grid is still not full. \nPlease, complete it before sending."},
-
-        { "key": "error_155_title", "value": "ERROR(155): BannedPiecePresent"},
-        { "key": "error_155_message", "value": "There's a banned piece inside the game. \nPlease REMOVE IT before sending."},
-
-        { "key": "error_40_title", "value": "ERROR(40): GenereNotFound"},
-        { "key": "error_40_message", "value": "Unexisting genere inside the game. \nPlease add a Genere before sending."},
-
-        { "key": "error_41_title", "value": "ERROR(41): MechanicNotFound"},
-        { "key": "error_41_message", "value": "Unexisting mechanic inside the game. \nPlease add a Mechanic before sending."},
-
-        { "key": "error_42_title", "value": "ERROR(42): StyleNotFound"},
-        { "key": "error_42_message", "value": "Unexisting style inside the game. \nPlease add a Style before sending."},
-
-        { "key": "error_43_title", "value": "ERROR(43): ItemNotFound"},
-        { "key": "error_43_message", "value": "Unexisting item inside the game. \nPlease add an Item before sending."},
-
-
-        { "key": "piece_name_Correr", "value": "Running" },
-        { "key": "piece_name_Disparar", "value": "Shooting" },
-        { "key": "piece_name_Lofi", "value": "Lo-fi" },
-        { "key": "piece_name_FPS", "value": "FPS" },
-        { "key": "piece_name_Fuego", "value": "Fire" },
-        { "key": "piece_name_Fusil", "value": "Rifle" },
-        { "key": "piece_name_Pistola", "value": "Pistol" },
-        { "key": "piece_name_Realista", "value": "Realistic" },
-        { "key": "piece_name_Rock", "value": "Rock" },
-        { "key": "piece_name_Sangre", "value": "Blood" },
-        { "key": "piece_name_Arco", "value": "Bow" },
-        { "key": "piece_name_Droga", "value": "Frugs" },
-        { "key": "piece_name_Electricidad", "value": "Electricity" },
-        { "key": "piece_name_Machete", "value": "Machete" },
-        { "key": "piece_name_Ratonyteclado", "value": "Mouse and Keyboard" },
-        { "key": "piece_name_Pixel Art", "value": "Pixel Art" },
-        { "key": "piece_name_Escudo", "value": "Shield" },
-        { "key": "piece_name_SFX", "value": "SFX" },
-        { "key": "piece_name_Monedas", "value": "Coins" },
-        { "key": "piece_name_Metal", "value": "Metal" },
-        { "key": "piece_name_Salto", "value": "Jumping" },
-        { "key": "piece_name_Chip", "value": "Chip" },
-        { "key": "piece_name_Hackeo", "value": "Hacking" },
-        { "key": "piece_name_Plataformas", "value": "Platforms" },
-        { "key": "piece_name_Pop", "value": "Pop" },
-        { "key": "piece_name_Mando", "value": "Gamepad" },
-        { "key": "piece_name_Puños", "value": "Fists" },
+                {
+                    "key": "piece_name_Correr",
+                    "value": "Correr"
+                },
+                {
+                    "key": "piece_name_Disparar",
+                    "value": "Disparar"
+                },
+                {
+                    "key": "piece_name_Lofi",
+                    "value": "Lofi"
+                },
+                {
+                    "key": "piece_name_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "piece_name_Fuego",
+                    "value": "Fuego"
+                },
+                {
+                    "key": "piece_name_Fusil",
+                    "value": "Fusil"
+                },
+                {
+                    "key": "piece_name_Pistola",
+                    "value": "Pistola"
+                },
+                {
+                    "key": "piece_name_Realista",
+                    "value": "Realista"
+                },
+                {
+                    "key": "piece_name_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "piece_name_Sangre",
+                    "value": "Sangre"
+                },
+                {
+                    "key": "piece_name_Arco",
+                    "value": "Arco"
+                },
+                {
+                    "key": "piece_name_Droga",
+                    "value": "Droga"
+                },
+                {
+                    "key": "piece_name_Electricidad",
+                    "value": "Electricidad"
+                },
+                {
+                    "key": "piece_name_Machete",
+                    "value": "Machete"
+                },
+                {
+                    "key": "piece_name_Ratonyteclado",
+                    "value": "Ratón y Teclado"
+                },
+                {
+                    "key": "piece_name_Pixel Art",
+                    "value": "Pixel Art"
+                },
+                {
+                    "key": "piece_name_Escudo",
+                    "value": "Escudo"
+                },
+                {
+                    "key": "piece_name_SFX",
+                    "value": "SFX"
+                },
+                {
+                    "key": "piece_name_Monedas",
+                    "value": "Monedas"
+                },
+                {
+                    "key": "piece_name_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "piece_name_Salto",
+                    "value": "Salto"
+                },
+                {
+                    "key": "piece_name_Chip",
+                    "value": "Chip"
+                },
+                {
+                    "key": "piece_name_Hackeo",
+                    "value": "Hackeo"
+                },
+                {
+                    "key": "piece_name_Plataformas",
+                    "value": "Plataformas"
+                },
+                {
+                    "key": "piece_name_Pop",
+                    "value": "Pop"
+                },
+                {
+                    "key": "piece_name_Mando",
+                    "value": "Mando"
+                },
+                {
+                    "key": "piece_name_Puños",
+                    "value": "Puños"
+                },
 
 
-        { "key": "piece_type_Gobierno", "value": "Government"},
-        { "key": "piece_type_Mecanica", "value": "Mechanics"},
-        { "key": "piece_type_Estilo", "value": "Style"},
-        { "key": "piece_type_Item", "value": "Item"},
-        { "key": "piece_type_Musica", "value": "Music"},
-        { "key": "piece_type_Elemento", "value": "Element"},
-        { "key": "piece_type_Genero", "value": "Genre"},
+                {
+                    "key": "piece_type_Gobierno",
+                    "value": "Gobierno"
+                },
+                {
+                    "key": "piece_type_Mecanica",
+                    "value": "Mecánica"
+                },
+                {
+                    "key": "piece_type_Estilo",
+                    "value": "Estilo"
+                },
+                {
+                    "key": "piece_type_Item",
+                    "value": "Ítem"
+                },
+                {
+                    "key": "piece_type_Musica",
+                    "value": "Música"
+                },
+                {
+                    "key": "piece_type_Elemento",
+                    "value": "Elemento"
+                },
+                {
+                    "key": "piece_type_Genero",
+                    "value": "Genero"
+                },
 
 
-        { "key": "ui_type", "value": "Type" },
+                {
+                    "key": "ui_type",
+                    "value": "Tipo"
+                },
+
+                {
+                    "key": "prp_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "prp_Disparos",
+                    "value": "Disparos"
+                },
+                {
+                    "key": "prp_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "prp_Realismo",
+                    "value": "Realismo"
+                },
+                {
+                    "key": "prp_ArmasDeFuego",
+                    "value": "Armas de Fuego"
+                },
+                {
+                    "key": "prp_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "prp_Agotamiento",
+                    "value": "Agotamiento"
+                },
+                {
+                    "key": "prp_Tranquilo",
+                    "value": "Tranquilo"
+                },
+                {
+                    "key": "prp_Plataforma",
+                    "value": "Plataforma"
+                },
+                {
+                    "key": "prp_Proteccion",
+                    "value": "Protección"
+                },
+                {
+                    "key": "prp_Pixeles",
+                    "value": "Píxeles"
+                },
+                {
+                    "key": "prp_Ambientacion",
+                    "value": "Ambientación"
+                },
+                {
+                    "key": "prp_ArmaADistancia",
+                    "value": "Arma a Distancia"
+                },
+                {
+                    "key": "prp_ArmaBlanca",
+                    "value": "Arma Blanca"
+                },
+                {
+                    "key": "prp_Droga",
+                    "value": "Droga"
+                },
+                {
+                    "key": "prp_Controles",
+                    "value": "Controles"
+                },
+                {
+                    "key": "prp_Electricidad",
+                    "value": "Electricidad"
+                },
+                {
+                    "key": "prp_Tecleo",
+                    "value": "Tecleo"
+                },
+                {
+                    "key": "prp_Patata",
+                    "value": "Patata"
+                },
+                {
+                    "key": "prp_Tierra",
+                    "value": "Tierra"
+                },
+                {
+                    "key": "prp_Satanico",
+                    "value": "Satánico"
+                },
+                {
+                    "key": "prp_Sectario",
+                    "value": "Sectario"
+                },
+                {
+                    "key": "prp_RobinHood",
+                    "value": "Robin Hood"
+                },
+                {
+                    "key": "prp_Punteria",
+                    "value": "Puntería"
+                },
+                {
+                    "key": "prp_Equilibrio",
+                    "value": "Equilibrio"
+                },
+                {
+                    "key": "prp_Heisenberg",
+                    "value": "Heisenberg"
+                },
+                {
+                    "key": "prp_Placer",
+                    "value": "Placer"
+                },
+                {
+                    "key": "prp_Evasion",
+                    "value": "Evasión"
+                },
+                {
+                    "key": "prp_Defensa",
+                    "value": "Defensa"
+                },
+                {
+                    "key": "prp_CapitanAmerica",
+                    "value": "Capitán América"
+                },
+                {
+                    "key": "prp_Jason",
+                    "value": "Jason"
+                },
+                {
+                    "key": "prp_Oxidado",
+                    "value": "Oxidado"
+                },
+                {
+                    "key": "prp_Obstaculos",
+                    "value": "Obstáculos"
+                },
+                {
+                    "key": "prp_Inmersion",
+                    "value": "Inmersión"
+                },
+                {
+                    "key": "prp_Jazz",
+                    "value": "Jazz"
+                },
+                {
+                    "key": "prp_Pop",
+                    "value": "Pop"
+                }
+            ]
+        }, //Castellano
+        {
+            "languageID": "EN",
+            "items": [
+                {
+                    "key": "menu_start",
+                    "value": "- Press here to start -"
+                },
+                {
+                    "key": "menu_settings",
+                    "value": "Settings"
+                },
+                {
+                    "key": "menu_language",
+                    "value": "Language"
+                },
+                {
+                    "key": "menu_syncbands",
+                    "value": "Activate Syncbands"
+                },
 
 
-        { "key": "prp_FPS", "value": "FPS" },
-        { "key": "prp_Disparos", "value": "Shooting" },
-        { "key": "prp_Metal", "value": "Metal" },
-        { "key": "prp_Realismo", "value": "Realism" },
-        { "key": "prp_ArmasDeFuego", "value": "Firearms" },
-        { "key": "prp_Rock", "value": "Rock" },
-        { "key": "prp_Agotamiento", "value": "Exhaustion" },
-        { "key": "prp_Tranquilo", "value": "Calm" },
-        { "key": "prp_Plataforma", "value": "Platforms" },
-        { "key": "prp_Proteccion", "value": "Protection" },
-        { "key": "prp_Pixeles", "value": "Pixels" },
-        { "key": "prp_Ambientacion", "value": "Atmosphere" },
-        { "key": "prp_ArmaADistancia", "value": "Ranged Weapon" },
-        { "key": "prp_ArmaBlanca", "value": "Melee Weapon" },
-        { "key": "prp_Droga", "value": "Drugs" },
-        { "key": "prp_Controles", "value": "Controls" },
-        { "key": "prp_Electricidad", "value": "Elecrticity" },
-        { "key": "prp_Tecleo", "value": "Typing" },
-        { "key": "prp_Patata", "value": "Potato" },
-        { "key": "prp_Tierra", "value": "Soil" },
-        { "key": "prp_Satanico", "value": "Satanic" },
-        { "key": "prp_Sectario", "value": "Cultist" },
-        { "key": "prp_RobinHood", "value": "Robin Hood" },
-        { "key": "prp_Punteria", "value": "Aiming" },
-        { "key": "prp_Equilibrio", "value": "Balance" },
-        { "key": "prp_Heisenberg", "value": "Heisenberg" },
-        { "key": "prp_Placer", "value": "Pleasure" },
-        { "key": "prp_Evasion", "value": "Evasion" },
-        { "key": "prp_Defensa", "value": "Defense" },
-        { "key": "prp_CapitanAmerica", "value": "Captain America" },
-        { "key": "prp_Jason", "value": "Jason" },
-        { "key": "prp_Oxidado", "value": "Rusty" },
-        { "key": "prp_Obstaculos", "value": "Obstacles" },
-        { "key": "prp_Inmersion", "value": "Immersion" },
-        { "key": "prp_Jazz", "value": "Jazz" },
-        { "key": "prp_Pop", "value": "Pop" }
-      ]
-    }
-  ]
+                {
+                    "key": "desktop_email",
+                    "value": "Email"
+                },
+                {
+                    "key": "desktop_buscaminas",
+                    "value": "Minesweeper"
+                },
+                {
+                    "key": "desktop_engine",
+                    "value": "Liberty Engine"
+                },
+
+
+                {
+                    "key": "minesweeper_start",
+                    "value": "Start"
+                },
+                {
+                    "key": "minesweeper_title",
+                    "value": "<color=red>MINE</color>SWEEPER"
+                },
+                {
+                    "key": "minesweeper_victory",
+                    "value": "Victory"
+                },
+                {
+                    "key": "minesweeper_gameOver",
+                    "value": "Game Over"
+                },
+                {
+                    "key": "minesweeper_restart",
+                    "value": "RESTART"
+                },
+                {
+                    "key": "minesweeper_menu",
+                    "value": "MENU"
+                },
+
+
+                {
+                    "key": "tut_01",
+                    "value": "Welcome to the best <size=50%><color=grey>(and only)</color></size> government-approved game engine."
+                },
+                {
+                    "key": "tut_02",
+                    "value": "To develop your game, you have to place the components from the <color=#06EF06>grid</color> on the left"
+                },
+                {
+                    "key": "tut_03",
+                    "value": "so that they fit without leaving any gaps in the <color=red>grid</color> on the right."
+                },
+                {
+                    "key": "tut_04",
+                    "value": "Each component has its properties, which will be displayed when selecting the component on the <color=orange>screen</color>."
+                },
+                {
+                    "key": "tut_05",
+                    "value": "Every game needs 4 components: <color=purple>Mechanics</color>, <color=#946B1F>Genre</color>, <color=#E5C16F>Style</color> and an <color=#5D69A9>Item</color>. You will know which is which by the screen or by the color of the component."
+                },
+                {
+                    "key": "tut_06",
+                    "value": "To move the components you just have to <size=90%><b>click</b></size> on them. Once selected you can rotate them with the <size=90%><b>Q</b></size> and <size=90%><b>E</b></size> keys."
+                },
+                {
+                    "key": "tut_07",
+                    "value": "and move them with the <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size> keys."
+                },
+                {
+                    "key": "tut_08",
+                    "value": "To confirm the position of the components on the grid use the <size=90%><b>space bar</b></size>"
+                },
+                {
+                    "key": "tut_09",
+                    "value": "and if you change your mind you can return the component to the grid on the left with the <size=90%><b>right click</b></size> while you have it selected."
+                },
+                {
+                    "key": "tut_10",
+                    "value": "Good luck."
+                },
+                {
+                    "key": "tut_angry",
+                    "value": "<size=120%><color=red>STOP IT!</color></size>\nDON'T YOU SEE YOU CAN'T PLACE IT THERE?"
+                },
+
+
+                {
+                    "key": "gameSent_Title",
+                    "value": "Result report"
+                },
+                {
+                    "key": "gameSent_rejected",
+                    "value": "After thoroughly reviewing your video game. Unfortunately, we must inform you that <color=red>you cannot publish it</color>. \nThis type of content is not suitable for all ages, please <color=red>think of the children</color> who will be consuming this. \n\nSincerely, \nGovernment Office of Media Control."
+                },
+                {
+                    "key": "gameSent_accepted",
+                    "value": "Your game has been accepted, congratulations, this is a fair game for the government."
+                },
+
+
+
+                {
+                    "key": "error_83_title",
+                    "value": "ERROR(83): GridNotFull"
+                },
+                {
+                    "key": "error_83_message",
+                    "value": "The grid is still not full. \nPlease, complete it before sending."
+                },
+
+                {
+                    "key": "error_155_title",
+                    "value": "ERROR(155): BannedPiecePresent"
+                },
+                {
+                    "key": "error_155_message",
+                    "value": "There's a banned piece inside the game. \nPlease REMOVE IT before sending."
+                },
+
+                {
+                    "key": "error_40_title",
+                    "value": "ERROR(40): GenereNotFound"
+                },
+                {
+                    "key": "error_40_message",
+                    "value": "Unexisting genere inside the game. \nPlease add a Genere before sending."
+                },
+
+                {
+                    "key": "error_41_title",
+                    "value": "ERROR(41): MechanicNotFound"
+                },
+                {
+                    "key": "error_41_message",
+                    "value": "Unexisting mechanic inside the game. \nPlease add a Mechanic before sending."
+                },
+
+                {
+                    "key": "error_42_title",
+                    "value": "ERROR(42): StyleNotFound"
+                },
+                {
+                    "key": "error_42_message",
+                    "value": "Unexisting style inside the game. \nPlease add a Style before sending."
+                },
+
+                {
+                    "key": "error_43_title",
+                    "value": "ERROR(43): ItemNotFound"
+                },
+                {
+                    "key": "error_43_message",
+                    "value": "Unexisting item inside the game. \nPlease add an Item before sending."
+                },
+
+
+                {
+                    "key": "piece_name_Correr",
+                    "value": "Running"
+                },
+                {
+                    "key": "piece_name_Disparar",
+                    "value": "Shooting"
+                },
+                {
+                    "key": "piece_name_Lofi",
+                    "value": "Lo-fi"
+                },
+                {
+                    "key": "piece_name_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "piece_name_Fuego",
+                    "value": "Fire"
+                },
+                {
+                    "key": "piece_name_Fusil",
+                    "value": "Rifle"
+                },
+                {
+                    "key": "piece_name_Pistola",
+                    "value": "Pistol"
+                },
+                {
+                    "key": "piece_name_Realista",
+                    "value": "Realistic"
+                },
+                {
+                    "key": "piece_name_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "piece_name_Sangre",
+                    "value": "Blood"
+                },
+                {
+                    "key": "piece_name_Arco",
+                    "value": "Bow"
+                },
+                {
+                    "key": "piece_name_Droga",
+                    "value": "Frugs"
+                },
+                {
+                    "key": "piece_name_Electricidad",
+                    "value": "Electricity"
+                },
+                {
+                    "key": "piece_name_Machete",
+                    "value": "Machete"
+                },
+                {
+                    "key": "piece_name_Ratonyteclado",
+                    "value": "Mouse and Keyboard"
+                },
+                {
+                    "key": "piece_name_Pixel Art",
+                    "value": "Pixel Art"
+                },
+                {
+                    "key": "piece_name_Escudo",
+                    "value": "Shield"
+                },
+                {
+                    "key": "piece_name_SFX",
+                    "value": "SFX"
+                },
+                {
+                    "key": "piece_name_Monedas",
+                    "value": "Coins"
+                },
+                {
+                    "key": "piece_name_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "piece_name_Salto",
+                    "value": "Jumping"
+                },
+                {
+                    "key": "piece_name_Chip",
+                    "value": "Chip"
+                },
+                {
+                    "key": "piece_name_Hackeo",
+                    "value": "Hacking"
+                },
+                {
+                    "key": "piece_name_Plataformas",
+                    "value": "Platforms"
+                },
+                {
+                    "key": "piece_name_Pop",
+                    "value": "Pop"
+                },
+                {
+                    "key": "piece_name_Mando",
+                    "value": "Gamepad"
+                },
+                {
+                    "key": "piece_name_Puños",
+                    "value": "Fists"
+                },
+
+
+                {
+                    "key": "piece_type_Gobierno",
+                    "value": "Government"
+                },
+                {
+                    "key": "piece_type_Mecanica",
+                    "value": "Mechanics"
+                },
+                {
+                    "key": "piece_type_Estilo",
+                    "value": "Style"
+                },
+                {
+                    "key": "piece_type_Item",
+                    "value": "Item"
+                },
+                {
+                    "key": "piece_type_Musica",
+                    "value": "Music"
+                },
+                {
+                    "key": "piece_type_Elemento",
+                    "value": "Element"
+                },
+                {
+                    "key": "piece_type_Genero",
+                    "value": "Genre"
+                },
+
+
+                {
+                    "key": "ui_type",
+                    "value": "Type"
+                },
+
+
+                {
+                    "key": "prp_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "prp_Disparos",
+                    "value": "Shooting"
+                },
+                {
+                    "key": "prp_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "prp_Realismo",
+                    "value": "Realism"
+                },
+                {
+                    "key": "prp_ArmasDeFuego",
+                    "value": "Firearms"
+                },
+                {
+                    "key": "prp_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "prp_Agotamiento",
+                    "value": "Exhaustion"
+                },
+                {
+                    "key": "prp_Tranquilo",
+                    "value": "Calm"
+                },
+                {
+                    "key": "prp_Plataforma",
+                    "value": "Platforms"
+                },
+                {
+                    "key": "prp_Proteccion",
+                    "value": "Protection"
+                },
+                {
+                    "key": "prp_Pixeles",
+                    "value": "Pixels"
+                },
+                {
+                    "key": "prp_Ambientacion",
+                    "value": "Atmosphere"
+                },
+                {
+                    "key": "prp_ArmaADistancia",
+                    "value": "Ranged Weapon"
+                },
+                {
+                    "key": "prp_ArmaBlanca",
+                    "value": "Melee Weapon"
+                },
+                {
+                    "key": "prp_Droga",
+                    "value": "Drugs"
+                },
+                {
+                    "key": "prp_Controles",
+                    "value": "Controls"
+                },
+                {
+                    "key": "prp_Electricidad",
+                    "value": "Elecrticity"
+                },
+                {
+                    "key": "prp_Tecleo",
+                    "value": "Typing"
+                },
+                {
+                    "key": "prp_Patata",
+                    "value": "Potato"
+                },
+                {
+                    "key": "prp_Tierra",
+                    "value": "Soil"
+                },
+                {
+                    "key": "prp_Satanico",
+                    "value": "Satanic"
+                },
+                {
+                    "key": "prp_Sectario",
+                    "value": "Cultist"
+                },
+                {
+                    "key": "prp_RobinHood",
+                    "value": "Robin Hood"
+                },
+                {
+                    "key": "prp_Punteria",
+                    "value": "Aiming"
+                },
+                {
+                    "key": "prp_Equilibrio",
+                    "value": "Balance"
+                },
+                {
+                    "key": "prp_Heisenberg",
+                    "value": "Heisenberg"
+                },
+                {
+                    "key": "prp_Placer",
+                    "value": "Pleasure"
+                },
+                {
+                    "key": "prp_Evasion",
+                    "value": "Evasion"
+                },
+                {
+                    "key": "prp_Defensa",
+                    "value": "Defense"
+                },
+                {
+                    "key": "prp_CapitanAmerica",
+                    "value": "Captain America"
+                },
+                {
+                    "key": "prp_Jason",
+                    "value": "Jason"
+                },
+                {
+                    "key": "prp_Oxidado",
+                    "value": "Rusty"
+                },
+                {
+                    "key": "prp_Obstaculos",
+                    "value": "Obstacles"
+                },
+                {
+                    "key": "prp_Inmersion",
+                    "value": "Immersion"
+                },
+                {
+                    "key": "prp_Jazz",
+                    "value": "Jazz"
+                },
+                {
+                    "key": "prp_Pop",
+                    "value": "Pop"
+                }
+            ]
+        }, //Inglés
+        {
+            "languageID": "CAT",
+            "items": [
+                {
+                    "key": "menu_start",
+                    "value": "- Prem aquí per començar -"
+                },
+                {
+                    "key": "menu_settings",
+                    "value": "Ajustaments"
+                },
+                {
+                    "key": "menu_language",
+                    "value": "Idioma"
+                },
+                {
+                    "key": "menu_syncbands",
+                    "value": "Activar Syncbands"
+                },
+
+                {
+                    "key": "desktop_email",
+                    "value": "Correu"
+                },
+                {
+                    "key": "desktop_buscaminas",
+                    "value": "Buscamines"
+                },
+                {
+                    "key": "desktop_engine",
+                    "value": "Liberty Engine"
+                },
+
+                {
+                    "key": "minesweeper_start",
+                    "value": "Començar"
+                },
+                {
+                    "key": "minesweeper_title",
+                    "value": "<color=red>BUSCA</color>MINES"
+                },
+                {
+                    "key": "minesweeper_victory",
+                    "value": "Victòria"
+                },
+                {
+                    "key": "minesweeper_gameOver",
+                    "value": "Fi del joc"
+                },
+                {
+                    "key": "minesweeper_restart",
+                    "value": "REINICIAR"
+                },
+                {
+                    "key": "minesweeper_menu",
+                    "value": "MENÚ"
+                },
+
+                {
+                    "key": "tut_01",
+                    "value": "Benvingut al millor <size=50%><color=grey>(i únic)</color></size> motor de jocs aprovat pel govern."
+                },
+                {
+                    "key": "tut_02",
+                    "value": "Per desenvolupar el teu joc, has de col·locar els components de la <color=#06EF06>quadrícula</color> de l'esquerra"
+                },
+                {
+                    "key": "tut_03",
+                    "value": "de manera que encaixin sense deixar cap buit a la <color=red>quadrícula</color> de la dreta."
+                },
+                {
+                    "key": "tut_04",
+                    "value": "Cada component té les seves propietats, que es mostraran en seleccionar el component a la <color=orange>pantalla</color>."
+                },
+                {
+                    "key": "tut_05",
+                    "value": "Tot joc necessita 4 components: <color=purple>Mecàniques</color>, <color=#946B1F>Gènere</color>, <color=#E5C16F>Estil</color> i un <color=#5D69A9>Ítem</color>. Sabràs quin és quin per la pantalla o pel color del component."
+                },
+                {
+                    "key": "tut_06",
+                    "value": "Per moure els components només has de fer <size=90%><b>clic</b></size> sobre ells. Un cop seleccionats pots girar-los amb les tecles <size=90%><b>Q</b></size> i <size=90%><b>E</b></size>."
+                },
+                {
+                    "key": "tut_07",
+                    "value": "i moure'ls amb les tecles <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size>."
+                },
+                {
+                    "key": "tut_08",
+                    "value": "Per confirmar la posició dels components a la quadrícula fes servir la <size=90%><b>barra espaiadora</b></size>"
+                },
+                {
+                    "key": "tut_09",
+                    "value": "i si canvies d'opinió pots retornar el component a la quadrícula de l'esquerra amb el <size=90%><b>clic dret</b></size> mentre el tens seleccionat."
+                },
+                {
+                    "key": "tut_10",
+                    "value": "Bona sort."
+                },
+                {
+                    "key": "tut_angry",
+                    "value": "<size=120%><color=red>PARA!</color></size>\nNO VEUS QUE NO POTS COL·LOCAR-HO AQUÍ?"
+                },
+
+                {
+                    "key": "gameSent_Title",
+                    "value": "Informe de resultats"
+                },
+                {
+                    "key": "gameSent_rejected",
+                    "value": "Després de revisar a fons el teu videojoc. Malauradament, t'hem d'informar que <color=red>no pots publicar-lo</color>. \nAquest tipus de contingut no és adequat per a totes les edats, si us plau <color=red>pensa en els nens</color> que consumiran això. \n\nAtentament, \nOficina Governamental de Control de Mitjans."
+                },
+                {
+                    "key": "gameSent_accepted",
+                    "value": "El teu joc ha estat acceptat, felicitats, aquest és un joc just per al govern."
+                },
+
+                {
+                    "key": "error_83_title",
+                    "value": "ERROR(83): GridNotFull"
+                },
+                {
+                    "key": "error_83_message",
+                    "value": "La quadrícula encara no està plena. \nSi us plau, completa-la abans d'enviar."
+                },
+
+                {
+                    "key": "error_155_title",
+                    "value": "ERROR(155): BannedPiecePresent"
+                },
+                {
+                    "key": "error_155_message",
+                    "value": "Hi ha una peça prohibida dins del joc. \nSi us plau, RETIRA-LA abans d'enviar."
+                },
+
+                {
+                    "key": "error_40_title",
+                    "value": "ERROR(40): GenereNotFound"
+                },
+                {
+                    "key": "error_40_message",
+                    "value": "Gènere inexistent dins del joc. \nSi us plau, afegeix un Gènere abans d'enviar."
+                },
+
+                {
+                    "key": "error_41_title",
+                    "value": "ERROR(41): MechanicNotFound"
+                },
+                {
+                    "key": "error_41_message",
+                    "value": "Mecànica inexistent dins del joc. \nSi us plau, afegeix una Mecànica abans d'enviar."
+                },
+
+                {
+                    "key": "error_42_title",
+                    "value": "ERROR(42): StyleNotFound"
+                },
+                {
+                    "key": "error_42_message",
+                    "value": "Estil inexistent dins del joc. \nSi us plau, afegeix un Estil abans d'enviar."
+                },
+
+                {
+                    "key": "error_43_title",
+                    "value": "ERROR(43): ItemNotFound"
+                },
+                {
+                    "key": "error_43_message",
+                    "value": "Ítem inexistent dins del joc. \nSi us plau, afegeix un Ítem abans d'enviar."
+                },
+
+                {
+                    "key": "piece_name_Correr",
+                    "value": "Córrer"
+                },
+                {
+                    "key": "piece_name_Disparar",
+                    "value": "Disparar"
+                },
+                {
+                    "key": "piece_name_Lofi",
+                    "value": "Lo-fi"
+                },
+                {
+                    "key": "piece_name_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "piece_name_Fuego",
+                    "value": "Foc"
+                },
+                {
+                    "key": "piece_name_Fusil",
+                    "value": "Fusell"
+                },
+                {
+                    "key": "piece_name_Pistola",
+                    "value": "Pistola"
+                },
+                {
+                    "key": "piece_name_Realista",
+                    "value": "Realista"
+                },
+                {
+                    "key": "piece_name_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "piece_name_Sangre",
+                    "value": "Sang"
+                },
+                {
+                    "key": "piece_name_Arco",
+                    "value": "Arc"
+                },
+                {
+                    "key": "piece_name_Droga",
+                    "value": "Drogues"
+                },
+                {
+                    "key": "piece_name_Electricidad",
+                    "value": "Electricitat"
+                },
+                {
+                    "key": "piece_name_Machete",
+                    "value": "Matxet"
+                },
+                {
+                    "key": "piece_name_Ratonyteclado",
+                    "value": "Ratolí i teclat"
+                },
+                {
+                    "key": "piece_name_Pixel Art",
+                    "value": "Pixel Art"
+                },
+                {
+                    "key": "piece_name_Escudo",
+                    "value": "Escut"
+                },
+                {
+                    "key": "piece_name_SFX",
+                    "value": "SFX"
+                },
+                {
+                    "key": "piece_name_Monedas",
+                    "value": "Monedes"
+                },
+                {
+                    "key": "piece_name_Metal",
+                    "value": "Metall"
+                },
+                {
+                    "key": "piece_name_Salto",
+                    "value": "Saltar"
+                },
+                {
+                    "key": "piece_name_Chip",
+                    "value": "Xip"
+                },
+                {
+                    "key": "piece_name_Hackeo",
+                    "value": "Hacking"
+                },
+                {
+                    "key": "piece_name_Plataformas",
+                    "value": "Plataformes"
+                },
+                {
+                    "key": "piece_name_Pop",
+                    "value": "Pop"
+                },
+                {
+                    "key": "piece_name_Mando",
+                    "value": "Comandament"
+                },
+                {
+                    "key": "piece_name_Puños",
+                    "value": "Punys"
+                },
+
+                {
+                    "key": "piece_type_Gobierno",
+                    "value": "Govern"
+                },
+                {
+                    "key": "piece_type_Mecanica",
+                    "value": "Mecàniques"
+                },
+                {
+                    "key": "piece_type_Estilo",
+                    "value": "Estil"
+                },
+                {
+                    "key": "piece_type_Item",
+                    "value": "Ítem"
+                },
+                {
+                    "key": "piece_type_Musica",
+                    "value": "Música"
+                },
+                {
+                    "key": "piece_type_Elemento",
+                    "value": "Element"
+                },
+                {
+                    "key": "piece_type_Genero",
+                    "value": "Gènere"
+                },
+
+                {
+                    "key": "ui_type",
+                    "value": "Tipus"
+                },
+
+                {
+                    "key": "prp_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "prp_Disparos",
+                    "value": "Trets"
+                },
+                {
+                    "key": "prp_Metal",
+                    "value": "Metall"
+                },
+                {
+                    "key": "prp_Realismo",
+                    "value": "Realisme"
+                },
+                {
+                    "key": "prp_ArmasDeFuego",
+                    "value": "Armes de foc"
+                },
+                {
+                    "key": "prp_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "prp_Agotamiento",
+                    "value": "Esgotament"
+                },
+                {
+                    "key": "prp_Tranquilo",
+                    "value": "Calma"
+                },
+                {
+                    "key": "prp_Plataforma",
+                    "value": "Plataformes"
+                },
+                {
+                    "key": "prp_Proteccion",
+                    "value": "Protecció"
+                },
+                {
+                    "key": "prp_Pixeles",
+                    "value": "Píxels"
+                },
+                {
+                    "key": "prp_Ambientacion",
+                    "value": "Ambientació"
+                },
+                {
+                    "key": "prp_ArmaADistancia",
+                    "value": "Arma a distància"
+                },
+                {
+                    "key": "prp_ArmaBlanca",
+                    "value": "Arma blanca"
+                },
+                {
+                    "key": "prp_Droga",
+                    "value": "Drogues"
+                },
+                {
+                    "key": "prp_Controles",
+                    "value": "Controls"
+                },
+                {
+                    "key": "prp_Electricidad",
+                    "value": "Electricitat"
+                },
+                {
+                    "key": "prp_Tecleo",
+                    "value": "Teclejar"
+                },
+                {
+                    "key": "prp_Patata",
+                    "value": "Patata"
+                },
+                {
+                    "key": "prp_Tierra",
+                    "value": "Terra"
+                },
+                {
+                    "key": "prp_Satanico",
+                    "value": "Satànic"
+                },
+                {
+                    "key": "prp_Sectario",
+                    "value": "Sectari"
+                },
+                {
+                    "key": "prp_RobinHood",
+                    "value": "Robin Hood"
+                },
+                {
+                    "key": "prp_Punteria",
+                    "value": "Punteria"
+                },
+                {
+                    "key": "prp_Equilibrio",
+                    "value": "Equilibri"
+                },
+                {
+                    "key": "prp_Heisenberg",
+                    "value": "Heisenberg"
+                },
+                {
+                    "key": "prp_Placer",
+                    "value": "Plaer"
+                },
+                {
+                    "key": "prp_Evasion",
+                    "value": "Evasió"
+                },
+                {
+                    "key": "prp_Defensa",
+                    "value": "Defensa"
+                },
+                {
+                    "key": "prp_CapitanAmerica",
+                    "value": "Capità Amèrica"
+                },
+                {
+                    "key": "prp_Jason",
+                    "value": "Jason"
+                },
+                {
+                    "key": "prp_Oxidado",
+                    "value": "Oxidat"
+                },
+                {
+                    "key": "prp_Obstaculos",
+                    "value": "Obstacles"
+                },
+                {
+                    "key": "prp_Inmersion",
+                    "value": "Immersió"
+                },
+                {
+                    "key": "prp_Jazz",
+                    "value": "Jazz"
+                },
+                {
+                    "key": "prp_Pop",
+                    "value": "Pop"
+                }
+            ]
+        }, //Catalán
+        {
+            "languageID": "EU",
+            "items": [
+                {
+                    "key": "menu_start",
+                    "value": "- Sakatu hemen hasteko -"
+                },
+                {
+                    "key": "menu_settings",
+                    "value": "Ezarpenak"
+                },
+                {
+                    "key": "menu_language",
+                    "value": "Hizkuntza"
+                },
+                {
+                    "key": "menu_syncbands",
+                    "value": "Aktibatu Syncbands"
+                },
+                {
+                    "key": "desktop_email",
+                    "value": "Posta"
+                },
+                {
+                    "key": "desktop_buscaminas",
+                    "value": "Dragamina"
+                },
+                {
+                    "key": "desktop_engine",
+                    "value": "Liberty Engine"
+                },
+                {
+                    "key": "minesweeper_start",
+                    "value": "Hasi"
+                },
+                {
+                    "key": "minesweeper_title",
+                    "value": "<color=red>DRAGA</color>MINA"
+                },
+                {
+                    "key": "minesweeper_victory",
+                    "value": "Garaipena"
+                },
+                {
+                    "key": "minesweeper_gameOver",
+                    "value": "Jokoa amaitu da"
+                },
+                {
+                    "key": "minesweeper_restart",
+                    "value": "BERRHASI"
+                },
+                {
+                    "key": "minesweeper_menu",
+                    "value": "MENUA"
+                },
+                {
+                    "key": "tut_01",
+                    "value": "Ongi etorri gobernuak onartutako joko-motorrik onenara <size=50%><color=grey>(eta bakarrera)</color></size>."
+                },
+                {
+                    "key": "tut_02",
+                    "value": "Zure jokoa garatzeko, ezkerreko <color=#06EF06>saretako</color> osagaiak kokatu behar dituzu"
+                },
+                {
+                    "key": "tut_03",
+                    "value": "eskuineko <color=red>saretan</color> tarterik utzi gabe ahoka daitezen."
+                },
+                {
+                    "key": "tut_04",
+                    "value": "Osagai bakoitzak bere propietateak ditu, eta osagaia <color=orange>pantailan</color> hautatzean erakutsiko dira."
+                },
+                {
+                    "key": "tut_05",
+                    "value": "Joko bakoitzak 4 osagai behar ditu: <color=purple>Mekanikak</color>, <color=#946B1F>Generoa</color>, <color=#E5C16F>Estiloa</color> eta <color=#5D69A9>Objektu</color> bat. Zein den zein jakingo duzu pantailagatik edo osagaiaren koloreagatik."
+                },
+                {
+                    "key": "tut_06",
+                    "value": "Osagaiak mugitzeko haien gainean <size=90%><b>klik</b></size> egin besterik ez duzu. Hautatu ondoren, <size=90%><b>Q</b></size> eta <size=90%><b>E</b></size> teklak erabiliz biratu ditzakezu."
+                },
+                {
+                    "key": "tut_07",
+                    "value": "eta <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size> teklekin mugitu."
+                },
+                {
+                    "key": "tut_08",
+                    "value": "Osagaien posizioa saretan berresteko, erabili <size=90%><b>zuriune-barra</b></size>"
+                },
+                {
+                    "key": "tut_09",
+                    "value": "eta iritziz aldatzen baduzu, osagaia ezkerreko saretara itzul dezakezu <size=90%><b>eskuineko klikarekin</b></size> hautatuta duzula."
+                },
+                {
+                    "key": "tut_10",
+                    "value": "Zorte on."
+                },
+                {
+                    "key": "tut_angry",
+                    "value": "<size=120%><color=red>GELDITU!</color></size>\nEZ AL DUZU IKUSTEN EZIN DUZULA HOR KOKATU?"
+                },
+                {
+                    "key": "gameSent_Title",
+                    "value": "Emaitzen txostena"
+                },
+                {
+                    "key": "gameSent_rejected",
+                    "value": "Zure bideo-jokoa sakon aztertu ondoren. Zoritxarrez, <color=red>ezin duzula argitaratu</color> jakinarazi behar dizugu. \nEduki mota hau ez da egokia adin guztietarako, mesedez <color=red>pentsatu haurrengan</color>, haiek kontsumituko baitute hau. \n\nAdeitasunez, \nKomunikabideak Kontrolatzeko Gobernu Bulegoa."
+                },
+                {
+                    "key": "gameSent_accepted",
+                    "value": "Zure jokoa onartu da, zorionak, gobernuarentzat joko bidezkoa da hau."
+                },
+                {
+                    "key": "error_83_title",
+                    "value": "ERROREA(83): SaretaEzDagoBeteta"
+                },
+                {
+                    "key": "error_83_message",
+                    "value": "Sareta oraindik ez dago beteta. \nMesedez, osatu bidali aurretik."
+                },
+                {
+                    "key": "error_155_title",
+                    "value": "ERROREA(155): DebekatutakoPieza"
+                },
+                {
+                    "key": "error_155_message",
+                    "value": "Jokoan debekatutako pieza bat dago. \nMesedez, KENDU bidali aurretik."
+                },
+                {
+                    "key": "error_40_title",
+                    "value": "ERROREA(40): GeneroEzezaguna"
+                },
+                {
+                    "key": "error_40_message",
+                    "value": "Jokoan existitzen ez den generoa. \nMesedez, gehitu Genero bat bidali aurretik."
+                },
+                {
+                    "key": "error_41_title",
+                    "value": "ERROREA(41): MekanikaEzezaguna"
+                },
+                {
+                    "key": "error_41_message",
+                    "value": "Jokoan existitzen ez den mekanika. \nMesedez, gehitu Mekanika bat bidali aurretik."
+                },
+                {
+                    "key": "error_42_title",
+                    "value": "ERROREA(42): EstiloEzezaguna"
+                },
+                {
+                    "key": "error_42_message",
+                    "value": "Jokoan existitzen ez den estiloa. \nMesedez, gehitu Estilo bat bidali aurretik."
+                },
+                {
+                    "key": "error_43_title",
+                    "value": "ERROREA(43): ObjektuEzezaguna"
+                },
+                {
+                    "key": "error_43_message",
+                    "value": "Jokoan existitzen ez den objektua. \nMesedez, gehitu Objektu bat bidali aurretik."
+                },
+                {
+                    "key": "piece_name_Correr",
+                    "value": "Korrika egitea"
+                },
+                {
+                    "key": "piece_name_Disparar",
+                    "value": "Tiro egitea"
+                },
+                {
+                    "key": "piece_name_Lofi",
+                    "value": "Lo-fi"
+                },
+                {
+                    "key": "piece_name_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "piece_name_Fuego",
+                    "value": "Sua"
+                },
+                {
+                    "key": "piece_name_Fusil",
+                    "value": "Fusila"
+                },
+                {
+                    "key": "piece_name_Pistola",
+                    "value": "Pistola"
+                },
+                {
+                    "key": "piece_name_Realista",
+                    "value": "Errealista"
+                },
+                {
+                    "key": "piece_name_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "piece_name_Sangre",
+                    "value": "Odola"
+                },
+                {
+                    "key": "piece_name_Arco",
+                    "value": "Arkua"
+                },
+                {
+                    "key": "piece_name_Droga",
+                    "value": "Drogak"
+                },
+                {
+                    "key": "piece_name_Electricidad",
+                    "value": "Elektrizitatea"
+                },
+                {
+                    "key": "piece_name_Machete",
+                    "value": "Matxetea"
+                },
+                {
+                    "key": "piece_name_Ratonyteclado",
+                    "value": "Sagua eta teklatua"
+                },
+                {
+                    "key": "piece_name_Pixel Art",
+                    "value": "Pixel Art"
+                },
+                {
+                    "key": "piece_name_Escudo",
+                    "value": "Ezkutua"
+                },
+                {
+                    "key": "piece_name_SFX",
+                    "value": "SFX"
+                },
+                {
+                    "key": "piece_name_Monedas",
+                    "value": "Txanponak"
+                },
+                {
+                    "key": "piece_name_Metal",
+                    "value": "Metala"
+                },
+                {
+                    "key": "piece_name_Salto",
+                    "value": "Jauzi egitea"
+                },
+                {
+                    "key": "piece_name_Chip",
+                    "value": "Txipa"
+                },
+                {
+                    "key": "piece_name_Hackeo",
+                    "value": "Hackeatzea"
+                },
+                {
+                    "key": "piece_name_Plataformas",
+                    "value": "Plataformak"
+                },
+                {
+                    "key": "piece_name_Pop",
+                    "value": "Pop"
+                },
+                {
+                    "key": "piece_name_Mando",
+                    "value": "Agintea"
+                },
+                {
+                    "key": "piece_name_Puños",
+                    "value": "Ukabilak"
+                },
+                {
+                    "key": "piece_type_Gobierno",
+                    "value": "Gobernua"
+                },
+                {
+                    "key": "piece_type_Mecanica",
+                    "value": "Mekanikak"
+                },
+                {
+                    "key": "piece_type_Estilo",
+                    "value": "Estiloa"
+                },
+                {
+                    "key": "piece_type_Item",
+                    "value": "Objektua"
+                },
+                {
+                    "key": "piece_type_Musica",
+                    "value": "Musika"
+                },
+                {
+                    "key": "piece_type_Elemento",
+                    "value": "Elementua"
+                },
+                {
+                    "key": "piece_type_Genero",
+                    "value": "Generoa"
+                },
+                {
+                    "key": "ui_type",
+                    "value": "Mota"
+                },
+                {
+                    "key": "prp_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "prp_Disparos",
+                    "value": "Tiroak"
+                },
+                {
+                    "key": "prp_Metal",
+                    "value": "Metala"
+                },
+                {
+                    "key": "prp_Realismo",
+                    "value": "Errealismoa"
+                },
+                {
+                    "key": "prp_ArmasDeFuego",
+                    "value": "Su-armak"
+                },
+                {
+                    "key": "prp_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "prp_Agotamiento",
+                    "value": "Akidura"
+                },
+                {
+                    "key": "prp_Tranquilo",
+                    "value": "Lasai"
+                },
+                {
+                    "key": "prp_Plataforma",
+                    "value": "Plataformak"
+                },
+                {
+                    "key": "prp_Proteccion",
+                    "value": "Babesa"
+                },
+                {
+                    "key": "prp_Pixeles",
+                    "value": "Pixelak"
+                },
+                {
+                    "key": "prp_Ambientacion",
+                    "value": "Giroa"
+                },
+                {
+                    "key": "prp_ArmaADistancia",
+                    "value": "Urruneko arma"
+                },
+                {
+                    "key": "prp_ArmaBlanca",
+                    "value": "Arma zuria"
+                },
+                {
+                    "key": "prp_Droga",
+                    "value": "Drogak"
+                },
+                {
+                    "key": "prp_Controles",
+                    "value": "Kontrolak"
+                },
+                {
+                    "key": "prp_Electricidad",
+                    "value": "Elektrizitatea"
+                },
+                {
+                    "key": "prp_Tecleo",
+                    "value": "Teklatzea"
+                },
+                {
+                    "key": "prp_Patata",
+                    "value": "Patata"
+                },
+                {
+                    "key": "prp_Tierra",
+                    "value": "Lurra"
+                },
+                {
+                    "key": "prp_Satanico",
+                    "value": "Satanikoa"
+                },
+                {
+                    "key": "prp_Sectario",
+                    "value": "Sektarioa"
+                },
+                {
+                    "key": "prp_RobinHood",
+                    "value": "Robin Hood"
+                },
+                {
+                    "key": "prp_Punteria",
+                    "value": "Punteria"
+                },
+                {
+                    "key": "prp_Equilibrio",
+                    "value": "Oreka"
+                },
+                {
+                    "key": "prp_Heisenberg",
+                    "value": "Heisenberg"
+                },
+                {
+                    "key": "prp_Placer",
+                    "value": "Plazera"
+                },
+                {
+                    "key": "prp_Evasion",
+                    "value": "Ebasioa"
+                },
+                {
+                    "key": "prp_Defensa",
+                    "value": "Defentsa"
+                },
+                {
+                    "key": "prp_CapitanAmerica",
+                    "value": "Amerika Kapitaina"
+                },
+                {
+                    "key": "prp_Jason",
+                    "value": "Jason"
+                },
+                {
+                    "key": "prp_Oxidado",
+                    "value": "Herdoildua"
+                },
+                {
+                    "key": "prp_Obstaculos",
+                    "value": "Oztopoak"
+                },
+                {
+                    "key": "prp_Inmersion",
+                    "value": "Murgiltzea"
+                },
+                {
+                    "key": "prp_Jazz",
+                    "value": "Jazz"
+                },
+                {
+                    "key": "prp_Pop",
+                    "value": "Pop"
+                }
+            ]
+        }, //Euskera
+        {
+            "languageID": "AN",
+            "items": [
+                {
+                    "key": "menu_start",
+                    "value": "- Prete aquí ta prencipiar -"
+                },
+                {
+                    "key": "menu_settings",
+                    "value": "Achustes"
+                },
+                {
+                    "key": "menu_language",
+                    "value": "Luenga"
+                },
+                {
+                    "key": "menu_syncbands",
+                    "value": "Activar Syncbands"
+                },
+                {
+                    "key": "desktop_email",
+                    "value": "Correu"
+                },
+                {
+                    "key": "desktop_buscaminas",
+                    "value": "Buscaminas"
+                },
+                {
+                    "key": "desktop_engine",
+                    "value": "Liberty Engine"
+                },
+                {
+                    "key": "minesweeper_start",
+                    "value": "Prencipiar"
+                },
+                {
+                    "key": "minesweeper_title",
+                    "value": "<color=red>BUSCA</color>MINAS"
+                },
+                {
+                    "key": "minesweeper_victory",
+                    "value": "Victoria"
+                },
+                {
+                    "key": "minesweeper_gameOver",
+                    "value": "Fin d'o chuego"
+                },
+                {
+                    "key": "minesweeper_restart",
+                    "value": "REINICIAR"
+                },
+                {
+                    "key": "minesweeper_menu",
+                    "value": "MENÚ"
+                },
+                {
+                    "key": "tut_01",
+                    "value": "Bienveniu a lo millor <size=50%><color=grey>(y solo)</color></size> motor de chuegos aprebau por o gubierno."
+                },
+                {
+                    "key": "tut_02",
+                    "value": "Ta desembolicar o tuyo chuego, has de colocar os components d'a <color=#06EF06>cuadricula</color> d'a ezquierda"
+                },
+                {
+                    "key": "tut_03",
+                    "value": "de traza que encaixen sin deixar garra vuedo en a <color=red>cuadricula</color> d'a dreita."
+                },
+                {
+                    "key": "tut_04",
+                    "value": "Cada component tien as suyas propiedatz, que s'amostrarán en trigar o component en a <color=orange>pantalla</color>."
+                },
+                {
+                    "key": "tut_05",
+                    "value": "Todo chuego amenista 4 components: <color=purple>Mecanicas</color>, <color=#946B1F>Chenero</color>, <color=#E5C16F>Estilo</color> y un <color=#5D69A9>Ítem</color>. Sabrás quál ye quál por a pantalla u por a color d'o component."
+                },
+                {
+                    "key": "tut_06",
+                    "value": "Ta mover os components nomás has de fer <size=90%><b>clic</b></size> en éls. Una vegada trigaus puez chirar-los con as teclas <size=90%><b>Q</b></size> y <size=90%><b>E</b></size>."
+                },
+                {
+                    "key": "tut_07",
+                    "value": "y mover-los con as teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size>."
+                },
+                {
+                    "key": "tut_08",
+                    "value": "Ta confirmar a posición d'os components en a cuadricula fa servir a <size=90%><b>barra espaciadera</b></size>"
+                },
+                {
+                    "key": "tut_09",
+                    "value": "y si cambeas d'ideya puez tornar o component enta la cuadricula d'a ezquierda con o <size=90%><b>clic dreito</b></size> mientres lo tiens trigau."
+                },
+                {
+                    "key": "tut_10",
+                    "value": "Buena suerte."
+                },
+                {
+                    "key": "tut_angry",
+                    "value": "<size=120%><color=red>ATURA!</color></size>\nNO VEYES QUE NO PUEZ COLOCAR-LO ASTÍ?"
+                },
+                {
+                    "key": "gameSent_Title",
+                    "value": "Informe de resultaus"
+                },
+                {
+                    "key": "gameSent_rejected",
+                    "value": "Dimpués de revisar a fondo o tuyo videochuego. Malament, t'hemos d'informar que <color=red>no puez publicar-lo</color>. \nIste tipo de conteniu no ye adequau ta todas as edatz, por favor <color=red>piensa en os ninos</color> que consumirán isto. \n\nAtentament, \nOficina Gubernamental de Control de Meyos."
+                },
+                {
+                    "key": "gameSent_accepted",
+                    "value": "O tuyo chuego ha estau acceptau, parabiéns, iste ye un chuego chusto ta lo gubierno."
+                },
+                {
+                    "key": "error_83_title",
+                    "value": "ERROR(83): CuadriculaNoPlena"
+                },
+                {
+                    "key": "error_83_message",
+                    "value": "A cuadricula encara no ye plena. \nPor favor, completa-la antes de ninviar."
+                },
+                {
+                    "key": "error_155_title",
+                    "value": "ERROR(155): PiezaVedadaPresent"
+                },
+                {
+                    "key": "error_155_message",
+                    "value": "Bi ha una pieza vedada aintro d'o chuego. \nPor favor, SACA-LA antes de ninviar."
+                },
+                {
+                    "key": "error_40_title",
+                    "value": "ERROR(40): CheneroNoTrobau"
+                },
+                {
+                    "key": "error_40_message",
+                    "value": "Chenero inexistent aintro d'o chuego. \nPor favor, adhibe un Chenero antes de ninviar."
+                },
+                {
+                    "key": "error_41_title",
+                    "value": "ERROR(41): MecanicaNoTrobada"
+                },
+                {
+                    "key": "error_41_message",
+                    "value": "Mecanica inexistent aintro d'o chuego. \nPor favor, adhibe una Mecanica antes de ninviar."
+                },
+                {
+                    "key": "error_42_title",
+                    "value": "ERROR(42): EstiloNoTrobau"
+                },
+                {
+                    "key": "error_42_message",
+                    "value": "Estilo inexistent aintro d'o chuego. \nPor favor, adhibe un Estilo antes de ninviar."
+                },
+                {
+                    "key": "error_43_title",
+                    "value": "ERROR(43): ItemNoTrobau"
+                },
+                {
+                    "key": "error_43_message",
+                    "value": "Ítem inexistent aintro d'o chuego. \nPor favor, adhibe un Ítem antes de ninviar."
+                },
+                {
+                    "key": "piece_name_Correr",
+                    "value": "Correr"
+                },
+                {
+                    "key": "piece_name_Disparar",
+                    "value": "Disparar"
+                },
+                {
+                    "key": "piece_name_Lofi",
+                    "value": "Lo-fi"
+                },
+                {
+                    "key": "piece_name_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "piece_name_Fuego",
+                    "value": "Fuego"
+                },
+                {
+                    "key": "piece_name_Fusil",
+                    "value": "Fusil"
+                },
+                {
+                    "key": "piece_name_Pistola",
+                    "value": "Pistola"
+                },
+                {
+                    "key": "piece_name_Realista",
+                    "value": "Realista"
+                },
+                {
+                    "key": "piece_name_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "piece_name_Sangre",
+                    "value": "Sangre"
+                },
+                {
+                    "key": "piece_name_Arco",
+                    "value": "Arco"
+                },
+                {
+                    "key": "piece_name_Droga",
+                    "value": "Drogas"
+                },
+                {
+                    "key": "piece_name_Electricidad",
+                    "value": "Electricidat"
+                },
+                {
+                    "key": "piece_name_Machete",
+                    "value": "Machete"
+                },
+                {
+                    "key": "piece_name_Ratonyteclado",
+                    "value": "Ratet y teclau"
+                },
+                {
+                    "key": "piece_name_Pixel Art",
+                    "value": "Pixel Art"
+                },
+                {
+                    "key": "piece_name_Escudo",
+                    "value": "Escudo"
+                },
+                {
+                    "key": "piece_name_SFX",
+                    "value": "SFX"
+                },
+                {
+                    "key": "piece_name_Monedas",
+                    "value": "Monedas"
+                },
+                {
+                    "key": "piece_name_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "piece_name_Salto",
+                    "value": "Brinco"
+                },
+                {
+                    "key": "piece_name_Chip",
+                    "value": "Chip"
+                },
+                {
+                    "key": "piece_name_Hackeo",
+                    "value": "Hackeyo"
+                },
+                {
+                    "key": "piece_name_Plataformas",
+                    "value": "Plataformas"
+                },
+                {
+                    "key": "piece_name_Pop",
+                    "value": "Pop"
+                },
+                {
+                    "key": "piece_name_Mando",
+                    "value": "Mando"
+                },
+                {
+                    "key": "piece_name_Puños",
+                    "value": "Punyos"
+                },
+                {
+                    "key": "piece_type_Gobierno",
+                    "value": "Gubierno"
+                },
+                {
+                    "key": "piece_type_Mecanica",
+                    "value": "Mecanicas"
+                },
+                {
+                    "key": "piece_type_Estilo",
+                    "value": "Estilo"
+                },
+                {
+                    "key": "piece_type_Item",
+                    "value": "Ítem"
+                },
+                {
+                    "key": "piece_type_Musica",
+                    "value": "Mosica"
+                },
+                {
+                    "key": "piece_type_Elemento",
+                    "value": "Elemento"
+                },
+                {
+                    "key": "piece_type_Genero",
+                    "value": "Chenero"
+                },
+                {
+                    "key": "ui_type",
+                    "value": "Tipo"
+                },
+                {
+                    "key": "prp_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "prp_Disparos",
+                    "value": "Disparos"
+                },
+                {
+                    "key": "prp_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "prp_Realismo",
+                    "value": "Realismo"
+                },
+                {
+                    "key": "prp_ArmasDeFuego",
+                    "value": "Armas de fuego"
+                },
+                {
+                    "key": "prp_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "prp_Agotamiento",
+                    "value": "Cansancio"
+                },
+                {
+                    "key": "prp_Tranquilo",
+                    "value": "Tranquilo"
+                },
+                {
+                    "key": "prp_Plataforma",
+                    "value": "Plataformas"
+                },
+                {
+                    "key": "prp_Proteccion",
+                    "value": "Protección"
+                },
+                {
+                    "key": "prp_Pixeles",
+                    "value": "Pixels"
+                },
+                {
+                    "key": "prp_Ambientacion",
+                    "value": "Ambientación"
+                },
+                {
+                    "key": "prp_ArmaADistancia",
+                    "value": "Arma a distancia"
+                },
+                {
+                    "key": "prp_ArmaBlanca",
+                    "value": "Arma blanca"
+                },
+                {
+                    "key": "prp_Droga",
+                    "value": "Drogas"
+                },
+                {
+                    "key": "prp_Controles",
+                    "value": "Controles"
+                },
+                {
+                    "key": "prp_Electricidad",
+                    "value": "Electricidat"
+                },
+                {
+                    "key": "prp_Tecleo",
+                    "value": "Tecleyo"
+                },
+                {
+                    "key": "prp_Patata",
+                    "value": "Pataca"
+                },
+                {
+                    "key": "prp_Tierra",
+                    "value": "Tierra"
+                },
+                {
+                    "key": "prp_Satanico",
+                    "value": "Satanico"
+                },
+                {
+                    "key": "prp_Sectario",
+                    "value": "Sectario"
+                },
+                {
+                    "key": "prp_RobinHood",
+                    "value": "Robin Hood"
+                },
+                {
+                    "key": "prp_Punteria",
+                    "value": "Puntería"
+                },
+                {
+                    "key": "prp_Equilibrio",
+                    "value": "Equilibrio"
+                },
+                {
+                    "key": "prp_Heisenberg",
+                    "value": "Heisenberg"
+                },
+                {
+                    "key": "prp_Placer",
+                    "value": "Placer"
+                },
+                {
+                    "key": "prp_Evasion",
+                    "value": "Evasión"
+                },
+                {
+                    "key": "prp_Defensa",
+                    "value": "Esfensa"
+                },
+                {
+                    "key": "prp_CapitanAmerica",
+                    "value": "Capitán America"
+                },
+                {
+                    "key": "prp_Jason",
+                    "value": "Jason"
+                },
+                {
+                    "key": "prp_Oxidado",
+                    "value": "Oxidau"
+                },
+                {
+                    "key": "prp_Obstaculos",
+                    "value": "Obstaclos"
+                },
+                {
+                    "key": "prp_Inmersion",
+                    "value": "Inmersión"
+                },
+                {
+                    "key": "prp_Jazz",
+                    "value": "Jazz"
+                },
+                {
+                    "key": "prp_Pop",
+                    "value": "Pop"
+                }
+            ]
+        }, //Aragones
+        {
+            "languageID": "GL",
+            "items": [
+                {
+                    "key": "menu_start",
+                    "value": "- Preme aquí para comezar -"
+                },
+                {
+                    "key": "menu_settings",
+                    "value": "Axustes"
+                },
+                {
+                    "key": "menu_language",
+                    "value": "Idioma"
+                },
+                {
+                    "key": "menu_syncbands",
+                    "value": "Activar Syncbands"
+                },
+                {
+                    "key": "desktop_email",
+                    "value": "Correo"
+                },
+                {
+                    "key": "desktop_buscaminas",
+                    "value": "Buscaminas"
+                },
+                {
+                    "key": "desktop_engine",
+                    "value": "Liberty Engine"
+                },
+                {
+                    "key": "minesweeper_start",
+                    "value": "Comezar"
+                },
+                {
+                    "key": "minesweeper_title",
+                    "value": "<color=red>BUSCA</color>MINAS"
+                },
+                {
+                    "key": "minesweeper_victory",
+                    "value": "Vitoria"
+                },
+                {
+                    "key": "minesweeper_gameOver",
+                    "value": "Fin do xogo"
+                },
+                {
+                    "key": "minesweeper_restart",
+                    "value": "REINICIAR"
+                },
+                {
+                    "key": "minesweeper_menu",
+                    "value": "MENÚ"
+                },
+                {
+                    "key": "tut_01",
+                    "value": "Benvido ao mellor <size=50%><color=grey>(e único)</color></size> motor de xogos aprobado polo goberno."
+                },
+                {
+                    "key": "tut_02",
+                    "value": "Para desenvolver o teu xogo, tes que colocar os compoñentes da <color=#06EF06>cuadrícula</color> da esquerda"
+                },
+                {
+                    "key": "tut_03",
+                    "value": "de xeito que encaixen sen deixar ningún oco na <color=red>cuadrícula</color> da dereita."
+                },
+                {
+                    "key": "tut_04",
+                    "value": "Cada compoñente ten as súas propiedades, que se amosarán ao seleccionar o compoñente na <color=orange>pantalla</color>."
+                },
+                {
+                    "key": "tut_05",
+                    "value": "Todo xogo necesita 4 compoñentes: <color=purple>Mecánicas</color>, <color=#946B1F>Xénero</color>, <color=#E5C16F>Estilo</color> e un <color=#5D69A9>Ítem</color>. Saberás cal é cal pola pantalla ou pola cor do compoñente."
+                },
+                {
+                    "key": "tut_06",
+                    "value": "Para mover os compoñentes só tes que facer <size=90%><b>clic</b></size> neles. Unha vez seleccionados podes xiralos coas teclas <size=90%><b>Q</b></size> e <size=90%><b>E</b></size>."
+                },
+                {
+                    "key": "tut_07",
+                    "value": "e movelos coas teclas <size=90%><b>W</b></size>, <size=90%><b>A</b></size>, <size=90%><b>S</b></size>, <size=90%><b>D</b></size>."
+                },
+                {
+                    "key": "tut_08",
+                    "value": "Para confirmar a posición dos compoñentes na cuadrícula usa a <size=90%><b>barra espazadora</b></size>"
+                },
+                {
+                    "key": "tut_09",
+                    "value": "e se cambias de idea podes devolver o compoñente á cuadrícula da esquerda co <size=90%><b>clic dereito</b></size> mentres o tes seleccionado."
+                },
+                {
+                    "key": "tut_10",
+                    "value": "Boa sorte."
+                },
+                {
+                    "key": "tut_angry",
+                    "value": "<size=120%><color=red>PARA!</color></size>\nNON VES QUE NON PODES COLOCALO AÍ?"
+                },
+                {
+                    "key": "gameSent_Title",
+                    "value": "Informe de resultados"
+                },
+                {
+                    "key": "gameSent_rejected",
+                    "value": "Despois de revisar a fondo o teu videoxogo. Desgraciadamente, debémosche informar que <color=red>non podes publicalo</color>. \nEste tipo de contido non é axeitado para todas as idades, por favor <color=red>pensa nos nenos</color> que consumirán isto. \n\nAtentamente, \nOficina Gobernamental de Control de Medios."
+                },
+                {
+                    "key": "gameSent_accepted",
+                    "value": "O teu xogo foi aceptado, parabéns, este é un xogo xusto para o goberno."
+                },
+                {
+                    "key": "error_83_title",
+                    "value": "ERRO(83): CuadriculaNonChea"
+                },
+                {
+                    "key": "error_83_message",
+                    "value": "A cuadrícula aínda non está chea. \nPor favor, complétaa antes de enviar."
+                },
+                {
+                    "key": "error_155_title",
+                    "value": "ERRO(155): PezaProhibidaPresente"
+                },
+                {
+                    "key": "error_155_message",
+                    "value": "Hai unha peza prohibida dentro do xogo. \nPor favor, RETÍRAA antes de enviar."
+                },
+                {
+                    "key": "error_40_title",
+                    "value": "ERRO(40): XeneroNonAtopado"
+                },
+                {
+                    "key": "error_40_message",
+                    "value": "Xénero inexistente dentro do xogo. \nPor favor, engade un Xénero antes de enviar."
+                },
+                {
+                    "key": "error_41_title",
+                    "value": "ERRO(41): MecanicaNonAtopada"
+                },
+                {
+                    "key": "error_41_message",
+                    "value": "Mecánica inexistente dentro do xogo. \nPor favor, engade unha Mecánica antes de enviar."
+                },
+                {
+                    "key": "error_42_title",
+                    "value": "ERRO(42): EstiloNonAtopado"
+                },
+                {
+                    "key": "error_42_message",
+                    "value": "Estilo inexistente dentro do xogo. \nPor favor, engade un Estilo antes de enviar."
+                },
+                {
+                    "key": "error_43_title",
+                    "value": "ERRO(43): ItemNonAtopado"
+                },
+                {
+                    "key": "error_43_message",
+                    "value": "Ítem inexistente dentro do xogo. \nPor favor, engade un Ítem antes de enviar."
+                },
+                {
+                    "key": "piece_name_Correr",
+                    "value": "Correr"
+                },
+                {
+                    "key": "piece_name_Disparar",
+                    "value": "Disparar"
+                },
+                {
+                    "key": "piece_name_Lofi",
+                    "value": "Lo-fi"
+                },
+                {
+                    "key": "piece_name_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "piece_name_Fuego",
+                    "value": "Lume"
+                },
+                {
+                    "key": "piece_name_Fusil",
+                    "value": "Fusil"
+                },
+                {
+                    "key": "piece_name_Pistola",
+                    "value": "Pistola"
+                },
+                {
+                    "key": "piece_name_Realista",
+                    "value": "Realista"
+                },
+                {
+                    "key": "piece_name_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "piece_name_Sangre",
+                    "value": "Sangue"
+                },
+                {
+                    "key": "piece_name_Arco",
+                    "value": "Arco"
+                },
+                {
+                    "key": "piece_name_Droga",
+                    "value": "Drogas"
+                },
+                {
+                    "key": "piece_name_Electricidad",
+                    "value": "Electricidade"
+                },
+                {
+                    "key": "piece_name_Machete",
+                    "value": "Machete"
+                },
+                {
+                    "key": "piece_name_Ratonyteclado",
+                    "value": "Rato e teclado"
+                },
+                {
+                    "key": "piece_name_Pixel Art",
+                    "value": "Pixel Art"
+                },
+                {
+                    "key": "piece_name_Escudo",
+                    "value": "Escudo"
+                },
+                {
+                    "key": "piece_name_SFX",
+                    "value": "SFX"
+                },
+                {
+                    "key": "piece_name_Monedas",
+                    "value": "Moedas"
+                },
+                {
+                    "key": "piece_name_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "piece_name_Salto",
+                    "value": "Salto"
+                },
+                {
+                    "key": "piece_name_Chip",
+                    "value": "Chip"
+                },
+                {
+                    "key": "piece_name_Hackeo",
+                    "value": "Hackeo"
+                },
+                {
+                    "key": "piece_name_Plataformas",
+                    "value": "Plataformas"
+                },
+                {
+                    "key": "piece_name_Pop",
+                    "value": "Pop"
+                },
+                {
+                    "key": "piece_name_Mando",
+                    "value": "Mando"
+                },
+                {
+                    "key": "piece_name_Puños",
+                    "value": "Puños"
+                },
+                {
+                    "key": "piece_type_Gobierno",
+                    "value": "Goberno"
+                },
+                {
+                    "key": "piece_type_Mecanica",
+                    "value": "Mecánicas"
+                },
+                {
+                    "key": "piece_type_Estilo",
+                    "value": "Estilo"
+                },
+                {
+                    "key": "piece_type_Item",
+                    "value": "Ítem"
+                },
+                {
+                    "key": "piece_type_Musica",
+                    "value": "Música"
+                },
+                {
+                    "key": "piece_type_Elemento",
+                    "value": "Elemento"
+                },
+                {
+                    "key": "piece_type_Genero",
+                    "value": "Xénero"
+                },
+                {
+                    "key": "ui_type",
+                    "value": "Tipo"
+                },
+                {
+                    "key": "prp_FPS",
+                    "value": "FPS"
+                },
+                {
+                    "key": "prp_Disparos",
+                    "value": "Disparos"
+                },
+                {
+                    "key": "prp_Metal",
+                    "value": "Metal"
+                },
+                {
+                    "key": "prp_Realismo",
+                    "value": "Realismo"
+                },
+                {
+                    "key": "prp_ArmasDeFuego",
+                    "value": "Armas de fogo"
+                },
+                {
+                    "key": "prp_Rock",
+                    "value": "Rock"
+                },
+                {
+                    "key": "prp_Agotamiento",
+                    "value": "Esgotamento"
+                },
+                {
+                    "key": "prp_Tranquilo",
+                    "value": "Tranquilo"
+                },
+                {
+                    "key": "prp_Plataforma",
+                    "value": "Plataformas"
+                },
+                {
+                    "key": "prp_Proteccion",
+                    "value": "Protección"
+                },
+                {
+                    "key": "prp_Pixeles",
+                    "value": "Píxeles"
+                },
+                {
+                    "key": "prp_Ambientacion",
+                    "value": "Ambientación"
+                },
+                {
+                    "key": "prp_ArmaADistancia",
+                    "value": "Arma a distancia"
+                },
+                {
+                    "key": "prp_ArmaBlanca",
+                    "value": "Arma branca"
+                },
+                {
+                    "key": "prp_Droga",
+                    "value": "Drogas"
+                },
+                {
+                    "key": "prp_Controles",
+                    "value": "Controis"
+                },
+                {
+                    "key": "prp_Electricidad",
+                    "value": "Electricidade"
+                },
+                {
+                    "key": "prp_Tecleo",
+                    "value": "Tecleo"
+                },
+                {
+                    "key": "prp_Patata",
+                    "value": "Pataca"
+                },
+                {
+                    "key": "prp_Tierra",
+                    "value": "Terra"
+                },
+                {
+                    "key": "prp_Satanico",
+                    "value": "Satánico"
+                },
+                {
+                    "key": "prp_Sectario",
+                    "value": "Sectario"
+                },
+                {
+                    "key": "prp_RobinHood",
+                    "value": "Robin Hood"
+                },
+                {
+                    "key": "prp_Punteria",
+                    "value": "Puntería"
+                },
+                {
+                    "key": "prp_Equilibrio",
+                    "value": "Equilibrio"
+                },
+                {
+                    "key": "prp_Heisenberg",
+                    "value": "Heisenberg"
+                },
+                {
+                    "key": "prp_Placer",
+                    "value": "Pracer"
+                },
+                {
+                    "key": "prp_Evasion",
+                    "value": "Evasión"
+                },
+                {
+                    "key": "prp_Defensa",
+                    "value": "Defensa"
+                },
+                {
+                    "key": "prp_CapitanAmerica",
+                    "value": "Capitán América"
+                },
+                {
+                    "key": "prp_Jason",
+                    "value": "Jason"
+                },
+                {
+                    "key": "prp_Oxidado",
+                    "value": "Oxidado"
+                },
+                {
+                    "key": "prp_Obstaculos",
+                    "value": "Obstáculos"
+                },
+                {
+                    "key": "prp_Inmersion",
+                    "value": "Inmersión"
+                },
+                {
+                    "key": "prp_Jazz",
+                    "value": "Jazz"
+                },
+                {
+                    "key": "prp_Pop",
+                    "value": "Pop"
+                }
+            ]
+        } //Galego
+    ]
 }

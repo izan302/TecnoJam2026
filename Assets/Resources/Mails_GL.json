@@ -1,0 +1,53 @@
+{
+    "mail": [
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Hoxe finalmente celebrarase a audiencia contra a violencia nos videoxogos. Prevese que a resolución derive nun control parcial sobre o contido dos videoxogos e que se adopten medidas para establecer restricións de idade.",
+            "m_senderName": "Anuncios gobernamentais",
+            "m_senderDate": "05/03/1994",
+            "m_level": 1,
+            "m_extraImage": "Sprites/Mails/gmailPlaceholder"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Tras a audiencia celebrada no Senado dos Estados Unidos e como consecuencia da decisión adoptada, acordouse implementar, durante os vindeiros días, unha lei mediante a cal se impedirá que nos videoxogos se amose calquera tipo de imaxe violenta explícita, así como contido de carácter sanguento (ou calquera arma de fogo). Todo videoxogo que inclúa este tipo de contido será automaticamente prohibido para a súa venda e imporase a correspondente sanción económica aos desenvolvedores responsables.\n\nAdemais obrigarase a que cada desenvolvedor implemente unha <b><color=red>backdoor</color=red></b> no seu xogo para que o goberno saiba en tempo real se se cumpren estes requisitos.",
+            "m_senderName": "Anuncios gobernamentais",
+            "m_senderDate": "06/03/1994",
+            "m_level": 2
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Tras a audiencia celebrada no Senado dos Estados Unidos e como consecuencia da decisión adoptada, acordouse implementar medidas para a censura dos videoxogos.\nSegundo se informou, a partir do día de hoxe quedará completamente prohibida a aparición de <b><color=red>armas de fogo e de sangue</color></b> nos videoxogos, co fin de evitar a normalización do uso de armas entre a poboación. Así mesmo, quedarán prohibidos aqueles xogos que conteñan contidos <b><color=red>realistas</color></b> ou que intenten emular situacións propias da vida real.\n\nEstas medidas están orientadas a previr que as persoas, especialmente os menores, intenten reproducir na vida real as condutas observadas nos videoxogos.\n\nOs desenvolvedores deberán adaptarse a esta nova medida; pola contra, enfrontaranse ás penalizacións económicas pertinentes impostas pola audiencia nacional.",
+            "m_senderName": "Anuncios gobernamentais",
+            "m_senderDate": "07/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "mercadroga@communications.com",
+            "m_emailContent": "Compre agora o seu rifle de asalto de última xeración, cun deseño elegante e moderno, que lle permitirá destacar entre a multitude.\nEste rifle de asalto é a arma perfecta para aqueles que buscan unha experiencia de caza emocionante. Coa súa alta precisión e potencia, este rifle de asalto será a envexa dos seus amigos e compañeiros.\nNon perda a oportunidade de adquirir este incrible rifle de asalto e elevar a súa cazaría ao seguinte nivel.",
+            "m_senderName": "Nova promoción de Mercadroga",
+            "m_senderDate": "07/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Unha das leis máis polémicas e contraditorias xurdidas tras a audiencia xerou un intenso debate público. O goberno considerou que as últimas medidas contra os videoxogos son insuficientes, por tanto decidiuse prohibir todo tipo de <b><color=red>arco, drogas, mecánicas de disparar</color></b> e toda a música <b><color=red>rock</color></b> xa que conteñen letras explícitas, ante o auxe de videoxogos violentos. Segundo sosteñen fontes oficiais, esta exposición podería desencadear episodios de violencia física na vida real e desobediencia civil, polo que se sinalou que se require de xeito urxente a implementación de novos requisitos.\n\nComo medida complementaria para verificar o seu cumprimento, expúxose a necesidade de incorporar un chip dentro dos xogos que permita supervisar a aplicación de xeito máis efectivo e automatizado do cumprimento da normativa.",
+            "m_senderName": "Anuncios gobernamentais",
+            "m_senderDate": "08/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "No día de hoxe coñeceuse un intento recente de hackeo cara aos sistemas informáticos do Goberno.\nComo consecuencia destes feitos, e co obxectivo de non incentivar condutas relacionadas, decidiuse prohibir calquera mecánica de intrusión ou <color=red>hackeo</color> informático nos videoxogos.\nAsí mesmo, quedará totalmente prohibido o desenvolvemento de xogos para PC, así como de calquera título que requira ser controlado mediante <color=red>rato e teclado</color>. Esta medida crese que foi adoptada co obxectivo de deixar de incentivar á xente a ter PCs na casa.\nNo marco das prohibicións enunciadas no día de hoxe, determinouse así mesmo a prohibición da aparición de calquera <color=red>arma branca</color> nos videoxogos.\n\nAdemais, en coherencia coas medidas previamente adoptadas respecto á música rock, o xénero <color=red>metal</color> pasará igualmente a formar parte das prohibicións vixentes.\nFinalmente, ante os intentos de determinados desenvolvedores de crear xogos de carácter realista mediante o uso de gráficos en estilo <color=red>Pixel Art</color>, decidiuse prohibir dito estilo artístico, así como impor a correspondente sanción económica a aqueles desenvolvedores que o empregaran nos últimos días.\nTamén se anunciou que o <color=red>chip</color> dos xogos deberá incluír máis funcións de supervisión automática para facilitar e axilizar o proceso de detectar funcións ilegais.\n",
+            "m_senderName": "Anuncios gobernamentais",
+            "m_senderDate": "11/09/2001",
+            "m_level": 4
+        }
+    ]
+}

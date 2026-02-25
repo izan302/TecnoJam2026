@@ -1,0 +1,53 @@
+{
+    "mail": [
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Avui finalment se celebrarà l'audiència contra la violència en els videojocs. Es preveu que la resolució derivi en un control parcial sobre el contingut dels videojocs i que s'adoptin mesures per establir restriccions d'edat.",
+            "m_senderName": "Anuncis governamentals",
+            "m_senderDate": "05/03/1994",
+            "m_level": 1,
+            "m_extraImage": "Sprites/Mails/gmailPlaceholder"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Després de l'audiència celebrada al Senat dels Estats Units i com a conseqüència de la decisió adoptada, s'ha acordat implementar, durant els propers dies, una llei mitjançant la qual s'impedirà que en els videojocs es mostri qualsevol tipus d'imatge violenta explícita, així com contingut de caràcter sanguini (o qualsevol arma de foc). Tot videojoc que inclogui aquest tipus de contingut serà automàticament prohibit per a la seva venda i s'imposarà la corresponent sanció econòmica als desenvolupadors responsables.\n\nA més, s'obligarà que cada desenvolupador implementi una <b><color=red>backdoor</color=red></b> en el seu joc perquè el govern sàpiga en temps real si es compleixen aquests requisits.",
+            "m_senderName": "Anuncis governamentals",
+            "m_senderDate": "06/03/1994",
+            "m_level": 2
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Després de l'audiència celebrada al Senat dels Estats Units i com a conseqüència de la decisió adoptada, s'ha acordat implementar mesures per a la censura dels videojocs.\nSegons s'ha informat, a partir d'avui quedarà completament prohibida l'aparició d'<b><color=red>armes de foc i de sang</color></b> en els videojocs, amb la finalitat d'evitar la normalització de l'ús d'armes entre la població. Així mateix, quedaran prohibits aquells jocs que continguin continguts <b><color=red>realistes</color></b> o que intentin emular situacions pròpies de la vida real.\n\nAquestes mesures estan orientades a prevenir que les persones, especialment els menors, intentin reproduir en la vida real les conductes observades en els videojocs.\n\nEls desenvolupadors s'hauran d'adaptar a aquesta nova mesura; en cas contrari, s'enfrontaran a les penalitzacions econòmiques pertinents imposades per l'audiència nacional.",
+            "m_senderName": "Anuncis governamentals",
+            "m_senderDate": "07/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "mercadroga@communications.com",
+            "m_emailContent": "Compri ara el seu rifle d'assalt d'última generació, amb un disseny elegant i modern, que li permetrà destacar entre la multitud.\nAquest rifle d'assalt és l'arma perfecta per a aquells que busquen una experiència de caça emocionant. Amb la seva alta precisió i potència, aquest rifle d'assalt serà l'enveja dels seus amics i companys.\nNo perdi l'oportunitat d'adquirir aquest increïble rifle d'assalt i elevar la seva cacera al següent nivell.",
+            "m_senderName": "Nova promoció de Mercadroga",
+            "m_senderDate": "07/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Una de les lleis més polèmiques i contradictòries sorgides després de l'audiència ha generat un intens debat públic. El govern ha considerat que les últimes mesures contra els videojocs són insuficients, per tant s'ha decidit prohibir tot tipus d'<b><color=red>arc, drogues, mecàniques de disparar</color></b> i tota la música <b><color=red>rock</color></b> ja que contenen lletres explícites, davant l'augment de videojocs violents. Segons sostenen fonts oficials, aquesta exposició podria desencadenar episodis de violència física en la vida real i desobediència civil, per la qual cosa s'ha assenyalat que es requereix de manera urgent la implementació de nous requisits.\n\nCom a mesura complementària per verificar el seu compliment, s'ha plantejat la necessitat d'incorporar un xip dins dels jocs que permeti supervisar l'aplicació de manera més efectiva i automatitzada el compliment de la normativa.",
+            "m_senderName": "Anuncis governamentals",
+            "m_senderDate": "08/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "En el dia d'avui s'ha conegut un intent recent de hackeig cap als sistemes informàtics del Govern.\nCom a conseqüència d'aquests fets, i amb l'objectiu de no incentivar conductes relacionades, s'ha decidit prohibir qualsevol mecànica d'intrusió o <color=red>hackeig</color> informàtic en els videojocs.\nAixí mateix, quedarà totalment prohibit el desenvolupament de jocs per a PC, així com de qualsevol títol que requereixi ser controlat mitjançant <color=red>ratolí i teclat</color>. Es creu que aquesta mesura ha estat adoptada amb l'objectiu de deixar d'incentivar la gent a tenir PCs a casa.\nEn el marc de les prohibicions enunciades en el dia d'avui, s'ha determinat així mateix la prohibició de l'aparició de qualsevol <color=red>arma blanca</color> en els videojocs.\n\nA més, en coherència amb les mesures prèviament adoptades respecte a la música rock, el gènere <color=red>metal</color> passarà igualment a formar part de les prohibicions vigents.\nFinalment, davant els intents de determinats desenvolupadors de crear jocs de caràcter realista mitjançant l'ús de gràfics en estil <color=red>Pixel Art</color>, s'ha decidit prohibir aquest estil artístic, així com imposar la corresponent sanció econòmica a aquells desenvolupadors que l'hagin emprat en els últims dies.\nTambé s'ha anunciat que el <color=red>xip</color> dels jocs haurà d'incloure més funcions de supervisió automàtica per facilitar i agilitzar el procés de detectar funcions il·legals.\n",
+            "m_senderName": "Anuncis governamentals",
+            "m_senderDate": "11/09/2001",
+            "m_level": 4
+        }
+    ]
+}
