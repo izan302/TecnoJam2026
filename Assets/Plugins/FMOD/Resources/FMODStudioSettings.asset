@@ -527,7 +527,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop"
+  sourceBankPath: FMOD/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -540,7 +540,7 @@ MonoBehaviour:
   TargetBankFolder: 
   EventLinkage: 0
   SerializeGUIDsOnly: 0
-  LoggingLevel: 2
+  LoggingLevel: 0
   SpeakerModeSettings: []
   SampleRateSettings: []
   LiveUpdateSettings: []
@@ -551,7 +551,10 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
+  - Desktop/Master
   Banks:
+  - Desktop/Music
+  - Desktop/SFX
   - Music
   - SFX
   BanksToLoad: []
