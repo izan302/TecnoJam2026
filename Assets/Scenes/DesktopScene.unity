@@ -840,6 +840,7 @@ GameObject:
   - component: {fileID: 396580953}
   - component: {fileID: 396580955}
   - component: {fileID: 396580956}
+  - component: {fileID: 396580957}
   m_Layer: 5
   m_Name: EmailButton
   m_TagString: Untagged
@@ -862,7 +863,7 @@ RectTransform:
   - {fileID: 1558697905}
   - {fileID: 176260648}
   m_Father: {fileID: 1428257165}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.6029863}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 99, y: -79}
@@ -1024,6 +1025,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+--- !u!111 &396580957
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396580948}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 7b418f279f363ea4b9e98f4b0ab8c7aa, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &435579598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2254,6 +2272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameAppScript
   m_appName: IzanScene
   m_timeToDoubleClick: 1.5
+  m_animation: {fileID: 0}
+  m_animationClip: {fileID: 7400000, guid: 7b418f279f363ea4b9e98f4b0ab8c7aa, type: 2}
 --- !u!114 &1254756978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3381,7 +3401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 323470421466858629, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: level
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 828592730295388585, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_Name
