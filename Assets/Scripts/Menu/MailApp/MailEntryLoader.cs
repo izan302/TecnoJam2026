@@ -66,6 +66,9 @@ public class MailEntryLoader : MonoBehaviour
             
             for (int i = 0; i < m_mailLists.mail.Length; i++)
             {
+                if (m_mailLists.mail[i].m_level == 6969 && GabeNewell.Instance.m_MaxTimeMinesweeper) {
+                    CreateMailEntry(i);
+                }
                 if (m_mailLists.mail[i].m_level <= GabeNewell.Instance.m_Level())
                 {
                     CreateMailEntry(i);

@@ -1,7 +1,6 @@
 using TMPro;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class MinesweeperGameHandler : MonoBehaviour
 {
@@ -31,6 +30,8 @@ public class MinesweeperGameHandler : MonoBehaviour
 
     private bool m_IsGameRunning;
     private float m_StartTime;
+    private int m_LastMinuteMark;
+
     void Start()
     {
         Instance = this;
@@ -39,78 +40,61 @@ public class MinesweeperGameHandler : MonoBehaviour
     public void StartGame()
     {
         m_Minesweeper = new Minesweeper(m_Width, m_Height, m_Size, transform, m_MineCount);
+        m_LastMinuteMark = 0;
 
-        if (m_GridPrefabVisual != null)
-        {
-            m_GridPrefabVisual.Setup(m_Minesweeper.GetGrid());
-        }
+        if (m_GridPrefabVisual != null) m_GridPrefabVisual.Setup(m_Minesweeper.GetGrid());
+        if (m_ClickHandler != null) m_ClickHandler.m_GameLogic = m_Minesweeper;
+        if (m_MenuScreen != null) m_MenuScreen.SetActive(false);
+        if (m_GameScreen != null) m_GameScreen.SetActive(true);
 
-        if (m_ClickHandler != null)
-        {
-            m_ClickHandler.m_GameLogic = m_Minesweeper;
-        }
-        if (m_MenuScreen != null)
-        {
-            m_MenuScreen.SetActive(false);
-        }
-        if (m_GameScreen != null)
-        {
-            m_GameScreen.SetActive(true);
-        }
         m_StartTime = Time.time;
         m_IsGameRunning = true;
     }
+
     void Update()
     {
         if (!m_IsGameRunning) return;
+
         float t = Time.time - m_StartTime;
-        float minutes = (t / 60);
-        float seconds = (t % 60);
+        int minutes = Mathf.FloorToInt(t / 60);
+        int seconds = Mathf.FloorToInt(t % 60);
+
         m_Timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        if (minutes > m_LastMinuteMark)
+        {
+            m_LastMinuteMark = minutes;
+            GabeNewell.Instance.AddMinesweeperTime();
+        }
     }
+
     public void GameOver(int x, int y)
     {
         m_IsGameRunning = false;
         m_GridPrefabVisual.ExplodeCell(x, y);
         StartCoroutine(GameOverCorroutine());
     }
+
     IEnumerator GameOverCorroutine()
     {
         yield return new WaitForSeconds(2);
-        if (m_GameOverScreen != null)
-        {
-            m_GameOverScreen.SetActive(true);
-        }
-        if (m_GameScreen != null)
-        {
-            m_GameScreen.SetActive(false);
-        }
+        if (m_GameOverScreen != null) m_GameOverScreen.SetActive(true);
+        if (m_GameScreen != null) m_GameScreen.SetActive(false);
     }
 
     public void Victory()
     {
-        if (m_GameScreen != null)
-        {
-            m_GameScreen.SetActive(false);
-        }
-        if (m_VictoryScreen != null)
-        {
-            m_VictoryScreen.SetActive(true);
-        }
+        m_IsGameRunning = false;
+        if (m_GameScreen != null) m_GameScreen.SetActive(false);
+        if (m_VictoryScreen != null) m_VictoryScreen.SetActive(true);
         GabeNewell.Instance.m_MinesweeperWon = true;
     }
+
     public void Retry()
     {
+        if (m_GameOverScreen != null) m_GameOverScreen.SetActive(false);
+        if (m_VictoryScreen != null) m_VictoryScreen.SetActive(false);
         StartGame();
-
-        if (m_GameOverScreen != null)
-        {
-            m_GameOverScreen.SetActive(false);
-        }
-        if (m_VictoryScreen != null)
-        {
-            m_VictoryScreen.SetActive(false);
-        }
     }
 
     public void OpenApp()
@@ -126,22 +110,9 @@ public class MinesweeperGameHandler : MonoBehaviour
 
     public void GoToMenu()
     {
-        if (m_MenuScreen != null)
-        {
-            m_MenuScreen.SetActive(true);
-        }
-        if (m_GameScreen != null)
-        {
-            m_GameScreen.SetActive(false);
-        }
-        if (m_GameOverScreen != null)
-        {
-            m_GameOverScreen.SetActive(false);
-        }
-        if (m_VictoryScreen != null)
-        {
-            m_VictoryScreen.SetActive(false);
-        }
+        if (m_MenuScreen != null) m_MenuScreen.SetActive(true);
+        if (m_GameScreen != null) m_GameScreen.SetActive(false);
+        if (m_GameOverScreen != null) m_GameOverScreen.SetActive(false);
+        if (m_VictoryScreen != null) m_VictoryScreen.SetActive(false);
     }
-
 }

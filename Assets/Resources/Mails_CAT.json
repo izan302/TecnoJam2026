@@ -2,6 +2,14 @@
     "mail": [
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "govsafety@gov.com",
+            "m_senderName": "Dte. de Productivitat Nacional",
+            "m_senderDate": "05/03/1994",
+            "m_emailContent": "Avís de salut pública: S'ha detectat que la seva terminal està executant el 'Buscamines', un \"joc\" dissenyat per sembrar la indolència i el col·lapse del capitalisme. \n\nInformes recents indiquen que aquest \"joc\" provoca distorsions cognitives greus: hi ha ciutadans que diuen veure patrons de bombes a les rajoles dels seus banys, perdent la capacitat de realitzar tasques fisiològiques bàsiques. No és només un joc; és una addicció que consumeix empreses senceres i converteix els homes de negocis en mers addictes als fulls de càlcul. \n\nPD: Si creu que pot guanyar, recordi que fins i tot Bill Gates el va haver de desinstal·lar per recuperar la seva dignitat humana. Esborri el programa o pateixi les conseqüències!",
+            "m_level": 6969
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "announcements@gob.com",
             "m_emailContent": "Avui finalment se celebrarà l'audiència contra la violència en els videojocs. Es preveu que la resolució derivi en un control parcial sobre el contingut dels videojocs i que s'adoptin mesures per establir restriccions d'edat.",
             "m_senderName": "Anuncis governamentals",

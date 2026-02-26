@@ -11,6 +11,8 @@ public class GabeNewell : MonoBehaviour
     public bool m_MinesweeperWon { get; set; } = false;
     public bool m_TutorialPlayed { get; set; } = false;
     public string m_Language { get; set; } = "ES";
+    public float m_TimePlayedInMinesweeper { get; set; } = 0f;
+    public bool m_MaxTimeMinesweeper { get; set; } = false;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -30,6 +32,13 @@ public class GabeNewell : MonoBehaviour
     void m_Level(int i)
     {
         level = i;
+    }
+    public void AddMinesweeperTime()
+    {
+        m_TimePlayedInMinesweeper += 1f;
+        if (m_TimePlayedInMinesweeper >= 5f) {
+            m_MaxTimeMinesweeper = true;
+        }
     }
     public void LevelUp()
     {

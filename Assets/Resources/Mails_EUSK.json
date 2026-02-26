@@ -2,6 +2,14 @@
     "mail": [
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "govsafety@gov.com",
+            "m_senderName": "Produktibitate Nazionaleko Saila",
+            "m_senderDate": "05/03/1994",
+            "m_emailContent": "Osasun publikoko oharra: Zure terminala 'Mina-biltzailea' exekutatzen ari dela detektatu da, axolagabekeria eta kapitalismoaren kolapsoa ereiteko diseinatutako \"jokoa\". \n\nAzken txostenek adierazten dutenez, \"joko\" honek distortsio kognitibo larriak eragiten ditu: herritarrek bainugelako azulejuetan bonba-ereduak ikusten dituztela diote, oinarrizko zeregin fisiologikoak egiteko gaitasuna galduz. Ez da joko bat soilik; enpresa osoak irentsi eta negozio-gizonak kalkulu-orrien mendeko huts bihurtzen dituen mendekotasuna da. \n\nPS: Irabaz dezakezula uste baduzu, gogoratu Bill Gatesek berak ere desinstalatu behar izan zuela bere giza duintasuna berreskuratzeko. Ezabatu programa edo jasan ondorioak!",
+            "m_level": 6969
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "announcements@gob.com",
             "m_emailContent": "Gaur azkenean bideojokoen indarkeriaren aurkako audientzia egingo da. Ebazpenak bideojokoen edukiaren gaineko kontrol partziala ekarriko duela aurreikusten da, bai eta adin-murrizketak ezartzeko neurriak hartuko direla ere.",
             "m_senderName": "Gobernuaren iragarkiak",

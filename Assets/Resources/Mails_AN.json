@@ -2,6 +2,14 @@
     "mail": [
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "govsafety@gov.com",
+            "m_senderName": "Dpto. de Productividat Nacional",
+            "m_senderDate": "05/03/1994",
+            "m_emailContent": "Abiso de salut publica: S'ha detectau que o suyo terminal ye executando 'Buscaminas', un \"chuego\" disenyo ta sembrar a indolencia y o colapso d'o capitalismo. \n\nInformes recients indican que iste \"chuego\" provoca distorsions cognitibas grieus: bi ha ciudadans que dicen biyer patrons de bombas en os recholas d'os suyos banyos, perdiendo a capacidat de fer faineas fisiolochicas basicas. No ye nomás un chuego; ye una adicción que consume interpresas enteras y conbierte a os hombres de negocios en meros adictos a as fuellas de calculo. \n\nPD: Si creye que puede ganar, alcuerde-se que dica Bill Gates habió de desinstalar-lo ta recuperar a suya dignidat humana. Borre o programa o se i atenga a as conzequenzias!",
+            "m_level": 6969
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "announcements@gob.com",
             "m_emailContent": "Hué finalment se celebrará l'audiencia contra la violencia en os videochuegos. Se preveye que la resolución derive un control parcial sobre o conteniu d'os videochuegos y que s'adopten medidas pa establir restriccions d'edat.",
             "m_senderName": "Anuncios gubernamentals",

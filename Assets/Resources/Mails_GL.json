@@ -2,6 +2,14 @@
     "mail": [
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "govsafety@gov.com",
+            "m_senderName": "Dpto. de Produtividade Nacional",
+            "m_senderDate": "05/03/1994",
+            "m_emailContent": "Aviso de saúde pública: Detectouse que a súa terminal está a executar o 'Buscaminas', un \"xogo\" deseñado para sementar a indolencia e o colapso do capitalismo. \n\nInformes recentes indican que este \"xogo\" provoca distorsións cognitivas graves: cidadáns informan de ver patróns de bombas nos azulexos dos seus baños, perdendo a capacidade de realizar tarefas fisiolóxicas básicas. Non é só un xogo; é unha adicción que consome empresas enteiras e converte aos homes de negocios en meros adictos ás follas de cálculo. \n\nPD: Se cre que pode gañar, lembre que ata Bill Gates tivo que desinstalalo para recuperar a súa dignidade humana. Borre o programa ou atéñase ás consecuencias!",
+            "m_level": 6969
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "announcements@gob.com",
             "m_emailContent": "Hoxe finalmente celebrarase a audiencia contra a violencia nos videoxogos. Prevese que a resolución derive nun control parcial sobre o contido dos videoxogos e que se adopten medidas para establecer restricións de idade.",
             "m_senderName": "Anuncios gobernamentais",

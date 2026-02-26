@@ -13,6 +13,11 @@ public class GameAppScript : MonoBehaviour
     private void Update()
     {
         m_clickCounter += Time.deltaTime;
+        if (GabeNewell.Instance.m_MailsAreRead) {
+            GetComponent<InteractiveObject>().m_IsInteractable = true;
+        } else {
+            GetComponent<InteractiveObject>().m_IsInteractable = false;
+        }
     }
     public void AppClick()
     {
