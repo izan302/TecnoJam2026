@@ -92,16 +92,18 @@ public class MailEntryLoader : MonoBehaviour
             m_mailLists.mail[index].m_senderName,
             m_mailLists.mail[index].m_senderDate,
             m_MailContent,
-            m_mailLists.mail[index].m_extraImage
+            m_mailLists.mail[index].m_extraImage,
+            this,
+            m_mailLists.mail[index].m_level
         );
 
         rt.anchoredPosition = new Vector2(-105, -50 * m_loadedMails);
         
         if(index == 0) l_mail.OnClick();
         if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level()) l_mail.Opened();
+        else  m_newMails++;
 
         m_loadedMails++;
-        m_newMails++;
     }
 
     public void Notifiy()
@@ -115,11 +117,19 @@ public class MailEntryLoader : MonoBehaviour
     {
         if (m_clickCounter < m_timeToDoubleClick && !GabeNewell.Instance.m_MailsAreRead)
         {
-            m_newMails = 0;
             m_textUGUI.text = m_newMails.ToString();
-            m_notificationGameObject.SetActive(false);
-            GabeNewell.Instance.m_MailsAreRead = true;
         }
         m_clickCounter = 0;
+    }
+
+    public void OpenedNewEntry()
+    {
+        m_newMails--;
+        m_textUGUI.text = m_newMails.ToString();
+        if (m_newMails <= 0)
+        {
+            GabeNewell.Instance.m_MailsAreRead=true;
+            m_notificationGameObject.SetActive(false);
+        }
     }
 }

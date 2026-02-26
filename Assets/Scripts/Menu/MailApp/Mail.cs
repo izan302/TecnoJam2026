@@ -24,9 +24,13 @@ public class Mail : MonoBehaviour
     [SerializeField] private GameObject m_contentGameObject;
     [SerializeField] private RawImage m_readedImage;
     private ContentData m_contentData;
+
+    private MailEntryLoader m_entryLoader;
+    private int m_level;
+    private bool m_opened = false;
     
 
-    public void SetValues(string senderPFP, string senderArroba, string emailContent, string senderName, string senderDate, GameObject contentGameObject, string extraImage)
+    public void SetValues(string senderPFP, string senderArroba, string emailContent, string senderName, string senderDate, GameObject contentGameObject, string extraImage, MailEntryLoader mel, int level)
     {
         m_senderPFPstring = senderPFP;
         m_senderPFP = Resources.Load<Sprite>(m_senderPFPstring) as Sprite;
@@ -40,6 +44,8 @@ public class Mail : MonoBehaviour
         m_senderPFPImage.sprite = Resources.Load<Sprite>(m_senderPFPstring) as Sprite;
         m_extraImage = Resources.Load<Sprite>(extraImage) as Sprite;
         m_contentData = m_contentGameObject.GetComponent<ContentData>();
+        m_entryLoader = mel;
+        m_level = level;
     }
 
     public void OnClick()
@@ -60,12 +66,20 @@ public class Mail : MonoBehaviour
         m_contentData.m_senderPFP.sprite = this.m_senderPFP;
         m_contentData.m_senderPFP.GetComponent<Image>().color = Color.white;
         m_contentData.m_emailContent.text = this.m_emailContent;
-        Opened();
+        if(m_opened == false)
+        {
+            Opened();
+        }
     }
 
     public void Opened()
     {
         m_readedImage.color = new Color(255, 255, 255, 0);
+        if(m_level == GabeNewell.Instance.level)
+        {
+            m_entryLoader.OpenedNewEntry();
+        }
+        m_opened = true;
     }
 
 }
