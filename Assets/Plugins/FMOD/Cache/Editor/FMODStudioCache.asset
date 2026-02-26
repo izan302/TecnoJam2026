@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639077293888908929
+  lastModified: 639077299546630916
   FileSizes:
   - Name: 
-    Value: 928
+    Value: 980
   Exists: 1
 --- !u!114 &-3914639084169403494
 MonoBehaviour:
@@ -55,10 +55,10 @@ MonoBehaviour:
   Path: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop/SFX.bank"
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639077292399916803
+  lastModified: 639077299546696750
   FileSizes:
   - Name: 
-    Value: 506
+    Value: 1214
   Exists: 1
 --- !u!114 &-918573194022669151
 MonoBehaviour:
@@ -75,7 +75,7 @@ MonoBehaviour:
   Path: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639077293888888927
+  lastModified: 639077299546630916
   FileSizes:
   - Name: 
     Value: 1074
@@ -100,18 +100,48 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 2376324985632426087}
   - {fileID: 5809460694660068325}
+  - {fileID: 2255284799756578522}
   EditorParameters: []
   MasterBanks:
   - {fileID: -918573194022669151}
   StringsBanks:
   - {fileID: -8600174596217694830}
   cacheVersion: 131849
-  cacheTime: 639077293936036628
+  cacheTime: 639077299546696750
   SerializableEventsDict:
   - key: event:/Music/Menu Music
     index: 0
   - key: event:/Music/Gameplay Music
     index: 1
+  - key: event:/SFX/Start
+    index: 2
+--- !u!114 &2255284799756578522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Start
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Start
+  Guid:
+    Data1: -1384274844
+    Data2: 1281169539
+    Data3: -64313434
+    Data4: -900839771
+  Banks:
+  - {fileID: -3914639084169403494}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2376324985632426087
 MonoBehaviour:
   m_ObjectHideFlags: 0

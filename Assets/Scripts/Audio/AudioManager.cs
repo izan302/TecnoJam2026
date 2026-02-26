@@ -21,7 +21,6 @@ public class AudioManager : MonoBehaviour
 
     private Bus masterBus;
     private Bus musicBus;
-    private Bus ambienceBus;
     private Bus sfxBus;
 
     private EventInstance currentMusic;
@@ -77,7 +76,6 @@ public class AudioManager : MonoBehaviour
     {
         masterBus.setVolume(masterVolume);
         musicBus.setVolume(musicVolume);
-        ambienceBus.setVolume(ambienceVolume);
         sfxBus.setVolume(SFXVolume);
     }
 
