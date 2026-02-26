@@ -60,6 +60,26 @@ MonoBehaviour:
   - Name: 
     Value: 1214
   Exists: 1
+--- !u!114 &-2256797472810964255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/SFX.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop/Desktop/SFX.bank"
+  Name: Desktop/SFX
+  StudioPath: bank:/SFX
+  lastModified: 639077316131108619
+  FileSizes:
+  - Name: 
+    Value: 1214
+  Exists: 1
 --- !u!114 &-918573194022669151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +96,26 @@ MonoBehaviour:
   Name: Master
   StudioPath: bank:/Master
   lastModified: 639077299546630916
+  FileSizes:
+  - Name: 
+    Value: 1074
+  Exists: 1
+--- !u!114 &-277673363112593486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop/Desktop/Master.bank"
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 639077316127180424
   FileSizes:
   - Name: 
     Value: 1074
@@ -97,6 +137,9 @@ MonoBehaviour:
   - {fileID: -918573194022669151}
   - {fileID: -9016128125520593186}
   - {fileID: -3914639084169403494}
+  - {fileID: -277673363112593486}
+  - {fileID: 4651188522718423608}
+  - {fileID: -2256797472810964255}
   EditorEvents:
   - {fileID: 2376324985632426087}
   - {fileID: 5809460694660068325}
@@ -104,10 +147,11 @@ MonoBehaviour:
   EditorParameters: []
   MasterBanks:
   - {fileID: -918573194022669151}
+  - {fileID: -277673363112593486}
   StringsBanks:
   - {fileID: -8600174596217694830}
   cacheVersion: 131849
-  cacheTime: 639077299546696750
+  cacheTime: 639077316131108619
   SerializableEventsDict:
   - key: event:/Music/Menu Music
     index: 0
@@ -135,6 +179,7 @@ MonoBehaviour:
     Data4: -900839771
   Banks:
   - {fileID: -3914639084169403494}
+  - {fileID: -2256797472810964255}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -162,6 +207,7 @@ MonoBehaviour:
     Data4: 1292962588
   Banks:
   - {fileID: -9016128125520593186}
+  - {fileID: 4651188522718423608}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -169,6 +215,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 33500
+--- !u!114 &4651188522718423608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Music.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: "C:/Users/AIMAR/Desktop/1r/Programaci\xF3n 3D/prac1_Prueba/test_Prac1/TecnoJam2026/FMOD/Desktop/Desktop/Music.bank"
+  Name: Desktop/Music
+  StudioPath: bank:/Music
+  lastModified: 639077316131062124
+  FileSizes:
+  - Name: 
+    Value: 4751648
+  Exists: 1
 --- !u!114 &5809460694660068325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +255,7 @@ MonoBehaviour:
     Data4: -1515675606
   Banks:
   - {fileID: -9016128125520593186}
+  - {fileID: 4651188522718423608}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
