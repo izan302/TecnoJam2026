@@ -863,7 +863,7 @@ RectTransform:
   - {fileID: 1558697905}
   - {fileID: 176260648}
   m_Father: {fileID: 1428257165}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.6029863}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.463176}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 99, y: -79}
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameAppScript
   m_appName: IzanScene
   m_timeToDoubleClick: 1.5
-  m_animation: {fileID: 0}
+  m_animation: {fileID: 396580957}
   m_animationClip: {fileID: 7400000, guid: 7b418f279f363ea4b9e98f4b0ab8c7aa, type: 2}
 --- !u!114 &1254756978
 MonoBehaviour:
@@ -3401,7 +3401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 323470421466858629, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: level
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 828592730295388585, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_Name
