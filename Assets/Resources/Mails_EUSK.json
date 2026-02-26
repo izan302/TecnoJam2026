@@ -1,0 +1,53 @@
+{
+    "mail": [
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Gaur azkenean bideojokoen indarkeriaren aurkako audientzia egingo da. Ebazpenak bideojokoen edukiaren gaineko kontrol partziala ekarriko duela aurreikusten da, bai eta adin-murrizketak ezartzeko neurriak hartuko direla ere.",
+            "m_senderName": "Gobernuaren iragarkiak",
+            "m_senderDate": "05/03/1994",
+            "m_level": 1,
+            "m_extraImage": "Sprites/Mails/gmailPlaceholder"
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Ameriketako Estatu Batuetako Senatuan egindako audientziaren ondoren eta hartutako erabakiaren ondorioz, hurrengo egunetan lege bat ezartzea adostu da. Lege horren bidez, bideojokoetan edozein indarkeria-irudi esplizitu erakustea eragotziko da, baita odol-edukiak (edo edozein su-arma) ere. Mota horretako edukiak dituen bideojoko ororen salmenta automatikoki debekatuko da, eta dagokion isun ekonomikoa ezarriko zaie garatzaile arduradunei.\n\nGainera, garatzaile bakoitzak bere jokoan <b><color=red>backdoor</color=red></b> bat ezartzera behartuko da, gobernuak denbora errealean jakin dezan baldintza horiek betetzen diren ala ez.",
+            "m_senderName": "Gobernuaren iragarkiak",
+            "m_senderDate": "06/03/1994",
+            "m_level": 2
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Ameriketako Estatu Batuetako Senatuan egindako audientziaren ondoren eta hartutako erabakiaren ondorioz, bideojokoen zentsurarako neurriak ezartzea adostu da.\nInformatu denez, gaurtik aurrera erabat debekatuta egongo da bideojokoetan <b><color=red>su-armak eta odola</color></b> agertzea, biztanleriaren artean armen erabilera normalizatzea saihesteko. Era berean, eduki <b><color=red>errealistak</color></b> dituzten edo benetako bizitzako egoerak emulatzen saiatzen diren jokoak debekatuta geratuko dira.\n\nNeurri hauek pertsonek, eta bereziki adingabeek, bideojokoetan ikusitako jokabideak benetako bizitzan erreproduzitu ez ditzaten bideratuta daude.\n\nGaratzaileek neurri berri honetara egokitu beharko dute; bestela, audientzia nazionalak ezarritako zigor ekonomikoei aurre egin beharko diete.",
+            "m_senderName": "Gobernuaren iragarkiak",
+            "m_senderDate": "07/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "mercadroga@communications.com",
+            "m_emailContent": "Erosi orain azken belaunaldiko eraso-fusila, diseinu dotore eta modernokoa, jendetzaren artean nabarmentzeko aukera emango dizuna.\nEraso-fusil hau arma ezin hobea da ehiza-esperientzia zirraragarria bilatzen dutenentzat. Zehaztasun eta potentzia handiarekin, eraso-fusil hau zure lagun eta kideen inbidia izango da.\nEz galdu eraso-fusil harrigarri hau eskuratzeko eta zure ehiza hurrengo mailara eramateko aukera.",
+            "m_senderName": "Mercadrogaren promozio berria",
+            "m_senderDate": "07/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Audientziaren ondoren sortutako legerik polemiko eta kontraesankorrenetako batek eztabaida publiko bizia eragin du. Gobernuaren ustez, bideojokoen aurkako azken neurriak nahikoak ez direnez, <b><color=red>arku, droga eta tiro-mekanika</color></b> mota guztiak debekatzea erabaki da, baita <b><color=red>rock</color></b> musika guztia ere, letra esplizituak dituztelako, bideojoko bortitzen gorakadaren aurrean. Iturri ofizialen arabera, esposizio horrek indarkeria fisikoko gertakariak eta desobedientzia zibila eragin ditzake bizitza errealean, eta, beraz, baldintza berriak premiaz ezarri behar direla adierazi da.\n\nBetetzen dela egiaztatzeko neurri osagarri gisa, jokoen barruan txip bat sartzeko beharra planteatu da, araudiaren betetzea modu eraginkorragoan eta automatizatuagoan gainbegiratu ahal izateko.",
+            "m_senderName": "Gobernuaren iragarkiak",
+            "m_senderDate": "08/03/1994",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "announcements@gob.com",
+            "m_emailContent": "Gaur jakitera eman denez, Gobernuaren informatika-sistemen aurkako hackeatze-saiakera bat izan da berriki.\nGertaera horien ondorioz, eta lotutako jokabideak ez sustatzeko asmoz, bideojokoetan edozein intrusio-mekanika edo informatika-<color=red>hackeatze</color> debekatzea erabaki da.\nEra berean, erabat debekatuta geratuko da PCrako jokoak garatzea, baita <color=red>sagu eta teklatu</color> bidez kontrolatu behar den edozein titulu ere. Neurri hau jendeak etxean PCak izatea sustatzeari uzteko helburuarekin hartu dela uste da.\nGaur iragarritako debekuen esparruan, bideojokoetan edozein <color=red>arma zuri</color> agertzea ere debekatu da.\n\nGainera, rock musikari buruz lehenago hartutako neurriekin bat etorriz, <color=red>metal</color> generoa ere indarrean dauden debekuen parte izango da.\nAzkenik, garatzaile batzuek <color=red>Pixel Art</color> estiloko grafikoen bidez joko errealistak sortzeko egindako saiakeren aurrean, estilo artistiko hori debekatzea erabaki da, baita azken egunetan erabili duten garatzaileei dagokion isun ekonomikoa ezartzea ere.\nJokoen <color=red>txipak</color> gainbegiratze automatikoko funtzio gehiago izan beharko dituela ere iragarri da, legez kanpoko funtzioak detektatzeko prozesua errazteko eta azkartzeko.\n",
+            "m_senderName": "Gobernuaren iragarkiak",
+            "m_senderDate": "11/09/2001",
+            "m_level": 4
+        }
+    ]
+}

@@ -1,5 +1,9 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="AYellowpaper.SerializedCollections.csproj" />
+  <Project Path="FMODUnityResonanceEditor.csproj" />
+  <Project Path="FMODUnityEditor.csproj" />
+  <Project Path="FMODUnity.csproj" />
   <Project Path="AYellowpaper.SerializedCollections.Editor.csproj" />
+  <Project Path="FMODUnityResonance.csproj" />
 </Solution>
