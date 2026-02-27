@@ -2712,14 +2712,21 @@ MonoBehaviour:
       Data2: 1142330111
       Data3: -1033564787
       Data4: 1292962588
-    Path: event:/Music/Menu Music
+    Path: event:/Music/MenuMusic
   gameplayMusic:
     Guid:
-      Data1: -1402733973
-      Data2: 1239401975
-      Data3: -100772480
-      Data4: -1515675606
-    Path: event:/Music/Gameplay Music
+      Data1: -446161283
+      Data2: 1082455449
+      Data3: 293821858
+      Data4: -1731500240
+    Path: event:/Music/GamePlayMusic
+  desktopScene:
+    Guid:
+      Data1: -1826797917
+      Data2: 1196636031
+      Data3: 670263992
+      Data4: 1776178662
+    Path: event:/Music/DesktopMusic
 --- !u!4 &2113025522
 Transform:
   m_ObjectHideFlags: 0
