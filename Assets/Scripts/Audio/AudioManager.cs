@@ -16,6 +16,8 @@ public class AudioManager : MonoBehaviour
     [Header("Music Events")]
     public EventReference menuMusic;
     public EventReference gameplayMusic;
+    public EventReference desktopScene;
+
 
     [Header("Cinematicas")]
 
@@ -307,6 +309,11 @@ public class AudioManager : MonoBehaviour
                 break;
 
             case "DesktopScene":
+                newMusic = desktopScene;
+                Debug.Log("AudioManager: Música de Gameplay");
+                ApplyShopLowcut(false);
+                break;
+            case "GameplayScene":
                 newMusic = gameplayMusic;
                 Debug.Log("AudioManager: Música de Gameplay");
                 ApplyShopLowcut(false);
