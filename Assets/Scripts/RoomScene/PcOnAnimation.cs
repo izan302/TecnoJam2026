@@ -20,36 +20,32 @@ public class PcOnAnimation : MonoBehaviour
     {
         m_StartupVideo.source = VideoSource.Url;
         m_StartupVideo.url = Path.Combine(Application.streamingAssetsPath, m_VideoFileName);
-        
+
+        m_StartupVideo.playOnAwake = false;
         m_StartupVideo.loopPointReached += OnVideoFinished;
-        m_StartupVideo.started += OnVideoStarted;
-        
-        m_StartupVideo.Prepare();
     }
 
     public void OnClick()
     {
         GabeNewell.Instance.LoadDesktop();
-        
+
         m_Title.SetActive(false);
         m_PcOn.SetActive(true);
         m_PcStartupScreen.SetActive(true);
 
-        if (m_StartupVideo.isPrepared)
-        {
-            m_StartupVideo.Play();
-        }
-        else
-        {
-            m_StartupVideo.prepareCompleted += (vp) => vp.Play();
-        }
+        m_StartupVideo.Play();
 
-        Invoke(nameof(SafetyNet), 5.0f);
+        StartCoroutine(WaitForVideoToStart());
+
+        Invoke(nameof(SafetyNet), 5f);
     }
 
-    void OnVideoStarted(VideoPlayer vp)
+    IEnumerator WaitForVideoToStart()
     {
+        yield return new WaitUntil(() => m_StartupVideo.isPlaying);
+
         CancelInvoke(nameof(SafetyNet));
+
         m_PcOff.SetActive(false);
     }
 
@@ -62,9 +58,9 @@ public class PcOnAnimation : MonoBehaviour
     {
         m_PcDesktop.SetActive(true);
         m_PcStartupScreen.SetActive(false);
-        
+
         yield return new WaitForSeconds(0.5f);
-        
+
         GabeNewell.Instance.GoToDesktop();
     }
 
@@ -81,7 +77,6 @@ public class PcOnAnimation : MonoBehaviour
         if (m_StartupVideo != null)
         {
             m_StartupVideo.loopPointReached -= OnVideoFinished;
-            m_StartupVideo.started -= OnVideoStarted;
         }
     }
 }
