@@ -70,7 +70,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 639077316131108619
+  lastModified: 639078047492973126
   FileSizes: []
   Exists: 1
 --- !u!114 &-215658400655443880
@@ -409,7 +409,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639077299546630916
+  lastModified: 639078047493000036
   FileSizes:
   - Name: 
     Value: 980

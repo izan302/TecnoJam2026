@@ -15,12 +15,12 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject paperNotificationAproved;
     [SerializeField] TextMeshProUGUI letterText;
 
-    [Header("Animaci�n Solapa")]
+    [Header("Animacion Solapa")]
     [SerializeField] AnimationCurve flapRotationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] float flapRotationDuration = 1f;
     [SerializeField] Vector3 flapRotationAxis = new Vector3(1, 0, 0);
 
-    [Header("Animaci�n Folio")]
+    [Header("Animacion Folio")]
     [SerializeField] AnimationCurve folioMoveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] float folioMoveDuration = 1f;
     [SerializeField] float folioUpwardDistance = 2f;
@@ -30,18 +30,71 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] float targetYPosition = 6.4f;
 
     [SerializeField] string[] m_KeysToPlay;
+    [Header("Letter Before Click Animation")]
+    private RectTransform m_Letter;
+    private Vector3 m_InitialLetterScale;
+    [SerializeField] private float m_GrowSize = 0.2f;
+    [SerializeField] private float m_Duration = 0.1f;
 
     TypewriterEffect typewriter;
     bool showAproved = false;
     bool isAnimating = false;
+    bool isTextFinished = false;
+    bool isEnvelopeOpen = false;
+
+    Coroutine m_LetterPulse;
 
     private void Start()
     {
         showAproved = GabeNewell.Instance.m_Level() == 6;
         typewriter = GetComponent<TypewriterEffect>();
-        typewriter.OnTextFinished += StartNextScene;
+        typewriter.OnTextFinished += TextFinished;
         Letter.SetActive(true);
         folio.SetActive(true);
+        m_Letter = Letter.GetComponent<RectTransform>();
+        m_InitialLetterScale = m_Letter.localScale;
+    }
+
+    private void Update()
+    {
+        if (!isEnvelopeOpen)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (!isTextFinished)
+                {
+                    typewriter.Skip();
+                }
+                else
+                {
+                    StartNextScene();
+                }
+            }
+        }else
+        {
+            /*
+            if (m_LetterPulse != null)
+            {
+                m_LetterPulse = StartCoroutine(LetterPulse());
+            }else
+            {
+                StopCoroutine(LetterPulse());
+            }
+            */
+        }
+
+    }
+    /*
+    IEnumerator LetterPulse()
+    {
+        m_Letter.localScale = m_InitialLetterScale + new Vector3(m_GrowSize, m_GrowSize, 0f);
+        yield return new WaitForSeconds(m_Duration);
+        m_Letter.localScale = m_InitialLetterScale;
+    }
+    */
+    void TextFinished()
+    {
+        isTextFinished = true;
     }
 
     public void OnEnvelopeOpened()
@@ -102,7 +155,7 @@ public class TransitionHandler : MonoBehaviour
         else
         {
             paperNotificationAproved.SetActive(false);
-            paperNotificationRejected.SetActive(true); 
+            paperNotificationRejected.SetActive(true);
         }
 
         RectTransform rect = letterFinal.GetComponent<RectTransform>();
@@ -134,7 +187,7 @@ public class TransitionHandler : MonoBehaviour
         }
         else
         {
-           typewriter.PlayText("gameSent_rejected", letterText);
+            typewriter.PlayText("gameSent_rejected", letterText);
         }
     }
     public void StartNextScene()
