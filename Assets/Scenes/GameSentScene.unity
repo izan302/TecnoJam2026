@@ -627,9 +627,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffect
   m_TextComponent: {fileID: 0}
-  m_CharactersPerSecond: 40
+  m_CharactersPerSecond: 85
   m_PauseOnPunctuation: 1
-  m_PunctuationPauseTime: 0.3
+  m_PunctuationPauseTime: 0.2
 --- !u!1 &437649050
 GameObject:
   m_ObjectHideFlags: 0
