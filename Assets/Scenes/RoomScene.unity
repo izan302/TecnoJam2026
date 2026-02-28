@@ -2468,6 +2468,7 @@ GameObject:
   - component: {fileID: 2048758047}
   - component: {fileID: 2048758046}
   - component: {fileID: 2048758049}
+  - component: {fileID: 2048758050}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -2539,9 +2540,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 285863770}
-        m_TargetAssemblyTypeName: CloseWindow, Assembly-CSharp
-        m_MethodName: OpenWindow
+      - m_Target: {fileID: 2048758050}
+        m_TargetAssemblyTypeName: AppScript, Assembly-CSharp
+        m_MethodName: AppClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2601,6 +2602,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+--- !u!114 &2048758050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048758044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8235a12b8714f4e838ca68d0ef0331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AppScript
+  m_timeToDoubleClick: 1
+  m_appWindow: {fileID: 1605685909}
+  m_appAnimation: {fileID: 8970947718727995335}
+  m_appAnimationOpen: {fileID: 7400000, guid: cc008d9b57fb6a24897fa87c650abb46, type: 2}
+  m_appAnimationClose: {fileID: 7400000, guid: b435016037cf2f5408c7a7feedc115cd, type: 2}
+  m_IsDoubleClickToOpen: 0
+--- !u!1 &2062153014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6801328423231024988, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+  m_PrefabInstance: {fileID: 8970947718727995334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062153020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062153014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8235a12b8714f4e838ca68d0ef0331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AppScript
+  m_timeToDoubleClick: 1.5
+  m_appWindow: {fileID: 1605685909}
+  m_appAnimation: {fileID: 8970947718727995335}
+  m_appAnimationOpen: {fileID: 7400000, guid: cc008d9b57fb6a24897fa87c650abb46, type: 2}
+  m_appAnimationClose: {fileID: 7400000, guid: b435016037cf2f5408c7a7feedc115cd, type: 2}
+  m_IsDoubleClickToOpen: 0
 --- !u!1 &2074315535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,10 +2849,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285863768}
     m_Modifications:
-    - target: {fileID: 847272050420761210, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -95
-      objectReference: {fileID: 0}
     - target: {fileID: 2241990972979367712, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2901,19 +2939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2626146177856397487, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.87813574
+      value: 0.8781357
       objectReference: {fileID: 0}
     - target: {fileID: 3718992342026079852, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000038146973
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641331097902162561, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641331097902162561, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 140
+      value: -0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 6202025437677274919, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2927,6 +2957,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: -17
       objectReference: {fileID: 0}
+    - target: {fileID: 6351730812840313094, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2062153020}
+    - target: {fileID: 6351730812840313094, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AppClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351730812840313094, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AppScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7699240538096480694, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_Name
       value: SettingsMenu
@@ -2935,39 +2977,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8423532860587763768, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -110
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960255798642599564, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960255798642599564, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 46a56c0bbf86a694e98d35da468cdb22, type: 2}
-    - target: {fileID: 8960255798642599564, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960255798642599564, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960255798642599564, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8960255798642599564, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2214107188919260806, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6801328423231024988, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2062153020}
   m_SourcePrefab: {fileID: 100100000, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+--- !u!111 &8970947718727995335 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 6731081333040040522, guid: 1e33bfc18ecba6a4886411dc6a286258, type: 3}
+  m_PrefabInstance: {fileID: 8970947718727995334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
