@@ -536,6 +536,8 @@ MonoBehaviour:
   m_KeysToPlay:
   - gameSent_01
   - gameSent_02
+  m_GrowSize: 0.01
+  m_Duration: 0.5
 --- !u!114 &417571738
 MonoBehaviour:
   m_ObjectHideFlags: 0

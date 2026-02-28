@@ -29,6 +29,10 @@ public class GabeNewell : MonoBehaviour
     {
         return level;
     }
+    public void m_LevelUp()
+    {
+        level++;
+    }
     void m_Level(int i)
     {
         level = i;
@@ -42,7 +46,6 @@ public class GabeNewell : MonoBehaviour
     }
     public void LevelUp()
     {
-        level++;
         m_MailsAreRead = false;
         Debug.Log(level);
         GoToTransition();

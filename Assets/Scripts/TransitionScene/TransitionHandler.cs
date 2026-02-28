@@ -24,16 +24,18 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] AnimationCurve folioMoveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] float folioMoveDuration = 1f;
     [SerializeField] float folioUpwardDistance = 2f;
+
     [Header("Animación Carta Final")]
     [SerializeField] AnimationCurve letterMoveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] float letterMoveDuration = 1f;
     [SerializeField] float targetYPosition = 6.4f;
 
     [SerializeField] string[] m_KeysToPlay;
+
     [Header("Letter Before Click Animation")]
     private RectTransform m_Letter;
     private Vector3 m_InitialLetterScale;
-    [SerializeField] private float m_GrowSize = 0.2f;
+    [SerializeField] private float m_GrowSize = 0.02f;
     [SerializeField] private float m_Duration = 0.1f;
 
     TypewriterEffect typewriter;
@@ -53,11 +55,14 @@ public class TransitionHandler : MonoBehaviour
         folio.SetActive(true);
         m_Letter = Letter.GetComponent<RectTransform>();
         m_InitialLetterScale = m_Letter.localScale;
+        m_LetterPulse = StartCoroutine(LetterPulse());
     }
 
     private void Update()
     {
-        if (!isEnvelopeOpen)
+        if (isAnimating) return;
+
+        if (letterFinal.activeSelf)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -70,28 +75,42 @@ public class TransitionHandler : MonoBehaviour
                     StartNextScene();
                 }
             }
-        }else
-        {
-            /*
-            if (m_LetterPulse != null)
-            {
-                m_LetterPulse = StartCoroutine(LetterPulse());
-            }else
-            {
-                StopCoroutine(LetterPulse());
-            }
-            */
         }
-
     }
-    /*
+
     IEnumerator LetterPulse()
     {
-        m_Letter.localScale = m_InitialLetterScale + new Vector3(m_GrowSize, m_GrowSize, 0f);
-        yield return new WaitForSeconds(m_Duration);
+        while (!isEnvelopeOpen)
+        {
+            float elapsed = 0f;
+            Vector3 targetScale = m_InitialLetterScale + new Vector3(m_GrowSize, m_GrowSize, 0f);
+
+            while (elapsed < m_Duration)
+            {
+                m_Letter.localScale = Vector3.Lerp(m_InitialLetterScale, targetScale, elapsed / m_Duration);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            m_Letter.localScale = targetScale;
+
+            elapsed = 0f;
+
+            while (elapsed < m_Duration)
+            {
+                m_Letter.localScale = Vector3.Lerp(targetScale, m_InitialLetterScale, elapsed / m_Duration);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            m_Letter.localScale = m_InitialLetterScale;
+
+            yield return new WaitForSeconds(0.4f);
+        }
+
         m_Letter.localScale = m_InitialLetterScale;
     }
-    */
+
     void TextFinished()
     {
         isTextFinished = true;
@@ -100,9 +119,20 @@ public class TransitionHandler : MonoBehaviour
     public void OnEnvelopeOpened()
     {
         if (isAnimating) return;
+
+        isEnvelopeOpen = true;
+
+        if (m_LetterPulse != null)
+        {
+            StopCoroutine(m_LetterPulse);
+            m_Letter.localScale = m_InitialLetterScale;
+            m_LetterPulse = null;
+        }
+
         Letter.GetComponent<Button>().enabled = false;
         StartCoroutine(OpeningEnvelope());
     }
+
     IEnumerator OpeningEnvelope()
     {
         isAnimating = true;
@@ -120,19 +150,18 @@ public class TransitionHandler : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+
         solapaEnvelope.transform.localRotation = endRot;
-
         solapaEnvelope.transform.SetSiblingIndex(0);
-
 
         timeElapsed = 0f;
         Vector3 startPos = folio.transform.localPosition;
         Vector3 endPos = startPos + (Vector3.up * folioUpwardDistance);
+
         while (timeElapsed < folioMoveDuration)
         {
             float t = timeElapsed / folioMoveDuration;
             float curveValue = folioMoveCurve.Evaluate(t);
-
             folio.transform.localPosition = Vector3.LerpUnclamped(startPos, endPos, curveValue);
 
             timeElapsed += Time.deltaTime;
@@ -142,11 +171,13 @@ public class TransitionHandler : MonoBehaviour
         folio.transform.localPosition = endPos;
         StartCoroutine(ShowLetter(0.5f));
     }
+
     IEnumerator ShowLetter(float _waitTime)
     {
         yield return new WaitForSeconds(_waitTime);
 
         letterFinal.SetActive(true);
+
         if (showAproved)
         {
             paperNotificationAproved.SetActive(true);
@@ -169,9 +200,7 @@ public class TransitionHandler : MonoBehaviour
         {
             float t = timeElapsed / letterMoveDuration;
             float curveValue = letterMoveCurve.Evaluate(t);
-
-            rect.anchoredPosition =
-                Vector2.LerpUnclamped(startPos, endPos, curveValue);
+            rect.anchoredPosition = Vector2.LerpUnclamped(startPos, endPos, curveValue);
 
             timeElapsed += Time.deltaTime;
             yield return null;
@@ -190,8 +219,10 @@ public class TransitionHandler : MonoBehaviour
             typewriter.PlayText("gameSent_rejected", letterText);
         }
     }
+
     public void StartNextScene()
     {
+        GabeNewell.Instance.m_LevelUp();
         GabeNewell.Instance.GoToDesktop();
     }
 }

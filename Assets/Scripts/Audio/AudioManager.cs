@@ -282,6 +282,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (mode == LoadSceneMode.Additive) return; //He metido yo esto Aimar UwU
         Debug.Log($"AudioManager: Escena cargada - {scene.name}");
 
         if (scene.name == "SampleScene" && IsPlayingMusic(gameplayMusic))

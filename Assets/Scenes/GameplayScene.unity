@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 323470421466858629, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: level
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 828592730295388585, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_Name
@@ -3632,7 +3632,7 @@ MonoBehaviour:
   - {fileID: 515035653}
   - {fileID: 1525524457}
   goodColor: {r: 0.31446525, g: 0.6289307, b: 0.31787547, a: 1}
-  bannedColor: {r: 0.5031446, g: 0.21992797, b: 0.21992797, a: 1}
+  bannedColor: {r: 0.7924528, g: 0, b: 0, a: 1}
 --- !u!1 &1824539531
 GameObject:
   m_ObjectHideFlags: 0
