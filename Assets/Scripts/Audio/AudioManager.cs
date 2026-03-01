@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour
     private Bus sfxBus;
 
     private EventInstance currentMusic;
+    private EventInstance nextMusic;
+    private bool isTransitioning = false;
 
     private Dictionary<string, EventInstance> cinematicInstances = new Dictionary<string, EventInstance>();
     private Coroutine musicParameterCoroutine;
@@ -54,23 +56,23 @@ public class AudioManager : MonoBehaviour
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
         SetupLowLatency();
-        PlayMusic(menuMusic);
+        currentMusic = RuntimeManager.CreateInstance(menuMusic);
+        currentMusic.start();
+        currentMusic.setVolume(musicVolume);
     }
 
     private void SetupLowLatency()
     {
         try
         {
-            // Solo configurar desde Unity, no modificar FMOD directamente
             AudioConfiguration config = AudioSettings.GetConfiguration();
-            config.dspBufferSize = 256; // Valor más bajo = menos latencia
+            config.dspBufferSize = 256;
             AudioSettings.Reset(config);
 
             Debug.Log("Configuración de audio de Unity ajustada para baja latencia");
         }
         catch
         {
-            // Silenciosamente continuar si falla
         }
     }
 
@@ -138,49 +140,68 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void ChangeMusicWithFade(EventReference newMusic, float fadeTime = 0f)
+    public void ChangeMusicWithFade(EventReference newMusic, float fadeTime = 2f)
     {
-        StartCoroutine(FadeMusicRoutine(newMusic, fadeTime));
+        if (newMusic.IsNull || isTransitioning) return;
+        StartCoroutine(SmoothCrossfadeMusic(newMusic, fadeTime));
     }
 
-    private IEnumerator FadeMusicRoutine(EventReference newMusic, float fadeTime)
+    private IEnumerator SmoothCrossfadeMusic(EventReference newMusic, float fadeTime)
     {
         if (newMusic.IsNull) yield break;
 
-        float timer = 0f;
+        if (IsPlayingMusic(newMusic))
+        {
+            if (currentMusic.isValid())
+            {
+                currentMusic.setVolume(musicVolume);
+            }
+            yield break;
+        }
+
+        isTransitioning = true;
+
         float startVolume = musicVolume;
 
-        EventInstance newMusicInstance = RuntimeManager.CreateInstance(newMusic);
-        newMusicInstance.start();
+        nextMusic = RuntimeManager.CreateInstance(newMusic);
+        nextMusic.start();
+        nextMusic.setVolume(0f);
 
-        EventInstance oldMusic = currentMusic;
-        currentMusic = newMusicInstance;
+        float timer = 0f;
 
         while (timer < fadeTime)
         {
-            float t = timer / fadeTime;
+            timer += Time.deltaTime;
+            float t = Mathf.Clamp01(timer / fadeTime);
 
-            if (oldMusic.isValid())
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+            float exponentialT = 1f - Mathf.Pow(1f - t, 3f);
+            float finalT = (smoothT + exponentialT) * 0.5f;
+
+            if (currentMusic.isValid())
             {
-                float oldVolume = Mathf.Lerp(startVolume, 0f, t);
-                oldMusic.setVolume(oldVolume);
+                float oldVolume = Mathf.Lerp(startVolume, 0f, finalT);
+                currentMusic.setVolume(oldVolume);
             }
 
-            float newVolume = Mathf.Lerp(0f, startVolume, t);
-            newMusicInstance.setVolume(newVolume);
+            float newVolume = Mathf.Lerp(0f, startVolume, finalT);
+            nextMusic.setVolume(newVolume);
 
-            timer += Time.deltaTime;
             yield return null;
         }
 
-        if (oldMusic.isValid())
+        if (currentMusic.isValid())
         {
-            oldMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            oldMusic.release();
+            currentMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentMusic.release();
         }
+
+        currentMusic = nextMusic;
+        nextMusic.clearHandle();
+        isTransitioning = false;
     }
 
-    public void SetMusicParameterSmooth(string parameterName, float targetValue, float duration = 1f)
+    public void SetMusicParameterSmooth(string parameterName, float targetValue, float duration = 1.5f)
     {
         if (!currentMusic.isValid()) return;
 
@@ -205,7 +226,9 @@ public class AudioManager : MonoBehaviour
             float t = Mathf.Clamp01(timer / duration);
 
             float smoothT = t * t * (3f - 2f * t);
-            float value = Mathf.Lerp(startValue, targetValue, smoothT);
+            float elasticT = Mathf.Sin(t * Mathf.PI * 0.5f);
+            float value = Mathf.Lerp(startValue, targetValue, (smoothT + elasticT) * 0.5f);
+
             currentMusic.setParameterByName(parameterName, value);
 
             currentModesValue = value;
@@ -214,56 +237,6 @@ public class AudioManager : MonoBehaviour
 
         currentModesValue = targetValue;
         currentMusic.setParameterByName(parameterName, targetValue);
-    }
-
-    private IEnumerator FadeInNewMusic(EventReference newMusic, float fadeTime)
-    {
-        if (newMusic.IsNull)
-        {
-            Debug.LogWarning("No se puede hacer fade in de música nula");
-            yield break;
-        }
-
-        if (IsPlayingMusic(newMusic))
-        {
-            Debug.Log($"AudioManager: Ya está reproduciendo esta música, manteniendo");
-
-            if (currentMusic.isValid())
-            {
-                currentMusic.setVolume(musicVolume);
-            }
-            yield break;
-        }
-
-        Debug.Log($"Iniciando fade in para nueva música");
-
-        if (currentMusic.isValid())
-        {
-            currentMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            currentMusic.release();
-        }
-
-        currentMusic = RuntimeManager.CreateInstance(newMusic);
-        currentMusic.start();
-
-        currentMusic.setVolume(0f);
-
-        float timer = 0f;
-        while (timer < fadeTime)
-        {
-            float t = timer / fadeTime;
-
-            float targetVolume = Mathf.Lerp(0f, musicVolume, t);
-
-            currentMusic.setVolume(targetVolume);
-
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        currentMusic.setVolume(musicVolume);
-
-        Debug.Log($"Fade in completado con volumen: {musicVolume}");
     }
 
     #endregion
@@ -282,7 +255,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (mode == LoadSceneMode.Additive) return; //He metido yo esto Aimar UwU
+        if (mode == LoadSceneMode.Additive) return;
         Debug.Log($"AudioManager: Escena cargada - {scene.name}");
 
         if (scene.name == "SampleScene" && IsPlayingMusic(gameplayMusic))
@@ -311,7 +284,7 @@ public class AudioManager : MonoBehaviour
 
             case "DesktopScene":
                 newMusic = desktopScene;
-                Debug.Log("AudioManager: Música de Gameplay");
+                Debug.Log("AudioManager: Música de Desktop");
                 ApplyShopLowcut(false);
                 break;
             case "GameplayScene":
@@ -321,10 +294,10 @@ public class AudioManager : MonoBehaviour
                 break;
         }
 
-        if (!newMusic.IsNull)
+        if (!newMusic.IsNull && !IsPlayingMusic(newMusic) && !isTransitioning)
         {
-            Debug.Log($"AudioManager: Cambiando a nueva música");
-            StartCoroutine(FadeInNewMusic(newMusic, 0.5f));
+            Debug.Log($"AudioManager: Cambiando a nueva música con transición suave");
+            StartCoroutine(SmoothCrossfadeMusic(newMusic, 2f));
         }
     }
 
@@ -333,7 +306,7 @@ public class AudioManager : MonoBehaviour
         if (!currentMusic.isValid()) return;
 
         float target = enable ? 1f : 0f;
-        float duration = enable ? 0.6f : 1.8f;
+        float duration = enable ? 1.2f : 2.5f;
 
         Debug.Log($"AudioManager: Modes → {target} ({duration}s)");
         SetMusicParameterSmooth("Modes", target, duration);
@@ -373,6 +346,4 @@ public class AudioManager : MonoBehaviour
     }
 
     #endregion
-
-  
 }
