@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity; 
 
 public class Tutorial : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class Tutorial : MonoBehaviour
     [Header("Localización")]
     [SerializeField] private string[] m_TutorialTextKeys;
 
+    [Header("FMOD Audio")] 
+    [SerializeField] private EventReference m_TypingSound; 
+
     private Vector3 m_NormalMouthOriginalPos;
     private Vector3 m_AngryMouthOriginalPos;
     private Quaternion m_NormalOriginalRot;
@@ -35,6 +39,9 @@ public class Tutorial : MonoBehaviour
 
     private int m_CurrentIndex = 0;
     private bool m_IsAngryMode = false;
+
+    private float m_NextSoundTime = 0f;
+    [SerializeField] private float m_SoundInterval = 0.05f; 
 
     void Awake()
     {
@@ -85,6 +92,8 @@ public class Tutorial : MonoBehaviour
         if (m_TypewriterEffect.IsTyping)
         {
             AnimateTalking();
+
+            PlayTypingSoundLoop();
         }
         else
         {
@@ -92,17 +101,31 @@ public class Tutorial : MonoBehaviour
         }
     }
 
+    private void PlayTypingSoundLoop()
+    {
+        if (Time.time >= m_NextSoundTime)
+        {
+            if (!m_TypingSound.IsNull)
+            {
+                RuntimeManager.PlayOneShot(m_TypingSound, transform.position);
+            }
+            m_NextSoundTime = Time.time + m_SoundInterval;
+        }
+    }
+
     public void ShowText(string _key)
     {
         SetAngryMode(false);
         m_TypewriterEffect.PlayText(_key, m_TextComponent);
+        m_NextSoundTime = 0f; 
     }
 
     public void AngryText(string _key)
     {
-        gameObject.SetActive(true); 
+        gameObject.SetActive(true);
         SetAngryMode(true);
         m_TypewriterEffect.PlayText(_key, m_TextComponent);
+        m_NextSoundTime = 0f; 
     }
 
     private void AdvanceTutorial()
@@ -163,7 +186,7 @@ public class Tutorial : MonoBehaviour
     {
         SetAngryMode(false);
         m_TextComponent.text = "";
-        
+
         if (GabeNewell.Instance.m_TutorialPlayed)
         {
             gameObject.SetActive(false);

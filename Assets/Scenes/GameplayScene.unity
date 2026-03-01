@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 323470421466858629, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: level
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 828592730295388585, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_Name
@@ -2775,6 +2775,24 @@ MonoBehaviour:
   m_CharactersPerSecond: 30
   m_PauseOnPunctuation: 1
   m_PunctuationPauseTime: 0.2
+--- !u!114 &997744515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997744512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioBankLoader
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - SFX
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1041908035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5333,6 +5351,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1735395163}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_SoundInterval
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_AngryFaceGroup
       value: 
       objectReference: {fileID: 2111390938}
@@ -5352,6 +5374,26 @@ PrefabInstance:
       propertyPath: m_TypewriterEffect
       value: 
       objectReference: {fileID: 997744514}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TypingSound.Path
+      value: event:/SFX/DialogoTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TypingSound.Guid.Data1
+      value: -1278581104
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TypingSound.Guid.Data2
+      value: 1247526836
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TypingSound.Guid.Data3
+      value: 21374127
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      propertyPath: m_TypingSound.Guid.Data4
+      value: 233556201
+      objectReference: {fileID: 0}
     - target: {fileID: 7937297972426613846, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       propertyPath: m_TutorialTexts.Array.size
       value: 10
@@ -5474,6 +5516,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 997744514}
+    - targetCorrespondingSourceObject: {fileID: 8791328091293524946, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 997744515}
   m_SourcePrefab: {fileID: 100100000, guid: b504fd6b63cf9d74783033d0f49ec5d6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
