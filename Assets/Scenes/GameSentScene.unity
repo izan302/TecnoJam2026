@@ -360,16 +360,16 @@ RectTransform:
   m_LocalScale: {x: 0.42456895, y: 0.53742903, z: 0.53742903}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1362440567}
   - {fileID: 522461634}
   - {fileID: 921586305}
   - {fileID: 1951394130}
   - {fileID: 1271550500}
-  - {fileID: 1362440567}
   m_Father: {fileID: 417571736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 66.6}
+  m_AnchoredPosition: {x: 0, y: 76}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380351632
@@ -802,7 +802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40.2}
+  m_AnchoredPosition: {x: 0, y: 38.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522461635
@@ -825,10 +825,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Patata
+  m_text: Reporte de resultados
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 46a56c0bbf86a694e98d35da468cdb22, type: 2}
-  m_sharedMaterial: {fileID: 8374841348311082387, guid: 46a56c0bbf86a694e98d35da468cdb22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: de45af5073fe8694e9b34a748d392b7d, type: 2}
+  m_sharedMaterial: {fileID: -2925355597475158872, guid: de45af5073fe8694e9b34a748d392b7d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -852,13 +852,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
+  m_fontSize: 10.7
   m_fontSizeBase: 10
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
+  m_fontSizeMax: 20
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -975,10 +975,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Despois de revisar exhaustivamente o seu videoxogo. Lamentablemente, debemos
+    comunicarlle que <color=red>non pode publicalo</color>. \\nEste tipo de contidos
+    non son axeitados para todas as idades, por favor, <color=red>pense nos nenos</color>
+    que consumir\xE1n isto. \\n \\nAtentamente, \\nDept. de Control Medi\xE1tico."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 46a56c0bbf86a694e98d35da468cdb22, type: 2}
-  m_sharedMaterial: {fileID: 8374841348311082387, guid: 46a56c0bbf86a694e98d35da468cdb22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: de45af5073fe8694e9b34a748d392b7d, type: 2}
+  m_sharedMaterial: {fileID: -2925355597475158872, guid: de45af5073fe8694e9b34a748d392b7d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1002,12 +1005,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
+  m_fontSize: 8.05
   m_fontSizeBase: 5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
@@ -1151,7 +1154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1271550500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1168,7 +1171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.2, y: -28.7}
+  m_AnchoredPosition: {x: 32.8, y: -27.4}
   m_SizeDelta: {x: 25, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271550501
@@ -1184,7 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.11814104, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.11814104, b: 0, a: 0.9137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1308,14 +1311,14 @@ RectTransform:
   m_GameObject: {fileID: 1362440566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18971877, y: 0.18971877, z: 0.18971877}
+  m_LocalScale: {x: 0.7095482, y: 0.7095482, z: 0.7095482}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 380351631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36.2, y: -38.8}
+  m_AnchoredPosition: {x: 0, y: -0.000045845}
   m_SizeDelta: {x: 120, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362440568
@@ -1331,7 +1334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.21960784}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
