@@ -67,7 +67,6 @@ public class Mail : MonoBehaviour
         m_contentData.m_senderPFP.GetComponent<Image>().color = Color.white;
         m_contentData.m_emailContent.text = this.m_emailContent;
 
-        m_readedImage.color = new Color(255, 255, 255, 100);
         if (m_contentData.m_currentMail != null)
         {
             m_contentData.m_currentMail.ChangeEntry();
@@ -77,6 +76,7 @@ public class Mail : MonoBehaviour
             Opened();
         }
         m_contentData.m_currentMail = this;
+        m_readedImage.color = new Color(255, 255, 255, 100);
     }
 
     public void ChangeEntry()
