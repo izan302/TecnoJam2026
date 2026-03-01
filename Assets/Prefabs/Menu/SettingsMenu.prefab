@@ -1293,8 +1293,8 @@ MonoBehaviour:
       Value: {fileID: -4897578839205825560, guid: 384eba91df26e9c49a43762ce2fe7c9d, type: 3}
     - Key: GL
       Value: {fileID: -3407699835890307245, guid: ae3de2ef4406fc64988162b1c5accd78, type: 3}
-    - Key: AN
-      Value: {fileID: -5828373384838942875, guid: 95da8fe669a68ad4b8138f2cfbcd7f4c, type: 3}
+    - Key: OCC
+      Value: {fileID: 8415146172658562061, guid: b297d85cd4812564ea1e43c5283231cd, type: 3}
 --- !u!1 &6254578947532163728
 GameObject:
   m_ObjectHideFlags: 0

@@ -527,7 +527,7 @@
             ]
         },
         {
-            "languageID": "OC_ARAN",
+            "languageID": "OCC",
             "items": [
                 { "key": "menu_start", "value": "- Quica ací entà començar -" },
                 { "key": "menu_settings", "value": "Opcions" },
