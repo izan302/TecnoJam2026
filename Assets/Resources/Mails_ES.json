@@ -3,65 +3,65 @@
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "govsafety@gov.com",
-            "m_senderName": "Dept. of National Productivity",
+            "m_senderName": "Dpto. de Productividad Nacional",
             "m_senderDate": "",
-            "m_emailContent": "Public health warning: Your terminal has been detected running 'Minesweeper'...",
+            "m_emailContent": "Aviso de salud pública: Se ha detectado que su terminal está ejecutando 'Buscaminas', un \"juego\" diseñado para sembrar la indolencia y el colapso del capitalismo.\n\nInformes recientes indican que este \"juego\" provoca distorsiones cognitivas graves: ciudadanos reportan ver patrones de bombas en los azulejos de sus baños, perdiendo la capacidad de realizar tareas fisiológicas básicas. No es solo un juego, es una adicción que consume empresas enteras y convierte a hombres de negocios en meros adictos a las hojas de cálculo.\n\nPD: Si cree que puede ganar, recuerde que incluso Bill Gates tuvo que desinstalarlo para recuperar su dignidad humana. ¡Borre el programa o aténgase a las consecuencias!",
             "m_level": 6969
         },
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
-            "m_senderArroba": "info@real-journalism.org",
-            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderArroba": "announcements@gov.com",
+            "m_emailContent": "Hoy finalmente se celebrará la audiencia contra la violencia en los videojuegos. Se prevé que la resolución derive en un control parcial sobre el contenido de los videojuegos y que se adopten medidas para establecer restricciones de edad.",
+            "m_senderName": "Redacción de 'El Píxel Independiente'",
             "m_senderDate": "05/03/1994",
-            "m_emailContent": "Today, the hearing against violence in video games will finally be held. The resolution is expected to lead to partial control over video game content and measures to establish age restrictions.",
             "m_level": 1
         },
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
-            "m_senderArroba": "info@real-journalism.org",
-            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderArroba": "announcements@gov.com",
+            "m_emailContent": "Tras la audiencia celebrada en el Senado de los Estados Unidos y como consecuencia de la decisión adoptada, se ha acordado implementar medidas para la censura de los videojuegos.\nSegún se ha informado, a partir del día de hoy quedará completamente prohibida la aparición de <b><color=red>sangre y armas de fuego</color></b> en los videojuegos, con el fin de evitar la normalización del uso de armas entre la población. Asimismo, quedarán prohibidos aquellos juegos que contengan contenidos <b><color=red>realistas</color></b> o que intenten emular situaciones propias de la vida real.\n\nEstas medidas están orientadas a prevenir que las personas, especialmente los menores, intenten reproducir en la vida real las conductas observadas en los videojuegos.\n\nLos desarrolladores deberán adaptarse a esta nueva medida, de lo contrario, se enfrentarán a las penalizaciones económicas pertinentes impuestas por la audiencia nacional.",
+            "m_senderName": "Redacción de 'El Píxel Independiente'",
             "m_senderDate": "06/03/1994",
-            "m_emailContent": "Following the hearing held in the United States Senate and as a result of the decision made, it has been agreed to implement measures for the censorship of video games.\nAs reported, as of today, the appearance of <b><color=red>blood and firearms</color></b> in video games is completely prohibited, in order to prevent the normalization of weapon use among the population. Likewise, games containing <b><color=red>realistic</color></b> content or attempting to emulate real-life situations will be prohibited.\n\nThese measures are aimed at preventing people, especially minors, from attempting to reproduce behaviors observed in video games in real life.\n\nDevelopers must adapt to this new measure; otherwise, they will face relevant economic penalties imposed by the national court.",
             "m_level": 2
         },
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
-            "m_senderArroba": "info@real-journalism.org",
-            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderArroba": "announcements@gov.com",
+            "m_emailContent": "Una de las leyes más polémicas y contradictorias surgidas tras la audiencia ha generado un intenso debate público. El gobierno ha considerado que las últimas medidas contra los videojuegos son insuficientes, por tanto, se ha decidido prohibir todo tipo de <b><color=red>arcos, drogas, mecánicas de disparar</color></b> y toda la música <b><color=red>rock</color></b>, ya que contiene letras explícitas, ante el auge de videojuegos violentos.\n\nSegún sostienen fuentes oficiales, esta exposición podría desencadenar episodios de violencia física en la vida real y desobediencia civil, por lo que se ha señalado que se requiere de manera urgente la implementación de nuevos requisitos.\n\nComo medida complementaria para verificar su cumplimiento, se ha planteado la necesidad de incorporar un <color=red>chip</color> dentro de los juegos que permita supervisar de manera más efectiva y automatizada el cumplimiento de la normativa.",
+            "m_senderName": "Redacción de 'El Píxel Independiente'",
             "m_senderDate": "07/03/1994",
-            "m_emailContent": "One of the most controversial and contradictory laws arising after the hearing has generated intense public debate. The government has considered the latest measures against video games to be insufficient; therefore, it has been decided to prohibit all types of <b><color=red>bows, drugs, shooting mechanics</color></b> and all <b><color=red>rock</color></b> music, as it contains explicit lyrics, in the face of the rise of violent video games.\n\nAccording to official sources, this exposure could trigger episodes of physical violence in real life and civil disobedience, which is why the urgent implementation of new requirements has been signaled.\n\nAs a complementary measure to verify compliance, the need to incorporate a <color=red>chip</color> within games has been raised to allow for more effective and automated monitoring of regulatory compliance.",
             "m_level": 3
         },
         {
             "m_senderPFPstring": "Sprites/Mails/Lion",
             "m_senderArroba": "mercadroga@communications.com",
-            "m_senderName": "New Mercadroga Promotion",
+            "m_emailContent": "Compre ahora su rifle de asalto de última generación, con un diseño elegante y moderno que le permitirá destacar entre la multitud.\n\nEste rifle de asalto es el arma perfecta para aquellos que buscan una experiencia de caza emocionante. Con su alta precisión y potencia, este rifle de asalto será la envidia de sus amigos y compañeros.\n\nNo pierda la oportunidad de adquirir este increíble rifle de asalto y elevar su cacería al siguiente nivel.",
+            "m_senderName": "Nueva promoción de Mercadroga",
             "m_senderDate": "08/03/1994",
-            "m_emailContent": "Buy your latest generation assault rifle now...",
             "m_level": 3
         },
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
-            "m_senderArroba": "info@real-journalism.org",
-            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderArroba": "announcements@gov.com",
+            "m_emailContent": "En el día de hoy se ha conocido un intento reciente de hackeo hacia los sistemas informáticos del Gobierno.\n\nComo consecuencia de estos hechos, y con el objetivo de no incentivar conductas relacionadas, se ha decidido prohibir cualquier mecánica de intrusión o <color=red>hackeo</color> informático en los videojuegos.\n\nAsimismo, quedará totalmente prohibido el desarrollo de juegos para PC, así como de cualquier título que requiera ser controlado mediante <color=red>ratón y teclado</color>. Esta medida se cree que ha sido adoptada con el objetivo de dejar de incentivar a la gente a tener PCs en casa.\n\nEn el marco de las prohibiciones anunciadas en el día de hoy, se ha determinado también la prohibición de la aparición de cualquier <color=red>arma blanca</color> en los videojuegos.\n\nAdemás, en coherencia con las medidas previamente adoptadas respecto a la música rock, el género <color=red>metal</color> pasará igualmente a formar parte de las prohibiciones vigentes.\n\nFinalmente, ante los intentos de determinados desarrolladores de crear juegos de carácter realista mediante el uso de gráficos en estilo <color=red>Pixel Art</color>, se ha decidido prohibir dicho estilo artístico, así como imponer la correspondiente sanción económica a aquellos desarrolladores que lo hayan empleado en los últimos días.\n\nTambién se ha anunciado que el <color=red>chip</color> de los juegos deberá incluir más funciones de supervisión automática para facilitar y agilizar el proceso de detección de funciones ilegales.",
+            "m_senderName": "Redacción de 'El Píxel Independiente'",
             "m_senderDate": "09/03/1994",
-            "m_emailContent": "Today, a recent hacking attempt against Government computer systems has been revealed.\n\nAs a consequence of these events, and with the aim of not encouraging related behaviors, it has been decided to prohibit any <color=red>hacking</color> or intrusion mechanics in video games.\n\nFurthermore, the development of PC games will be completely prohibited, as well as any title that requires control via <color=red>mouse and keyboard</color>. This measure is believed to have been adopted with the aim of discouraging people from having PCs at home.\n\nIn the framework of the prohibitions announced today, the appearance of any <color=red>melee weapons</color> in video games has also been determined.\n\nAdditionally, in consistency with previously adopted measures regarding rock music, the <color=red>metal</color> genre will also become part of the current prohibitions.\n\nFinally, given the attempts of certain developers to create realistic games using <color=red>Pixel Art</color> style graphics, it has been decided to prohibit said artistic style, as well as impose corresponding economic sanctions on those developers who have used it in recent days.\n\nIt has also been announced that the game <color=red>chip</color> must include more automatic monitoring functions to facilitate and speed up the process of detecting illegal functions.",
             "m_level": 4
         },
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
-            "m_senderArroba": "info@real-journalism.org",
-            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderArroba": "announcements@gov.com",
+            "m_emailContent": "Tras evaluar el impacto de las medidas anteriores y con el objetivo de reforzar la seguridad pública, el gobierno ha adoptado nuevas medidas orientadas a eliminar cualquier elemento potencialmente estimulante dentro de los videojuegos.\n\nEn las nuevas medidas, se ha decidido prohibir <color=red>cualquier actividad física</color> que pueda ser perjudicial al ser reproducida sin descanso, tal y como se muestra en los videojuegos. Se cree que esta medida se toma para que el pueblo no intente imitar a los personajes de los juegos y no llegue a su límite físico, lo cual sería peligroso para la salud.\n\nAsimismo, se ha anunciado la prohibición de la música <color=red>pop</color>, alegando que su ritmo podría incentivar este tipo de comportamientos.\n\nSumado a las restricciones relacionadas con la actividad física, se ha decretado también la prohibición de la aparición de cualquier elemento vinculado con la <color=red>electricidad</color> en los videojuegos. Esta medida se justifica en el argumento de que, en una gran parte de los títulos, la electricidad es utilizada de forma indebida o irrealista, lo que, según las autoridades, podría provocar accidentes domésticos si los jugadores intentaran imitar dichas acciones en la vida real.",
+            "m_senderName": "Redacción de 'El Píxel Independiente'",
             "m_senderDate": "09/03/1994",
-            "m_emailContent": "After evaluating the impact of previous measures and with the goal of strengthening public safety, the government has adopted new measures aimed at eliminating any potentially stimulating elements within video games.\n\nIn the new measures, it has been decided to prohibit <color=red>any physical activity</color> that could be harmful if reproduced without rest, as shown in video games. This measure is believed to be taken so that people do not try to imitate the characters in the games and do not reach their physical limit, which would be dangerous for health.\n\nLikewise, the prohibition of <color=red>pop</color> music has been announced, claiming that its rhythm could encourage this type of behavior.\n\nIn addition to the restrictions related to physical activity, the appearance of any element linked to <color=red>electricity</color> in video games has also been decreed. This measure is justified by the argument that, in a large part of the titles, electricity is used improperly or unrealistically, which, according to authorities, could cause domestic accidents if players tried to imitate such actions in real life.",
             "m_level": 5
         },
         {
             "m_senderPFPstring": "Sprites/Mails/aguila",
-            "m_senderArroba": "info@real-journalism.org",
-            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderArroba": "announcements@gov.com",
+            "m_senderName": "Redacción de 'El Píxel Independiente'",
             "m_senderDate": "10/03/1994",
-            "m_emailContent": "What began as censorship presented as legitimate against violence in video games has drifted into a practically total restriction, bordering on the absurd. What was initially proposed as a measure aimed at the consumption of violent content has ended up becoming an almost complete limitation of any activity related to real life within video games.\n\nFollowing the latest prohibitions, which include the prohibition of <color=red>business simulation</color> in video games, and added to the previously adopted restrictions, there are hardly any areas left that allow for the development of video games with a minimum of creative freedom.\n\nEverything seems to indicate that even if a developer managed to launch a title that did not bypass any of the current prohibitions, it would end up being equally banned by the Government a few days after its publication.\n\nAt this point, we can only ask ourselves one thing.\n\nIs this the end of video games as we knew them?",
+            "m_emailContent": "Lo que comenzó como una censura presentada como legítima contra la violencia en los videojuegos ha derivado en una restricción prácticamente total, rozando lo absurdo. Lo que en un inicio se planteó como una medida orientada al consumo de contenidos violentos ha terminado convirtiéndose en una limitación casi completa de cualquier actividad relacionada con la vida real dentro de los videojuegos.\n\nTras las últimas prohibiciones, entre las que se incluye la prohibición de la <color=red>simulación de negocios</color> en los videojuegos, y sumadas a las restricciones previamente adoptadas, apenas quedan ya ámbitos que permitan el desarrollo de videojuegos con un mínimo de libertad creativa.\n\nTodo parece indicar que, incluso si alguna desarrolladora lograra lanzar un título que no se saltara ninguna de las prohibiciones vigentes, este terminaría siendo igualmente vetado por el Gobierno a los pocos días de su publicación.\n\nLlegados a este punto, solo nos podemos preguntar una cosa.\n\n¿Es el fin de los videojuegos tal y como los conocíamos?",
             "m_level": 6
         }
     ]
