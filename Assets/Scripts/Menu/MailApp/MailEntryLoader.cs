@@ -101,10 +101,8 @@ public class MailEntryLoader : MonoBehaviour
         );
 
         rt.anchoredPosition = new Vector2(-105, -50 * m_loadedMails);
-        
-        if(index == 0) l_mail.OnClick();
-        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level()) l_mail.Opened();
-        else  m_newMails++;
+        if (m_mailLists.mail[index].m_level < GabeNewell.Instance.m_Level()) {l_mail.Opened(); l_mail.OnClick(); }
+        else m_newMails++;
 
         m_loadedMails++;
     }
