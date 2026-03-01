@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 323470421466858629, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: level
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 828592730295388585, guid: 1597bee6c5385254c9cb46625705c8f0, type: 3}
       propertyPath: m_Name
@@ -1764,6 +1764,7 @@ MonoBehaviour:
   m_ScrollSpeed: 10
   m_SmoothSpeed: 12
   m_ButtonStep: 2
+  m_AutoScrollSpeed: 15
 --- !u!4 &482014953
 Transform:
   m_ObjectHideFlags: 0
