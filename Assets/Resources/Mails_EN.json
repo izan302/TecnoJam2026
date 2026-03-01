@@ -1,61 +1,68 @@
 {
-  "mail": [
-    {
-      "m_senderPFPstring": "Sprites/Mails/aguila",
-      "m_senderArroba": "govsafety@gov.com",
-      "m_senderName": "National Productivity Dept.",
-      "m_senderDate": "05/03/1994",
-      "m_emailContent": "Public health warning: Your terminal has been detected running 'Minesweeper', a \"game\" designed to sow indolence and the collapse of capitalism. \n\nRecent reports indicate that this \"game\" causes severe cognitive distortions: citizens report seeing bomb patterns in their bathroom tiles, losing the ability to perform basic physiological tasks. It is not just a game; it is an addiction that consumes entire companies and turns businessmen into mere spreadsheet addicts. \n\nPS: If you think you can win, remember that even Bill Gates had to uninstall it to regain his human dignity. Delete the program or face the consequences!",
-      "m_level": 6969
-    },
-    {
-      "m_senderPFPstring": "Sprites/Mails/aguila",
-      "m_senderArroba": "announcements@gov.com",
-      "m_emailContent": "Today, the hearing against violence in video games will finally be held. The resolution is expected to result in partial control over video game content and the adoption of measures to establish age restrictions.",
-      "m_senderName": "Government Announcements",
-      "m_senderDate": "05/03/1994",
-      "m_level": 1,
-      "m_extraImage": "Sprites/Mails/gmailPlaceholder"
-    },
-    {
-      "m_senderPFPstring": "Sprites/Mails/aguila",
-      "m_senderArroba": "announcements@gov.com",
-      "m_emailContent": "Following the hearing held in the United States Senate and as a consequence of the decision adopted, it has been agreed to implement, over the coming days, a law that will prevent video games from showing any type of explicit violent imagery, as well as bloody content (or any firearms). Any video game that includes this type of content will be automatically banned from sale, and the corresponding economic sanction will be imposed on the responsible developers.\n\nFurthermore, every developer will be required to implement a <b><color=red>backdoor</color></b> in their game so the government can monitor in real-time whether these requirements are being met.",
-      "m_senderName": "Government Announcements",
-      "m_senderDate": "06/03/1994",
-      "m_level": 2
-    },
-    {
-      "m_senderPFPstring": "Sprites/Mails/aguila",
-      "m_senderArroba": "announcements@gov.com",
-      "m_emailContent": "Following the hearing held in the United States Senate and as a consequence of the decision adopted, it has been agreed to implement measures for the censorship of video games.\nAs reported, starting today, the appearance of <b><color=red>firearms and blood</color></b> in video games will be completely prohibited, in order to avoid the normalization of weapon use among the population. Likewise, games containing <b><color=red>realistic</color></b> content or those attempting to emulate real-life situations will be banned.\n\nThese measures are aimed at preventing individuals, especially minors, from attempting to reproduce behaviors observed in video games in real life.\n\nDevelopers must adapt to this new measure; otherwise, they will face the pertinent economic penalties imposed by the national court.",
-      "m_senderName": "Government Announcements",
-      "m_senderDate": "07/03/1994",
-      "m_level": 3
-    },
-    {
-      "m_senderPFPstring": "Sprites/Mails/Lion",
-      "m_senderArroba": "mercadroga@communications.com",
-      "m_emailContent": "Buy now your latest generation assault rifle, with an elegant and modern design that will allow you to stand out from the crowd.\nThis assault rifle is the perfect weapon for those looking for an exciting hunting experience. With its high precision and power, this assault rifle will be the envy of your friends and colleagues.\nDo not miss the opportunity to acquire this incredible assault rifle and take your hunting to the next level.",
-      "m_senderName": "New promotion from Wartmart",
-      "m_senderDate": "07/03/1994",
-      "m_level": 3
-    },
-    {
-      "m_senderPFPstring": "Sprites/Mails/aguila",
-      "m_senderArroba": "announcements@gov.com",
-      "m_emailContent": "One of the most controversial and contradictory laws arising from the hearing has generated intense public debate. The government has considered the latest measures against video games to be insufficient; therefore, it has been decided to prohibit all types of <b><color=red>bows, drugs, shooting mechanics</color></b> and all <b><color=red>rock</color></b> music as it contains explicit lyrics, in view of the rise of violent video games. According to official sources, this exposure could trigger episodes of physical violence in real life and civil disobedience, thus urgent implementation of new requirements is needed.\n\nAs a complementary measure to verify compliance, the need to incorporate a chip within the games has been raised, allowing for more effective and automated monitoring of compliance with the regulations.",
-      "m_senderName": "Government Announcements",
-      "m_senderDate": "08/03/1994",
-      "m_level": 3
-    },
-    {
-      "m_senderPFPstring": "Sprites/Mails/aguila",
-      "m_senderArroba": "announcements@gov.com",
-      "m_emailContent": "",
-      "m_senderName": "Government Announcements",
-      "m_senderDate": "11/09/2001",
-      "m_level": 4
-    }
-  ]
+    "mail": [
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "govsafety@gov.com",
+            "m_senderName": "Dept. of National Productivity",
+            "m_senderDate": "",
+            "m_emailContent": "Public health warning: Your terminal has been detected running 'Minesweeper', a \"game\" designed to sow indolence and the collapse of capitalism.\n\nRecent reports indicate that this \"game\" causes severe cognitive distortions: citizens report seeing bomb patterns in their bathroom tiles, losing the ability to perform basic physiological tasks. It's not just a game, it's an addiction that consumes entire companies and turns businessmen into mere spreadsheet addicts.\n\nPS: If you think you can win, remember that even Bill Gates had to uninstall it to regain his human dignity. Delete the program or face the consequences!",
+            "m_level": 6969
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "info@real-journalism.org",
+            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderDate": "05/03/1994",
+            "m_emailContent": "Today, the hearing against violence in video games will finally be held. The resolution is expected to lead to partial control over video game content and measures to establish age restrictions.",
+            "m_level": 1
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "info@real-journalism.org",
+            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderDate": "06/03/1994",
+            "m_emailContent": "Following the hearing held in the United States Senate and as a result of the decision made, it has been agreed to implement measures for the censorship of video games.\nAs reported, as of today, the appearance of <b><color=red>blood and firearms</color></b> in video games is completely prohibited, in order to prevent the normalization of weapon use among the population. Likewise, games containing <b><color=red>realistic</color></b> content or attempting to emulate real-life situations will be prohibited.\n\nThese measures are aimed at preventing people, especially minors, from attempting to reproduce behaviors observed in video games in real life.\n\nDevelopers must adapt to this new measure; otherwise, they will face relevant economic penalties imposed by the national court.",
+            "m_level": 2
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "info@real-journalism.org",
+            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderDate": "07/03/1994",
+            "m_emailContent": "One of the most controversial and contradictory laws arising after the hearing has generated intense public debate. The government has considered the latest measures against video games to be insufficient; therefore, it has been decided to prohibit all types of <b><color=red>bows, drugs, shooting mechanics</color></b> and all <b><color=red>rock</color></b> music, as it contains explicit lyrics, in the face of the rise of violent video games.\n\nAccording to official sources, this exposure could trigger episodes of physical violence in real life and civil disobedience, which is why the urgent implementation of new requirements has been signaled.\n\nAs a complementary measure to verify compliance, the need to incorporate a <color=red>chip</color> within games has been raised to allow for more effective and automated monitoring of regulatory compliance.",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/Lion",
+            "m_senderArroba": "mercadroga@communications.com",
+            "m_senderName": "New Mercadroga Promotion",
+            "m_senderDate": "08/03/1994",
+            "m_emailContent": "Buy your latest generation assault rifle now, with a sleek and modern design that will let you stand out from the crowd.\n\nThis assault rifle is the perfect weapon for those seeking a thrilling hunting experience. With its high precision and power, this assault rifle will be the envy of your friends and colleagues.\n\nDon't miss the opportunity to acquire this incredible assault rifle and take your hunting to the next level.",
+            "m_level": 3
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "info@real-journalism.org",
+            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderDate": "09/03/1994",
+            "m_emailContent": "Today, a recent hacking attempt against Government computer systems has been revealed.\n\nAs a consequence of these events, and with the aim of not encouraging related behaviors, it has been decided to prohibit any <color=red>hacking</color> or intrusion mechanics in video games.\n\nFurthermore, the development of PC games will be completely prohibited, as well as any title that requires control via <color=red>mouse and keyboard</color>. This measure is believed to have been adopted with the aim of discouraging people from having PCs at home.\n\nIn the framework of the prohibitions announced today, the appearance of any <color=red>melee weapons</color> in video games has also been determined.\n\nAdditionally, in consistency with previously adopted measures regarding rock music, the <color=red>metal</color> genre will also become part of the current prohibitions.\n\nFinally, given the attempts of certain developers to create realistic games using <color=red>Pixel Art</color> style graphics, it has been decided to prohibit said artistic style, as well as impose corresponding economic sanctions on those developers who have used it in recent days.\n\nIt has also been announced that the game <color=red>chip</color> must include more automatic monitoring functions to facilitate and speed up the process of detecting illegal functions.",
+            "m_level": 4
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "info@real-journalism.org",
+            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderDate": "09/03/1994",
+            "m_emailContent": "After evaluating the impact of previous measures and with the goal of strengthening public safety, the government has adopted new measures aimed at eliminating any potentially stimulating elements within video games.\n\nIn the new measures, it has been decided to prohibit <color=red>any physical activity</color> that could be harmful if reproduced without rest, as shown in video games. This measure is believed to be taken so that people do not try to imitate the characters in the games and do not reach their physical limit, which would be dangerous for health.\n\nLikewise, the prohibition of <color=red>pop</color> music has been announced, claiming that its rhythm could encourage this type of behavior.\n\nIn addition to the restrictions related to physical activity, the appearance of any element linked to <color=red>electricity</color> in video games has also been decreed. This measure is justified by the argument that, in a large part of the titles, electricity is used improperly or unrealistically, which, according to authorities, could cause domestic accidents if players tried to imitate such actions in real life.",
+            "m_level": 5
+        },
+        {
+            "m_senderPFPstring": "Sprites/Mails/aguila",
+            "m_senderArroba": "info@real-journalism.org",
+            "m_senderName": "Editorial Board of 'The Independent Pixel'",
+            "m_senderDate": "10/03/1994",
+            "m_emailContent": "What began as censorship presented as legitimate against violence in video games has drifted into a practically total restriction, bordering on the absurd. What was initially proposed as a measure aimed at the consumption of violent content has ended up becoming an almost complete limitation of any activity related to real life within video games.\n\nFollowing the latest prohibitions, which include the prohibition of <color=red>business simulation</color> in video games, and added to the previously adopted restrictions, there are hardly any areas left that allow for the development of video games with a minimum of creative freedom.\n\nEverything seems to indicate that even if a developer managed to launch a title that did not bypass any of the current prohibitions, it would end up being equally banned by the Government a few days after its publication.\n\nAt this point, we can only ask ourselves one thing.\n\nIs this the end of video games as we knew them?",
+            "m_level": 6
+        }
+    ]
 }
