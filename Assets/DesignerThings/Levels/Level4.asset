@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b399df978295744b586d1e829de84e, type: 3}
   m_Name: Level4
   m_EditorClassIdentifier: Assembly-CSharp::LevelDefinition
-  maxSuplementaryGridHeight: 300
+  maxSuplementaryGridHeight: 40
   restrictedProperties: 0d000000020000000a00000005000000010000000e0000000300000004000000
   piecesToSpawn:
   - pieceData: {fileID: 11400000, guid: 545062eb676779245b67b20f35ad2299, type: 2}

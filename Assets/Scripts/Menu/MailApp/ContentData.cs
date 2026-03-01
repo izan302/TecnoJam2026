@@ -11,4 +11,5 @@ public class ContentData : MonoBehaviour
     [SerializeField] public Image m_senderPFP;
     [SerializeField] public Image m_contentImage;
     [SerializeField] public EventTrigger m_contentButton;
+    [SerializeField] public Mail m_currentMail;
 }

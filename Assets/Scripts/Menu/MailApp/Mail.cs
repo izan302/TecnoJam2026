@@ -66,15 +66,26 @@ public class Mail : MonoBehaviour
         m_contentData.m_senderPFP.sprite = this.m_senderPFP;
         m_contentData.m_senderPFP.GetComponent<Image>().color = Color.white;
         m_contentData.m_emailContent.text = this.m_emailContent;
+
+        if (m_contentData.m_currentMail != null)
+        {
+            m_contentData.m_currentMail.ChangeEntry();
+        }
         if(m_opened == false)
         {
             Opened();
         }
+        m_contentData.m_currentMail = this;
+        m_readedImage.color = new Color(255, 255, 255, 100);
+    }
+
+    public void ChangeEntry()
+    {
+        m_readedImage.color = new Color(255, 255, 255, 0);
     }
 
     public void Opened()
     {
-        m_readedImage.color = new Color(255, 255, 255, 0);
         if(m_level == GabeNewell.Instance.level)
         {
             m_entryLoader.OpenedNewEntry();
