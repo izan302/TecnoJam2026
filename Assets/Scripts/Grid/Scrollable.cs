@@ -14,6 +14,11 @@ public class Scrollable : MonoBehaviour
     [SerializeField] private float m_SmoothSpeed = 12f;
     [SerializeField] private float m_ButtonStep = 2f;
 
+    [Header("Auto Scroll")]
+    [SerializeField] private float m_AutoScrollSpeed = 0.5f;
+    private bool m_IsAutoScrolling = false;
+    private bool m_WasTutorialPlaying = true;
+
     private float m_TargetY;
     private float m_ContentHeight;
     private bool m_IsReady = false;
@@ -24,8 +29,14 @@ public class Scrollable : MonoBehaviour
     public void SetupLimits(float _Height)
     {
         m_ContentHeight = _Height;
-        m_TargetY = transform.position.y;
+        m_TargetY = GetLimitTop();
+        transform.position = new Vector3(transform.position.x, m_TargetY, transform.position.z);
         m_IsReady = true;
+        
+        if (GabeNewell.Instance != null && !GabeNewell.Instance.m_IsTutorialPlaying)
+        {
+            m_IsAutoScrolling = true;
+        }
     }
 
     private float GetLimitTop()
@@ -51,6 +62,7 @@ public class Scrollable : MonoBehaviour
 
     public void ScrollDown()
     {
+        m_IsAutoScrolling = false;
         m_TargetY += m_ButtonStep;
         ApplyClamp();
         UpdateScrollbar();
@@ -58,23 +70,24 @@ public class Scrollable : MonoBehaviour
 
     public void ScrollUp()
     {
+        m_IsAutoScrolling = false;
         m_TargetY -= m_ButtonStep;
         ApplyClamp();
         UpdateScrollbar();
     }
+
     public void SetScrollPosition(Single s)
     {
         if (!m_IsReady) return;
+        m_IsAutoScrolling = false;
 
         float l_LimitBottom = m_BottomAnchor.position.y;
         float l_LimitTop = GetLimitTop();
 
-        float l_Min = Mathf.Min(l_LimitBottom, l_LimitTop);
-        float l_Max = Mathf.Max(l_LimitBottom, l_LimitTop);
         m_TargetY = Mathf.Lerp(l_LimitBottom, l_LimitTop, s);
-
         ApplyClamp();
     }
+
     private void UpdateScrollbar()
     {
         if (m_Scrollbar == null) return;
@@ -89,16 +102,33 @@ public class Scrollable : MonoBehaviour
         float l_Normalized = Mathf.InverseLerp(l_LimitBottom, l_LimitTop, m_TargetY);
         m_Scrollbar.SetValueWithoutNotify(l_Normalized);
     }
+
     void Update()
     {
         if (!m_IsReady) return;
 
+        bool l_TutorialActive = GabeNewell.Instance != null && GabeNewell.Instance.m_IsTutorialPlaying;
+
+        if (m_WasTutorialPlaying && !l_TutorialActive)
+        {
+            m_IsAutoScrolling = true;
+        }
+        m_WasTutorialPlaying = l_TutorialActive;
+
         float l_ScrollInput = Input.GetAxis("Mouse ScrollWheel");
+        
         if (l_ScrollInput != 0)
         {
+            m_IsAutoScrolling = false;
             m_TargetY -= l_ScrollInput * m_ScrollSpeed;
             ApplyClamp();
             UpdateScrollbar();
+        }
+        else if (m_IsAutoScrolling && !l_TutorialActive)
+        {
+            m_TargetY = Mathf.MoveTowards(m_TargetY, m_BottomAnchor.position.y, m_AutoScrollSpeed * Time.deltaTime);
+            UpdateScrollbar();
+            if (Mathf.Approximately(m_TargetY, m_BottomAnchor.position.y)) m_IsAutoScrolling = false;
         }
 
         Vector3 l_NextPos = new Vector3(transform.position.x, m_TargetY, transform.position.z);
