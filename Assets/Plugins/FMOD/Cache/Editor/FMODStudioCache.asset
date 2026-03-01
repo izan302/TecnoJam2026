@@ -88,7 +88,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639077316131108619
+  lastModified: 639079885158502582
   FileSizes: []
   Exists: 1
 --- !u!114 &-215201811602453580
@@ -141,13 +141,14 @@ MonoBehaviour:
   - {fileID: 4491503152287853881}
   - {fileID: 4639052608745841426}
   - {fileID: 369144263678945848}
+  - {fileID: 5703762764976012015}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6330333976403456706}
   StringsBanks:
   - {fileID: 2087219555383641634}
   cacheVersion: 131849
-  cacheTime: 639078113376525805
+  cacheTime: 639079885158502582
   SerializableEventsDict:
   - key: event:/Music/MenuMusic
     index: 0
@@ -157,6 +158,8 @@ MonoBehaviour:
     index: 2
   - key: event:/SFX/Start
     index: 3
+  - key: event:/SFX/Carta
+    index: 4
 --- !u!114 &169107286027951646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,10 +248,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639078039422652798
+  lastModified: 639079885157074008
   FileSizes:
   - Name: 
-    Value: 1020
+    Value: 1068
   Exists: 1
 --- !u!114 &2765052207228131788
 MonoBehaviour:
@@ -265,7 +268,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639078113376525805
+  lastModified: 639079885157448810
   FileSizes: []
   Exists: 1
 --- !u!114 &4491503152287853881
@@ -322,6 +325,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13083
+--- !u!114 &5703762764976012015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Carta
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Carta
+  Guid:
+    Data1: -1278581104
+    Data2: 1247526836
+    Data3: 21374127
+    Data4: 233556201
+  Banks:
+  - {fileID: -215658400655443880}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 875
 --- !u!114 &6234163852747685307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +394,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639078039422631857
+  lastModified: 639079885157063910
   FileSizes: []
   Exists: 1
 --- !u!114 &7025806290843974491
@@ -393,7 +423,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 33500
+  Length: 16000
 --- !u!114 &7861972884074446607
 MonoBehaviour:
   m_ObjectHideFlags: 0
