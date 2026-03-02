@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3199803023225454507}
   - component: {fileID: 6664555755452839352}
+  - component: {fileID: 2571518005152740889}
   m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
@@ -647,6 +648,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &2571518005152740889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436456150817723748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &3453824760220230809
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +872,7 @@ GameObject:
   - component: {fileID: 3760298447951631284}
   - component: {fileID: 4717447527584585606}
   - component: {fileID: 1064036269938611334}
+  - component: {fileID: 8789092675555350806}
   m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
@@ -973,6 +987,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8789092675555350806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131563033036101124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &5062742084979532226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1187,7 @@ GameObject:
   - component: {fileID: 5694320598268165825}
   - component: {fileID: 2312579350026557930}
   - component: {fileID: 7824094772052721496}
+  - component: {fileID: 4114305065083206556}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -1309,6 +1336,18 @@ MonoBehaviour:
       Value: {fileID: -3407699835890307245, guid: ae3de2ef4406fc64988162b1c5accd78, type: 3}
     - Key: OCC
       Value: {fileID: 8415146172658562061, guid: b297d85cd4812564ea1e43c5283231cd, type: 3}
+--- !u!114 &4114305065083206556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5440698949442981610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &6254578947532163728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1573,7 @@ GameObject:
   - component: {fileID: 3817465665205307046}
   - component: {fileID: 6351730812840313094}
   - component: {fileID: 2214107188919260806}
+  - component: {fileID: 2033575833421920951}
   m_Layer: 5
   m_Name: Cross
   m_TagString: Untagged
@@ -1667,6 +1707,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseWindow
   m_WindowToClose: {fileID: 7699240538096480694}
+--- !u!114 &2033575833421920951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801328423231024988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
 --- !u!1 &6825672281857106051
 GameObject:
   m_ObjectHideFlags: 0

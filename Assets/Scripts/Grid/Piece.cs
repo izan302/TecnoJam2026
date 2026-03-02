@@ -96,6 +96,7 @@ public class Piece : MonoBehaviour
 
     public void OnPieceSelect(bool selected)
     {
+        AudioManager.instance.PlayClick();
         foreach (PieceTile t in tiles)
         {
             t.selection.enabled = selected;
