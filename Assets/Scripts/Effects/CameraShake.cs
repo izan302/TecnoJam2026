@@ -20,7 +20,7 @@ public class CameraShake : MonoBehaviour
 
     public void PlayCameraShake()
     {
-        RuntimeManager.PlayOneShot(m_Error, transform.position);
+        AudioManager.instance.BadPlacement();
 
         if (Time.time - m_LastShakeTime > m_ResetThreshold)
         {

@@ -156,7 +156,7 @@ public class GridPlacementManager : MonoBehaviour
         }
         else
         {
-            AudioManager.instance.BadPlacement();
+            AudioManager.instance.Error();
             StartCoroutine(RotateBounceRoutine(originalRotation, targetRotationValue));
         }
     }
