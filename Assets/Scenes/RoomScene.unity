@@ -2949,6 +2949,10 @@ PrefabInstance:
       value: -164143932
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: gameplayMusic.Path
+      value: event:/Music/GamePlayMusic 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: rotatepiece.Guid.Data1
       value: 511781189
       objectReference: {fileID: 0}
@@ -2979,6 +2983,22 @@ PrefabInstance:
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: badPlacement.Guid.Data4
       value: -792308073
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: gameplayMusic.Guid.Data1
+      value: -1121443700
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: gameplayMusic.Guid.Data2
+      value: 1274903039
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: gameplayMusic.Guid.Data3
+      value: 1615357621
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: gameplayMusic.Guid.Data4
+      value: -1839462663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
