@@ -277,7 +277,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639080437666284574
+  lastModified: 639080719960707818
   FileSizes: []
   Exists: 1
 --- !u!114 &-215201811602453580
@@ -341,13 +341,14 @@ MonoBehaviour:
   - {fileID: 1365009858118957464}
   - {fileID: -1846231561136665252}
   - {fileID: -2213785736764680160}
+  - {fileID: 7859130768288733554}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6330333976403456706}
   StringsBanks:
   - {fileID: 2087219555383641634}
   cacheVersion: 131849
-  cacheTime: 639080437666284574
+  cacheTime: 639080719960707818
   SerializableEventsDict:
   - key: event:/Music/MenuMusic
     index: 0
@@ -379,6 +380,8 @@ MonoBehaviour:
     index: 13
   - key: event:/SFX/RotatePiece
     index: 14
+  - key: event:/SFX/Error
+    index: 15
 --- !u!114 &169107286027951646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,10 +497,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639080437666033233
+  lastModified: 639080586323252913
   FileSizes:
   - Name: 
-    Value: 1542
+    Value: 1584
   Exists: 1
 --- !u!114 &2765052207228131788
 MonoBehaviour:
@@ -514,7 +517,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639080437666198907
+  lastModified: 639080109923134792
   FileSizes: []
   Exists: 1
 --- !u!114 &4491503152287853881
@@ -640,7 +643,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639078718526780853
+  lastModified: 639080586323242889
   FileSizes: []
   Exists: 1
 --- !u!114 &6687491859225289218
@@ -697,6 +700,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &7859130768288733554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Error
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Error
+  Guid:
+    Data1: -2026186199
+    Data2: 1196993399
+    Data3: 1049302676
+    Data4: -921254340
+  Banks:
+  - {fileID: -215658400655443880}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125
 --- !u!114 &7861972884074446607
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -90,3 +90,38 @@ MonoBehaviour:
       Data3: -64313434
       Data4: -900839771
     Path: event:/SFX/Start
+  click:
+    Guid:
+      Data1: -1559872259
+      Data2: 1201031970
+      Data3: -1649518401
+      Data4: 1689688154
+    Path: event:/SFX/Click
+  closing:
+    Guid:
+      Data1: 251671698
+      Data2: 1232344609
+      Data3: 1033358497
+      Data4: -164143932
+    Path: event:/SFX/Closing
+  error:
+    Guid:
+      Data1: -2026186199
+      Data2: 1196993399
+      Data3: 1049302676
+      Data4: -921254340
+    Path: event:/SFX/Error
+  carta:
+    Guid:
+      Data1: 1965095753
+      Data2: 1158069601
+      Data3: -1474628987
+      Data4: -162848244
+    Path: event:/SFX/Desplegar Carta
+  sendButton:
+    Guid:
+      Data1: 1917251366
+      Data2: 1093539949
+      Data3: 1287805608
+      Data4: -770153308
+    Path: event:/SFX/SendPuzzle

@@ -23,6 +23,14 @@ public class AudioManager : MonoBehaviour
     public EventReference settings;
     public EventReference start;
     public EventReference click;
+    public EventReference closing;
+    public EventReference error;
+    public EventReference carta;
+    public EventReference sendButton;
+
+
+
+
 
 
     [Header("Cinematicas")]
@@ -261,6 +269,12 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void Closing ()
+    {
+        RuntimeManager.PlayOneShot(closing);
+
+    }
+
     public void PlayStartSound ()
     {
         RuntimeManager.PlayOneShot(start);
@@ -273,6 +287,24 @@ public class AudioManager : MonoBehaviour
         {
             RuntimeManager.PlayOneShot(click);
         }
+    }
+
+    public void Error()
+    {
+        RuntimeManager.PlayOneShot(error);
+
+    }
+
+    public void DesplegarCarta ()
+    {
+        RuntimeManager.PlayOneShot(carta);
+
+    }
+
+    public void SendButton ()
+    {
+        RuntimeManager.PlayOneShot(sendButton);
+
     }
 
     #endregion

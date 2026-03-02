@@ -33,6 +33,7 @@ public class InteractiveObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     }
 
 
+    
     public void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -43,8 +44,9 @@ public class InteractiveObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
             }
             if (m_fail)
             {
+                AudioManager.instance.Error();
             }
         }
     }
-
+    
 }

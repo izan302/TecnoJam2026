@@ -735,15 +735,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &346248139 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7594075578567013445, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
@@ -979,18 +970,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1601113781}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &396580954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,15 +1027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!111 &396580957
 Animation:
   m_ObjectHideFlags: 0
@@ -1274,15 +1244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &820131462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,15 +1463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &835529452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,15 +1505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &888548706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5690286376177670266, guid: 24ff2177098e3b146be73f7cb838c56a, type: 3}
@@ -1847,15 +1790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: event:/SFX/Click
-  errorPath: event:/SFX/Error Bad Placement
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &1046189058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2208,15 +2142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &1254756972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,18 +2277,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1601113781}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1254756977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,15 +2305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!224 &1334793046 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8513328322890718838, guid: 24ff2177098e3b146be73f7cb838c56a, type: 3}
@@ -2435,15 +2339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &1411792667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,18 +2653,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1601113781}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1429985793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2832,15 +2715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1 &1463394493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,15 +2821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef744da694f73343852eac4e47a70fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  clickPath: 
-  errorPath: 
-  error:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &1537513312 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5735025284838304688, guid: 7f95e360a8df1424e9811b6167e74a07, type: 3}
@@ -3739,6 +3604,14 @@ PrefabInstance:
       value: event:/SFX/Click
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: error.Path
+      value: event:/SFX/Error
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: closing.Path
+      value: event:/SFX/Closing
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: click.Guid.Data1
       value: -1559872259
       objectReference: {fileID: 0}
@@ -3753,6 +3626,38 @@ PrefabInstance:
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: click.Guid.Data4
       value: 1689688154
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: error.Guid.Data1
+      value: -2026186199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: error.Guid.Data2
+      value: 1196993399
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: error.Guid.Data3
+      value: 1049302676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: error.Guid.Data4
+      value: -921254340
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: closing.Guid.Data1
+      value: 251671698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: closing.Guid.Data2
+      value: 1232344609
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: closing.Guid.Data3
+      value: 1033358497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: closing.Guid.Data4
+      value: -164143932
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
