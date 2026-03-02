@@ -72,6 +72,7 @@ public class TransitionHandler : MonoBehaviour
                 }
                 else
                 {
+                    AudioManager.instance.PlayClick();
                     StartNextScene();
                 }
             }

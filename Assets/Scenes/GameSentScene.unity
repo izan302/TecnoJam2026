@@ -651,11 +651,11 @@ MonoBehaviour:
     Path: event:/SFX/DialogoTutorial
   m_PunctuationSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 251671698
+      Data2: 1232344609
+      Data3: 1033358497
+      Data4: -164143932
+    Path: event:/SFX/Closing
   m_MinTimeBetweenSounds: 0.1
 --- !u!1 &437649050
 GameObject:

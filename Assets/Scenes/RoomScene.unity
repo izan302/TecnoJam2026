@@ -2889,6 +2889,10 @@ PrefabInstance:
       value: event:/SFX/Error
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: musicVolume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: closing.Path
       value: event:/SFX/Closing
       objectReference: {fileID: 0}
