@@ -7,7 +7,6 @@ public class InteractiveObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private Vector2 hotspot = Vector2.zero;
     private bool m_check = false;
     private bool m_fail = false;
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (m_IsInteractable)

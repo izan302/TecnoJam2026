@@ -79,4 +79,9 @@ public class GabeNewell : MonoBehaviour
     {
         SceneManager.LoadScene("GameplayScene");
     }
+
+    public void GoToCinematic()
+    {
+        SceneManager.LoadScene("CinematicScene");
+    }
 }
