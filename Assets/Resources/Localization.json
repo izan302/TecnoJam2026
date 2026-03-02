@@ -268,7 +268,7 @@
             "languageID": "CAT",
             "items": [
                 { "key": "menu_start", "value": "- Prem aquí per començar -" },
-                { "key": "menu_settings", "value": "Ajustaments" },
+                { "key": "menu_settings", "value": "Opcions" },
                 { "key": "menu_language", "value": "Idioma" },
                 { "key": "menu_syncbands", "value": "Activar Syncbands" },
                 { "key": "desktop_email", "value": "Correu" },
