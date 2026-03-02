@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1052402302749396775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114951559119053416}
+  - component: {fileID: 2772756836176620345}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &114951559119053416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052402302749396775}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 842.7965, y: 545.36487, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2772756836176620345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052402302749396775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6efc0955b04d847ace25aa5595e384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  SFXVolume: 1
+  menuMusic:
+    Guid:
+      Data1: -384305629
+      Data2: 1142330111
+      Data3: -1033564787
+      Data4: 1292962588
+    Path: event:/Music/MenuMusic
+  gameplayMusic:
+    Guid:
+      Data1: -446161283
+      Data2: 1082455449
+      Data3: 293821858
+      Data4: -1731500240
+    Path: event:/Music/GamePlayMusic
+  desktopScene:
+    Guid:
+      Data1: -1826797917
+      Data2: 1196636031
+      Data3: 670263992
+      Data4: 1776178662
+    Path: event:/Music/DesktopMusic
+  GameSent:
+    Guid:
+      Data1: -1010932463
+      Data2: 1294810328
+      Data3: -338862711
+      Data4: 1942029219
+    Path: event:/Music/GameSentMusic
+  settings:
+    Guid:
+      Data1: -1046152467
+      Data2: 1306203382
+      Data3: -1426849641
+      Data4: -1455719601
+    Path: event:/SFX/Options
+  start:
+    Guid:
+      Data1: -1384274844
+      Data2: 1281169539
+      Data3: -64313434
+      Data4: -900839771
+    Path: event:/SFX/Start

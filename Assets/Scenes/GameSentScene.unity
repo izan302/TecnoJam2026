@@ -630,6 +630,21 @@ MonoBehaviour:
   m_CharactersPerSecond: 85
   m_PauseOnPunctuation: 1
   m_PunctuationPauseTime: 0.2
+  m_TypeSound:
+    Guid:
+      Data1: -1278581104
+      Data2: 1247526836
+      Data3: 21374127
+      Data4: 233556201
+    Path: event:/SFX/DialogoTutorial
+  m_PunctuationSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  m_MinTimeBetweenSounds: 0.1
 --- !u!1 &437649050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1070,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921586304}
   m_CullTransparentMesh: 1
+--- !u!1001 &1054713667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -38.52325
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2722
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951559119053416, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052402302749396775, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: click.Path
+      value: event:/SFX/Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: click.Guid.Data1
+      value: -1559872259
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: click.Guid.Data2
+      value: 1201031970
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: click.Guid.Data3
+      value: -1649518401
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: click.Guid.Data4
+      value: 1689688154
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
 --- !u!1 &1138224035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,3 +1897,4 @@ SceneRoots:
   - {fileID: 417571736}
   - {fileID: 1138224038}
   - {fileID: 1575476694}
+  - {fileID: 1054713667}

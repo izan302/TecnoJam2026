@@ -17,6 +17,12 @@ public class AudioManager : MonoBehaviour
     public EventReference menuMusic;
     public EventReference gameplayMusic;
     public EventReference desktopScene;
+    public EventReference GameSent;
+
+    [Header("SFX")]
+    public EventReference settings;
+    public EventReference start;
+    public EventReference click;
 
 
     [Header("Cinematicas")]
@@ -248,6 +254,26 @@ public class AudioManager : MonoBehaviour
         if (!sound.IsNull)
             RuntimeManager.PlayOneShot(sound);
     }
+    
+    public void PlaySettings ()
+    {
+            RuntimeManager.PlayOneShot(settings);
+
+    }
+
+    public void PlayStartSound ()
+    {
+        RuntimeManager.PlayOneShot(start);
+
+    }
+
+    public void PlayClick ()
+    {
+        if (SceneManager.GetActiveScene().name == "GameplayScene" | SceneManager.GetActiveScene().name == "DesktopScene")
+        {
+            RuntimeManager.PlayOneShot(click);
+        }
+    }
 
     #endregion
 
@@ -289,6 +315,11 @@ public class AudioManager : MonoBehaviour
                 break;
             case "GameplayScene":
                 newMusic = gameplayMusic;
+                Debug.Log("AudioManager: Música de Gameplay");
+                ApplyShopLowcut(false);
+                break;
+                case "GameSentScene":
+                newMusic = GameSent;
                 Debug.Log("AudioManager: Música de Gameplay");
                 ApplyShopLowcut(false);
                 break;

@@ -1,10 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] private float m_Duration = 0.15f;
     [SerializeField] private float m_Magnitude = 0.3f;
+
+    [Header("Audio")]
+    [SerializeField] private EventReference m_Error;
+   
 
     private Vector3 m_ShakeOffset;
     
@@ -15,6 +20,8 @@ public class CameraShake : MonoBehaviour
 
     public void PlayCameraShake()
     {
+        RuntimeManager.PlayOneShot(m_Error, transform.position);
+
         if (Time.time - m_LastShakeTime > m_ResetThreshold)
         {
             m_ShakeCount = 0;

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 public class AppScript : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class AppScript : MonoBehaviour
     [SerializeField] private AnimationClip m_appAnimationOpen;
     [SerializeField] private AnimationClip m_appAnimationClose;
     [SerializeField] private bool m_IsDoubleClickToOpen = true;
+
+    [SerializeField] private EventReference m_closingSound;
+
+
+
     private float m_clickCounter;
     private void Update()
     {
@@ -29,7 +35,10 @@ public class AppScript : MonoBehaviour
     }
     public void AppClose()
     {
-        if(m_appAnimationClose != null)
+         RuntimeManager.PlayOneShot(m_closingSound, transform.position);
+
+
+        if (m_appAnimationClose != null)
         {
             m_appAnimation.clip = m_appAnimationClose;
             m_appAnimation.Play();

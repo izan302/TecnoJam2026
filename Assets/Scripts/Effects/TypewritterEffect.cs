@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class TypewriterEffect : MonoBehaviour
 {
@@ -12,12 +13,18 @@ public class TypewriterEffect : MonoBehaviour
     [SerializeField] private bool m_PauseOnPunctuation = true;
     [SerializeField] private float m_PunctuationPauseTime = 0.2f;
 
+    [Header("Audio")]
+    [SerializeField] private EventReference m_TypeSound;
+    [SerializeField] private EventReference m_PunctuationSound;
+    [SerializeField] private float m_MinTimeBetweenSounds = 0.05f;
+
     public event Action OnTextFinished;
 
     private Coroutine m_TypeRoutine;
     private int m_TotalCharacters;
     public bool IsTyping => m_IsTyping;
     private bool m_IsTyping = false;
+    private float m_LastSoundTime = 0f;
 
     public void PlayText(string _textKey, TextMeshProUGUI _textComponent)
     {
@@ -27,11 +34,12 @@ public class TypewriterEffect : MonoBehaviour
         m_TextComponent = _textComponent;
         m_TextComponent.text = l_translatedText;
         m_TextComponent.maxVisibleCharacters = 0;
-        
+
         m_TextComponent.ForceMeshUpdate();
         m_TotalCharacters = m_TextComponent.textInfo.characterCount;
 
         m_IsTyping = true;
+        m_LastSoundTime = 0f;
         m_TypeRoutine = StartCoroutine(TypeTextRoutine());
     }
 
@@ -44,12 +52,29 @@ public class TypewriterEffect : MonoBehaviour
         {
             m_TextComponent.maxVisibleCharacters = l_counter;
 
-            if (m_PauseOnPunctuation && l_counter > 0 && l_counter <= m_TotalCharacters)
+            if (l_counter > 0 && l_counter <= m_TotalCharacters)
             {
-                char l_lastChar = m_TextComponent.textInfo.characterInfo[Mathf.Max(0, l_counter - 1)].character;
-                if (IsPunctuation(l_lastChar))
+                char l_lastChar = m_TextComponent.textInfo.characterInfo[l_counter - 1].character;
+
+                if (Time.time >= m_LastSoundTime + m_MinTimeBetweenSounds)
                 {
-                    yield return new WaitForSeconds(m_PunctuationPauseTime);
+                    if (m_PauseOnPunctuation && IsPunctuation(l_lastChar))
+                    {
+                        if (!m_PunctuationSound.IsNull)
+                        {
+                            RuntimeManager.PlayOneShot(m_PunctuationSound);
+                            m_LastSoundTime = Time.time;
+                        }
+                        yield return new WaitForSeconds(m_PunctuationPauseTime);
+                    }
+                    else
+                    {
+                        if (!m_TypeSound.IsNull)
+                        {
+                            RuntimeManager.PlayOneShot(m_TypeSound);
+                            m_LastSoundTime = Time.time;
+                        }
+                    }
                 }
             }
 
