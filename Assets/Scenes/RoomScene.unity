@@ -2925,6 +2925,14 @@ PrefabInstance:
       value: -921254340
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: rotatepiece.Path
+      value: event:/SFX/RotatePiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: badPlacement.Path
+      value: event:/SFX/Error Bad Placement
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: closing.Guid.Data1
       value: 251671698
       objectReference: {fileID: 0}
@@ -2939,6 +2947,38 @@ PrefabInstance:
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: closing.Guid.Data4
       value: -164143932
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: rotatepiece.Guid.Data1
+      value: 511781189
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: rotatepiece.Guid.Data2
+      value: 1181276306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: rotatepiece.Guid.Data3
+      value: 108797078
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: rotatepiece.Guid.Data4
+      value: 757414738
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: badPlacement.Guid.Data1
+      value: -208570923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: badPlacement.Guid.Data2
+      value: 1121690369
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: badPlacement.Guid.Data3
+      value: 1451541666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: badPlacement.Guid.Data4
+      value: -792308073
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

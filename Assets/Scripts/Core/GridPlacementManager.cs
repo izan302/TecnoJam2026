@@ -93,11 +93,16 @@ public class GridPlacementManager : MonoBehaviour
     {
         if (activePiece == null || isBouncing) return;
 
+
         if (InputManager.Instance.GetLeftRotation())
+        {
             TryRotate(-1);
+        }
 
         if (InputManager.Instance.GetRightRotation())
+        {
             TryRotate(1);
+        }
     }
 
     void HandleMovement()
@@ -138,15 +143,20 @@ public class GridPlacementManager : MonoBehaviour
 
     void TryRotate(int dir)
     {
+
+
         int originalRotation = activePiece.rotation;
         int targetRotationValue = (originalRotation + dir % 4 + 4) % 4;
 
         if (IsInsideGrid(activePiece, activePiece.pivotGridPosition, targetRotationValue))
         {
+
+            AudioManager.instance.RotatePiece();
             activePiece.rotation = targetRotationValue;
         }
         else
         {
+            AudioManager.instance.BadPlacement();
             StartCoroutine(RotateBounceRoutine(originalRotation, targetRotationValue));
         }
     }

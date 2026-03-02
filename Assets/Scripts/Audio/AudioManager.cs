@@ -27,6 +27,10 @@ public class AudioManager : MonoBehaviour
     public EventReference error;
     public EventReference carta;
     public EventReference sendButton;
+    public EventReference rotatepiece;
+    public EventReference badPlacement;
+
+
 
 
 
@@ -287,6 +291,16 @@ public class AudioManager : MonoBehaviour
         {
             RuntimeManager.PlayOneShot(click);
         }
+    }
+
+    public void RotatePiece ()
+    {
+        RuntimeManager.PlayOneShot(rotatepiece);
+    }
+
+    public void BadPlacement()
+    {
+        RuntimeManager.PlayOneShot(badPlacement);
     }
 
     public void Error()
