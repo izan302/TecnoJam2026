@@ -342,13 +342,14 @@ MonoBehaviour:
   - {fileID: -1846231561136665252}
   - {fileID: -2213785736764680160}
   - {fileID: 7859130768288733554}
+  - {fileID: 4760126099901746900}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6330333976403456706}
   StringsBanks:
   - {fileID: 2087219555383641634}
   cacheVersion: 131849
-  cacheTime: 639080783314074293
+  cacheTime: 639080820316841624
   SerializableEventsDict:
   - key: event:/Music/MenuMusic
     index: 0
@@ -382,6 +383,8 @@ MonoBehaviour:
     index: 14
   - key: event:/SFX/Error
     index: 15
+  - key: event:/Music/GamePlayMusic 2
+    index: 16
 --- !u!114 &169107286027951646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,10 +500,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639080752285746621
+  lastModified: 639080820316640561
   FileSizes:
   - Name: 
-    Value: 1584
+    Value: 1628
   Exists: 1
 --- !u!114 &2765052207228131788
 MonoBehaviour:
@@ -517,7 +520,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639080783314074293
+  lastModified: 639080820316841624
   FileSizes: []
   Exists: 1
 --- !u!114 &4491503152287853881
@@ -574,6 +577,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13097
+--- !u!114 &4760126099901746900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/GamePlayMusic 2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/GamePlayMusic 2
+  Guid:
+    Data1: -1121443700
+    Data2: 1274903039
+    Data3: 1615357621
+    Data4: -1839462663
+  Banks:
+  - {fileID: 2765052207228131788}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 61000
 --- !u!114 &5194678474825377087
 MonoBehaviour:
   m_ObjectHideFlags: 0
