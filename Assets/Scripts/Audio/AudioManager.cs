@@ -30,10 +30,8 @@ public class AudioManager : MonoBehaviour
     public EventReference rotatepiece;
     public EventReference badPlacement;
 
-
     [Header("Cinematicas")]
     public EventReference cinematic;
-
 
     private Bus masterBus;
     private Bus musicBus;
@@ -65,38 +63,42 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        masterBus = RuntimeManager.GetBus("bus:/");
-        musicBus = RuntimeManager.GetBus("bus:/Music");
-        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        RuntimeManager.LoadBank("Master");
+        RuntimeManager.LoadBank("Master.strings");
+        RuntimeManager.LoadBank("Music");
 
-        SetupLowLatency();
+        StartCoroutine(InitAudioWhenReady());
+    }
+
+    private IEnumerator InitAudioWhenReady()
+    {
+        while (!RuntimeManager.HaveAllBanksLoaded)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        masterBus = RuntimeManager.GetBus("bus:/");
+
+        try { musicBus = RuntimeManager.GetBus("bus:/Music"); }
+        catch { musicBus = masterBus; }
+
+        try { sfxBus = RuntimeManager.GetBus("bus:/SFX"); }
+        catch { }
+
         currentMusic = RuntimeManager.CreateInstance(menuMusic);
         currentMusic.start();
         currentMusic.setVolume(musicVolume);
     }
 
-    private void SetupLowLatency()
-    {
-        try
-        {
-            AudioConfiguration config = AudioSettings.GetConfiguration();
-            config.dspBufferSize = 256;
-            AudioSettings.Reset(config);
-
-            Debug.Log("Configuración de audio de Unity ajustada para baja latencia");
-        }
-        catch
-        {
-        }
-    }
-
     private void Update()
     {
+        if (!masterBus.isValid()) return;
         masterBus.setVolume(masterVolume);
         musicBus.setVolume(musicVolume);
         sfxBus.setVolume(SFXVolume);
     }
-
 
     #region Musica
 
@@ -104,8 +106,6 @@ public class AudioManager : MonoBehaviour
     {
         if (!musicEvent.IsNull)
         {
-            Debug.Log($"Reproduciendo música");
-
             if (currentMusic.isValid())
             {
                 currentMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -126,8 +126,6 @@ public class AudioManager : MonoBehaviour
     {
         if (!musicEvent.IsNull)
         {
-            Debug.Log($"Reproduciendo música inmediata");
-
             if (currentMusic.isValid())
             {
                 currentMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -140,19 +138,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
     public void ReturnToGameplayImmediate()
     {
-        Debug.Log("AudioManager: Volviendo a gameplay inmediatamente (sin fade)");
         PlayMusicImmediate(gameplayMusic);
     }
 
     public void ReturnToMenuImmediate()
     {
-        Debug.Log("AudioManager: Volviendo a menú inmediatamente (sin fade)");
         PlayMusicImmediate(menuMusic);
     }
-
 
     public void ChangeMusicWithFade(EventReference newMusic, float fadeTime = 2f)
     {
@@ -262,26 +256,23 @@ public class AudioManager : MonoBehaviour
         if (!sound.IsNull)
             RuntimeManager.PlayOneShot(sound);
     }
-    
-    public void PlaySettings ()
-    {
-            RuntimeManager.PlayOneShot(settings);
 
+    public void PlaySettings()
+    {
+        RuntimeManager.PlayOneShot(settings);
     }
 
-    public void Closing ()
+    public void Closing()
     {
         RuntimeManager.PlayOneShot(closing);
-
     }
 
-    public void PlayStartSound ()
+    public void PlayStartSound()
     {
         RuntimeManager.PlayOneShot(start);
-
     }
 
-    public void PlayClick ()
+    public void PlayClick()
     {
         if (SceneManager.GetActiveScene().name == "GameplayScene" | SceneManager.GetActiveScene().name == "DesktopScene")
         {
@@ -289,7 +280,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void RotatePiece ()
+    public void RotatePiece()
     {
         RuntimeManager.PlayOneShot(rotatepiece);
     }
@@ -302,19 +293,16 @@ public class AudioManager : MonoBehaviour
     public void Error()
     {
         RuntimeManager.PlayOneShot(error);
-
     }
 
-    public void DesplegarCarta ()
+    public void DesplegarCarta()
     {
         RuntimeManager.PlayOneShot(carta);
-
     }
 
-    public void SendButton ()
+    public void SendButton()
     {
         RuntimeManager.PlayOneShot(sendButton);
-
     }
 
     #endregion
@@ -324,9 +312,7 @@ public class AudioManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (mode == LoadSceneMode.Additive) return;
-        Debug.Log($"AudioManager: Escena cargada - {scene.name}");
 
-        // Aplicar lowcut según la escena
         if (scene.name == "RoomScene" || scene.name == "DesktopScene" || scene.name == "GameSentScene" || scene.name == "CinematicScene")
         {
             ApplyShopLowcut(true);
@@ -338,7 +324,6 @@ public class AudioManager : MonoBehaviour
 
         if ((scene.name == "SampleScene" || scene.name == "Menu") && IsPlayingMusic(GetMusicForScene(scene.name)))
         {
-            Debug.Log($"AudioManager: Ya está sonando música de {scene.name}, manteniendo");
             return;
         }
 
@@ -346,9 +331,21 @@ public class AudioManager : MonoBehaviour
 
         if (!newMusic.IsNull && !IsPlayingMusic(newMusic) && !isTransitioning)
         {
-            Debug.Log($"AudioManager: Cambiando a nueva música con transición suave");
-            StartCoroutine(SmoothCrossfadeMusic(newMusic, 2f));
+            StartCoroutine(ChangeMusicWhenReady(newMusic));
         }
+    }
+
+    private IEnumerator ChangeMusicWhenReady(EventReference newMusic)
+    {
+        while (!RuntimeManager.HaveAllBanksLoaded)
+        {
+            yield return null;
+        }
+        while (!masterBus.isValid())
+        {
+            yield return null;
+        }
+        StartCoroutine(SmoothCrossfadeMusic(newMusic, 2f));
     }
 
     private EventReference GetMusicForScene(string sceneName)
@@ -357,24 +354,19 @@ public class AudioManager : MonoBehaviour
         {
             case "SampleScene":
             case "GameplayScene":
-                Debug.Log("AudioManager: Música de Gameplay");
                 return gameplayMusic;
 
             case "Menu":
             case "RoomScene":
-                Debug.Log("AudioManager: Música de Menú");
                 return menuMusic;
 
             case "DesktopScene":
-                Debug.Log("AudioManager: Música de Desktop");
                 return desktopScene;
 
             case "GameSentScene":
-                Debug.Log("AudioManager: Música de Game Sent");
                 return GameSent;
 
             case "CinematicScene":
-                Debug.Log("AudioManager: Música de Cinemática");
                 return cinematic;
 
             default:
@@ -389,7 +381,6 @@ public class AudioManager : MonoBehaviour
         float target = enable ? 1f : 0f;
         float duration = enable ? 1.2f : 2.5f;
 
-        Debug.Log($"AudioManager: Modes → {target} ({duration}s)");
         SetMusicParameterSmooth("Modes", target, duration);
     }
 
