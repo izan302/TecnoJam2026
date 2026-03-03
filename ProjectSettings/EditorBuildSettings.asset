@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CinematicScene.unity
     guid: c63733e93f8e55e41b4ada2ffb5b072f
+  - enabled: 1
+    path: Assets/Scenes/YourGameExe.unity
+    guid: 7f23f73d34346ec43b06149f94f53958
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
