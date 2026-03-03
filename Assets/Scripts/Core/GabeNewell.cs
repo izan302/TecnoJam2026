@@ -13,6 +13,7 @@ public class GabeNewell : MonoBehaviour
     public string m_Language { get; set; } = "ES";
     public float m_TimePlayedInMinesweeper { get; set; } = 0f;
     public bool m_MaxTimeMinesweeper { get; set; } = false;
+    public bool m_GameEnded { get; set; } = false;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -83,5 +84,10 @@ public class GabeNewell : MonoBehaviour
     public void GoToCinematic()
     {
         SceneManager.LoadScene("CinematicScene");
+    }
+
+    public void GotToYourGame()
+    {
+        SceneManager.LoadScene("YourGameExe");
     }
 }
