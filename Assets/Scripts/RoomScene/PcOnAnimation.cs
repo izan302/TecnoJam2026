@@ -61,7 +61,7 @@ public class PcOnAnimation : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        GabeNewell.Instance.GoToCinematic();
+        GabeNewell.Instance.GoToDesktop();
     }
 
     void SafetyNet()
