@@ -33,14 +33,6 @@
             "m_level": 3
         },
         {
-            "m_senderPFPstring": "Sprites/Mails/Lion",
-            "m_senderArroba": "mercadroga@communications.com",
-            "m_senderName": "Nova promoció de Mercadroga",
-            "m_senderDate": "08/03/1994",
-            "m_emailContent": "Compri ara el seu rifle d'assalt d'última generació, amb un disseny elegant i modern que li permetrà destacar entre la multitud.\n\nAquest rifle d'assalt és l'arma perfecta per a aquells que busquen una experiència de caça emocionant. Amb la seva alta precisió i potència, aquest rifle d'assalt serà l'enveja dels seus amics i companys.\n\nNo perdi l'oportunitat d'adquirir aquest increïble rifle d'assalt i elevar la seva cacera al següent nivell.",
-            "m_level": 3
-        },
-        {
             "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "info@periodisme-real.org",
             "m_senderName": "Redacció de 'El Píxel Independent'",

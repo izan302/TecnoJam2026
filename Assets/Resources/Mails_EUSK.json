@@ -33,14 +33,6 @@
             "m_level": 3
         },
         {
-            "m_senderPFPstring": "Sprites/Mails/Lion",
-            "m_senderArroba": "mercadroga@communications.com",
-            "m_senderName": "Mercadrogaren promozio berria",
-            "m_senderDate": "08/03/1994",
-            "m_emailContent": "Erosi orain azken belaunaldiko eraso-fusila, jendearen artean nabarmentzeko diseinu dotore eta modernoarekin.\n\nEraso-fusil hau ehiza-esperientzia zirraragarria bilatzen dutenentzako arma ezin hobea da. Bere zehaztasun eta potentzia handiarekin, eraso-fusil hau zure lagun eta kideen inbidia izango da.\n\nEz galdu eraso-fusil harrigarri hau eskuratzeko eta zure ehiza hurrengo mailara igotzeko aukera.",
-            "m_level": 3
-        },
-        {
             "m_senderPFPstring": "Sprites/Mails/aguila",
             "m_senderArroba": "info@benetako-kazetaritza.org",
             "m_senderName": "'Pixel Independentea'ko Erredakzioa",
