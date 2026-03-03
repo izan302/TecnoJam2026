@@ -2881,52 +2881,8 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: click.Path
-      value: event:/SFX/Click
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: error.Path
-      value: event:/SFX/Error
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: musicVolume
       value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: closing.Path
-      value: event:/SFX/Closing
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: click.Guid.Data1
-      value: -1559872259
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: click.Guid.Data2
-      value: 1201031970
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: click.Guid.Data3
-      value: -1649518401
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: click.Guid.Data4
-      value: 1689688154
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: error.Guid.Data1
-      value: -2026186199
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: error.Guid.Data2
-      value: 1196993399
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: error.Guid.Data3
-      value: 1049302676
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: error.Guid.Data4
-      value: -921254340
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: rotatepiece.Path
@@ -2935,22 +2891,6 @@ PrefabInstance:
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: badPlacement.Path
       value: event:/SFX/Error Bad Placement
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: closing.Guid.Data1
-      value: 251671698
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: closing.Guid.Data2
-      value: 1232344609
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: closing.Guid.Data3
-      value: 1033358497
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
-      propertyPath: closing.Guid.Data4
-      value: -164143932
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: gameplayMusic.Path
@@ -3200,5 +3140,5 @@ SceneRoots:
   - {fileID: 1008120626}
   - {fileID: 1013330250}
   - {fileID: 285863768}
-  - {fileID: 1182819346}
   - {fileID: 7560464558975683602}
+  - {fileID: 1182819346}

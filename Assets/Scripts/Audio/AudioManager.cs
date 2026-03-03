@@ -364,10 +364,13 @@ public class AudioManager : MonoBehaviour
                 Debug.Log("AudioManager: Música de Gameplay");
                 ApplyShopLowcut(false);
                 break;
-                case "GameSentScene":
+            case "GameSentScene":
                 newMusic = GameSent;
                 Debug.Log("AudioManager: Música de Gameplay");
                 ApplyShopLowcut(false);
+                break;
+            case "CinematicScene":
+                
                 break;
         }
 

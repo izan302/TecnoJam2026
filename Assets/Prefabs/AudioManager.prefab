@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   masterVolume: 1
-  musicVolume: 1
+  musicVolume: 0.8
   ambienceVolume: 1
   SFXVolume: 1
   menuMusic:
@@ -57,11 +57,11 @@ MonoBehaviour:
     Path: event:/Music/MenuMusic
   gameplayMusic:
     Guid:
-      Data1: -446161283
-      Data2: 1082455449
-      Data3: 293821858
-      Data4: -1731500240
-    Path: event:/Music/GamePlayMusic
+      Data1: -1121443700
+      Data2: 1274903039
+      Data3: 1615357621
+      Data4: -1839462663
+    Path: event:/Music/GamePlayMusic 2
   desktopScene:
     Guid:
       Data1: -1826797917
@@ -76,6 +76,13 @@ MonoBehaviour:
       Data3: -338862711
       Data4: 1942029219
     Path: event:/Music/GameSentMusic
+  CinematicMusic:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   settings:
     Guid:
       Data1: -1046152467
@@ -125,3 +132,17 @@ MonoBehaviour:
       Data3: 1287805608
       Data4: -770153308
     Path: event:/SFX/SendPuzzle
+  rotatepiece:
+    Guid:
+      Data1: 511781189
+      Data2: 1181276306
+      Data3: 108797078
+      Data4: 757414738
+    Path: event:/SFX/RotatePiece
+  badPlacement:
+    Guid:
+      Data1: -208570923
+      Data2: 1121690369
+      Data3: 1451541666
+      Data4: -792308073
+    Path: event:/SFX/Error Bad Placement
