@@ -41,7 +41,12 @@
                 { "key": "error_42_title", "value": "ERROR(42): EstiloNoEncontrado" },
                 { "key": "error_42_message", "value": "No existe un Estilo en el juego. \nPor favor, añade un Estilo antes de enviar." },
                 { "key": "error_43_title", "value": "ERROR(43): ÍtemNoEncontrado" },
-                { "key": "error_43_message", "value": "No existe un Ítem en el juego. \nPor favor, añade un Ítem antes de enviar." },
+                { "key": "error_43_message","value": "No existe un Ítem en el juego. \nPor favor, añade un Ítem antes de enviar."},
+
+                { "key": "end_yourgameexe", "value":  "TuJuego.exe" },
+                { "key": "end_havefun", "value":  "Te estas divirtiendo" },
+                { "key": "end_close", "value":  "Cerrar Juego" },
+
                 { "key": "piece_name_Correr", "value": "Correr" },
                 { "key": "piece_name_Disparar", "value": "Disparar" },
                 { "key": "piece_name_Lofi", "value": "Lofi" },
@@ -175,6 +180,11 @@
                 { "key": "error_42_message", "value": "Unexisting style inside the game. \nPlease add a Style before sending." },
                 { "key": "error_43_title", "value": "ERROR(43): ItemNotFound" },
                 { "key": "error_43_message", "value": "Unexisting item inside the game. \nPlease add an Item before sending." },
+
+                { "key": "end_yourgameexe", "value":  "YourGame.exe" },
+                { "key": "end_havefun", "value":  "You are having fun" },
+                { "key": "end_close", "value":  "Close Game" },
+
                 { "key": "piece_name_Correr", "value": "Running" },
                 { "key": "piece_name_Disparar", "value": "Shooting" },
                 { "key": "piece_name_Lofi", "value": "Lo-fi" },
@@ -306,6 +316,11 @@
                 { "key": "error_42_message", "value": "Estil inexistent dins del joc. \nSi us plau, afegeix un Estil abans d'enviar." },
                 { "key": "error_43_title", "value": "ERROR(43): ItemNotFound" },
                 { "key": "error_43_message", "value": "Ítem inexistent dins del joc. \nSi us plau, afegeix un Ítem abans d'enviar." },
+
+                { "key": "end_yourgameexe", "value":  "ElTeuJoc.exe" },
+                { "key": "end_havefun", "value":  "T'ho estàs passant pipa" },
+                { "key": "end_close", "value":  "Tancar joc" },
+
                 { "key": "piece_name_Correr", "value": "Córrer" },
                 { "key": "piece_name_Disparar", "value": "Disparar" },
                 { "key": "piece_name_Lofi", "value": "Lo-fi" },
@@ -437,6 +452,11 @@
                 { "key": "error_42_message", "value": "Jokoan existitzen ez den estiloa. \nMesedez, gehitu Estilo bat bidali aurretik." },
                 { "key": "error_43_title", "value": "ERROREA(43): ObjektuEzezaguna" },
                 { "key": "error_43_message", "value": "Jokoan existitzen ez den objektua. \nMesedez, gehitu Objektu bat bidali aurretik." },
+
+                { "key": "end_yourgameexe", "value":  "ZureJokoa.exe" },
+                { "key": "end_havefun", "value":  "Ondo pasatzen ari zara" },
+                { "key": "end_close", "value":  "Itxi jokoa" },
+
                 { "key": "piece_name_Correr", "value": "Korrika egitea" },
                 { "key": "piece_name_Disparar", "value": "Tiro egitea" },
                 { "key": "piece_name_Lofi", "value": "Lo-fi" },
@@ -568,6 +588,11 @@
                 { "key": "error_42_message", "value": "Non existís un Estil en jòc. \nPer favor, ahit un Estil abans d'enviar." },
                 { "key": "error_43_title", "value": "ERROR(43): ItemNonTrapat" },
                 { "key": "error_43_message", "value": "Non existís un Item en jòc. \nPer favor, ahit un Item abans d'enviar." },
+
+                { "key": "end_yourgameexe", "value":  "VòstreJòc.exe" },
+                { "key": "end_havefun", "value":  "Te divertisses" },
+                { "key": "end_close", "value":  "Barrar la partida" },
+
                 { "key": "piece_name_Correr", "value": "Córrer" },
                 { "key": "piece_name_Disparar", "value": "Disparar" },
                 { "key": "piece_name_Lofi", "value": "Lofi" },
@@ -696,6 +721,11 @@
                 { "key": "error_42_message", "value": "Estilo inexistente dentro do xogo. \nPor favor, engade un Estilo antes de enviar." },
                 { "key": "error_43_title", "value": "ERRO(43): ItemNonAtopado" },
                 { "key": "error_43_message", "value": "Ítem inexistente dentro do xogo. \nPor favor, engade un Ítem antes de enviar." },
+
+                { "key": "end_yourgameexe", "value":  "OTeuXogo.exe" },
+                { "key": "end_havefun", "value":  "Estás a divertirte" },
+                { "key": "end_close", "value":  "Pechar xogo" },
+
                 { "key": "piece_name_Correr", "value": "Correr" },
                 { "key": "piece_name_Disparar", "value": "Disparar" },
                 { "key": "piece_name_Lofi", "value": "Lo-fi" },
