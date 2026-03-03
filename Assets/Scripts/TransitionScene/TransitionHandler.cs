@@ -214,6 +214,7 @@ public class TransitionHandler : MonoBehaviour
         if (showAproved)
         {
             typewriter.PlayText("gameSent_accepted", letterText);
+            GabeNewell.Instance.m_GameEnded = true;
         }
         else
         {
