@@ -562,6 +562,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Cinematic
   - Music
   - SFX
   BanksToLoad: []

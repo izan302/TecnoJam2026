@@ -2885,6 +2885,10 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: cinematic.Path
+      value: event:/Cinematics/Cinematic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: rotatepiece.Path
       value: event:/SFX/RotatePiece
       objectReference: {fileID: 0}
@@ -2895,6 +2899,22 @@ PrefabInstance:
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: gameplayMusic.Path
       value: event:/Music/GamePlayMusic 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: cinematic.Guid.Data1
+      value: 1354922173
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: cinematic.Guid.Data2
+      value: 1176571973
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: cinematic.Guid.Data3
+      value: 1402562740
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
+      propertyPath: cinematic.Guid.Data4
+      value: -1925734052
       objectReference: {fileID: 0}
     - target: {fileID: 2772756836176620345, guid: 17084847454c3ee4d8dac04ee324cadb, type: 3}
       propertyPath: rotatepiece.Guid.Data1

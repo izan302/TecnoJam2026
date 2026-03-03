@@ -31,13 +31,9 @@ public class AudioManager : MonoBehaviour
     public EventReference badPlacement;
 
 
-
-
-
-
-
-
     [Header("Cinematicas")]
+    public EventReference cinematic;
+
 
     private Bus masterBus;
     private Bus musicBus;
@@ -330,54 +326,59 @@ public class AudioManager : MonoBehaviour
         if (mode == LoadSceneMode.Additive) return;
         Debug.Log($"AudioManager: Escena cargada - {scene.name}");
 
-        if (scene.name == "SampleScene" && IsPlayingMusic(gameplayMusic))
+        // Aplicar lowcut según la escena
+        if (scene.name == "RoomScene" || scene.name == "DesktopScene" || scene.name == "GameSentScene" || scene.name == "CinematicScene")
         {
-            Debug.Log("AudioManager: Ya está sonando música de gameplay, manteniendo");
+            ApplyShopLowcut(true);
+        }
+        else
+        {
             ApplyShopLowcut(false);
+        }
+
+        if ((scene.name == "SampleScene" || scene.name == "Menu") && IsPlayingMusic(GetMusicForScene(scene.name)))
+        {
+            Debug.Log($"AudioManager: Ya está sonando música de {scene.name}, manteniendo");
             return;
         }
 
-        if (scene.name == "Menu" && IsPlayingMusic(menuMusic))
-        {
-            Debug.Log("AudioManager: Ya está sonando música de menú, manteniendo");
-            ApplyShopLowcut(false);
-            return;
-        }
-
-        EventReference newMusic = default;
-
-        switch (scene.name)
-        {
-            case "RoomScene":
-                newMusic = menuMusic;
-                Debug.Log("AudioManager: Música de Menú");
-                ApplyShopLowcut(false);
-                break;
-
-            case "DesktopScene":
-                newMusic = desktopScene;
-                Debug.Log("AudioManager: Música de Desktop");
-                ApplyShopLowcut(false);
-                break;
-            case "GameplayScene":
-                newMusic = gameplayMusic;
-                Debug.Log("AudioManager: Música de Gameplay");
-                ApplyShopLowcut(false);
-                break;
-            case "GameSentScene":
-                newMusic = GameSent;
-                Debug.Log("AudioManager: Música de Gameplay");
-                ApplyShopLowcut(false);
-                break;
-            case "CinematicScene":
-                
-                break;
-        }
+        EventReference newMusic = GetMusicForScene(scene.name);
 
         if (!newMusic.IsNull && !IsPlayingMusic(newMusic) && !isTransitioning)
         {
             Debug.Log($"AudioManager: Cambiando a nueva música con transición suave");
             StartCoroutine(SmoothCrossfadeMusic(newMusic, 2f));
+        }
+    }
+
+    private EventReference GetMusicForScene(string sceneName)
+    {
+        switch (sceneName)
+        {
+            case "SampleScene":
+            case "GameplayScene":
+                Debug.Log("AudioManager: Música de Gameplay");
+                return gameplayMusic;
+
+            case "Menu":
+            case "RoomScene":
+                Debug.Log("AudioManager: Música de Menú");
+                return menuMusic;
+
+            case "DesktopScene":
+                Debug.Log("AudioManager: Música de Desktop");
+                return desktopScene;
+
+            case "GameSentScene":
+                Debug.Log("AudioManager: Música de Game Sent");
+                return GameSent;
+
+            case "CinematicScene":
+                Debug.Log("AudioManager: Música de Cinemática");
+                return cinematic;
+
+            default:
+                return default;
         }
     }
 
@@ -395,6 +396,8 @@ public class AudioManager : MonoBehaviour
     private bool IsPlayingMusic(EventReference musicEvent)
     {
         if (!currentMusic.isValid() || musicEvent.IsNull) return false;
+
+        if (isTransitioning) return false;
 
         try
         {
@@ -421,7 +424,7 @@ public class AudioManager : MonoBehaviour
         {
             PLAYBACK_STATE playbackState;
             currentMusic.getPlaybackState(out playbackState);
-            return playbackState == PLAYBACK_STATE.PLAYING;
+            return playbackState == PLAYBACK_STATE.PLAYING && !isTransitioning;
         }
     }
 
