@@ -15,6 +15,7 @@ public class PcOnAnimation : MonoBehaviour
     [SerializeField] private GameObject m_PcDesktop;
     [SerializeField] private GameObject m_PcStartupScreen;
     [SerializeField] private GameObject m_Title;
+    private bool m_IsClicked = false;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class PcOnAnimation : MonoBehaviour
 
     public void OnClick()
     {
+        if (m_IsClicked) return;
+        m_IsClicked = true;
         GabeNewell.Instance.LoadDesktop();
 
         m_Title.SetActive(false);
