@@ -4,6 +4,7 @@ public class GameAppScript : MonoBehaviour
 {
     [SerializeField] private string m_appName;
     [SerializeField] private float m_timeToDoubleClick = 1.5f;
+    [SerializeField] private bool m_IsDoubleClicking = false;
     private float m_clickCounter;
 
     [Header("Animations")]
@@ -21,7 +22,7 @@ public class GameAppScript : MonoBehaviour
     }
     public void AppClick()
     {
-        if (m_clickCounter < m_timeToDoubleClick && GabeNewell.Instance.m_MailsAreRead)
+        if (m_clickCounter < m_timeToDoubleClick && GabeNewell.Instance.m_MailsAreRead || !m_IsDoubleClicking)
         {
             GabeNewell.Instance.GoToGameplay();
         } else if(GabeNewell.Instance.m_MailsAreRead == false)

@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_appAnimation: {fileID: 953070846}
   m_appAnimationOpen: {fileID: 7400000, guid: f5cd722494f211e4bbb99463ba47c6ee, type: 2}
   m_appAnimationClose: {fileID: 0}
-  m_IsDoubleClickToOpen: 1
+  m_IsDoubleClickToOpen: 0
   m_closingSound:
     Guid:
       Data1: 0
@@ -2668,6 +2668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameAppScript
   m_appName: IzanScene
   m_timeToDoubleClick: 1.5
+  m_IsDoubleClicking: 1
   m_animation: {fileID: 396580957}
   m_animationClip: {fileID: 7400000, guid: 7b418f279f363ea4b9e98f4b0ab8c7aa, type: 2}
 --- !u!114 &1254756978
